@@ -50,9 +50,12 @@ const Header = () => {
                 <a href="/">Schedules</a>
               </li>
               <li>
+                <a href="/">Registration</a>
+              </li>
+              <li>
                 <a href="/">Contact</a>
               </li>
-              <TicketButton>Buy Ticket</TicketButton>
+              <TicketButton>Login Here</TicketButton>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -112,7 +115,7 @@ const Nav = styled.ul`
 `;
 
 const TicketButton = styled.button`
-  background-color: #f6699e;
+  background-color: #486FF8;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -124,12 +127,13 @@ const TicketButton = styled.button`
   justify-content: center;
   align-items: center;
   outline: none;
-  border: 2px solid transparent;
+  /* border: 2px solid transparent; */
+  border: none;
   transition: all 0.3s ease-out;
   &:hover {
-    border: 2px solid #f6699e;
-    background-color: transparent;
-    color: #f6699e;
+    /* border: 2px solid #486FF8; */
+    background-color: #fff;
+    color: #486FF8;
     transition: all 0.3s ease-out;
   }
 `;
