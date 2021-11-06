@@ -1,10 +1,11 @@
 import React from 'react'
 import Layout from './Layouts/Layout'
+import Home from './Pages/Home'
 
 const App = () => {
   return (
     <Layout>
-      Hello World
+      <Home />
     </Layout>
   )
 }
