@@ -50,10 +50,11 @@ const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  /* position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0; */
+  right: 0;
+  z-index: 9999;
   .navbar {
     justify-content: space-between;
     padding: 46px 0;
