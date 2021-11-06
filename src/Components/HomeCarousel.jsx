@@ -40,12 +40,23 @@ const HomeCarousel = () => {
 };
 
 const SliderComponent = styled.div`
-  background-image: url(${Slide01});
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   height: 100vh;
   position: relative;
+  background-color: #39364f;
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-image: url(${Slide01});
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 `;
 
 const SliderContent = styled.div`
