@@ -12,8 +12,7 @@ import Pluses from "../Assets/Images/Home/SummitInfo/pluses.svg";
 const SummitInfo = () => {
   return (
     <Container>
-      <Row className="justify-content-between">
-        <Col md={4} sm={12}>
+      {/* <Col md={4} sm={12}>
           <SummitTitle>Get the latest info about TECH Summit</SummitTitle>
           <SummitInfoWrapper>
             <FontAwesomeIcon icon={faCalendarWeek} />
@@ -23,38 +22,49 @@ const SummitInfo = () => {
             <FontAwesomeIcon icon={faMapMarkerAlt} />
             <p>Brigton Hall, 2715 Ash Dr. San Jose, South Dakota 83475</p>
           </SummitInfoWrapper>
-        </Col>
-        <Col md={7} sm={12}>
-          <SummitDescription>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exchange notes
-            with your peers and competitors. Maybe you want to place your
-            company. and faceds the top area world’s most eagers transformation
-            business digitization.
-          </SummitDescription>
-          <SummitTicket>
-            <SummitTicketElement>
-              <p>300</p>
-              <span>Free Tickets</span>
-            </SummitTicketElement>
-            <SummitTicketElement>
-              <p>15</p>
-              <span>Speakers</span>
-            </SummitTicketElement>
-            <SummitTicketElement>
-              <p>34</p>
-              <span>Sponsors</span>
-            </SummitTicketElement>
-            <SummitTicketElement>
-              <p>20</p>
-              <span>Coffee Breaks</span>
-            </SummitTicketElement>
-            <PlusesWrapper>
-              <img src={Pluses} alt="Pluses" />
-            </PlusesWrapper>
-          </SummitTicket>
-        </Col>
-      </Row>
+        </Col> */}
+
+      <SummitDescription>
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Exchange notes
+        with your peers and competitors. Maybe you want to place your company.
+        and faceds the top area world’s most eagers transformation business
+        digitization.
+      </SummitDescription>
+      <SummitTicket>
+        <SummitTicketElement>
+          <p>300</p>
+          <span>Days</span>
+          <span className="description">
+            full of exciting scientific content and networking opportunities
+          </span>
+        </SummitTicketElement>
+        <SummitTicketElement>
+          <p>15</p>
+          <span>Sessions</span>
+          <span className="description">
+            lectures, panels, discussions, presentations, e-posters
+          </span>
+        </SummitTicketElement>
+        <SummitTicketElement>
+          <p>34</p>
+          <span>Speakers</span>
+          <span className="description">
+            presenting new and exciting scientific content in a personalised
+            online platform
+          </span>
+        </SummitTicketElement>
+        <SummitTicketElement>
+          <p>20</p>
+          <span>Participants</span>
+          <span className="description">
+            expected attendees at the 21st WPA World Congress of Psychiatry
+          </span>
+        </SummitTicketElement>
+        <PlusesWrapper>
+          <img src={Pluses} alt="Pluses" />
+        </PlusesWrapper>
+      </SummitTicket>
     </Container>
   );
 };
@@ -92,66 +102,32 @@ const SummitDescription = styled.p`
   font-weight: 400;
   line-height: 1.6;
   color: #717488;
+  text-align: center;
 `;
 
 const SummitTicket = styled.div`
   position: relative;
   width: 100%;
-  height: 140px;
   border-radius: 5px;
-  background-color: #f6699e;
-  margin-top: 30px;
+  background-color: transparent;
+  margin: 50px 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   @media only screen and (max-width: 558.98px) {
     flex-wrap: wrap;
     height: unset;
-  }
-  &:before {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: -15px;
-    transform: translateY(-50%);
-    @media only screen and (max-width: 558.98px) {
-      width: 24px;
-      height: 24px;
-      left: -12px;
-    }
-  }
-  &:after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    right: -15px;
-    transform: translateY(-50%);
-    @media only screen and (max-width: 558.98px) {
-      width: 24px;
-      height: 24px;
-      right: -12px;
-    }
   }
 `;
 
 const SummitTicketElement = styled.div`
   text-align: center;
-  border-right: 1px solid #c82c66;
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 6px;
   @media only screen and (max-width: 558.98px) {
     border: none;
     padding: 30px 0;
@@ -165,15 +141,20 @@ const SummitTicketElement = styled.div`
   }
   p {
     font-family: "Urbanist", sans-serif;
-    font-size: 35px;
+    font-size: 50px;
     font-weight: 700;
-    color: #fff;
+    color: #39364f;
   }
   span {
     font-family: "Urbanist", sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: #486ff8;
+  }
+  .description {
+    font-size: 14px;
+    color: #717488;
+    width: 70%;
   }
 `;
 

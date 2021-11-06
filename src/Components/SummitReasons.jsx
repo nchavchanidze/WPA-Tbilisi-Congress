@@ -6,12 +6,14 @@ import Background from "../Assets/Images/Home/SummitReasons/background.png";
 import Image01 from "../Assets/Images/Home/SummitReasons/image-01.jpg";
 import Image02 from "../Assets/Images/Home/SummitReasons/image-02.jpg";
 import Image03 from "../Assets/Images/Home/SummitReasons/image-03.jpg";
+import SummitInfo from "./SummitInfo";
 
 const SummitReasons = () => {
   return (
     <SummitReasonsWrapper>
       <Container>
-        <Title>Top 3 Reasons to Attend</Title>
+        <Title>Why Attend</Title>
+        <SummitInfo />
         <Row>
           <Col md={4} sm={12}>
             <SummitImageWrapper>
@@ -54,7 +56,7 @@ const SummitReasons = () => {
             </SummitReason>
           </Col>
         </Row>
-        <AgendaButton>Download Agenda</AgendaButton>
+        {/* <AgendaButton>Download Agenda</AgendaButton> */}
       </Container>
     </SummitReasonsWrapper>
   );

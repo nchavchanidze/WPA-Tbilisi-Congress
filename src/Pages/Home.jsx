@@ -8,10 +8,10 @@ const Home = () => {
   return (
     <>
       <HomeCarousel />
-      <Section>
-        <SummitInfo />
-      </Section>
       <SummitReasons />
+      {/* <Section>
+        <SummitInfo />
+      </Section> */}
     </>
   );
 };
