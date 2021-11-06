@@ -131,6 +131,31 @@ body {
   position: relative;
 }
 
+
+::selection {
+  color: #fff !important;
+  background: #486FF8 !important;
+}
+::-moz-selection {
+  background: #486FF8 !important;
+  color: #fff;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #717488;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #595b6b;
+}
+
+
 /* Navbar Toggler Reset */
 .navbar-toggler {
   color: transparent !important;
