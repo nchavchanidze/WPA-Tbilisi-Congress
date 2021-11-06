@@ -56,7 +56,7 @@ const SliderContent = styled.div`
   text-align: center;
   h1 {
     font-family: "Urbanist", sans-serif;
-    font-size: 120px;
+    font-size: 90px;
     font-weight: 900;
     text-transform: uppercase;
     color: #fff;
@@ -80,11 +80,10 @@ const SliderButtonsWrapper = styled.div`
 const SliderButton = styled.button`
   background-color: #000;
   font-family: "Urbanist", sans-serif;
-  font-size: 30px;
+  font-size: 22.5px;
   font-weight: 400;
   text-transform: uppercase;
   color: #fff;
-  border-radius: 5px;
   padding: 0 20px;
   display: flex;
   justify-content: center;
