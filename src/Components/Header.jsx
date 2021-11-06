@@ -1,50 +1,62 @@
-import React, { useState } from "react";
-import { Navbar } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 
 import Logo from "../Assets/Images/Logo.svg";
 
 const Header = () => {
   const [burger, setBurger] = useState(false);
+  const [scroll, setScroll] = useState(0);
 
   const handleBurger = () => {
     setBurger(!burger);
   };
 
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      setScroll(window.scrollY);
+    });
+  });
+
   return (
-    <StyledHeader className="container">
-      <Navbar expand="lg">
-        <LogoWrapper>
-          <img src={Logo} alt="Seat Event" />
-        </LogoWrapper>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleBurger}>
-          <Hamburger className={`hamburger ${burger ? "is-active" : ""}`}>
-            <span className="line"></span>
-            <span className="line"></span>
-            <span className="line"></span>
-          </Hamburger>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="navbar-nav">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/">Events</a>
-            </li>
-            <li>
-              <a href="/">About</a>
-            </li>
-            <li>
-              <a href="/">Schedules</a>
-            </li>
-            <li>
-              <a href="/">Contact</a>
-            </li>
-            <TicketButton>Buy Ticket</TicketButton>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+    <StyledHeader className={scroll > 100 ? "scrolled" : ""}>
+      <Container>
+        <Navbar expand="lg">
+          <LogoWrapper>
+            <img src={Logo} alt="Seat Event" />
+          </LogoWrapper>
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            onClick={handleBurger}
+          >
+            <Hamburger className={`hamburger ${burger ? "is-active" : ""}`}>
+              <span className="line"></span>
+              <span className="line"></span>
+              <span className="line"></span>
+            </Hamburger>
+          </Navbar.Toggle>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="navbar-nav">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/">Events</a>
+              </li>
+              <li>
+                <a href="/">About</a>
+              </li>
+              <li>
+                <a href="/">Schedules</a>
+              </li>
+              <li>
+                <a href="/">Contact</a>
+              </li>
+              <TicketButton>Buy Ticket</TicketButton>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </Container>
     </StyledHeader>
   );
 };
@@ -55,9 +67,15 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 9999;
+  transition: all 0.3s ease-out;
+  padding: 46px 0;
+  &.scrolled {
+    background-color: #39364f;
+    transition: all 0.3s ease-out;
+    padding: 0;
+  }
   .navbar {
     justify-content: space-between;
-    padding: 46px 0;
     .navbar-collapse {
       /* flex-basis: unset !important; */
       flex-grow: unset !important;
