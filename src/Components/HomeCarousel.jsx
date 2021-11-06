@@ -17,7 +17,7 @@ const HomeCarousel = () => {
     <Slider {...settings}>
       <SliderComponent>
         <SliderContent>
-          <h1>TECH SUMMIT</h1>
+          <h1>21 WPA World Congress of Psychiatry</h1>
           <SliderButtonsWrapper>
             <SliderButton>Upcoming Event</SliderButton>
             <SliderButton>Our Big Conference 2021</SliderButton>
@@ -27,7 +27,7 @@ const HomeCarousel = () => {
       <SliderComponent>
         <SliderComponent>
           <SliderContent>
-            <h1>TECH SUMMIT</h1>
+            <h1>21 WPA World Congress of Psychiatry</h1>
             <SliderButtonsWrapper>
               <SliderButton>Upcoming Event</SliderButton>
               <SliderButton>Our Big Conference 2021</SliderButton>
@@ -65,14 +65,18 @@ const SliderContent = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 50%;
+  @media only screen and (max-width: 1025.98px) {
+    width: unset;
+  }
   h1 {
     font-family: "Urbanist", sans-serif;
-    font-size: 90px;
+    font-size: 75px;
     font-weight: 900;
     text-transform: uppercase;
     color: #fff;
     @media only screen and (max-width: 496.98px) {
-      font-size: 80px;
+      font-size: 52px;
     }
   }
 `;
