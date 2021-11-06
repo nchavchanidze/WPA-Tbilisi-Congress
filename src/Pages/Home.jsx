@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HomeCarousel from "../Components/HomeCarousel";
 import SummitInfo from "../Components/SummitInfo";
+import SummitReasons from "../Components/SummitReasons";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Section>
         <SummitInfo />
       </Section>
+      <SummitReasons />
     </>
   );
 };
