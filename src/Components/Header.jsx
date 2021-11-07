@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Navbar, NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import Logo from "../Assets/Images/Logo.svg";
 
@@ -28,7 +29,9 @@ const Header = () => {
       <Container>
         <Navbar expand="lg">
           <LogoWrapper>
-            <img src={Logo} alt="Seat Event" />
+            <Link to="/">
+              <img src={Logo} alt="Seat Event" />
+            </Link>
           </LogoWrapper>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
@@ -43,39 +46,39 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navbar-nav">
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="/">About</a>
+                <Link to="/">About</Link>
               </li>
               <NavDropdown title="Program" id="basic-nav-dropdown">
                 <ul>
                   <li>
-                    <a href="/">Program 1</a>
+                    <Link to="/">Program 1</Link>
                   </li>
                   <li>
-                    <a href="/">Program 2</a>
+                    <Link to="/">Program 2</Link>
                   </li>
                 </ul>
               </NavDropdown>
               <li>
-                <a href="/">Events</a>
+                <Link to="/">Events</Link>
               </li>
               <li>
-                <a href="/">Schedules</a>
+                <Link to="/">Schedules</Link>
               </li>
               <NavDropdown title="Registration" id="basic-nav-dropdown">
                 <ul>
                   <li>
-                    <a href="/">Registration 1</a>
+                    <Link to="/">Registration 1</Link>
                   </li>
                   <li>
-                    <a href="/">Registration 2</a>
+                    <Link to="/">Registration 2</Link>
                   </li>
                 </ul>
               </NavDropdown>
               <li>
-                <a href="/">Contact</a>
+                <Link to="/">Contact</Link>
               </li>
               <TicketButton>Login Here</TicketButton>
             </Nav>
