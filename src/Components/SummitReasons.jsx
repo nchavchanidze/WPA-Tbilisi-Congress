@@ -56,7 +56,6 @@ const SummitReasons = () => {
             </SummitReason>
           </Col>
         </Row>
-        {/* <AgendaButton>Download Agenda</AgendaButton> */}
       </Container>
     </SummitReasonsWrapper>
   );
@@ -107,30 +106,6 @@ const SummitReason = styled.div`
     font-weight: 400;
     color: #39364f;
     line-height: 1.6;
-  }
-`;
-
-const AgendaButton = styled.button`
-  background-color: #f6699e;
-  font-family: "Urbanist", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-  border-radius: 5px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  border: 2px solid transparent;
-  transition: all 0.3s ease-out;
-  margin: 50px auto 0;
-  padding: 0 47px;
-  &:hover {
-    border: 2px solid #f6699e;
-    background-color: transparent;
-    color: #f6699e;
-    transition: all 0.3s ease-out;
   }
 `;
 
