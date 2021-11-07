@@ -177,7 +177,7 @@ const Nav = styled.ul`
         transition: all 0.3s ease-out;
       }
       &:after {
-        display: none;
+        /* display: none; */
       }
       &:hover {
         color: #f6699e;
@@ -202,6 +202,9 @@ const Nav = styled.ul`
       ul {
         li {
           margin-top: 10px;
+          a {
+            font-weight: 400;
+          }
           &:first-child {
             margin-top: 0;
           }
