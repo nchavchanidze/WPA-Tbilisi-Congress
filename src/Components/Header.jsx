@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Navbar } from "react-bootstrap";
+import { Container, Navbar, NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
 
 import Logo from "../Assets/Images/Logo.svg";
@@ -16,7 +16,12 @@ const Header = () => {
     document.addEventListener("scroll", () => {
       setScroll(window.scrollY);
     });
-  });
+    if (burger === true) {
+      document.querySelector("header").style.backgroundColor = "#39364f";
+    } else {
+      document.querySelector("header").style.backgroundColor = null;
+    }
+  }, [burger]);
 
   return (
     <StyledHeader className={scroll > 100 ? "scrolled" : ""}>
@@ -41,17 +46,34 @@ const Header = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/">Events</a>
-              </li>
-              <li>
                 <a href="/">About</a>
+              </li>
+              <NavDropdown title="Program" id="basic-nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="/">Program 1</a>
+                  </li>
+                  <li>
+                    <a href="/">Program 2</a>
+                  </li>
+                </ul>
+              </NavDropdown>
+              <li>
+                <a href="/">Events</a>
               </li>
               <li>
                 <a href="/">Schedules</a>
               </li>
-              <li>
-                <a href="/">Registration</a>
-              </li>
+              <NavDropdown title="Registration" id="basic-nav-dropdown">
+                <ul>
+                  <li>
+                    <a href="/">Registration 1</a>
+                  </li>
+                  <li>
+                    <a href="/">Registration 2</a>
+                  </li>
+                </ul>
+              </NavDropdown>
               <li>
                 <a href="/">Contact</a>
               </li>
@@ -98,6 +120,92 @@ const Nav = styled.ul`
   justify-content: space-between;
   align-items: center;
   gap: 45px;
+  .dropdown {
+    &.show {
+      .dropdown-toggle {
+        color: #f6699e;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .dropdown-menu {
+        &.show {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          margin-top: 20px !important;
+          @media only screen and (max-width: 979.98px) {
+            margin-top: 0 !important;
+          }
+          ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px 0;
+            gap: 20px;
+            @media only screen and (max-width: 979.98px) {
+              gap: 25px;
+              margin-top: 45px;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+    .dropdown-toggle {
+      font-family: "Urbanist", sans-serif;
+      font-size: 18px;
+      color: #fff;
+      font-weight: 700;
+      transition: all 0.3s ease-out;
+      background-color: unset;
+      border: none;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease-out;
+      svg {
+        transition: all 0.3s ease-out;
+      }
+      &:after {
+        display: none;
+      }
+      &:hover {
+        color: #f6699e;
+        transition: all 0.3s ease-out;
+      }
+      &:focus {
+        color: #f6699e;
+        transition: all 0.3s ease-out;
+        box-shadow: none;
+      }
+      &:focus-within {
+        outline: none;
+      }
+      &:focus-visible {
+        outline: none;
+      }
+    }
+    .dropdown-menu {
+      background-color: #39364f;
+      padding: 10px 20px;
+      border: none;
+      ul {
+        li {
+          margin-top: 10px;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
   li {
     a {
       font-family: "Urbanist", sans-serif;
@@ -105,7 +213,6 @@ const Nav = styled.ul`
       color: #fff;
       font-weight: 700;
       transition: all 0.3s ease-out;
-
       &:hover {
         color: #f6699e;
         transition: all 0.3s ease-out;
@@ -115,7 +222,7 @@ const Nav = styled.ul`
 `;
 
 const TicketButton = styled.button`
-  background-color: #486FF8;
+  background-color: #486ff8;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -133,7 +240,7 @@ const TicketButton = styled.button`
   &:hover {
     /* border: 2px solid #486FF8; */
     background-color: #fff;
-    color: #486FF8;
+    color: #486ff8;
     transition: all 0.3s ease-out;
   }
 `;
