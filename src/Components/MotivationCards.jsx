@@ -60,6 +60,10 @@ const CardWrapper = styled.div`
   }
   @media only screen and (max-width: 878.98px) {
     flex-wrap: wrap;
+    margin-top: 100px;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 `;
 
@@ -74,7 +78,7 @@ const CardText = styled.div`
   width: 35%;
   height: 100%;
   @media only screen and (max-width: 878.98px) {
-    padding: 50px;
+    padding: 0 50px 50px;
     width: 100%;
   }
   @media only screen and (max-width: 575.98px) {
