@@ -1,6 +1,7 @@
 import React from "react";
 import HomeCarousel from "../Components/HomeCarousel";
 import MotivationCards from "../Components/MotivationCards";
+import Pricing from "../Components/Pricing";
 import SummitReasons from "../Components/SummitReasons";
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <HomeCarousel />
       <SummitReasons />
       <MotivationCards />
+      <Pricing />
     </>
   );
 };
