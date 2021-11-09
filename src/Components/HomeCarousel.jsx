@@ -19,7 +19,9 @@ const HomeCarousel = () => {
       <SliderComponent>
         <SliderContent>
           <p className="date">October 08 - October 12</p>
-          <h1>21 WPA World Congress of Psychiatry</h1>
+          <h1>
+            Treatment and Management of Mental Disorders in a Post-pandemic Era
+          </h1>
           <SliderButtonsWrapper>
             <SliderButton>Abstract Submission</SliderButton>
           </SliderButtonsWrapper>
@@ -28,7 +30,10 @@ const HomeCarousel = () => {
       <SliderComponent>
         <SliderComponent className="slide02">
           <SliderContent>
-            <h1>21 WPA World Congress of Psychiatry</h1>
+            <h1>
+              Treatment and Management of Mental Disorders in a Post-pandemic
+              Era
+            </h1>
             <SliderButtonsWrapper>
               <SliderButton>Abstract Submission</SliderButton>
             </SliderButtonsWrapper>
@@ -71,8 +76,9 @@ const SliderContent = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   width: 50%;
-  @media only screen and (max-width: 1025.98px) {
-    width: unset;
+
+  @media only screen and (max-width: 1231.98px) {
+    width: 90%;
   }
   .date {
     font-family: "Urbanist", sans-serif;
@@ -80,6 +86,9 @@ const SliderContent = styled.div`
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+    @media only screen and (max-width: 672.98px) {
+      font-size: 19px;
+    }
   }
   h1 {
     font-family: "Urbanist", sans-serif;
@@ -87,8 +96,11 @@ const SliderContent = styled.div`
     font-weight: 900;
     text-transform: uppercase;
     color: #fff;
-    @media only screen and (max-width: 496.98px) {
-      font-size: 52px;
+    @media only screen and (max-width: 672.98px) {
+      font-size: 50px;
+    }
+    @media only screen and (max-width: 456.98px) {
+      font-size: 35px;
     }
   }
 `;
