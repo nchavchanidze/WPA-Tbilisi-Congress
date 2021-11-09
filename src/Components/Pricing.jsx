@@ -204,7 +204,7 @@ const PricingCard = styled.div`
   &:hover {
     transform: translateY(-40px);
     transition: all 0.3s ease-out;
-    background-color: #3a3386;
+    background-color: #39364f;
     color: #fff;
     h1,
     li,
