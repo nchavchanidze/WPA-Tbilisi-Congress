@@ -77,6 +77,10 @@ const SliderContent = styled.div`
   text-align: center;
   width: 50%;
 
+  @media only screen and (max-width: 1366.98px) {
+    width: 90%;
+  }
+
   @media only screen and (max-width: 1231.98px) {
     width: 90%;
   }
@@ -86,6 +90,9 @@ const SliderContent = styled.div`
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+    @media only screen and (max-width: 1366.98px) {
+      font-size: 40px;
+    }
     @media only screen and (max-width: 672.98px) {
       font-size: 19px;
     }
@@ -96,6 +103,9 @@ const SliderContent = styled.div`
     font-weight: 900;
     text-transform: uppercase;
     color: #fff;
+    @media only screen and (max-width: 1366.98px) {
+      font-size: 56px;
+    }
     @media only screen and (max-width: 672.98px) {
       font-size: 50px;
     }
