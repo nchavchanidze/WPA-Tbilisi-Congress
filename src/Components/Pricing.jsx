@@ -201,6 +201,12 @@ const PricingCard = styled.div`
   height: 430px;
   border-radius: 5px;
   transition: all 0.3s ease-out;
+  @media only screen and (max-width: 1399.98px) {
+    width: 270px;
+  }
+  @media only screen and (max-width: 1199.98px) {
+    width: 300px;
+  }
   &:hover {
     transform: translateY(-40px);
     transition: all 0.3s ease-out;
