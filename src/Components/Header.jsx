@@ -80,7 +80,9 @@ const Header = () => {
               <li>
                 <Link to="/">Contact</Link>
               </li>
-              <TicketButton>Login Here</TicketButton>
+              <Link className="sign-btn" to="/login">
+                Sign In
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -225,29 +227,28 @@ const Nav = styled.ul`
       }
     }
   }
-`;
-
-const TicketButton = styled.button`
-  background-color: #486ff8;
-  font-family: "Urbanist", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-  border-radius: 5px;
-  height: 50px;
-  width: 136px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  /* border: 2px solid transparent; */
-  border: none;
-  transition: all 0.3s ease-out;
-  &:hover {
-    /* border: 2px solid #486FF8; */
-    background-color: #fff;
-    color: #486ff8;
+  .sign-btn {
+    background-color: #486ff8;
+    font-family: "Urbanist", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    height: 50px;
+    width: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    /* border: 2px solid transparent; */
+    border: none;
     transition: all 0.3s ease-out;
+    &:hover {
+      /* border: 2px solid #486FF8; */
+      background-color: #fff;
+      color: #486ff8;
+      transition: all 0.3s ease-out;
+    }
   }
 `;
 
