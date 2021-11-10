@@ -18,7 +18,7 @@ const Login = () => {
             <Input type="password" placeholder="Enter your Password" />
           </InputWrapper>
           <Link to="/login">Forgot Password?</Link>
-          <Link to="/login">Don’t have an account? Create one.</Link>
+          <Link to="/register">Don’t have an account? Create one.</Link>
           <Button type="submit" value="Sign In" />
         </InputForm>
       </Container>

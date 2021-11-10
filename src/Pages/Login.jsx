@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../Layouts/ComponentLayout";
-import SignIn from '../Components/Login/Login';
+import SignIn from '../Components/Auth/Login';
 
 const Login = () => {
   return (
