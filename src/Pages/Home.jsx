@@ -4,6 +4,7 @@ import MotivationCards from "../Components/MotivationCards";
 import Pricing from "../Components/Pricing";
 import FAQ from "../Components/FAQ";
 import SummitReasons from "../Components/SummitReasons";
+import Schedule from "../Components/Schedule";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <HomeCarousel />
       <SummitReasons />
       <MotivationCards />
+      <Schedule />
       <Pricing />
       <FAQ />
     </>
