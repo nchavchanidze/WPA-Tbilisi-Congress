@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Dropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 import Background from "../Assets/Images/Home/FAQ/bg.png";
 
@@ -14,7 +14,7 @@ const FAQ = () => {
         <Dropdown>
           <Dropdown.Toggle id="dropdown-basic">
             1. How does the virtual event WomenTech Global Conference work?
-            <FontAwesomeIcon icon={faPlus} />
+            <FontAwesomeIcon icon={faAngleDown} />
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <p>
@@ -29,7 +29,7 @@ const FAQ = () => {
         <Dropdown>
           <Dropdown.Toggle id="dropdown-basic">
             2. How does the virtual event WomenTech Global Conference work?
-            <FontAwesomeIcon icon={faPlus} />
+            <FontAwesomeIcon icon={faAngleDown} />
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <p>
@@ -44,7 +44,7 @@ const FAQ = () => {
         <Dropdown>
           <Dropdown.Toggle id="dropdown-basic">
             3. How does the virtual event WomenTech Global Conference work?
-            <FontAwesomeIcon icon={faPlus} />
+            <FontAwesomeIcon icon={faAngleDown} />
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <p>
@@ -59,7 +59,7 @@ const FAQ = () => {
         <Dropdown>
           <Dropdown.Toggle id="dropdown-basic">
             4. How does the virtual event WomenTech Global Conference work?
-            <FontAwesomeIcon icon={faPlus} />
+            <FontAwesomeIcon icon={faAngleDown} />
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <p>
@@ -74,7 +74,7 @@ const FAQ = () => {
         <Dropdown>
           <Dropdown.Toggle id="dropdown-basic">
             5. How does the virtual event WomenTech Global Conference work?
-            <FontAwesomeIcon icon={faPlus} />
+            <FontAwesomeIcon icon={faAngleDown} />
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <p>
