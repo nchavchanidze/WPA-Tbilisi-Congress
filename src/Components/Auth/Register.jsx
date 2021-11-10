@@ -75,7 +75,7 @@ const Register = () => {
               </Select>
             </label>
           </InputWrapper>
-          <Link to="/register">Already have an account? Sign In.</Link>
+          <Link to="/login">Already have an account? Sign In.</Link>
           <Button type="submit" value="Sign Up" />
         </InputForm>
       </Container>
