@@ -5,17 +5,18 @@ import Pricing from "../Components/Pricing";
 import FAQ from "../Components/FAQ";
 import SummitReasons from "../Components/SummitReasons";
 import Schedule from "../Components/Schedule";
+import Layout from "../Layouts/Layout";
 
 const Home = () => {
   return (
-    <>
+    <Layout>
       <HomeCarousel />
       <SummitReasons />
       <MotivationCards />
       <Schedule />
       <Pricing />
       <FAQ />
-    </>
+    </Layout>
   );
 };
 
