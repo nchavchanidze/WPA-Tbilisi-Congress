@@ -4,19 +4,16 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import Logo from "../../Assets/Images/LogoBlack.svg";
+import LogoWhite from "../../Assets/Images/Logo.svg";
 
 const Header = () => {
   const [burger, setBurger] = useState(false);
-  const [scroll, setScroll] = useState(0);
 
   const handleBurger = () => {
     setBurger(!burger);
   };
 
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      setScroll(window.scrollY);
-    });
     if (burger === true) {
       document.querySelector("header").style.backgroundColor = "#39364f";
     } else {
@@ -25,12 +22,12 @@ const Header = () => {
   }, [burger]);
 
   return (
-    <StyledHeader className={scroll > 100 ? "scrolled" : ""}>
+    <StyledHeader>
       <Container>
         <Navbar expand="lg">
           <LogoWrapper>
             <Link to="/">
-              <img src={Logo} alt="Seat Event" />
+              <img src={burger ? LogoWhite : Logo} alt="Seat Event" />
             </Link>
           </LogoWrapper>
           <Navbar.Toggle
@@ -44,7 +41,7 @@ const Header = () => {
             </Hamburger>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="navbar-nav">
+            <Nav className={`navbar-nav ${burger ? "is-active" : ""}`}>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -62,9 +59,6 @@ const Header = () => {
                 </ul>
               </NavDropdown>
               <li>
-                <Link to="/">Events</Link>
-              </li>
-              <li>
                 <Link to="/">Schedules</Link>
               </li>
               <NavDropdown title="Registration" id="basic-nav-dropdown">
@@ -80,7 +74,9 @@ const Header = () => {
               <li>
                 <Link to="/">Contact</Link>
               </li>
-              <Link className="sign-btn" to="/login">Sign In</Link>
+              <Link className="sign-btn" to="/login">
+                Sign In
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -97,11 +93,6 @@ const StyledHeader = styled.header`
   z-index: 9999;
   transition: all 0.3s ease-out;
   padding: 46px 0;
-  &.scrolled {
-    background-color: #39364f;
-    transition: all 0.3s ease-out;
-    padding: 0;
-  }
   .navbar {
     justify-content: space-between;
     .navbar-collapse {
@@ -123,6 +114,16 @@ const Nav = styled.ul`
   justify-content: space-between;
   align-items: center;
   gap: 45px;
+  &.is-active {
+    li {
+      a {
+        color: #ecf0f1;
+      }
+    }
+    .dropdown-toggle {
+      color: #ecf0f1 !important;
+    }
+  }
   .dropdown {
     &.show {
       .dropdown-toggle {
@@ -243,11 +244,10 @@ const Nav = styled.ul`
     justify-content: center;
     align-items: center;
     outline: none;
-    /* border: 2px solid transparent; */
-    border: none;
+    border: 2px solid transparent;
     transition: all 0.3s ease-out;
     &:hover {
-      /* border: 2px solid #486FF8; */
+      border: 2px solid #486ff8;
       background-color: #fff;
       color: #486ff8;
       transition: all 0.3s ease-out;
@@ -268,6 +268,7 @@ const Hamburger = styled.div`
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
     .line {
+      background-color: #ecf0f1;
       &:nth-child(2) {
         width: 0px;
       }
@@ -294,7 +295,7 @@ const Hamburger = styled.div`
   .line {
     width: 30px;
     height: 2px;
-    background-color: #ecf0f1;
+    background-color: #39364f;
     display: block;
     /* margin: 6px auto; */
     margin-top: 6px;
