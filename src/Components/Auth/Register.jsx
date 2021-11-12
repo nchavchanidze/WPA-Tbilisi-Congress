@@ -24,25 +24,180 @@ const Register = () => {
             </label>
           </InputWrapper>
           <InputWrapper>
-            <label htmlFor="Salutation">
-              <span>
-                Salutation <span className="required">*</span>
-              </span>
-              <Select required name="Salutation">
-                <option disabled defaultValue>
-                  Please Select
-                </option>
-                <option value="notSpecified">Not specified</option>
-                <option value="mr">Mr.</option>
-                <option value="mrs">Mrs.</option>
-                <option value="ms">Ms.</option>
-              </Select>
+            <label>
+              <span>Middle Name</span>
+              <Input type="text" placeholder="Enter your Middle Name" />
             </label>
             <label>
               <span>
                 Email <span className="required">*</span>
               </span>
               <Input type="email" placeholder="Enter your Email" />
+            </label>
+          </InputWrapper>
+          <InputWrapper>
+            <label htmlFor="Salutation">
+              <span>
+                Salutation <span className="required">*</span>
+              </span>
+              <Select required name="Salutation">
+                <option defaultValue={"DEFAULT"}>Please Select</option>
+                <option value="notSpecified">Not specified</option>
+                <option value="mr">Mr.</option>
+                <option value="mrs">Mrs.</option>
+                <option value="ms">Ms.</option>
+              </Select>
+            </label>
+            <label htmlFor="Academic">
+              <span>
+                Academic Title<span className="required">*</span>
+              </span>
+              <Select required name="Academic">
+                <option defaultValue={"DEFAULT"}>Please Select</option>
+                <option value="notSpecified">Not specified</option>
+                <option value="title-1">Title 1</option>
+                <option value="title-2">Title 2</option>
+                <option value="title-3">Title 3</option>
+              </Select>
+            </label>
+          </InputWrapper>
+          <RadioWrapper>
+            <span>
+              Gender <span className="required">*</span>
+            </span>
+            <RadioRow>
+              <label htmlFor="Male">
+                <input
+                  required
+                  type="radio"
+                  id="male"
+                  name="Gender"
+                  value="Male"
+                />
+                Male
+              </label>
+              <label htmlFor="Female">
+                <input
+                  required
+                  type="radio"
+                  id="female"
+                  name="Gender"
+                  value="Female"
+                />
+                Female
+              </label>
+              <label htmlFor="Other">
+                <input
+                  required
+                  type="radio"
+                  id="other"
+                  name="Gender"
+                  value="Other"
+                />
+                Other
+              </label>
+            </RadioRow>
+          </RadioWrapper>
+          <InputWrapper>
+            <label htmlFor="Profession">
+              <span>
+                Profession <span className="required">*</span>
+              </span>
+              <Select required name="Profession">
+                <option defaultValue={"DEFAULT"}>Please Select</option>
+                <option value="notSpecified">Profession 1</option>
+                <option value="male">Profession 2</option>
+                <option value="female">Profession 3</option>
+                <option value="other">Profession 4</option>
+              </Select>
+            </label>
+          </InputWrapper>
+
+          <RadioWrapper className="mt-5">
+            <span>
+              Address Type <span className="required">*</span>
+            </span>
+            <RadioRow>
+              <label htmlFor="Office">
+                <input
+                  required
+                  type="radio"
+                  id="office"
+                  name="address_type"
+                  value="Office"
+                />
+                Office
+              </label>
+              <label htmlFor="Private">
+                <input
+                  required
+                  type="radio"
+                  id="private"
+                  name="address_type"
+                  value="Private"
+                />
+                Private
+              </label>
+            </RadioRow>
+          </RadioWrapper>
+          <InputWrapper>
+            <label>
+              <span>
+                Instituion <span className="required">*</span>
+              </span>
+              <Input type="text" required placeholder="Enter your Instituion" />
+            </label>
+            <label>
+              <span>
+                Department <span className="required">*</span>
+              </span>
+              <Input type="text" placeholder="Enter your Department" />
+            </label>
+          </InputWrapper>
+          <InputWrapper>
+            <label htmlFor="Country">
+              <span>
+                Country <span className="required">*</span>
+              </span>
+              <Select required name="Country">
+                <option defaultValue={"DEFAULT"}>Please Select</option>
+                <option value="notSpecified">Not specified</option>
+                <option value="country-1">Country 1</option>
+                <option value="country-2">Country 2</option>
+                <option value="country-3">Country 3</option>
+              </Select>
+            </label>
+            <label>
+              <span>
+                City <span className="required">*</span>
+              </span>
+              <Input type="text" placeholder="Enter your City" />
+            </label>
+          </InputWrapper>
+          <InputWrapper>
+            <label htmlFor="zip-code">
+              <span>
+                Zip Code <span className="required">*</span>
+              </span>
+              <Select required name="zip-code">
+                <option defaultValue={"DEFAULT"}>Please Select</option>
+                <option value="notSpecified">Not specified</option>
+                <option value="zip-code-1">Zip Code 1</option>
+                <option value="zip-code-2">Zip Code 2</option>
+                <option value="zip-code-3">Zip Code 3</option>
+              </Select>
+            </label>
+            <label>
+              <span>Street</span>
+              <Input type="text" placeholder="Enter your Street Name" />
+            </label>
+          </InputWrapper>
+          <InputWrapper className="mt-5">
+            <label>
+              <span>
+                Username <span className="required">*</span>
+              </span>
+              <Input type="text" placeholder="Enter your Username" />
             </label>
           </InputWrapper>
           <InputWrapper>
@@ -59,22 +214,57 @@ const Register = () => {
               <Input type="Password" placeholder="Confirm Password" />
             </label>
           </InputWrapper>
-          <InputWrapper>
-            <label htmlFor="Profession">
+          <PhoneWrapper className="mt-5">
+            <label htmlFor="phone-code">
               <span>
-                Profession <span className="required">*</span>
+               Phone <span className="required">*</span>
               </span>
-              <Select required name="Profession">
-                <option disabled defaultValue>
-                  Please Select
-                </option>
-                <option value="notSpecified">Profession 1</option>
-                <option value="male">Profession 2</option>
-                <option value="female">Profession 3</option>
-                <option value="other">Profession 4</option>
+              <Select required name="phone-code">
+                <option defaultValue={"DEFAULT"}>Please Select</option>
+                <option value="notSpecified">Not specified</option>
+                <option value="phone-code-1">Phone Code 1</option>
+                <option value="phone-code-2">Phone Code 2</option>
+                <option value="phone-code-3">Phone Code 3</option>
               </Select>
             </label>
-          </InputWrapper>
+            <label>
+              <Input type="text" placeholder="Enter your Phone Number" />
+            </label>
+          </PhoneWrapper>
+          <PhoneWrapper>
+            <label htmlFor="phone-code">
+              <span>
+               Fax <span className="required">*</span>
+              </span>
+              <Select required name="phone-code">
+                <option defaultValue={"DEFAULT"}>Please Select</option>
+                <option value="notSpecified">Not specified</option>
+                <option value="phone-code-1">Phone Code 1</option>
+                <option value="phone-code-2">Phone Code 2</option>
+                <option value="phone-code-3">Phone Code 3</option>
+              </Select>
+            </label>
+            <label>
+              <Input type="text" placeholder="Enter your Phone Number" />
+            </label>
+          </PhoneWrapper>
+          <PhoneWrapper  className="mb-5">
+            <label htmlFor="phone-code">
+              <span>
+               Cellhone <span className="required">*</span>
+              </span>
+              <Select required name="phone-code">
+                <option defaultValue={"DEFAULT"}>Please Select</option>
+                <option value="notSpecified">Not specified</option>
+                <option value="phone-code-1">Phone Code 1</option>
+                <option value="phone-code-2">Phone Code 2</option>
+                <option value="phone-code-3">Phone Code 3</option>
+              </Select>
+            </label>
+            <label>
+              <Input type="text" placeholder="Enter your Phone Number" />
+            </label>
+          </PhoneWrapper>
           <Link to="/login">Already have an account? Sign In.</Link>
           <Button type="submit" value="Sign Up" />
         </InputForm>
@@ -137,6 +327,69 @@ const InputWrapper = styled.div`
     .required {
       color: #f6699e;
     }
+  }
+`;
+const PhoneWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  width: 100%;
+  @media only screen and (max-width: 991.98px) {
+    flex-wrap: wrap;
+  }
+  label {
+    font-family: "Urbanist", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #39364f;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    .required {
+      color: #f6699e;
+    }
+  }
+`;
+
+const RadioWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  span {
+    font-family: "Urbanist", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #39364f;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    .required {
+      color: #f6699e;
+    }
+  }
+`;
+
+const RadioRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  label {
+    font-family: "Urbanist", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #39364f;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
   }
 `;
 
