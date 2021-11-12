@@ -251,7 +251,7 @@ const Register = () => {
           <PhoneWrapper  className="mb-5">
             <label htmlFor="phone-code">
               <span>
-               Cellhone <span className="required">*</span>
+               Cellphone <span className="required">*</span>
               </span>
               <Select required name="phone-code">
                 <option defaultValue={"DEFAULT"}>Please Select</option>
