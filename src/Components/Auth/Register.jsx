@@ -120,6 +120,9 @@ const InputWrapper = styled.div`
   align-items: flex-start;
   gap: 30px;
   width: 100%;
+  @media only screen and (max-width: 991.98px) {
+    flex-wrap: wrap;
+  }
   label {
     font-family: "Urbanist", sans-serif;
     font-size: 16px;
