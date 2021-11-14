@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+import Countries from "./Country.json";
+import PhoneCodes from "./PhoneCodes.json";
+
 const Register = () => {
   return (
     <>
@@ -162,9 +165,11 @@ const Register = () => {
               <Select required name="Country">
                 <option defaultValue={"DEFAULT"}>Please Select</option>
                 <option value="notSpecified">Not specified</option>
-                <option value="country-1">Country 1</option>
-                <option value="country-2">Country 2</option>
-                <option value="country-3">Country 3</option>
+                {Countries.map((country) => (
+                  <option value={country.name} key={country.code}>
+                    {country.name}
+                  </option>
+                ))}
               </Select>
             </label>
             <label>
@@ -175,18 +180,14 @@ const Register = () => {
             </label>
           </InputWrapper>
           <InputWrapper>
-            <label htmlFor="zip-code">
-              <span>
-                Zip Code <span className="required">*</span>
-              </span>
-              <Select required name="zip-code">
-                <option defaultValue={"DEFAULT"}>Please Select</option>
-                <option value="notSpecified">Not specified</option>
-                <option value="zip-code-1">Zip Code 1</option>
-                <option value="zip-code-2">Zip Code 2</option>
-                <option value="zip-code-3">Zip Code 3</option>
-              </Select>
-            </label>
+            <InputWrapper>
+              <label>
+                <span>
+                  Zip Code <span className="required">*</span>
+                </span>
+                <Input type="text" placeholder="Enter your Zip Code" />
+              </label>
+            </InputWrapper>
             <label>
               <span>Street</span>
               <Input type="text" placeholder="Enter your Street Name" />
@@ -217,11 +218,20 @@ const Register = () => {
           <PhoneWrapper className="mt-5">
             <label htmlFor="phone-code">
               <span>
-               Phone <span className="required">*</span>
+                Phone <span className="required">*</span>
               </span>
               <Select required name="phone-code">
                 <option defaultValue={"DEFAULT"}>Please Select</option>
                 <option value="notSpecified">Not specified</option>
+                {PhoneCodes.map((phonecode) => (
+                  <option
+                    className="flag-icon flag-icon-gr flag-icon-squared"
+                    value={phonecode.dial_code}
+                    key={phonecode.code}
+                  >
+                    {phonecode.name} ({phonecode.dial_code})
+                  </option>
+                ))}
                 <option value="phone-code-1">Phone Code 1</option>
                 <option value="phone-code-2">Phone Code 2</option>
                 <option value="phone-code-3">Phone Code 3</option>
@@ -234,7 +244,7 @@ const Register = () => {
           <PhoneWrapper>
             <label htmlFor="phone-code">
               <span>
-               Fax <span className="required">*</span>
+                Fax <span className="required">*</span>
               </span>
               <Select required name="phone-code">
                 <option defaultValue={"DEFAULT"}>Please Select</option>
@@ -248,10 +258,10 @@ const Register = () => {
               <Input type="text" placeholder="Enter your Phone Number" />
             </label>
           </PhoneWrapper>
-          <PhoneWrapper  className="mb-5">
+          <PhoneWrapper className="mb-5">
             <label htmlFor="phone-code">
               <span>
-               Cellphone <span className="required">*</span>
+                Cellphone <span className="required">*</span>
               </span>
               <Select required name="phone-code">
                 <option defaultValue={"DEFAULT"}>Please Select</option>
@@ -265,6 +275,18 @@ const Register = () => {
               <Input type="text" placeholder="Enter your Phone Number" />
             </label>
           </PhoneWrapper>
+          <TermsCheckbox htmlFor="terms">
+            <input
+              required
+              type="checkbox"
+              id="terms"
+              name="terms"
+              value="terms"
+            />
+            <p>
+              I agree to the <span>Terms and Conditions</span>.
+            </p>
+          </TermsCheckbox>
           <Link to="/login">Already have an account? Sign In.</Link>
           <Button type="submit" value="Sign Up" />
         </InputForm>
@@ -390,6 +412,30 @@ const RadioRow = styled.div`
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
+  }
+`;
+
+const TermsCheckbox = styled.label`
+  font-family: "Urbanist", sans-serif;
+  font-size: 14px;
+  color: #486ff8;
+  font-weight: 600;
+  transition: all 0.3s ease-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  p {
+    span {
+      color: #486ff8;
+      transition: all 0.3s ease-out;
+      text-decoration: underline;
+      &:hover {
+        color: #f6699e;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+      }
+    }
   }
 `;
 
