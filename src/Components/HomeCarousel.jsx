@@ -6,17 +6,23 @@ import Slide02 from "../Assets/Images/Home/Slider/slide-02.jpg";
 
 const HomeCarousel = () => {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
+    autoplay: true,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    dots: false,
   };
 
   return (
-    <Slider {...settings}>
-      <SliderComponent>
+    <HomeCarouselWrapper>
+      <Slider {...settings}>
+        <SliderComponent />
+        <SliderComponent className="slide02" />
+      </Slider>
+      <SlideContentWrapper>
         <SliderContent>
           <p className="date">October 08 - October 12</p>
           <h1>
@@ -26,23 +32,15 @@ const HomeCarousel = () => {
             <SliderButton>Abstract Submission</SliderButton>
           </SliderButtonsWrapper>
         </SliderContent>
-      </SliderComponent>
-      <SliderComponent>
-        <SliderComponent className="slide02">
-          <SliderContent>
-            <h1>
-              Treatment and Management of Mental Disorders in a Post-pandemic
-              Era
-            </h1>
-            <SliderButtonsWrapper>
-              <SliderButton>Abstract Submission</SliderButton>
-            </SliderButtonsWrapper>
-          </SliderContent>
-        </SliderComponent>
-      </SliderComponent>
-    </Slider>
+      </SlideContentWrapper>
+    </HomeCarouselWrapper>
   );
 };
+
+const HomeCarouselWrapper = styled.div`
+  position: relative;
+  height: 100%;
+`;
 
 const SliderComponent = styled.div`
   height: 100vh;
@@ -69,6 +67,14 @@ const SliderComponent = styled.div`
   }
 `;
 
+const SlideContentWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+`;
 const SliderContent = styled.div`
   position: absolute;
   top: 53%;
