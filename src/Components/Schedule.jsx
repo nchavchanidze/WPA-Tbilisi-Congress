@@ -368,7 +368,7 @@ const ScheduleWrapper = styled.section`
       display: flex;
       justify-content: center;
       align-items: center;
-      border: none;
+      border: 2px solid transparent;
       border-radius: 5px;
       background-color: #486ff8;
       color: #fff;
@@ -377,6 +377,9 @@ const ScheduleWrapper = styled.section`
       font-weight: 700;
       text-transform: capitalize;
       transition: all 0.3s ease-out;
+      @media only screen and (max-width: 397.98px) {
+        width: 100%;
+      }
       &.active {
         border: 2px solid #486ff8;
         background-color: #f0f4ff !important;
