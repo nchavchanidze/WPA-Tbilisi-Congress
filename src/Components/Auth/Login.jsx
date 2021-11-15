@@ -112,11 +112,11 @@ const Button = styled.input`
   justify-content: center;
   align-items: center;
   outline: none;
-  /* border: 2px solid transparent; */
-  border: none;
+  border: 2px solid transparent;
+  /* border: none; */
   transition: all 0.3s ease-out;
   &:hover {
-    /* border: 2px solid #486FF8; */
+    border: 2px solid #486ff8;
     background-color: #fff;
     color: #486ff8;
     transition: all 0.3s ease-out;
