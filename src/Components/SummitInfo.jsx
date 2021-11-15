@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
-import Pluses from "../Assets/Images/Home/SummitInfo/pluses.svg";
-
 const SummitInfo = () => {
   return (
     <Container>
@@ -44,9 +42,6 @@ const SummitInfo = () => {
             expected attendees at the 21st WPA World Congress of Psychiatry
           </span>
         </SummitTicketElement>
-        <PlusesWrapper>
-          <img src={Pluses} alt="Pluses" />
-        </PlusesWrapper>
       </SummitTicket>
     </Container>
   );
@@ -111,20 +106,6 @@ const SummitTicketElement = styled.div`
     font-size: 14px;
     color: #717488;
     width: 70%;
-  }
-`;
-
-const PlusesWrapper = styled.div`
-  position: absolute;
-  right: -7%;
-  bottom: -34%;
-  width: 127px;
-  z-index: -1;
-  @media only screen and (max-width: 587.98px) {
-    display: none;
-  }
-  img {
-    width: 100%;
   }
 `;
 
