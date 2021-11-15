@@ -2,12 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Tabs, Tab } from "react-bootstrap";
 
-import Background from "../Assets/Images/Home/Schedule/background.png";
+import Background from "../Assets/Images/Home/SummitReasons/background.png";
+import Speaker from "../Assets/Images/Home/Schedule/speaker-1.jpg";
 
 const Schedule = () => {
   return (
     <ScheduleWrapper>
-      <Title data-aos="fade-up" data-aos-duration="800">Schedule</Title>
+      <Title data-aos="fade-up" data-aos-duration="800">
+        Schedule
+      </Title>
       <Container data-aos="fade-up" data-aos-duration="800">
         <Tabs
           defaultActiveKey="Day1"
@@ -26,7 +29,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -37,7 +42,11 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <ScheduleItem
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -48,7 +57,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -59,7 +70,11 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <ScheduleItem
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -70,7 +85,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -81,7 +98,11 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <ScheduleItem
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -92,7 +113,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -116,7 +139,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -127,7 +152,11 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <ScheduleItem
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -138,7 +167,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -149,7 +180,11 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <ScheduleItem
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -160,7 +195,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -171,7 +208,11 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <ScheduleItem
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -182,7 +223,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -206,7 +249,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -217,7 +262,11 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <ScheduleItem
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -228,7 +277,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -239,7 +290,11 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <ScheduleItem
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -250,7 +305,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -261,7 +318,11 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <ScheduleItem
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-delay="300"
+            >
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -272,7 +333,9 @@ const Schedule = () => {
                 </div>
               </ScheduleDate>
               <ScheduleInfoWrapper>
-                <ScheduleSpeakerImage />
+                <ScheduleSpeakerImage>
+                  <img src={Speaker} alt="Speaker" />
+                </ScheduleSpeakerImage>
                 <ScheduleInfo>
                   <ScheduleTopic>
                     Innovation and Technological entrepreneurship.
@@ -307,7 +370,7 @@ const ScheduleWrapper = styled.section`
       align-items: center;
       border: none;
       border-radius: 5px;
-      background-color: #f6699e;
+      background-color: #486ff8;
       color: #fff;
       font-family: "Urbanist", sans-serif;
       font-size: 16px;
@@ -315,8 +378,9 @@ const ScheduleWrapper = styled.section`
       text-transform: capitalize;
       transition: all 0.3s ease-out;
       &.active {
-        background-color: #fff1f6 !important;
-        color: #f6699e !important;
+        border: 2px solid #486ff8;
+        background-color: #f0f4ff !important;
+        color: #486ff8 !important;
       }
     }
   }
@@ -328,11 +392,11 @@ const Title = styled.h1`
   font-family: "Urbanist", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #fff;
+  color: #39364f;
 `;
 
 const ScheduleItem = styled.div`
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #39364f;
   padding: 30px 35px;
   margin-top: 40px;
   display: flex;
@@ -352,7 +416,7 @@ const ScheduleDate = styled.div`
       font-family: "Urbanist", sans-serif;
       font-size: 44px;
       font-weight: 700;
-      color: #f6699e;
+      color: #486ff8;
     }
     .month-time {
       display: flex;
@@ -396,9 +460,15 @@ const ScheduleInfo = styled.div`
 const ScheduleSpeakerImage = styled.div`
   min-width: 90px;
   min-height: 90px;
+  max-width: 90px;
+  max-height: 90px;
   border-radius: 50%;
   background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   img {
+    border-radius: 50%;
     width: 100%;
   }
 `;
@@ -416,7 +486,8 @@ const ScheduleSpeaker = styled.p`
   font-weight: 400;
   color: rgba(255, 255, 255, 0.4);
   span {
-    color: #f6699e;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
   }
 `;
 
