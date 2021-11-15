@@ -222,7 +222,7 @@ const PricingCard = styled.div`
     }
     button {
       transition: all 0.3s ease-out;
-      background-color: #f6699e;
+      background-color: #486ff8;
       color: #fff;
     }
   }
@@ -289,16 +289,16 @@ const ChooseBtn = styled.button`
   align-items: center;
   border: none;
   border-radius: 5px;
-  background-color: #fff1f6;
+  background-color: #f0f4ff;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-transform: capitalize;
-  color: #f6699e;
+  color: #486ff8;
   transition: all 0.3s ease-out;
   &:hover {
-    background-color: #fff1f6 !important;
-    color: #f6699e !important;
+    background-color: #f0f4ff !important;
+    color: #486ff8 !important;
   }
 `;
 
