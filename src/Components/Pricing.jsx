@@ -7,13 +7,13 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 const Pricing = () => {
   return (
     <PricingWrapper>
-      <Container>
-        <Title>
+      <Container data-aos="fade-up" data-aos-duration="800">
+        <Title data-aos="fade-up" data-aos-duration="800">
           <span>Pricing Plan</span>
           <h1>Get Your Ticket</h1>
         </Title>
         <Row>
-          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card">
+          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
             <PricingCard>
               <h1>Basic Pass</h1>
               <PricingUl>
@@ -44,7 +44,7 @@ const Pricing = () => {
               <ChooseBtn>Choose</ChooseBtn>
             </PricingCard>
           </Col>
-          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card">
+          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
             <PricingCard>
               <h1>Silver Pass</h1>
               <PricingUl>
@@ -75,7 +75,7 @@ const Pricing = () => {
               <ChooseBtn>Choose</ChooseBtn>
             </PricingCard>
           </Col>
-          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card">
+          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
             <PricingCard>
               <h1>Golden Pass</h1>
               <PricingUl>
@@ -106,7 +106,7 @@ const Pricing = () => {
               <ChooseBtn>Choose</ChooseBtn>
             </PricingCard>
           </Col>
-          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card">
+          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
             <PricingCard>
               <h1>Diamond Pass</h1>
               <PricingUl>

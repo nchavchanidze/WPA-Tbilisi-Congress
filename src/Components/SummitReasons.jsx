@@ -2,13 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
+
 import Background from "../Assets/Images/Home/SummitReasons/background.png";
 import SummitInfo from "./SummitInfo";
 
 const SummitReasons = () => {
+
   return (
     <SummitReasonsWrapper>
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="800">
         <Title>Why Attend</Title>
         <SummitInfo />
       </Container>

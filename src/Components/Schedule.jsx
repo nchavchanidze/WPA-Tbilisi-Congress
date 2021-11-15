@@ -7,15 +7,15 @@ import Background from "../Assets/Images/Home/Schedule/background.png";
 const Schedule = () => {
   return (
     <ScheduleWrapper>
-      <Title>Schedule</Title>
-      <Container>
+      <Title data-aos="fade-up" data-aos-duration="800">Schedule</Title>
+      <Container data-aos="fade-up" data-aos-duration="800">
         <Tabs
           defaultActiveKey="Day1"
           id="uncontrolled-tab-example"
           className="mb-3"
         >
           <Tab eventKey="Day1" title="Day 1">
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -37,7 +37,7 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -59,7 +59,7 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -81,7 +81,7 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -105,7 +105,7 @@ const Schedule = () => {
             </ScheduleItem>
           </Tab>
           <Tab eventKey="Day2" title="Day 2">
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -127,7 +127,7 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -149,7 +149,7 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -171,7 +171,7 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -195,7 +195,7 @@ const Schedule = () => {
             </ScheduleItem>
           </Tab>
           <Tab eventKey="Day3" title="Day 3">
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -217,7 +217,7 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -239,7 +239,7 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>
@@ -261,7 +261,7 @@ const Schedule = () => {
                 </ScheduleInfo>
               </ScheduleInfoWrapper>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <ScheduleDate>
                 <div className="dateWrapper">
                   <h3>11</h3>

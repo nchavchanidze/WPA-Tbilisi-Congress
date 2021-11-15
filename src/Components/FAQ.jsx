@@ -9,7 +9,7 @@ import Background from "../Assets/Images/Home/FAQ/bg.png";
 const FAQ = () => {
   return (
     <QuestionWrapper>
-      <Container>
+      <Container data-aos="fade-up" data-aos-duration="800">
         <FAQTitle>​​​​​​​Frequently Asked Questions</FAQTitle>
         <Dropdown>
           <Dropdown.Toggle id="dropdown-basic">

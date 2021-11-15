@@ -8,7 +8,7 @@ import Image03 from "../Assets/Images/Home/SummitReasons/image-03.jpg";
 const MotivationCards = () => {
   return (
     <MotivationWrapper>
-      <CardWrapper>
+      <CardWrapper data-aos="fade-left" data-aos-duration="800">
         <CardImage src={Image01} alt="" />
         <CardText>
           <h1>Learn about New Developments and Best Practices</h1>
@@ -20,7 +20,7 @@ const MotivationCards = () => {
           </p>
         </CardText>
       </CardWrapper>
-      <CardWrapper className="reversed">
+      <CardWrapper className="reversed" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
         <CardImage src={Image02} alt="" />
         <CardText>
           <h1>Learn about New Developments and Best Practices</h1>
@@ -32,7 +32,7 @@ const MotivationCards = () => {
           </p>
         </CardText>
       </CardWrapper>
-      <CardWrapper>
+      <CardWrapper data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
         <CardImage src={Image03} alt="" />
         <CardText>
           <h1>Learn about New Developments and Best Practices</h1>
@@ -48,7 +48,9 @@ const MotivationCards = () => {
   );
 };
 
-const MotivationWrapper = styled.section``;
+const MotivationWrapper = styled.section`
+  overflow: hidden;
+`;
 
 const CardWrapper = styled.div`
   display: flex;
