@@ -6,6 +6,7 @@ import Loader from "./Components/Loader";
 const Home = React.lazy(() => import("./Pages/Home"));
 const Login = React.lazy(() => import("./Pages/Login"));
 const Register = React.lazy(() => import("./Pages/Register"));
+const AbstractSubmission = React.lazy(() => import("./Pages/AbstactSubmission"))
 
 const App = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
+        <Route exact path="/abstract-submission" element={<AbstractSubmission />} />
       </Routes>
     </Suspense>
   );
