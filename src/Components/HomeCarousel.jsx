@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Slide01 from "../Assets/Images/Home/Slider/slide-01.jpg";
 import Slide02 from "../Assets/Images/Home/Slider/slide-02.jpg";
 
@@ -29,7 +30,7 @@ const HomeCarousel = () => {
             Treatment and Management of Mental Disorders in a Post-pandemic Era
           </h1>
           <SliderButtonsWrapper>
-            <SliderButton>Abstract Submission</SliderButton>
+            <SliderButton to="/abstract-submission">Abstract Submission</SliderButton>
           </SliderButtonsWrapper>
         </SliderContent>
       </SlideContentWrapper>
@@ -134,7 +135,7 @@ const SliderButtonsWrapper = styled.div`
     flex-direction: column;
   }
 `;
-const SliderButton = styled.button`
+const SliderButton = styled(Link)`
   background-color: #486ff8;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
