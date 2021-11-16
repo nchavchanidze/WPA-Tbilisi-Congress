@@ -55,6 +55,7 @@ const IconsWrapper = styled.div`
   width: 100%;
   padding: 50px;
   box-shadow: 0px 3px 10px rgba(38, 59, 93, 0.05);
+  border-radius: 5px;
   svg {
     font-size: 70px;
     color: #242328;
