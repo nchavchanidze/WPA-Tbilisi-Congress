@@ -8,7 +8,7 @@ const SubmissionButtons = () => {
     <SubmissionButtonsSection>
       <Container>
         <ButtonsWrapper>
-          <Button to="/abstract-submission">Submit your Abstract</Button>
+          <Button to="/abstract-upload">Submit your Abstract</Button>
           <Button to="/abstract-topics">Abstract Topics</Button>
         </ButtonsWrapper>
       </Container>
