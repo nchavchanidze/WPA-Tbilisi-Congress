@@ -10,6 +10,7 @@ const AbstractSubmission = React.lazy(() =>
   import("./Pages/AbstactSubmission")
 );
 const AbstractUpload = React.lazy(() => import("./Pages/AbstractUpload"));
+const AbstractTopics = React.lazy(() => import("./Pages/AbstractTopics"));
 
 const App = () => {
   useEffect(() => {
@@ -27,6 +28,7 @@ const App = () => {
           element={<AbstractSubmission />}
         />
         <Route exact path="/abstract-upload" element={<AbstractUpload />} />
+        <Route exact path="/abstract-topics" element={<AbstractTopics />} />
       </Routes>
     </Suspense>
   );
