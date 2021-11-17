@@ -112,9 +112,9 @@ const StyledHeader = styled.header`
 `;
 
 const LogoWrapper = styled.div`
-  width: 71px;
+  height: 47px;
   img {
-    width: 100%;
+    height: 100%;
   }
 `;
 
