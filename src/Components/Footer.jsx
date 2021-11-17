@@ -95,7 +95,7 @@ const Footer = () => {
           </Col>
         </Row>
         <Copyright>
-          <p>Copyright © 2021 SEATevent. All Rights Reserved</p>
+          <p>Copyright © 2021 Devscave. All Rights Reserved</p>
           <TermsPrivacy>
             <li>
               <Link to="/">Privacy</Link>

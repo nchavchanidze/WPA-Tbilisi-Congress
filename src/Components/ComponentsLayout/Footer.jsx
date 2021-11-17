@@ -95,7 +95,7 @@ const Footer = () => {
           </Col>
         </Row>
         <Copyright>
-          <p>Copyright © 2021 SEATevent. All Rights Reserved</p>
+          <p>Copyright © 2021 Devscave. All Rights Reserved</p>
           <TermsPrivacy>
             <li>
               <Link to="/">Privacy</Link>
@@ -210,7 +210,7 @@ const SocialsWrapper = styled.ul`
     &:hover {
       background-color: transparent;
       transition: all 0.3s ease-out;
-    border: 1px solid #486ff8;
+      border: 1px solid #486ff8;
       svg {
         color: #486ff8;
         transition: all 0.3s ease-out;
