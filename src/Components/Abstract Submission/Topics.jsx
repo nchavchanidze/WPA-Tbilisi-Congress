@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
@@ -128,6 +129,7 @@ const Topics = () => {
             </TopicsUl>
           </Col>
         </Row>
+        <Button to="/abstract-upload">Submit your Abstract</Button>
       </TopicsContainer>
     </>
   );
@@ -172,4 +174,30 @@ const TopicItem = styled.li`
   gap: 25px;
 `;
 
+const Button = styled(Link)`
+  background-color: #486ff8;
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  height: 50px;
+  width: 250px;
+  margin: 100px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-out;
+  @media only screen and (max-width: 575.98px) {
+    width: 100%;
+  }
+  &:hover {
+    border: 2px solid #486ff8;
+    background-color: #fff;
+    color: #486ff8;
+    transition: all 0.3s ease-out;
+  }
+`;
 export default Topics;
