@@ -87,7 +87,7 @@ const InputForm = styled.form`
     font-weight: 600;
     transition: all 0.3s ease-out;
     &:hover {
-      color: #f6699e;
+      color: #486FF8;
       transition: all 0.3s ease-out;
     }
   }
@@ -114,7 +114,7 @@ const InputWrapper = styled.div`
     gap: 10px;
     width: 100%;
     .required {
-      color: #f6699e;
+      color: #486FF8;
     }
   }
 `;
@@ -142,7 +142,7 @@ const Input = styled.input`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #f6699e;
+    border: 2px solid #486FF8;
     transition: all 0.3s ease-out;
   }
   &[type="file"] {
@@ -201,7 +201,7 @@ const Select = styled.select`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #f6699e;
+    border: 2px solid #486FF8;
     transition: all 0.3s ease-out;
   }
 `;
