@@ -180,7 +180,7 @@ const Title = styled.div`
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
-    color: #f6699e;
+    color: #486FF8;
   }
   h1 {
     font-family: "Urbanist", sans-serif;
