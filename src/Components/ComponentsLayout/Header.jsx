@@ -127,7 +127,7 @@ const Nav = styled.ul`
   .dropdown {
     &.show {
       .dropdown-toggle {
-        color: #f6699e;
+        color: #486FF8;
         display: flex;
         text-align: center;
         justify-content: center;
@@ -181,11 +181,11 @@ const Nav = styled.ul`
         /* display: none; */
       }
       &:hover {
-        color: #f6699e;
+        color: #486FF8;
         transition: all 0.3s ease-out;
       }
       &:focus {
-        color: #f6699e;
+        color: #486FF8;
         transition: all 0.3s ease-out;
         box-shadow: none;
       }
@@ -207,7 +207,7 @@ const Nav = styled.ul`
             font-weight: 400;
             color: #fff;
             &:hover {
-              color: #f6699e;
+              color: #486FF8;
               transition: all 0.3s ease-out;
             }
           }
@@ -226,7 +226,7 @@ const Nav = styled.ul`
       font-weight: 700;
       transition: all 0.3s ease-out;
       &:hover {
-        color: #f6699e;
+        color: #486FF8;
         transition: all 0.3s ease-out;
       }
     }

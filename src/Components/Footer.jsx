@@ -152,7 +152,7 @@ const Navigation = styled.ul`
       font-weight: 500;
       transition: all 0.3s ease-out;
       &:hover {
-        color: #f6699e;
+        color: #486FF8;
         transition: all 0.3s ease-out;
       }
     }
@@ -184,7 +184,7 @@ const ContactText = styled.li`
     color: #39364f;
     transition: all 0.3s ease-out;
     &:hover {
-      color: #f6699e;
+      color: #486FF8;
       transition: all 0.3s ease-out;
     }
   }
