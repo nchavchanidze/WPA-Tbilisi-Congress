@@ -107,6 +107,9 @@ const StyledHeader = styled.header`
     .navbar-collapse {
       /* flex-basis: unset !important; */
       flex-grow: unset !important;
+      @media only screen and (max-width: 979.98px) {
+            margin-top: 45px;
+          }
     }
   }
 `;
