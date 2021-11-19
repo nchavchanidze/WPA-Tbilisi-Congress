@@ -2,7 +2,6 @@ import React, { Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import Loader from "./Components/Loader";
-import NotFound from "./Pages/NotFound";
 
 const Home = React.lazy(() => import("./Pages/Home"));
 const Login = React.lazy(() => import("./Pages/Login"));
@@ -12,6 +11,7 @@ const AbstractSubmission = React.lazy(() =>
 );
 const AbstractUpload = React.lazy(() => import("./Pages/AbstractUpload"));
 const AbstractTopics = React.lazy(() => import("./Pages/AbstractTopics"));
+const NotFound = React.lazy(() => import("./Pages/NotFound"));
 
 const App = () => {
   useEffect(() => {
