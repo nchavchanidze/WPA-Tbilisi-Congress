@@ -76,12 +76,11 @@ const Button = styled(Link)`
   justify-content: center;
   align-items: center;
   outline: none;
-  /* border: 2px solid transparent; */
-  border: none;
+  border: 2px solid transparent;
   transition: all 0.3s ease-out;
-  /* margin: 50px auto 0; */
+  margin-top: 50px;
   &:hover {
-    /* border: 2px solid #486FF8; */
+    border: 2px solid #486FF8;
     background-color: #fff;
     color: #486ff8;
     transition: all 0.3s ease-out;
