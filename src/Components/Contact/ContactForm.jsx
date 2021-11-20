@@ -6,7 +6,7 @@ const ContactForm = () => {
     <ContactWrapper>
       <Title>Drop us a line</Title>
       <Description>
-        Have a question, feedback or idea for the SEATevent team? Use the form
+        Have a question, feedback or idea for the Devscave team? Use the form
         below and a member of our team will contact you shortly.
       </Description>
       <InputForm>
@@ -83,6 +83,9 @@ const InputForm = styled.form`
   flex-direction: column;
   gap: 25px;
   max-width: 600px;
+  @media only screen and (max-width: 615.98px) {
+    padding: 0 20px;
+  }
 `;
 
 const InputWrapper = styled.div`
