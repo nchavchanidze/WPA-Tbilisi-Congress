@@ -71,11 +71,11 @@ const Footer = () => {
             <ContactWrapper>
               <ContactText>
                 <span>Email: </span>
-                <a href="mailto:info@seatevent.com">info@seatevent.com</a>
+                <a href="mailto:info@devscave.com">info@devscave.com</a>
               </ContactText>
               <ContactText>
                 <span>Phone: </span>
-                <a href="tel:+995555555555">+995 555 55 55 55</a>
+                <a href="tel:+995555555555">+995 555 555 555</a>
               </ContactText>
             </ContactWrapper>
             <SocialsWrapper>
@@ -199,8 +199,8 @@ const SocialsWrapper = styled.ul`
   margin-top: 30px;
   li {
     background-color: #486ff8;
-    width: 30px;
-    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;

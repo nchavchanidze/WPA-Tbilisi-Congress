@@ -72,7 +72,7 @@ const Header = () => {
                 </ul>
               </NavDropdown>
               <li>
-                <Link to="/">Contact</Link>
+                <Link to="/contact">Contact</Link>
               </li>
               <Link className="sign-btn" to="/login">
                 Sign In
