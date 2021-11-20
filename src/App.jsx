@@ -2,6 +2,7 @@ import React, { Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import Loader from "./Components/Loader";
+import Contact from "./Pages/Contact";
 
 const Home = React.lazy(() => import("./Pages/Home"));
 const Login = React.lazy(() => import("./Pages/Login"));
@@ -30,6 +31,7 @@ const App = () => {
         />
         <Route exact path="/abstract-upload" element={<AbstractUpload />} />
         <Route exact path="/abstract-topics" element={<AbstractTopics />} />
+        <Route exact path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
