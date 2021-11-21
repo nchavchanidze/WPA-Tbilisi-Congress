@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AboutSubmission from "../Components/Abstract Submission/AboutSubmission";
 import Deadline from "../Components/Abstract Submission/Deadline";
 import Heading from "../Components/Abstract Submission/Heading";
@@ -6,6 +6,9 @@ import SubmissionButtons from "../Components/Abstract Submission/SubmissionButto
 import Layout from "../Layouts/Layout";
 
 const AbstactSubmission = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <Layout>
       <Heading />

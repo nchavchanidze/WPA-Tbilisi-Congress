@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../Layouts/ComponentLayout";
-import SignIn from '../Components/Auth/Login';
+import SignIn from "../Components/Auth/Login";
 
 const Login = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <Layout>
       <SignIn />

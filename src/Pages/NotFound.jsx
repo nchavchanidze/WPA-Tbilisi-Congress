@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Error404 from "../Components/Error404";
 import Layout from "../Layouts/ComponentLayout";
 
 const NotFound = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <Layout>
-        <Error404 />
+      <Error404 />
     </Layout>
   );
 };

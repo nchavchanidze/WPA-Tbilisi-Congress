@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomeCarousel from "../Components/HomeCarousel";
 import MotivationCards from "../Components/MotivationCards";
 import Pricing from "../Components/Pricing";
@@ -8,6 +8,9 @@ import Schedule from "../Components/Schedule";
 import Layout from "../Layouts/Layout";
 
 const Home = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <Layout>
       <HomeCarousel />

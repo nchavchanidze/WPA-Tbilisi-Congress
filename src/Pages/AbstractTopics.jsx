@@ -1,13 +1,16 @@
-import React from 'react'
-import Topics from '../Components/Abstract Submission/Topics'
-import ComponentLayout from "../Layouts/ComponentLayout"
+import React, { useEffect } from "react";
+import Topics from "../Components/Abstract Submission/Topics";
+import ComponentLayout from "../Layouts/ComponentLayout";
 
 const AbstractTopics = () => {
-    return (
-        <ComponentLayout>
-            <Topics />
-        </ComponentLayout>
-    )
-}
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+  return (
+    <ComponentLayout>
+      <Topics />
+    </ComponentLayout>
+  );
+};
 
-export default AbstractTopics
+export default AbstractTopics;
