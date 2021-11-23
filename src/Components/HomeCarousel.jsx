@@ -19,10 +19,10 @@ const HomeCarousel = () => {
 
   return (
     <HomeCarouselWrapper>
-      <Slider {...settings}>
-        <SliderComponent />
+      {/* <Slider {...settings}>
         <SliderComponent className="slide02" />
-      </Slider>
+      </Slider> */}
+        <SliderComponent />
       <SlideContentWrapper>
         <SliderContent>
           <p className="date">October 08 - October 12</p>
