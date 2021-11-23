@@ -1,21 +1,21 @@
 import React from "react";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Slide01 from "../Assets/Images/Home/Slider/slide-01.jpg";
 import Slide02 from "../Assets/Images/Home/Slider/slide-02.jpg";
 
 const HomeCarousel = () => {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: false,
-  };
+  // const settings = {
+  //   infinite: true,
+  //   speed: 500,
+  //   autoplay: true,
+  //   autoplaySpeed: 5000,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  //   dots: false,
+  // };
 
   return (
     <HomeCarouselWrapper>
