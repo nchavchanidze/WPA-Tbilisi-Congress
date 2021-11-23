@@ -4,8 +4,9 @@ import MotivationCards from "../Components/MotivationCards";
 import Pricing from "../Components/Pricing";
 import FAQ from "../Components/FAQ";
 import SummitReasons from "../Components/SummitReasons";
-import Schedule from "../Components/Schedule";
+// import Schedule from "../Components/Schedule";
 import Layout from "../Layouts/Layout";
+import Speakers from "../Components/Speakers";
 
 const Home = () => {
   useEffect(() => {
@@ -16,7 +17,8 @@ const Home = () => {
       <HomeCarousel />
       <SummitReasons />
       <MotivationCards />
-      <Schedule />
+      {/* <Schedule /> */}
+      <Speakers />
       <Pricing />
       <FAQ />
     </Layout>
