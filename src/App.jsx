@@ -13,6 +13,7 @@ const AbstractSubmission = React.lazy(() =>
 const AbstractUpload = React.lazy(() => import("./Pages/AbstractUpload"));
 const AbstractTopics = React.lazy(() => import("./Pages/AbstractTopics"));
 const NotFound = React.lazy(() => import("./Pages/NotFound"));
+const ScrollButton = React.lazy(() => import("./Components/ScrollButton"));
 
 const App = () => {
   useEffect(() => {
@@ -34,6 +35,7 @@ const App = () => {
         <Route exact path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <ScrollButton />
     </Suspense>
   );
 };
