@@ -25,7 +25,7 @@ const HomeCarousel = () => {
         <SliderComponent />
       <SlideContentWrapper>
         <SliderContent>
-          <p className="date">October 08 - October 12</p>
+          <p className="date">October 14 - October 16</p>
           <h1>
             Treatment and Management of Mental Disorders in a Post-pandemic Era
           </h1>
