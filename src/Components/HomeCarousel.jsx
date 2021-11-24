@@ -27,7 +27,7 @@ const HomeCarousel = () => {
         <SliderContent>
           <p className="date">October 14 - October 16</p>
           <h1>
-            Treatment and Management of Mental Disorders in a Post-pandemic Era
+            Treatment and Management of Mental Disorders in a Post-pandemic Era 2022
           </h1>
           <SliderButtonsWrapper>
             <SliderButton to="/abstract-submission">Abstract Submission</SliderButton>
@@ -82,7 +82,7 @@ const SliderContent = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 50%;
+  width: 70%;
 
   @media only screen and (max-width: 1366.98px) {
     width: 90%;
