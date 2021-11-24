@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Slide01 from "../Assets/Images/Home/Slider/slide-01.jpg";
 import Slide02 from "../Assets/Images/Home/Slider/slide-02.jpg";
+import Slide03 from "../Assets/Images/Home/Slider/slide-03.png";
+import Sponsors from "./Sponsors";
 
 const HomeCarousel = () => {
   // const settings = {
@@ -25,6 +27,7 @@ const HomeCarousel = () => {
         <SliderComponent />
       <SlideContentWrapper>
         <SliderContent>
+          {/* <Sponsors /> */}
           <p className="date">October 14 - October 16</p>
           <h1>
             Treatment and Management of Mental Disorders in a Post-pandemic Era 2022
@@ -44,12 +47,13 @@ const HomeCarouselWrapper = styled.div`
 `;
 
 const SliderComponent = styled.div`
+  /* height: calc(100vh - 147px); */
   height: 100vh;
   position: relative;
   background-color: #39364f;
   &.slide02 {
     &:before {
-      background-image: url(${Slide02});
+      background-image: url(${Slide03});
     }
   }
   &:before {
@@ -60,8 +64,8 @@ const SliderComponent = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
-    background-image: url(${Slide01});
+    opacity: 0.6;
+    background-image: url(${Slide03});
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
