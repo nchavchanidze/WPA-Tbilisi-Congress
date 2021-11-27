@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
+import Modal from "react-modal";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,6 +16,8 @@ const Abstract = () => {
   const [conclusion, setConclusion] = useState("");
   const [counter, setCounter] = useState([]);
 
+  const [modalIsopen, setModalIsopen] = useState(false);
+
   const [authors, setAuthors] = useState([]);
   const [authorsValue, setAuthorsValue] = useState("");
 
@@ -26,8 +29,8 @@ const Abstract = () => {
     setAuthorsValue
   ) => {
     e.preventDefault();
-    if(authorsValue === "") {
-      alert("Add Authors")
+    if (authorsValue === "") {
+      alert("Add Authors");
     } else {
       const id = authors.length ? authors[authors.length - 1].id + 1 : 0;
       setAuthors([...authors, { id: id, message: authorsValue }]);
@@ -69,6 +72,15 @@ const Abstract = () => {
       [{ align: [] }],
       ["clean"],
     ],
+  };
+
+  const openModal = (e) => {
+    e.preventDefault();
+    setModalIsopen(true);
+  };
+  const closeModal = (e) => {
+    e.preventDefault();
+    setModalIsopen(false);
   };
 
   useEffect(() => {
@@ -117,27 +129,31 @@ const Abstract = () => {
           <InputWrapper>
             <label>
               <span>Authors</span>
-              <AuthorWrapper>
-                <Input
-                  onChange={(e) => setAuthorsValue(e.target.value)}
-                  value={authorsValue}
-                  placeholder="Enter Authors"
-                />
+              <Modal isOpen={modalIsopen} onRequestClose={closeModal}>
+                <button onClick={closeModal}>Close Modal</button>
+                <AuthorWrapper>
+                  <Input
+                    onChange={(e) => setAuthorsValue(e.target.value)}
+                    value={authorsValue}
+                    placeholder="Enter Authors"
+                  />
 
-                <AddButton
-                  onClick={(e) =>
-                    handleAuthor(
-                      e,
-                      authors,
-                      setAuthors,
-                      authorsValue,
-                      setAuthorsValue
-                    )
-                  }
-                >
-                  <FontAwesomeIcon icon={faPlus} />
-                </AddButton>
-              </AuthorWrapper>
+                  <AddButton
+                    onClick={(e) =>
+                      handleAuthor(
+                        e,
+                        authors,
+                        setAuthors,
+                        authorsValue,
+                        setAuthorsValue
+                      )
+                    }
+                  >
+                    <FontAwesomeIcon icon={faPlus} />
+                  </AddButton>
+                </AuthorWrapper>
+              </Modal>
+              <button onClick={openModal}>Open Modal</button>
             </label>
             {authors.map((author) => (
               <AuthorCard
