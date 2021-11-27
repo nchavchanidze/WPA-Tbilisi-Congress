@@ -4,10 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const AuthorCard = (props) => {
+  console.log(props)
   return (
     <AuthorCardWrapper>
-      <Author>{props.author}</Author>
-      <DeleteButton onClick={() => props.remove(props.id)}>
+      <Author>{props.author} | {props.id}</Author>
+      <DeleteButton onClick={() => props.deleteAuthor(props.id)}>
         <FontAwesomeIcon icon={faTimes} />
       </DeleteButton>
     </AuthorCardWrapper>

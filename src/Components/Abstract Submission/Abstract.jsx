@@ -3,57 +3,53 @@ import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import AuthorCard from "./AuthorCard";
 
 const Abstract = () => {
-  const [firstInput, setFirstInput] = useState("");
-  const [secondInput, setSecondInput] = useState("");
-  const [word, setWord] = useState("");
-  const [wordCounter, setWordCounter] = useState([]);
-  const [value, setValue] = useState("");
-  const [parsedValue, setParsedValue] = useState("");
+  const [intro, setIntro] = useState("");
+  const [objectives, setObjectives] = useState("");
+  const [methods, setMethods] = useState("");
+  const [results, setResults] = useState("");
+  const [conclusion, setConclusion] = useState("");
+  const [counter, setCounter] = useState([]);
+
   const [authors, setAuthors] = useState([]);
-  const [authorValue, setAuthorValue] = useState("");
+  const [authorsValue, setAuthorsValue] = useState("");
 
-  
-  const removeAuthor = (id) => {
-    const newAuthors = [...authors];
-    newAuthors.splice(id, 1);
-    setAuthors(newAuthors);
-  };
-
-  const addAuthor = (e) => {
+  const handleAuthor = (
+    e,
+    authors,
+    setAuthors,
+    authorsValue,
+    setAuthorsValue
+  ) => {
     e.preventDefault();
-    setAuthors([...authors, authorValue]);
-    setAuthorValue("");
+    if(authorsValue === "") {
+      alert("Add Authors")
+    } else {
+      const id = authors.length ? authors[authors.length - 1].id + 1 : 0;
+      setAuthors([...authors, { id: id, message: authorsValue }]);
+      setAuthorsValue("");
+    }
   };
 
-  const wordMtvleli = () => {
-    let strng = firstInput + " " + secondInput;
-    setWord(strng);
+  const deleteAuthor = (id, authors, setAuthors) => {
+    setAuthors(authors.filter((author) => author.id !== id));
   };
 
-  const handleWordCounter = () => {
+  const dataParser = () => {
     let res = [];
-    let str = word.replace(/[\t\n\r\\.\\?\\!]/gm, " ").split(" ");
+    let data = intro + objectives + methods + results + conclusion;
+    console.log(data);
+    let str = data.replace(/(<([^>\t\n\r\\.\\?\\!]+)>)/gi, "").split(" ");
     str.map((s) => {
-      let trimStr = s.trim();
-      if (trimStr.length > 0) {
-        res.push(trimStr);
-      }
-      return setWordCounter(res.length + parsedValue);
+      let parsedStr = s.trim();
+      res.push(parsedStr);
+      return console.log(res);
     });
-  };
-
-  const valueParser = () => {
-    let rs = [];
-    let str = value.replace(/(<([^>]+)>)/gi, "").split(" ");
-    str.map((s) => {
-      let trimStr = s.trim();
-      rs.push(trimStr);
-      return console.log(rs);
-    });
-    setParsedValue(rs.length);
+    setCounter(res.length);
   };
 
   const toolbarOptions = {
@@ -76,12 +72,9 @@ const Abstract = () => {
   };
 
   useEffect(() => {
-    valueParser();
-    handleWordCounter();
-    wordMtvleli();
-  }, [value]);
+    dataParser();
+  }, [intro, objectives, methods, results, conclusion]);
 
-  console.log(authors)
   return (
     <>
       <Title>Submit Your Absract</Title>
@@ -124,19 +117,36 @@ const Abstract = () => {
           <InputWrapper>
             <label>
               <span>Authors</span>
-              <Input
-                value={authorValue}
-                onChange={(e) => setAuthorValue(e.target.value)}
-                placeholder="Enter Authors"
-              />
+              <AuthorWrapper>
+                <Input
+                  onChange={(e) => setAuthorsValue(e.target.value)}
+                  value={authorsValue}
+                  placeholder="Enter Authors"
+                />
 
-              <button onClick={addAuthor}>Add</button>
+                <AddButton
+                  onClick={(e) =>
+                    handleAuthor(
+                      e,
+                      authors,
+                      setAuthors,
+                      authorsValue,
+                      setAuthorsValue
+                    )
+                  }
+                >
+                  <FontAwesomeIcon icon={faPlus} />
+                </AddButton>
+              </AuthorWrapper>
             </label>
-            {authors.map((author, id) => {
-              return (
-                <AuthorCard key={id} author={author} remove={removeAuthor} />
-              );
-            })}
+            {authors.map((author) => (
+              <AuthorCard
+                key={author.id}
+                author={author.message}
+                id={author.id}
+                deleteAuthor={(id) => deleteAuthor(id, authors, setAuthors)}
+              />
+            ))}
           </InputWrapper>
           <InputWrapper>
             <label>
@@ -146,69 +156,90 @@ const Abstract = () => {
           </InputWrapper>
           <InputWrapper>
             <label>
+              <span>TextArea</span>
+              <Textarea type="text" placeholder="Enter Keywords" />
+            </label>
+          </InputWrapper>
+          <InputWrapper>
+            <label>
               <span>
-                Message <span className="required">*</span>
+                Introduction <span className="required">*</span>
               </span>
             </label>
             <RichText
               theme="snow"
-              value={value}
-              onChange={setValue}
+              value={intro}
+              onChange={setIntro}
               modules={toolbarOptions}
             />
-            <Counter className={wordCounter > 250 ? "over" : ""}>
-              {wordCounter} / 250
+            <Counter className={counter > 250 ? "over" : ""}>
+              {counter} / 250
             </Counter>
           </InputWrapper>
           <InputWrapper>
             <label>
               <span>
-                Message <span className="required">*</span>
+                Objectives <span className="required">*</span>
               </span>
             </label>
             <RichText
               theme="snow"
-              value={value}
-              onChange={setValue}
+              value={objectives}
+              onChange={setObjectives}
               modules={toolbarOptions}
             />
-            <Counter className={wordCounter > 250 ? "over" : ""}>
-              {wordCounter} / 250
+            <Counter className={counter > 250 ? "over" : ""}>
+              {counter} / 250
             </Counter>
           </InputWrapper>
           <InputWrapper>
             <label>
               <span>
-                Message <span className="required">*</span>
+                Methods <span className="required">*</span>
               </span>
             </label>
             <RichText
               theme="snow"
-              value={value}
-              onChange={setValue}
+              value={methods}
+              onChange={setMethods}
               modules={toolbarOptions}
             />
-            <Counter className={wordCounter > 250 ? "over" : ""}>
-              {wordCounter} / 250
+            <Counter className={counter > 250 ? "over" : ""}>
+              {counter} / 250
             </Counter>
           </InputWrapper>
           <InputWrapper>
             <label>
               <span>
-                Message <span className="required">*</span>
+                Results <span className="required">*</span>
               </span>
             </label>
             <RichText
               theme="snow"
-              value={value}
-              onChange={setValue}
+              value={results}
+              onChange={setResults}
               modules={toolbarOptions}
             />
-            <Counter className={wordCounter > 250 ? "over" : ""}>
-              {wordCounter} / 250
+            <Counter className={counter > 250 ? "over" : ""}>
+              {counter} / 250
             </Counter>
           </InputWrapper>
-
+          <InputWrapper>
+            <label>
+              <span>
+                Conclusion <span className="required">*</span>
+              </span>
+            </label>
+            <RichText
+              theme="snow"
+              value={conclusion}
+              onChange={setConclusion}
+              modules={toolbarOptions}
+            />
+            <Counter className={counter > 250 ? "over" : ""}>
+              {counter} / 250
+            </Counter>
+          </InputWrapper>
           <InputWrapper>
             <label>
               <span>
@@ -348,6 +379,37 @@ const Input = styled.input`
   }
 `;
 
+const AuthorWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+`;
+
+const AddButton = styled.button`
+  min-height: 53px;
+  min-width: 53px;
+  border: none;
+  border-radius: 50%;
+  background-color: #486ff8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: #f0f4ff;
+    transition: all 0.3s ease-out;
+    svg {
+      transition: all 0.3s ease-out;
+      color: #486ff8;
+    }
+  }
+  svg {
+    transition: all 0.3s ease-out;
+    color: #fff;
+  }
+`;
+
 const Select = styled.select`
   background-color: #f4f4f4;
   padding: 15px;
@@ -443,7 +505,8 @@ const RichText = styled(ReactQuill)`
   li {
   }
   .ql-editor {
-    min-height: 130px;
+    height: 400px;
+    max-height: 400px;
   }
 `;
 
