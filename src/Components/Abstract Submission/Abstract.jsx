@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import AuthorCard from "./AuthorCard";
+import KeywordCard from "./KeywordCard";
 
 const Abstract = () => {
   const [intro, setIntro] = useState("");
@@ -15,6 +16,9 @@ const Abstract = () => {
 
   const [authors, setAuthors] = useState([]);
   const [authorsValue, setAuthorsValue] = useState("");
+
+  const [keywords, setKeywords] = useState([]);
+  const [keywordsValue, setKeywordsValue] = useState("");
 
   const handleAuthor = (
     e,
@@ -37,18 +41,37 @@ const Abstract = () => {
     setAuthors(authors.filter((author) => author.id !== id));
   };
 
-  const dataParser = () => {
+  const handleKeyword = (
+    e,
+    keywords,
+    setKeywords,
+    keywordsValue,
+    setKeywordsValue
+  ) => {
+    e.preventDefault();
+    if (keywordsValue === "") {
+      alert("Add Keyword");
+    } else {
+      const id = keywords.length ? keywords[keywords.length - 1].id + 1 : 0;
+      setKeywords([...keywords, { id: id, keyword: keywordsValue }]);
+      setKeywordsValue("");
+    }
+  };
+
+  const deleteKeyword = (id, keywords, setKeywords) => {
+    setKeywords(keywords.filter((keyword) => keyword.id !== id));
+  };
+
+  const dataParser = useCallback(() => {
     let res = [];
     let data = intro + objectives + methods + results + conclusion;
-    console.log(data);
     let str = data.replace(/(<([^>\t\n\r\\.\\?\\!]+)>)/gi, "").split(" ");
     str.map((s) => {
       let parsedStr = s.trim();
-      res.push(parsedStr);
-      return console.log(res);
+      return res.push(parsedStr);
     });
     setCounter(res.length);
-  };
+  }, [intro, objectives, methods, results, conclusion]);
 
   const toolbarOptions = {
     toolbar: [
@@ -71,7 +94,7 @@ const Abstract = () => {
 
   useEffect(() => {
     dataParser();
-  }, [intro, objectives, methods, results, conclusion]);
+  }, [dataParser]);
 
   return (
     <>
@@ -133,7 +156,7 @@ const Abstract = () => {
                     )
                   }
                 >
-                 Add Authors
+                  Add Authors
                 </AddButton>
               </AuthorWrapper>
             </label>
@@ -149,14 +172,44 @@ const Abstract = () => {
           <InputWrapper>
             <label>
               <span>Keywords</span>
-              <Input type="text" placeholder="Enter Keywords" />
+              <AuthorWrapper>
+                <Input
+                  onChange={(e) => setKeywordsValue(e.target.value)}
+                  value={keywordsValue}
+                  placeholder="Enter Keywords"
+                />
+
+                <AddButton
+                  onClick={(e) =>
+                    handleKeyword(
+                      e,
+                      keywords,
+                      setKeywords,
+                      keywordsValue,
+                      setKeywordsValue
+                    )
+                  }
+                >
+                  Add Keyword
+                </AddButton>
+              </AuthorWrapper>
             </label>
-          </InputWrapper>
-          <InputWrapper>
-            <label>
-              <span>TextArea</span>
-              <Textarea type="text" placeholder="Enter Keywords" />
-            </label>
+            {keywords.length === 0 ? (
+              <></>
+            ) : (
+              <KeywordsWrapper>
+                {keywords.map((keyword) => (
+                  <KeywordCard
+                    key={keyword.id}
+                    keyword={keyword.keyword}
+                    id={keyword.id}
+                    deleteKeyword={(id) =>
+                      deleteKeyword(id, keywords, setKeywords)
+                    }
+                  />
+                ))}
+              </KeywordsWrapper>
+            )}
           </InputWrapper>
           <InputWrapper>
             <label>
@@ -383,6 +436,16 @@ const AuthorWrapper = styled.div`
   align-items: center;
   width: 100%;
   gap: 20px;
+`;
+
+const KeywordsWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  width: 100%;
 `;
 
 const AddButton = styled.button`
