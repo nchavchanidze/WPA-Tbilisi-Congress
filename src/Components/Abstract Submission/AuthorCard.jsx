@@ -54,10 +54,10 @@ const Author = styled.p`
 
 const CheckboxWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  gap: 30px;
+  gap: 50px;
   width: 100%;
   @media only screen and (max-width: 991.98px) {
     flex-wrap: wrap;
@@ -70,9 +70,9 @@ const CheckboxWrapper = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row !important;
     gap: 10px;
-    width: 100%;
+    width: initial !important;
     .required {
       color: #486ff8;
     }
