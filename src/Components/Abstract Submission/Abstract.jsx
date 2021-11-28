@@ -505,32 +505,6 @@ const Select = styled.select`
   }
 `;
 
-const Textarea = styled.textarea`
-  background-color: #f4f4f4;
-  padding: 15px;
-  border: none;
-  border-radius: 5px;
-  width: 100%;
-  transition: all 0.3s ease-out;
-  border: 2px solid transparent;
-  font-family: "Urbanist", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: #39364f;
-  &::-webkit-input-placeholder {
-    font-family: "Urbanist", sans-serif;
-    font-size: 14px;
-    color: #717488;
-    font-weight: 400;
-  }
-  &:focus {
-    box-shadow: none;
-    outline: none;
-    border: 2px solid #486ff8;
-    transition: all 0.3s ease-out;
-  }
-`;
-
 const Counter = styled.p`
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
