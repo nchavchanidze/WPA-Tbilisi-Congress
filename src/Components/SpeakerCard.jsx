@@ -45,8 +45,10 @@ const SpeakerCardWrapper = styled.div`
 `;
 
 const SpeakerImage = styled.div`
-  min-width: 270px;
-  min-height: 270px;
+  max-width: 155px;
+  max-height: 155px;
+  width: 100%;
+  height: 100%;
   background-color: #c4c4c4;
   border-radius: 50%;
   display: flex;
