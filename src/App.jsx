@@ -11,6 +11,7 @@ const AbstractSubmission = React.lazy(() =>
   import("./Pages/AbstactSubmission")
 );
 const AbstractUpload = React.lazy(() => import("./Pages/AbstractUpload"));
+const EposterUpload = React.lazy(() => import("./Pages/EposterUpload"));
 const AbstractTopics = React.lazy(() => import("./Pages/AbstractTopics"));
 const NotFound = React.lazy(() => import("./Pages/NotFound"));
 const ScrollButton = React.lazy(() => import("./Components/ScrollButton"));
@@ -36,6 +37,10 @@ const App = () => {
     {
       path: "/abstract-upload",
       element: <AbstractUpload />,
+    },
+    {
+      path: "/eposter-upload",
+      element: <EposterUpload />,
     },
     {
       path: "/abstract-topics",

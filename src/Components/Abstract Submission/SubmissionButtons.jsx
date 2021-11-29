@@ -9,6 +9,7 @@ const SubmissionButtons = () => {
       <Container>
         <ButtonsWrapper>
           <Button to="/abstract-upload">Submit your Abstract</Button>
+          <Button to="/eposter-upload">Submit your E-Poster</Button>
           <Button to="/abstract-topics">Abstract Topics</Button>
         </ButtonsWrapper>
       </Container>
@@ -27,7 +28,7 @@ const ButtonsWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 150px;
+    gap: 70px;
     @media only screen and (max-width: 575.98px) {
         flex-direction: column;
         gap: 50px;
@@ -37,6 +38,7 @@ const ButtonsWrapper = styled.div`
 const Button = styled(Link)`
   background-color: #486ff8;
   font-family: "Urbanist", sans-serif;
+  text-transform: capitalize;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
