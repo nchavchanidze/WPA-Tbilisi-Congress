@@ -31,7 +31,7 @@ const Sponsors = () => {
       <SponsorsWrapper>
         {SponsorsList.map((sponsor) => {
           return (
-            <SponsorCard>
+            <SponsorCard key={sponsor.id}>
               <SponsorsImageWrapper>
                 <img src={sponsor.image} alt={sponsor.name} />
               </SponsorsImageWrapper>
