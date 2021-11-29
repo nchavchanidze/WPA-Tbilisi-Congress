@@ -16,24 +16,49 @@ const NotFound = React.lazy(() => import("./Pages/NotFound"));
 const ScrollButton = React.lazy(() => import("./Components/ScrollButton"));
 
 const App = () => {
+  const routes = [
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+    {
+      path: "/abstract-submission",
+      element: <AbstractSubmission />,
+    },
+    {
+      path: "/abstract-upload",
+      element: <AbstractUpload />,
+    },
+    {
+      path: "/abstract-topics",
+      element: <AbstractTopics />,
+    },
+    {
+      path: "/contact",
+      element: <Contact />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ];
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/register" element={<Register />} />
-        <Route
-          exact
-          path="/abstract-submission"
-          element={<AbstractSubmission />}
-        />
-        <Route exact path="/abstract-upload" element={<AbstractUpload />} />
-        <Route exact path="/abstract-topics" element={<AbstractTopics />} />
-        <Route exact path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
+        {routes.map(({ path, element }, key) => (
+          <Route exact path={path} element={element} key={key} />
+        ))}
       </Routes>
       <ScrollButton />
     </Suspense>
