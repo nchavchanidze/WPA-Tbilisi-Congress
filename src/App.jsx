@@ -15,6 +15,7 @@ const EposterUpload = React.lazy(() => import("./Pages/EposterUpload"));
 const AbstractTopics = React.lazy(() => import("./Pages/AbstractTopics"));
 const NotFound = React.lazy(() => import("./Pages/NotFound"));
 const Dashboard = React.lazy(() => import("./Pages/Dashboard/Dashboard"))
+const Profile = React.lazy(() => import("./Pages/Profile/Profile"))
 const ScrollButton = React.lazy(() => import("./Components/ScrollButton"));
 
 const App = () => {
@@ -54,6 +55,10 @@ const App = () => {
     {
       path: "/dashboard",
       element: <Dashboard />,
+    },
+    {
+      path: "/profile",
+      element: <Profile />,
     },
     {
       path: "*",
