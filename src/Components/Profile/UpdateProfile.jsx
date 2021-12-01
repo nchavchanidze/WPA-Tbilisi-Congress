@@ -14,6 +14,12 @@ const UpdateProfile = () => {
   const [gender, setGender] = useState("");
   const [profession, setProfession] = useState("");
   const [addressType, setAddressType] = useState("");
+  const [institution, setInstitution] = useState("")
+  const [department, setDepartment] = useState("")
+  const [country, setCountry] = useState("")
+  const [city, setCity] = useState("")
+  const [zipCode, setZipCode] = useState('')
+  const [street, setStreet] = useState("")
 
   const genderList = [
     {
@@ -41,7 +47,24 @@ const UpdateProfile = () => {
     },
   ];
 
-  console.log(firstname, lastname, middlename, email, salutation, academicTitle, gender, profession, addressType)
+  const userInfo = {
+    firstname: firstname,
+    lastname: lastname,
+    middlename: middlename,
+    email: email,
+    salutation: salutation,
+    academicTitle: academicTitle,
+    gender: gender,
+    profession: profession,
+    addressType: addressType,
+    institution: institution,
+    department: department,
+    country: country,
+    city: city,
+    zipCode: zipCode,
+    street: street,
+  }
+
   return (
     <>
       <Title>Profile</Title>
@@ -193,13 +216,13 @@ const UpdateProfile = () => {
               <span>
                 Instituion <span className="required">*</span>
               </span>
-              <Input type="text" required placeholder="Enter your Instituion" />
+              <Input value={institution} onChange={(e) => setInstitution(e.target.value)} type="text" required placeholder="Enter your Instituion" />
             </label>
             <label>
               <span>
                 Department <span className="required">*</span>
               </span>
-              <Input type="text" placeholder="Enter your Department" />
+              <Input value={department} onChange={(e) => setDepartment(e.target.value)} type="text" placeholder="Enter your Department" />
             </label>
           </InputWrapper>
           <InputWrapper>
@@ -207,7 +230,7 @@ const UpdateProfile = () => {
               <span>
                 Country <span className="required">*</span>
               </span>
-              <Select required name="Country">
+              <Select value={country} onChange={(e) => setCountry(e.target.value)} required name="Country">
                 <option defaultValue={"DEFAULT"}>Please Select</option>
                 <option value="notSpecified">Not specified</option>
                 {Countries.map((country) => (
@@ -221,7 +244,7 @@ const UpdateProfile = () => {
               <span>
                 City <span className="required">*</span>
               </span>
-              <Input type="text" placeholder="Enter your City" />
+              <Input value={city} onChange={(e) => setCity(e.target.value)} required type="text" placeholder="Enter your City" />
             </label>
           </InputWrapper>
           <InputWrapper>
@@ -230,12 +253,12 @@ const UpdateProfile = () => {
                 <span>
                   Zip Code <span className="required">*</span>
                 </span>
-                <Input type="text" placeholder="Enter your Zip Code" />
+                <Input value={zipCode} onChange={(e) => setZipCode(e.target.value)} type="text" placeholder="Enter your Zip Code" />
               </label>
             </InputWrapper>
             <label>
               <span>Street</span>
-              <Input type="text" placeholder="Enter your Street Name" />
+              <Input value={street} onChange={(e) => setStreet(e.target.value)} type="text" placeholder="Enter your Street Name" />
             </label>
           </InputWrapper>
           <InputWrapper className="mt-5">
