@@ -20,6 +20,10 @@ const UpdateProfile = () => {
   const [city, setCity] = useState("")
   const [zipCode, setZipCode] = useState('')
   const [street, setStreet] = useState("")
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState('')
+
 
   const genderList = [
     {
@@ -63,8 +67,12 @@ const UpdateProfile = () => {
     city: city,
     zipCode: zipCode,
     street: street,
+    username: username,
+    password: password,
+    confirmPassword: confirmPassword,
   }
 
+  console.log(userInfo)
   return (
     <>
       <Title>Profile</Title>
@@ -266,7 +274,7 @@ const UpdateProfile = () => {
               <span>
                 Username <span className="required">*</span>
               </span>
-              <Input type="text" placeholder="Enter your Username" />
+              <Input value={username} onChange={(e) => setUsername(e.target.value)}type="text" placeholder="Enter your Username" />
             </label>
           </InputWrapper>
           <InputWrapper>
@@ -274,13 +282,13 @@ const UpdateProfile = () => {
               <span>
                 Password <span className="required">*</span>
               </span>
-              <Input type="Password" placeholder="Enter your Password" />
+              <Input value={password} onChange={(e) => setPassword(e.target.value)} type="Password" placeholder="Enter your Password" />
             </label>
             <label>
               <span>
                 Confirm Password <span className="required">*</span>
               </span>
-              <Input type="Password" placeholder="Confirm Password" />
+              <Input value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} type="Password" placeholder="Confirm Password" />
             </label>
           </InputWrapper>
           <PhoneWrapper className="mt-5">
