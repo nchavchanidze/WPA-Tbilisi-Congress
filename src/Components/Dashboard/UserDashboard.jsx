@@ -15,7 +15,7 @@ const UserDashboard = () => {
       id: 2,
       name: "Abstracts",
       description: "See your submited Abstracts",
-      path: "/abstacts",
+      path: "/abstracts",
     },
     {
       id: 3,

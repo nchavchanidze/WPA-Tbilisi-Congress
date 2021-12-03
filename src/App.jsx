@@ -16,6 +16,7 @@ const AbstractTopics = React.lazy(() => import("./Pages/AbstractTopics"));
 const NotFound = React.lazy(() => import("./Pages/NotFound"));
 const Dashboard = React.lazy(() => import("./Pages/Dashboard/Dashboard"))
 const Profile = React.lazy(() => import("./Pages/Profile/Profile"))
+const Abstracts = React.lazy(() => import("./Pages/Abstracts/Abstracts"))
 const ScrollButton = React.lazy(() => import("./Components/ScrollButton"));
 
 const App = () => {
@@ -59,6 +60,10 @@ const App = () => {
     {
       path: "/profile",
       element: <Profile />,
+    },
+    {
+      path: "/abstracts",
+      element: <Abstracts />,
     },
     {
       path: "*",
