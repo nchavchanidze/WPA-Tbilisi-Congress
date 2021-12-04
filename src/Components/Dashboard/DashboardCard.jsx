@@ -13,13 +13,17 @@ const DashboardCard = (props) => {
 
 const DashboardCardWrapper = styled(Link)`
   background-color: #486ff8;
-  padding: 15px;
-  max-height: 155px;
+  padding: 25px;
+  max-height: 85px;
   width: 300px;
   height: 100%;
   border-radius: 5px;
   border: 2px solid transparent;
   transition: all 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
   &:hover {
     transition: all 0.3s ease-out;
     border: 2px solid #486ff8;
@@ -50,7 +54,6 @@ const DashboardDescription = styled.p`
   font-weight: 400;
   line-height: 1.6;
   color: #fff;
-  margin-top: 10px;
   transition: all 0.3s ease-out;
 `;
 

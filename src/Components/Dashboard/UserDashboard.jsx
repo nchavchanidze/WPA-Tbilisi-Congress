@@ -27,7 +27,7 @@ const UserDashboard = () => {
 
   return (
     <>
-      <Title>Dashboard</Title>
+      {/* <Title>Dashboard</Title> */}
       <DashboardWrapper>
         {dashboardCards.map((dashboardCard) => (
           <DashboardCard
@@ -44,10 +44,11 @@ const UserDashboard = () => {
 
 const DashboardWrapper = styled(Container)`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   gap: 30px;
   flex-wrap: wrap;
+  margin-top: 100px;
 `;
 
 const Title = styled.h1`

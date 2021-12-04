@@ -1,13 +1,15 @@
 import React from 'react'
+import Heading from "../../Components/Dashboard/Heading";
 import UserDashboard from '../../Components/Dashboard/UserDashboard';
-import ComponentLayout from "../../Layouts/ComponentLayout";
+import Layout from "../../Layouts/Layout";
 
 
 const Dashboard = () => {
     return (
-        <ComponentLayout>
+        <Layout>
+            <Heading />
             <UserDashboard />
-        </ComponentLayout>
+        </Layout>
     )
 }
 
