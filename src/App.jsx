@@ -1,8 +1,9 @@
 import React, { Suspense, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useParams, useLocation } from "react-router-dom";
 import AOS from "aos";
 import Loader from "./Components/Loader";
 import Contact from "./Pages/Contact";
+import AbstractEdit from "./Components/Abstract/AbstractEdit";
 
 const Home = React.lazy(() => import("./Pages/Home"));
 const Login = React.lazy(() => import("./Pages/Login"));
@@ -14,12 +15,13 @@ const AbstractUpload = React.lazy(() => import("./Pages/AbstractUpload"));
 const EposterUpload = React.lazy(() => import("./Pages/EposterUpload"));
 const AbstractTopics = React.lazy(() => import("./Pages/AbstractTopics"));
 const NotFound = React.lazy(() => import("./Pages/NotFound"));
-const Dashboard = React.lazy(() => import("./Pages/Dashboard/Dashboard"))
-const Profile = React.lazy(() => import("./Pages/Profile/Profile"))
-const Abstracts = React.lazy(() => import("./Pages/Abstracts/Abstracts"))
+const Dashboard = React.lazy(() => import("./Pages/Dashboard/Dashboard"));
+const Profile = React.lazy(() => import("./Pages/Profile/Profile"));
+const Abstracts = React.lazy(() => import("./Pages/Abstracts/Abstracts"));
 const ScrollButton = React.lazy(() => import("./Components/ScrollButton"));
 
 const App = () => {
+ 
   const routes = [
     {
       path: "/",
@@ -66,10 +68,17 @@ const App = () => {
       element: <Abstracts />,
     },
     {
+      path: "/abstracts/:id",
+      element: <AbstractEdit />,
+    },
+    {
       path: "*",
       element: <NotFound />,
     },
   ];
+
+  
+
   useEffect(() => {
     AOS.init();
   }, []);

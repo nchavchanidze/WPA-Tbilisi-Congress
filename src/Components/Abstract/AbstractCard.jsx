@@ -2,21 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faEdit } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const AbstractCard = (props) => {
   return (
     <Card>
       <Title>
-        <span>{props.id}.</span> {props.title}
+         {props.title}
       </Title>
-      {props.pending === true ? (
         <IconsWrapper>
+          <Link to={`/abstracts/${props.id}`}>
           <FontAwesomeIcon icon={faEdit} />
-          <FontAwesomeIcon icon={faTimes} />
+          </Link>
+          <DeleteButton onClick={() => props.deleteAbstract(props.id)}>
+            <FontAwesomeIcon icon={faTimes} />
+          </DeleteButton>
         </IconsWrapper>
-      ) : (
-        <></>
-      )}
     </Card>
   );
 };
@@ -38,9 +39,6 @@ const Title = styled.h4`
   font-weight: 500;
   line-height: 1.6;
   color: #39364f;
-  span {
-  font-weight: 700;
-  }
 `;
 
 const IconsWrapper = styled.div`
@@ -48,6 +46,21 @@ const IconsWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+`;
+
+const DeleteButton = styled.button`
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  svg {
+    font-size: 16px;
+    color: #39364f;
+    transition: all 0.3s ease-out;
+    &:hover {
+      transition: all 0.3s ease-out;
+      color: #486ff8;
+    }
+  }
 `;
 
 export default AbstractCard;

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { Outlet } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import AbstractCard from "./AbstractCard";
 
 const AbstractUpload = () => {
-  const abstractsList = [
+  const [abstracts, setAbstracts] = useState([
     {
       id: 1,
       title: "Network with fellow senior data leaders",
@@ -30,40 +31,12 @@ const AbstractUpload = () => {
       title: "Network with fellow senior data leaders",
       pending: true,
     },
-  ];
+  ]);
 
-  const abstractsUploaded = [
-    {
-      id: 1,
-      title: "Highly interactive sessions and over coffee, lunch and drinks.",
-      pending: false,
-
-    },
-    {
-      id: 2,
-      title: "Highly interactive sessions and over coffee, lunch and drinks.",
-      pending: false,
-
-    },
-    {
-      id: 3,
-      title: "Highly interactive sessions and over coffee, lunch and drinks.",
-      pending: false,
-
-    },
-    {
-      id: 4,
-      title: "Highly interactive sessions and over coffee, lunch and drinks.",
-      pending: false,
-
-    },
-    {
-      id: 5,
-      title: "Highly interactive sessions and over coffee, lunch and drinks.",
-      pending: false,
-
-    },
-  ];
+  const deleteAbstract = (id, abstracts, setAbstracts) => {
+    setAbstracts(abstracts.filter((abstract) => abstract.id !== id));
+    console.log(abstracts);
+  };
 
   return (
     <>
@@ -71,22 +44,25 @@ const AbstractUpload = () => {
       <AbstractContainer>
         <AbstractsWrapper>
           <AbstractCategoryTitle>
-            Pending ({abstractsList.length})
+            Pending ({abstracts.length})
           </AbstractCategoryTitle>
           <Abstracts>
-            {abstractsList.map((abstract) => {
+            {abstracts.map((abstract) => {
               return (
                 <AbstractCard
                   key={abstract.id}
                   id={abstract.id}
                   title={abstract.title}
                   pending={abstract.pending}
+                  deleteAbstract={(id) =>
+                    deleteAbstract(id, abstracts, setAbstracts)
+                  }
                 />
               );
             })}
           </Abstracts>
         </AbstractsWrapper>
-        <AbstractsWrapper>
+        {/* <AbstractsWrapper>
           <AbstractCategoryTitle>
             Uploaded ({abstractsUploaded.length})
           </AbstractCategoryTitle>
@@ -102,8 +78,9 @@ const AbstractUpload = () => {
               );
             })}
           </Abstracts>
-        </AbstractsWrapper>
+        </AbstractsWrapper> */}
       </AbstractContainer>
+      <Outlet />
     </>
   );
 };
