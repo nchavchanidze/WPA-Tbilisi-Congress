@@ -7,6 +7,10 @@ import AuthorCard from "./AuthorCard";
 import KeywordCard from "./KeywordCard";
 
 const Abstract = () => {
+  const [title, setTitle] = useState("");
+  const [topic, setTopic] = useState("");
+  const [presentationPreference, setPresentationPreference] = useState("");
+
   const [intro, setIntro] = useState("");
   const [objectives, setObjectives] = useState("");
   const [methods, setMethods] = useState("");
@@ -92,6 +96,19 @@ const Abstract = () => {
     ],
   };
 
+  const abstract = {
+    title: title,
+    topic: topic,
+    presentationPreference: presentationPreference,
+    intro: intro,
+    objectives: objectives,
+    methods: methods,
+    results: results,
+    conclusion: conclusion,
+    authors: authors,
+    keywords: keywords,
+  };
+
   useEffect(() => {
     dataParser();
   }, [dataParser]);
@@ -104,7 +121,12 @@ const Abstract = () => {
           <InputWrapper>
             <label>
               <span>Title</span>
-              <Input type="text" placeholder="Enter Title" />
+              <Input
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                type="text"
+                placeholder="Enter Title"
+              />
             </label>
           </InputWrapper>
           <InputWrapper>
@@ -112,7 +134,12 @@ const Abstract = () => {
               <span>
                 Topic <span className="required">*</span>
               </span>
-              <Select required name="topic">
+              <Select
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+                required
+                name="topic"
+              >
                 <option defaultValue={"DEFAULT"}>Please Select</option>
                 <option value="notSpecified">Not specified</option>
                 <option value="select-1">Select 1</option>
@@ -126,7 +153,12 @@ const Abstract = () => {
               <span>
                 Presentation preference <span className="required">*</span>
               </span>
-              <Select required name="preference">
+              <Select
+                value={presentationPreference}
+                onChange={(e) => setPresentationPreference(e.target.value)}
+                required
+                name="preference"
+              >
                 <option defaultValue={"DEFAULT"}>Please Select</option>
                 <option value="notSpecified">Not specified</option>
                 <option value="select-1">Select 1</option>

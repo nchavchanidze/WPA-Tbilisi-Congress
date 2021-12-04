@@ -1,13 +1,15 @@
 import React from 'react'
 import AbstractUpload from '../../Components/Abstract/AbstractUpload'
-import ComponentLayout from "../../Layouts/ComponentLayout"
+import Heading from '../../Components/Abstract/Heading'
+import Layout from "../../Layouts/Layout"
 
 
 const Abstracts = () => {
     return (
-        <ComponentLayout>
+        <Layout>
+            <Heading />
             <AbstractUpload />
-        </ComponentLayout>
+        </Layout>
     )
 }
 

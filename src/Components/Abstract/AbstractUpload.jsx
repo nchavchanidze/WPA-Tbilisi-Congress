@@ -40,11 +40,31 @@ const AbstractUpload = () => {
 
   return (
     <>
-      <Title>Abstracts</Title>
+      {/* <Title>Abstracts</Title> */}
       <AbstractContainer>
         <AbstractsWrapper>
           <AbstractCategoryTitle>
-            Pending ({abstracts.length})
+            In Progress ({abstracts.length})
+          </AbstractCategoryTitle>
+          <Abstracts>
+            {abstracts.map((abstract) => {
+              return (
+                <AbstractCard
+                  key={abstract.id}
+                  id={abstract.id}
+                  title={abstract.title}
+                  pending={abstract.pending}
+                  deleteAbstract={(id) =>
+                    deleteAbstract(id, abstracts, setAbstracts)
+                  }
+                />
+              );
+            })}
+          </Abstracts>
+        </AbstractsWrapper>
+        <AbstractsWrapper>
+          <AbstractCategoryTitle>
+            Sent ({abstracts.length})
           </AbstractCategoryTitle>
           <Abstracts>
             {abstracts.map((abstract) => {
@@ -97,10 +117,12 @@ const Title = styled.h1`
 
 const AbstractContainer = styled(Container)`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 100px;
-  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
 `;
 
 const AbstractsWrapper = styled.div`
@@ -125,6 +147,8 @@ const AbstractCategoryTitle = styled.h3`
   font-weight: 700;
   color: #39364f;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
 `;
 
 export default AbstractUpload;
