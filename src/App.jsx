@@ -1,11 +1,12 @@
 import React, { Suspense, useEffect } from "react";
-import { Routes, Route, useParams, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import Loader from "./Components/Loader";
 import Contact from "./Pages/Contact";
 import AbstractEdit from "./Components/Abstract/AbstractEdit";
 
 const Home = React.lazy(() => import("./Pages/Home"));
+const About = React.lazy(() => import("./Pages/About/About"));
 const Login = React.lazy(() => import("./Pages/Login"));
 const Register = React.lazy(() => import("./Pages/Register"));
 const AbstractSubmission = React.lazy(() =>
@@ -26,6 +27,10 @@ const App = () => {
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/about",
+      element: <About />,
     },
     {
       path: "/login",
