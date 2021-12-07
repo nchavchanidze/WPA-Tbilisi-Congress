@@ -77,7 +77,27 @@ const AboutInfo = () => {
         In this episode, Attentive founder and CTO Pedro Araújo talks about what
         it takes to build a tech new product from the ground up. Discover their
         approach to running an engineering team, from adopting new open source
-        technologies, to onboarding junior developers and learning .
+        technologies, to onboarding junior developers and learning.
+        <br />
+        <br />
+        While many New Yorker’s escape the city for cooler climates at the onset
+        of summer, for music lovers, the “city that never sleeps” is only just
+        heating up. Of course, The Big Apple hosts music festivals year round,
+        but summer is the time to truly immerse yourself in any and all styles
+        of music, from hip-hop to electronic, rock to salsa. Many festival
+        organizers also make good use of the greenery New York has to offer,
+        hosting events in the city’s many public parks and gardens. My
+        suggestion? Randall’s Island Park is a serious hotspot for tunes all
+        summer long, so don’t stray too far from this oasis in the middle of
+        Manhattan.
+        <br />
+        <br />
+        Dorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+        nonummy nibh euismodtincidunt dear ore magna aliquam erat volutpat. Ut
+        wisi enim ad minim veniam, quisnostrud exerci tation ullamcorper
+        lobortis Duis autem vel eum simply dummy text ofthe printing and
+        typesetting industry. Lorem Ipsum has been the industry’s standarddummy
+        text ever since the…
       </Paragraph>
     </AboutWrapper>
   );
