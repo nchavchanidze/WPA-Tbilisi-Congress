@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// import Background from "../../Assets/Images/Abstact Submission/background.jpg";
-import Background from "../../Assets/Images/Home/Slider/slide-03.png";
-
-
 const Heading = (props) => {
   console.log(props)
   return (
