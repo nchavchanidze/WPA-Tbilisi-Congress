@@ -5,10 +5,11 @@ import styled from "styled-components";
 import Background from "../../Assets/Images/Home/Slider/slide-03.png";
 
 
-const Heading = () => {
+const Heading = (props) => {
+  console.log(props)
   return (
-    <HeadingWrapper>
-      <Title>Abstracts</Title>
+    <HeadingWrapper background={props.background}>
+      <Title>{props.title}</Title>
     </HeadingWrapper>
   );
 };
@@ -26,9 +27,9 @@ const HeadingWrapper = styled.section`
     width: 100%;
     height: 100%;
     opacity: 0.4;
-    background-image: url(${Background});
+    background-image: url(${props => props.background});
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
     background-repeat: no-repeat;
   }
 `;
