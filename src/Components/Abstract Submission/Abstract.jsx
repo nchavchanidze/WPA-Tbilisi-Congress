@@ -325,9 +325,8 @@ const Abstract = () => {
           </InputWrapper>
           <InputWrapper>
             <label>
-              <span>
-                Upload your Abstract <span className="required">*</span>
-              </span>
+              <span>Upload your Abstract</span>
+              <Rule>**File upload is not nessesary**</Rule>
               <Input
                 type="file"
                 id="absract"
@@ -599,6 +598,15 @@ const Button = styled.input`
     color: #486ff8;
     transition: all 0.3s ease-out;
   }
+`;
+const Rule = styled.p`
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.6;
+  color: #ff3333;
+  margin-top: 10px;
 `;
 
 export default Abstract;
