@@ -1,12 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
 const Eposter = () => {
-    const [audio, setAudio] = useState([])
+  const [audio, setAudio] = useState([]);
 
-
-    console.log(audio)
+  console.log(audio);
   return (
     <>
       <Title>Submit Your E-Poster</Title>
@@ -36,7 +35,7 @@ const Eposter = () => {
             </StepListItem>
             <StepListItem>1 Page PPTX file</StepListItem>
             <StepListItem>
-              File format: <span>.PPTX only.</span>
+              File format: <span>.PPT / .PPTX only.</span>
             </StepListItem>
             <StepListItem>
               File size less than <span>10 MB</span>
@@ -93,12 +92,13 @@ const Eposter = () => {
             displayed correctly. Without following these instructions your
             E-Poster will be unable to be uploaded.
           </StepParagraph>
+        <StepRule>
+            **Audio is not nessesary**
+          </StepRule>
         </StepWrapper>
         <InputWrapper>
           <label>
-            <span>
-              Upload your Audio <span className="required">*</span>
-            </span>
+            <span>Upload your Audio</span>
             <Input
               type="file"
               id="absract"
@@ -108,7 +108,10 @@ const Eposter = () => {
               onChange={(e) => setAudio(e.target.value)}
             />
             <audio controls>
-              <source src="C:\fakepath\Jazz Beat C Blues Scale.mp3" type="audio/mp3" />
+              <source
+                src="C:\fakepath\Jazz Beat C Blues Scale.mp3"
+                type="audio/mp3"
+              />
               Your browser does not support the audio tag.
             </audio>
           </label>
