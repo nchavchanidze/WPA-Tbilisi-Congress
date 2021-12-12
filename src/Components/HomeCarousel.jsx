@@ -28,9 +28,9 @@ const HomeCarousel = () => {
       <SlideContentWrapper>
         <SliderContent>
           {/* <Sponsors /> */}
-          <p className="date">October 14 - October 16</p>
+          <p className="date">14 - 16 October 2022 / Tbilisi, Georgia</p>
           <h1>
-            Treatment and Management of Mental Disorders in a Post-pandemic Era 2022
+            Treatment and Management of Mental Disorders in <br/> a Post-pandemic Era
           </h1>
           <SliderButtonsWrapper>
             <SliderButton to="/abstract-submission">Abstract Submission</SliderButton>
