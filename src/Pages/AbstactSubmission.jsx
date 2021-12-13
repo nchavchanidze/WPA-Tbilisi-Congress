@@ -3,6 +3,7 @@ import AboutSubmission from "../Components/Abstract Submission/AboutSubmission";
 import Deadline from "../Components/Abstract Submission/Deadline";
 import Heading from "../Components/Abstract Submission/Heading";
 import SubmissionButtons from "../Components/Abstract Submission/SubmissionButtons";
+import Guidelines from "../Components/Abstract Submission/Guidelines"
 import Layout from "../Layouts/Layout";
 
 const AbstactSubmission = () => {
@@ -15,6 +16,7 @@ const AbstactSubmission = () => {
       <AboutSubmission />
       <Deadline />
       <SubmissionButtons />
+      <Guidelines />
     </Layout>
   );
 };
