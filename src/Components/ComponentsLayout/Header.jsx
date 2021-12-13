@@ -48,7 +48,10 @@ const Header = () => {
               <li>
                 <Link to="/about">About</Link>
               </li>
-              <NavDropdown title="Program" id="basic-nav-dropdown">
+              <li>
+                <Link to="/abstract-submission">Abstracts</Link>
+              </li>
+              {/* <NavDropdown title="Program" id="basic-nav-dropdown">
                 <ul>
                   <li>
                     <Link to="/">Program 1</Link>
@@ -57,7 +60,7 @@ const Header = () => {
                     <Link to="/">Program 2</Link>
                   </li>
                 </ul>
-              </NavDropdown>
+              </NavDropdown> */}
               <li>
                 <Link to="/">Schedules</Link>
               </li>
