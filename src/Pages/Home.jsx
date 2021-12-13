@@ -21,7 +21,7 @@ const Home = () => {
       <MotivationCards />
       {/* <Schedule /> */}
       <Speakers />
-      <Pricing />
+      {/* <Pricing /> */}
       <FAQ />
     </Layout>
   );
