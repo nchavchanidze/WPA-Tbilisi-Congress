@@ -4,7 +4,6 @@ import MotivationCards from "../Components/MotivationCards";
 import Pricing from "../Components/Pricing";
 import FAQ from "../Components/FAQ";
 import SummitReasons from "../Components/SummitReasons";
-// import Schedule from "../Components/Schedule";
 import Layout from "../Layouts/Layout";
 import Speakers from "../Components/Speakers";
 import Sponsors from "../Components/Sponsors";
@@ -19,7 +18,6 @@ const Home = () => {
       <Sponsors />
       <SummitReasons />
       <MotivationCards />
-      {/* <Schedule /> */}
       <Speakers />
       {/* <Pricing /> */}
       <FAQ />
