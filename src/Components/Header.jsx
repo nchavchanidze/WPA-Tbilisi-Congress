@@ -48,33 +48,76 @@ const Header = () => {
               <li>
                 <Link to="/">Home</Link>
               </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/abstract-submission">Abstracts</Link>
-              </li>
-              {/* <NavDropdown title="Program" id="basic-nav-dropdown">
+              <NavDropdown title="About" id="basic-nav-dropdown">
                 <ul>
                   <li>
-                    <Link to="/">Program 1</Link>
+                    <Link to="/">Welcome</Link>
                   </li>
                   <li>
-                    <Link to="/">Program 2</Link>
+                    <Link to="/">General Information</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Congress Committees</Link>
+                  </li>
+                  <li>
+                    <Link to="/">About WPA</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Covid-19 regulations</Link>
+                  </li>
+                  <li>
+                    <Link to="/">FAQs</Link>
                   </li>
                 </ul>
-              </NavDropdown> */}
-              
+              </NavDropdown>
+              <NavDropdown title="Program" id="basic-nav-dropdown">
+                <ul>
+                  <li>
+                    <Link to="/">Scientific program</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Speakers</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Pre-congress workshop</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Instructions</Link>
+                  </li>
+                  <li>
+                    <Link to="/">CME Accreditation</Link>
+                  </li>
+                </ul>
+              </NavDropdown>
+              <NavDropdown title="Submissions" id="basic-nav-dropdown">
+                <ul>
+                  <li>
+                    <Link to="/">Topics</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Symposium proposal submission</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Abstract submission</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Abstracts book</Link>
+                  </li>
+                </ul>
+              </NavDropdown>
               <li>
                 <Link to="/">Schedules</Link>
               </li>
               <NavDropdown title="Registration" id="basic-nav-dropdown">
                 <ul>
                   <li>
-                    <Link to="/">Registration 1</Link>
+                    <Link to="/">Registration</Link>
                   </li>
                   <li>
-                    <Link to="/">Registration 2</Link>
+                    <Link to="/">Onsite & Online</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Venue</Link>
                   </li>
                 </ul>
               </NavDropdown>
@@ -111,8 +154,8 @@ const StyledHeader = styled.header`
       /* flex-basis: unset !important; */
       flex-grow: unset !important;
       @media only screen and (max-width: 979.98px) {
-            margin-top: 45px;
-          }
+        margin-top: 45px;
+      }
     }
   }
 `;
@@ -141,20 +184,21 @@ const Nav = styled.ul`
       .dropdown-menu {
         &.show {
           display: flex;
-          text-align: center;
+          /* text-align: center; */
           justify-content: center;
           align-items: center;
-          padding: 0;
+          padding: 20px;
           margin-top: 20px !important;
+          width: 100px;
           @media only screen and (max-width: 979.98px) {
             margin-top: 0 !important;
           }
           ul {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
+            align-items: flex-start;
             flex-direction: column;
-            padding: 20px 0;
+            /* padding: 20px 20px; */
             gap: 20px;
             @media only screen and (max-width: 979.98px) {
               gap: 25px;
