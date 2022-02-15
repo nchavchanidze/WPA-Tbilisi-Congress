@@ -6,13 +6,15 @@ const SummitInfo = () => {
   return (
     <Container>
       <SummitDescription>
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exchange notes
-        with your peers and competitors. Maybe you want to place your company.
-        and faceds the top area world’s most eagers transformation business
-        digitization.
+        This is an attempt to provide an ambiance at the event that encourages
+        interaction, exchange of ideas, and networking opportunities among all
+        participants. Attending WPA Thematic Congress in Tbilisi will give you
+        opportunities for new knowledge, memorable experiences, hearing the
+        latest breakthroughs in psychiatry, and meeting colleagues and the
+        leading professionals in the field from all over the world. At the
+        Congress we will connect, share and learn.
       </SummitDescription>
-      <SummitTicket>
+      {/* <SummitTicket>
         <SummitTicketElement>
           <p>300</p>
           <span>Days</span>
@@ -42,7 +44,7 @@ const SummitInfo = () => {
             expected attendees at the 21st WPA World Congress of Psychiatry
           </span>
         </SummitTicketElement>
-      </SummitTicket>
+      </SummitTicket> */}
     </Container>
   );
 };

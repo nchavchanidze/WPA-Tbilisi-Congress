@@ -50,10 +50,10 @@ const SliderComponent = styled.div`
   /* height: calc(100vh - 147px); */
   height: 100vh;
   position: relative;
-  background-color: #39364f;
+  background-color: #fff;
   &.slide02 {
     &:before {
-      background-image: url(${Slide03});
+      /* background-image: url(${Slide03}); */
     }
   }
   &:before {
@@ -65,7 +65,7 @@ const SliderComponent = styled.div`
     width: 100%;
     height: 100%;
     opacity: 0.6;
-    background-image: url(${Slide03});
+    /* background-image: url(${Slide03}); */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -100,7 +100,7 @@ const SliderContent = styled.div`
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #fff;
+    color: #39364f;
     @media only screen and (max-width: 1366.98px) {
       font-size: 40px;
     }
@@ -113,7 +113,7 @@ const SliderContent = styled.div`
     font-size: 75px;
     font-weight: 900;
     text-transform: uppercase;
-    color: #fff;
+    color: #39364f;
     @media only screen and (max-width: 1366.98px) {
       font-size: 56px;
     }

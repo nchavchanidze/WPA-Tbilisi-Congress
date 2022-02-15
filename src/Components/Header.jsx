@@ -2,12 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Container, Navbar, NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-import Logo from "../Assets/Images/Logo.svg";
+// import Logo from "../Assets/Images/Logo.svg";
+import Logo from "../Assets/Images/NewLogo.png"
 
 const Header = () => {
   const [burger, setBurger] = useState(false);
   const [scroll, setScroll] = useState(0);
+  const [show, setShow] = useState(false);
 
   const handleBurger = () => {
     setBurger(!burger);
@@ -17,16 +21,16 @@ const Header = () => {
     document.addEventListener("scroll", () => {
       setScroll(window.scrollY);
     });
-    if (burger === true) {
-      document.querySelector("header").style.backgroundColor = "#39364f";
-    } else {
-      document.querySelector("header").style.backgroundColor = null;
-    }
-  }, [burger]);
+    // if (burger === true) {
+    //   document.querySelector("header").style.backgroundColor = "#39364f";
+    // } else {
+    //   document.querySelector("header").style.backgroundColor = null;
+    // }
+  }, []);
 
   return (
     <StyledHeader className={scroll > 100 ? "scrolled" : ""}>
-      <Container>
+      <StyledContainer fluid={true}>
         <Navbar expand="lg">
           <LogoWrapper>
             <Link to="/">
@@ -48,7 +52,18 @@ const Header = () => {
               <li>
                 <Link to="/">Home</Link>
               </li>
-              <NavDropdown title="About" id="basic-nav-dropdown">
+              <NavDropdown
+                title={
+                  <>
+                    About
+                    <FontAwesomeIcon
+                      className="nav-item-icon"
+                      icon={faChevronDown}
+                    ></FontAwesomeIcon>
+                  </>
+                }
+                id="basic-nav-dropdown"
+              >
                 <ul>
                   <li>
                     <Link to="/">Welcome</Link>
@@ -70,7 +85,18 @@ const Header = () => {
                   </li>
                 </ul>
               </NavDropdown>
-              <NavDropdown title="Program" id="basic-nav-dropdown">
+              <NavDropdown
+                title={
+                  <>
+                    Program
+                    <FontAwesomeIcon
+                      className="nav-item-icon"
+                      icon={faChevronDown}
+                    ></FontAwesomeIcon>
+                  </>
+                }
+                id="basic-nav-dropdown"
+              >
                 <ul>
                   <li>
                     <Link to="/">Scientific program</Link>
@@ -89,7 +115,18 @@ const Header = () => {
                   </li>
                 </ul>
               </NavDropdown>
-              <NavDropdown title="Submissions" id="basic-nav-dropdown">
+              <NavDropdown
+                title={
+                  <>
+                    Submissions
+                    <FontAwesomeIcon
+                      className="nav-item-icon"
+                      icon={faChevronDown}
+                    ></FontAwesomeIcon>
+                  </>
+                }
+                id="basic-nav-dropdown"
+              >
                 <ul>
                   <li>
                     <Link to="/">Topics</Link>
@@ -108,7 +145,18 @@ const Header = () => {
               <li>
                 <Link to="/">Schedules</Link>
               </li>
-              <NavDropdown title="Registration" id="basic-nav-dropdown">
+              <NavDropdown
+                title={
+                  <>
+                    Registration
+                    <FontAwesomeIcon
+                      className="nav-item-icon"
+                      icon={faChevronDown}
+                    ></FontAwesomeIcon>
+                  </>
+                }
+                id="basic-nav-dropdown"
+              >
                 <ul>
                   <li>
                     <Link to="/">Registration</Link>
@@ -130,33 +178,89 @@ const Header = () => {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-      </Container>
+      </StyledContainer>
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
   position: fixed;
-  top: 0;
+  top: 20px;
   left: 0;
   right: 0;
   z-index: 9999;
   transition: all 0.3s ease-out;
-  padding: 46px 0;
+  padding: 0px 40px;
+
   &.scrolled {
-    background-color: #39364f;
+    background-color: #fff;
     transition: all 0.3s ease-out;
+    padding: 0px 0px;
+    top: 0;
+    .container-fluid {
+      border: none;
+      background-color: #fff;
+      transition: all 0.3s ease-out;
+    }
+    /* .hamburger {
+      .line {
+        background-color: #fff;
+      }
+    } */
+    /* .dropdown-toggle {
+      color: #fff !important;
+    }
+    .dropdown-menu {
+      ul {
+        li {
+          a {
+              color: #39364f !important;
+              transition: all 0.3s ease-out;
+              &:hover {
+                color: #6989ff !important;
+                transition: all 0.3s ease-out;
+              }
+            }
+        }
+      }
+    } */
+    li {
+      a {
+        /* color: #fff !important; */
+      }
+    }
+  }
+  @media only screen and (max-width: 429.98px) {
+    top: 0;
     padding: 0;
   }
   .navbar {
     justify-content: space-between;
+    @media only screen and (max-width: 1365.98px) {
+      flex-wrap: wrap;
+    }
     .navbar-collapse {
       /* flex-basis: unset !important; */
       flex-grow: unset !important;
+      @media only screen and (max-width: 1365.98px) {
+        width: 100%;
+        justify-content: center;
+      }
       @media only screen and (max-width: 979.98px) {
         margin-top: 45px;
       }
     }
+  }
+`;
+
+const StyledContainer = styled(Container)`
+  background-color: #fff;
+  border-top: 4px solid #486ff8;
+  box-shadow: 0 3px 25px 0 rgb(0 0 0 / 9%);
+  padding: 10px 40px;
+  transition: all 0.3s ease-out;
+  @media only screen and (max-width: 429.98px) {
+    padding: 10px;
   }
 `;
 
@@ -172,7 +276,17 @@ const Nav = styled.ul`
   justify-content: space-between;
   align-items: center;
   gap: 45px;
+  @media only screen and (max-width: 1365.98px) {
+    margin-top: 40px;
+    width: 100%;
+  }
+  @media only screen and (max-width: 991.98px) {
+    align-items: flex-start;
+  }
   .dropdown {
+    @media only screen and (max-width: 991.98px) {
+      width: 100%;
+    }
     &.show {
       .dropdown-toggle {
         color: #6989ff;
@@ -180,8 +294,15 @@ const Nav = styled.ul`
         text-align: center;
         justify-content: center;
         align-items: center;
+        @media only screen and (max-width: 991.98px) {
+          justify-content: flex-start;
+          align-items: center;
+        }
       }
       .dropdown-menu {
+        @media only screen and (max-width: 979.98px) {
+          margin-top: 45px;
+        }
         &.show {
           display: flex;
           /* text-align: center; */
@@ -189,9 +310,9 @@ const Nav = styled.ul`
           align-items: center;
           padding: 20px;
           margin-top: 20px !important;
-          width: 100px;
+          margin-left: -20px !important;
           @media only screen and (max-width: 979.98px) {
-            margin-top: 0 !important;
+            /* margin-top: 0 !important; */
           }
           ul {
             display: flex;
@@ -199,11 +320,21 @@ const Nav = styled.ul`
             align-items: flex-start;
             flex-direction: column;
             /* padding: 20px 20px; */
+            width: 100%;
             gap: 20px;
             @media only screen and (max-width: 979.98px) {
               gap: 25px;
-              margin-top: 45px;
               padding: 0;
+            }
+          }
+          li {
+            a {
+              color: #39364f;
+              transition: all 0.3s ease-out;
+              &:hover {
+                color: #6989ff;
+                transition: all 0.3s ease-out;
+              }
             }
           }
         }
@@ -212,7 +343,7 @@ const Nav = styled.ul`
     .dropdown-toggle {
       font-family: "Urbanist", sans-serif;
       font-size: 18px;
-      color: #fff;
+      color: #39364f;
       font-weight: 700;
       transition: all 0.3s ease-out;
       background-color: unset;
@@ -227,7 +358,7 @@ const Nav = styled.ul`
         transition: all 0.3s ease-out;
       }
       &:after {
-        /* display: none; */
+        display: none;
       }
       &:hover {
         color: #6989ff;
@@ -246,9 +377,15 @@ const Nav = styled.ul`
       }
     }
     .dropdown-menu {
-      background-color: #39364f;
+      background-color: #fff;
       padding: 10px 20px;
       border: none;
+      box-shadow: 0 3px 25px 0 rgb(0 0 0 / 9%);
+      @media only screen and (max-width: 991.98px) {
+        border-radius: 12px;
+        background: #ffffff;
+        box-shadow: 6px 6px 12px #d4d4d4, -6px -6px 12px #ffffff;
+      }
       ul {
         li {
           margin-top: 10px;
@@ -266,7 +403,7 @@ const Nav = styled.ul`
     a {
       font-family: "Urbanist", sans-serif;
       font-size: 18px;
-      color: #fff;
+      color: #39364f;
       font-weight: 700;
       transition: all 0.3s ease-out;
       &:hover {
@@ -281,21 +418,24 @@ const Nav = styled.ul`
     font-size: 16px;
     font-weight: 700;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 25px;
     height: 50px;
-    width: 136px;
+    min-width: 136px;
     display: flex;
     justify-content: center;
     align-items: center;
     outline: none;
-    /* border: 2px solid transparent; */
-    border: none;
+    border: 2px solid transparent;
+    /* border: none; */
     transition: all 0.3s ease-out;
     &:hover {
-      /* border: 2px solid #486FF8; */
+      border: 2px solid #486ff8;
       background-color: #fff;
       color: #486ff8;
       transition: all 0.3s ease-out;
+    }
+    @media only screen and (max-width: 991.98px) {
+      width: 100%;
     }
   }
 `;
@@ -339,7 +479,7 @@ const Hamburger = styled.div`
   .line {
     width: 30px;
     height: 2px;
-    background-color: #ecf0f1;
+    background-color: #39364f;
     display: block;
     /* margin: 6px auto; */
     margin-top: 6px;

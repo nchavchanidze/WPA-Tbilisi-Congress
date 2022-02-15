@@ -11,36 +11,66 @@ const MotivationCards = () => {
       <CardWrapper data-aos="fade-left" data-aos-duration="800">
         <CardImage src={Image01} alt="" />
         <CardText>
-          <h1>Learn about New Developments and Best Practices</h1>
+          <h1>LEVEL UP YOUR KNOWLEDGE</h1>
           <p>
-            Want to build valuable connections with creatives from around the
-            world? Become a sponsor for the 9th Annual Conference and join us at
-            the beautiful Charles W. Eisemann Center for Performing Arts in
-            September 2121.
+            The congress will bring together best mental health professionals.
+            The latest discoveries and most up-to-date research will be revealed
+            and discussed. Discuss researchers’ findings with your colleagues,
+            share feedback, and make an impact on the scientific community.
+            Explore the latest industry advancements and learn about current
+            developments.
           </p>
         </CardText>
       </CardWrapper>
-      <CardWrapper className="reversed" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+      <CardWrapper
+        className="reversed"
+        data-aos="fade-right"
+        data-aos-duration="800"
+        data-aos-delay="300"
+      >
         <CardImage src={Image02} alt="" />
         <CardText>
-          <h1>Learn about New Developments and Best Practices</h1>
+          <h1>HEAR FROM THE EXPERTS</h1>
           <p>
-            Want to build valuable connections with creatives from around the
-            world? Become a sponsor for the 9th Annual Conference and join us at
-            the beautiful Charles W. Eisemann Center for Performing Arts in
-            September 2121.
+            Take the opportunity to meet global leaders in the field. Hear their
+            findings, ask them questions, make new contacts. This is the great
+            chance to share your own experience, ideas and projects and receive
+            valuable feedback.
           </p>
         </CardText>
       </CardWrapper>
-      <CardWrapper data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+      <CardWrapper
+        data-aos="fade-left"
+        data-aos-duration="800"
+        data-aos-delay="300"
+      >
         <CardImage src={Image03} alt="" />
         <CardText>
-          <h1>Learn about New Developments and Best Practices</h1>
+          <h1>NETWORK WITH THE COMMUNITY</h1>
           <p>
-            Want to build valuable connections with creatives from around the
-            world? Become a sponsor for the 9th Annual Conference and join us at
-            the beautiful Charles W. Eisemann Center for Performing Arts in
-            September 2121.
+            Network with international practitioners, researchers, colleagues,
+            and industry representatives. Share social and professional
+            experiences, successes and challenges, discuss real cases, and
+            emphasize the value of education and knowledge exchange. Present
+            your research and cases to your colleagues to get feedback, new
+            ideas, and recognition.
+          </p>
+        </CardText>
+      </CardWrapper>
+      <CardWrapper
+        className="reversed"
+        data-aos="fade-right"
+        data-aos-duration="800"
+        data-aos-delay="300"
+      >
+        <CardImage src={Image02} alt="" />
+        <CardText>
+          <h1>ADVANCE YOUR CAREER</h1>
+          <p>
+            Take part in exciting keynote sessions, panel discussions, e-poster
+            presentations, symposia, industry sessions, and many more.
+            Participate in the scientific program and be eligible to receive CME
+            credits.
           </p>
         </CardText>
       </CardWrapper>

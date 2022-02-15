@@ -7,6 +7,8 @@ import SummitReasons from "../Components/SummitReasons";
 import Layout from "../Layouts/Layout";
 import Speakers from "../Components/Speakers";
 import Sponsors from "../Components/Sponsors";
+import HomeVideo from "../Components/HomeVideo";
+import Deadlines from "../Components/Deadlines";
 
 const Home = () => {
   useEffect(() => {
@@ -15,12 +17,14 @@ const Home = () => {
   return (
     <Layout>
       <HomeCarousel />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <SummitReasons />
       <MotivationCards />
-      <Speakers />
+      <Deadlines />
+      {/* <Speakers /> */}
       {/* <Pricing /> */}
-      <FAQ />
+      {/* <FAQ /> */}
+      <HomeVideo />
     </Layout>
   );
 };

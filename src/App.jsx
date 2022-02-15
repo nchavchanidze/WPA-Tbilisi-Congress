@@ -4,6 +4,7 @@ import AOS from "aos";
 import Loader from "./Components/Loader";
 import Contact from "./Pages/Contact";
 import AbstractEdit from "./Components/Abstract/AbstractEdit";
+import Symposium from "./Pages/Symposium/Symposium";
 
 const Home = React.lazy(() => import("./Pages/Home"));
 const About = React.lazy(() => import("./Pages/About/About"));
@@ -22,7 +23,6 @@ const Abstracts = React.lazy(() => import("./Pages/Abstracts/Abstracts"));
 const ScrollButton = React.lazy(() => import("./Components/ScrollButton"));
 
 const App = () => {
- 
   const routes = [
     {
       path: "/",
@@ -77,12 +77,14 @@ const App = () => {
       element: <AbstractEdit />,
     },
     {
+      path: "/symposium",
+      element: <Symposium />,
+    },
+    {
       path: "*",
       element: <NotFound />,
     },
   ];
-
-  
 
   useEffect(() => {
     AOS.init();
