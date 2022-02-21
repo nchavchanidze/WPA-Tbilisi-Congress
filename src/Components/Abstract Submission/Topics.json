@@ -1,0 +1,134 @@
+[
+  {
+    "id": 0,
+    "title": "ADHD"
+  },
+  {
+    "id": 1,
+    "title": "Adversity and Mental Health"
+  },
+  {
+    "id": 2,
+    "title": "Anxiety/Fear-related Disorders"
+  },
+  {
+    "id": 3,
+    "title": "Autism Spectrum Disorder"
+  },
+  {
+    "id": 4,
+    "title": "Bipolar Disorders"
+  },
+  {
+    "id": 5,
+    "title": "Child and Adolescent Psychiatry"
+  },
+  {
+    "id": 6,
+    "title": "Comorbidity/Dual Diagnosis"
+  },
+  {
+    "id": 7,
+    "title": "COVID-19"
+  },
+  {
+    "id": 8,
+    "title": "Dementia"
+  },
+  {
+    "id": 9,
+    "title": "Depressive Disorders"
+  },
+  {
+    "id": 10,
+    "title": "Digital Mental Health"
+  },
+  {
+    "id": 11,
+    "title": "Eating/Feeding Disorders"
+  },
+  {
+    "id": 12,
+    "title": "Emergency Psychiatry"
+  },
+  {
+    "id": 13,
+    "title": "Epidemiology and Social Psychiatry"
+  },
+  {
+    "id": 14,
+    "title": "Ethics and Psychiatry"
+  },
+  {
+    "id": 15,
+    "title": "Forensic Psychiatry"
+  },
+  {
+    "id": 16,
+    "title": "Gambling and Internet abuse"
+  },
+  {
+    "id": 17,
+    "title": "Gender and mental health"
+  },
+  {
+    "id": 18,
+    "title": "LGBTQI+"
+  },
+  {
+    "id": 19,
+    "title": "Neurodevelopmental disorders"
+  },
+  {
+    "id": 20,
+    "title": "Obsessive-Compulsive and Related Disorders"
+  },
+  {
+    "id": 21,
+    "title": "Old Age Psychiatry"
+  },
+  {
+    "id": 22,
+    "title": "Oncology and Psychiatry"
+  },
+  {
+    "id": 23,
+    "title": "Personality Disorders"
+  },
+  {
+    "id": 24,
+    "title": "Psychopharmacology"
+  },
+  {
+    "id": 25,
+    "title": "Psychotherapy"
+  },
+  {
+    "id": 26,
+    "title": "Psychotic Disorders"
+  },
+  {
+    "id": 27,
+    "title": "PTSD/Stress-related Disorders"
+  },
+  {
+    "id": 28,
+    "title": "Rehabilitation of People with Mental Disorders"
+  },
+  {
+    "id": 29,
+    "title": "Sleep-Wake Disorders"
+  },
+  {
+    "id": 30,
+    "title": "Substance-related Addictions"
+  },
+  {
+    "id": 31,
+    "title": "Suicide Prevention"
+  },
+  {
+    "id": 32,
+    "title": "Other"
+  }
+]

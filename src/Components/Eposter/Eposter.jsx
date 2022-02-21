@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
-const Eposter = () => {
+const Eposter = (props) => {
   const [audio, setAudio] = useState([]);
 
   console.log(audio);
   return (
     <>
-      <Title>Submit Your E-Poster</Title>
-      <EposterWrapper>
+      {/* <Title>Submit Your E-Poster</Title> */}
+      <EposterWrapper className={!props.eposterChecked ? "hidden" : ""}>
         <Foreword>
           We kindly request that you prepare your E-Poster and audio recording
           (at a length of 5 minutes or less) for upload into the online system.
@@ -116,7 +116,7 @@ const Eposter = () => {
             </audio>
           </label>
         </InputWrapper>
-        <Button type="submit" value="Submit E-Poster" />
+        {/* <Button type="submit" value="Submit E-Poster" /> */}
       </EposterWrapper>
     </>
   );
@@ -132,7 +132,11 @@ const Title = styled.h1`
   text-transform: capitalize;
 `;
 
-const EposterWrapper = styled(Container)``;
+const EposterWrapper = styled(Container)`
+  &.hidden {
+    display: none;
+  }
+`;
 
 const Foreword = styled.h2`
   font-family: "Urbanist", sans-serif;

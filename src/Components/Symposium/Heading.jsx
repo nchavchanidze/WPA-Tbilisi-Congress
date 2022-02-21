@@ -6,7 +6,7 @@ import Background from "../../Assets/Images/Abstact Submission/background.jpg";
 const Heading = () => {
   return (
     <HeadingWrapper>
-      <Title>Abstact Submission</Title>
+      <Title>Symposia Proposal Submission</Title>
     </HeadingWrapper>
   );
 };
@@ -18,7 +18,6 @@ const HeadingWrapper = styled.section`
   align-items: center;
   padding: 200px 0 100px;
   box-shadow: 0 3px 25px 0 rgb(72 111 248 / 9%);
-  
 `;
 
 const Title = styled.h1`

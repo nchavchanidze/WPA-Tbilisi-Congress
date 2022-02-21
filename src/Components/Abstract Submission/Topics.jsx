@@ -4,95 +4,9 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
+import TopicList from "./Topics.json";
 
 const Topics = () => {
-  const TopicList = [
-    {
-      id: 0,
-      name: "Anxiety Disorders and Somatoform Disorders",
-    },
-    {
-      id: 1,
-      name: "Bipolar Disorders",
-    },
-    {
-      id: 2,
-      name: "Child and Adolescent Psychiatry",
-    },
-    {
-      id: 3,
-      name: "Classification of Mental Disorders",
-    },
-    {
-      id: 4,
-      name: "Comorbidity/Dual Pathologies",
-    },
-    {
-      id: 5,
-      name: "Consultation Liaison Psychiatry and Psychosomatics",
-    },
-    {
-      id: 6,
-      name: "COVID-19 and related topics",
-    },
-    {
-      id: 7,
-      name: "Cultural Psychiatry",
-    },
-    {
-      id: 8,
-      name: "Depressive Disorders",
-    },
-    {
-      id: 9,
-      name: "E-mental Health",
-    },
-    {
-      id: 10,
-      name: "Eating Disorders",
-    },
-    {
-      id: 11,
-      name: "Emergency Psychiatry",
-    },
-    {
-      id: 12,
-      name: "Epidemiology and Social Psychiatry",
-    },
-    {
-      id: 13,
-      name: "Ethics and Psychiatry",
-    },
-    {
-      id: 14,
-      name: "Forensic Psychiatry",
-    },
-    {
-      id: 15,
-      name: "Genetics and Molecular Neurobiology",
-    },
-    {
-      id: 16,
-      name: "Guidelines/Guidance",
-    },
-    {
-      id: 17,
-      name: "Intellectual Disability",
-    },
-    {
-      id: 18,
-      name: "Mental Health Care",
-    },
-    {
-      id: 19,
-      name: "Mental Health Policies",
-    },
-    {
-      id: 20,
-      name: "Migration and Mental health of Immigrants",
-    },
-  ];
-
   return (
     <>
       <Title>Abstract Topics</Title>
@@ -100,43 +14,43 @@ const Topics = () => {
         <Row>
           <Col md={4} sm={12}>
             <TopicsUl>
-              {TopicList.slice(0, 8).map((topic) => (
+              {TopicList.slice(0, 11).map((topic) => (
                 <TopicItem key={topic.id}>
                   <FontAwesomeIcon icon={faChevronCircleRight} />
-                  {topic.name}
+                  {topic.title}
                 </TopicItem>
               ))}
             </TopicsUl>
           </Col>
           <Col md={4} sm={12}>
             <TopicsUl className="topic-list">
-              {TopicList.slice(9, 17).map((topic) => (
+              {TopicList.slice(12, 23).map((topic) => (
                 <TopicItem key={topic.id}>
                   <FontAwesomeIcon icon={faChevronCircleRight} />
-                  {topic.name}
+                  {topic.title}
                 </TopicItem>
               ))}
             </TopicsUl>
           </Col>
           <Col md={4} sm={12}>
             <TopicsUl className="topic-list">
-              {TopicList.slice(18).map((topic) => (
+              {TopicList.slice(23).map((topic) => (
                 <TopicItem key={topic.id}>
                   <FontAwesomeIcon icon={faChevronCircleRight} />
-                  {topic.name}
+                  {topic.title}
                 </TopicItem>
               ))}
             </TopicsUl>
           </Col>
         </Row>
-        <Button to="/abstract-upload">Submit your Abstract</Button>
+        <Button to="/abstract-submission">Submit your Abstract</Button>
       </TopicsContainer>
     </>
   );
 };
 
 const Title = styled.h1`
-  margin: 30px auto 50px;
+  margin: 150px auto 50px;
   text-align: center;
   font-family: "Urbanist", sans-serif;
   font-size: 44px;

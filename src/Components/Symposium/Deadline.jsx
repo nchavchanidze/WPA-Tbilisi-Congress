@@ -17,43 +17,25 @@ const Deadline = () => {
           <Col md={4} sm={12}>
             <IconsWrapper>
               <FontAwesomeIcon icon={faCalendarAlt} />
-              <IconTitle>2022</IconTitle>
-              <IconDescription>Abstract Submissions Open</IconDescription>
+              <IconTitle>10 October 2021 (23:59 GMT+4)</IconTitle>
+              <IconDescription>Symposia Submission Deadline</IconDescription>
             </IconsWrapper>
           </Col>
           <Col md={4} sm={12}>
             <IconsWrapper>
               <FontAwesomeIcon icon={faClock} />
-              <IconTitle>2022</IconTitle>
-              <IconDescription>Abstract Submission Deadline</IconDescription>
+              <IconTitle>8 November 2021</IconTitle>
+              <IconDescription>
+                Notification of Submission Acceptance
+              </IconDescription>
             </IconsWrapper>
           </Col>
           <Col md={4} sm={12}>
             <IconsWrapper>
               <FontAwesomeIcon icon={faCheckSquare} />
-              <IconTitle>2022</IconTitle>
-              <IconDescription>
-                Notification of Acceptance/Rejection
-              </IconDescription>
-            </IconsWrapper>
-          </Col>
-        </Row>
-        <Row className="mt-5 align-center">
-          <Col md={{span: 4, offset: 2}} sm={12}>
-            <IconsWrapper>
-              <FontAwesomeIcon icon={faCalendarAlt} />
-              <IconTitle>2022</IconTitle>
+              <IconTitle>10 October 2021</IconTitle>
               <IconDescription>
                 Deadline for Change of Title/Authorship
-              </IconDescription>
-            </IconsWrapper>
-          </Col>
-          <Col md={4} sm={12}>
-            <IconsWrapper>
-              <FontAwesomeIcon icon={faClock} />
-              <IconTitle>2022</IconTitle>
-              <IconDescription>
-                Presenting Author Registration Deadline
               </IconDescription>
             </IconsWrapper>
           </Col>

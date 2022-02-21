@@ -5,6 +5,8 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import AuthorCard from "./AuthorCard";
 import KeywordCard from "./KeywordCard";
+import EposterUpload from "../Eposter/Eposter";
+import topics from './Topics.json'
 
 const Abstract = () => {
   const [title, setTitle] = useState("");
@@ -23,6 +25,8 @@ const Abstract = () => {
 
   const [keywords, setKeywords] = useState([]);
   const [keywordsValue, setKeywordsValue] = useState("");
+
+  const [eposter, setEposter] = useState();
 
   const handleAuthor = (
     e,
@@ -141,10 +145,9 @@ const Abstract = () => {
                 name="topic"
               >
                 <option defaultValue={"DEFAULT"}>Please Select</option>
-                <option value="notSpecified">Not specified</option>
-                <option value="select-1">Select 1</option>
-                <option value="select-2">Select 2</option>
-                <option value="select-3">Select 3</option>
+                {topics.map(topic => (
+                <option key={topic.id} value={topic.title}>{topic.title}</option>
+                ))}
               </Select>
             </label>
           </InputWrapper>
@@ -334,7 +337,37 @@ const Abstract = () => {
                 accept=".doc, .docx"
               />
             </label>
+            <RadioWrapper>
+              <span>Choose</span>
+              <RadioRow>
+                <label htmlFor="Male">
+                  <input
+                    required
+                    type="radio"
+                    id="oral"
+                    name="Type"
+                    value="Oral"
+                    checked={eposter === false}
+                    onChange={() => setEposter(false)}
+                  />
+                  Oral
+                </label>
+                <label htmlFor="Female">
+                  <input
+                    required
+                    type="radio"
+                    id="female"
+                    name="Gender"
+                    value="Female"
+                    checked={eposter === true}
+                    onChange={() => setEposter(true)}
+                  />
+                  E-Poster
+                </label>
+              </RadioRow>
+            </RadioWrapper>
           </InputWrapper>
+          <EposterUpload eposterChecked={eposter} />
           <Button type="submit" value="Submit Abstract" />
         </InputForm>
       </AbstractWrapper>
@@ -458,6 +491,46 @@ const Input = styled.input`
         transition: all 0.3s ease-out;
       }
     }
+  }
+`;
+const RadioWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  span {
+    font-family: "Urbanist", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #39364f;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    .required {
+      color: #486ff8;
+    }
+  }
+`;
+
+const RadioRow = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  label {
+    font-family: "Urbanist", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #39364f;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
   }
 `;
 

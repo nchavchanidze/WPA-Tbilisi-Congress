@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -7,8 +7,10 @@ import Countries from "./Country.json";
 import PhoneCodes from "./PhoneCodes.json";
 
 const Register = () => {
+  const [addressType, setAddressType] = useState(false);
+
   return (
-    <>
+    <SigupWrapper>
       <Title>Sign Up</Title>
       <Container className="d-flex justify-content-center align-items-center">
         <InputForm>
@@ -45,10 +47,11 @@ const Register = () => {
               </span>
               <Select required name="Salutation">
                 <option defaultValue={"DEFAULT"}>Please Select</option>
-                <option value="notSpecified">Not specified</option>
-                <option value="mr">Mr.</option>
-                <option value="mrs">Mrs.</option>
-                <option value="ms">Ms.</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Ms.">Ms.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Dr.">Dr.</option>
+                <option value="Prof.">Prof.</option>
               </Select>
             </label>
             <label htmlFor="Academic">
@@ -57,10 +60,18 @@ const Register = () => {
               </span>
               <Select required name="Academic">
                 <option defaultValue={"DEFAULT"}>Please Select</option>
-                <option value="notSpecified">Not specified</option>
-                <option value="title-1">Title 1</option>
-                <option value="title-2">Title 2</option>
-                <option value="title-3">Title 3</option>
+                <option value="Assoc.Prof.">Assoc.Prof.</option>
+                <option value="Dipl.Phys">Dipl.Phys</option>
+                <option value="Doz. Dr.">Doz. Dr.</option>
+                <option value="Dr.">Dr.</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Ms.">Ms.</option>
+                <option value="OA Dr.">OA Dr.</option>
+                <option value="PD Dr.">PD Dr.</option>
+                <option value="Prof.">Prof.</option>
+                <option value="Prof.Dr.">Prof.Dr.</option>
+                <option value="Prof.Dr.Dr.">Prof.Dr.Dr.</option>
               </Select>
             </label>
           </InputWrapper>
@@ -108,10 +119,82 @@ const Register = () => {
               </span>
               <Select required name="Profession">
                 <option defaultValue={"DEFAULT"}>Please Select</option>
-                <option value="notSpecified">Profession 1</option>
-                <option value="male">Profession 2</option>
-                <option value="female">Profession 3</option>
-                <option value="other">Profession 4</option>
+                <option value="Allergology">Allergology</option>
+                <option value="Anaesthesiology">Anaesthesiology</option>
+                <option value="Cardiology (incl. Paediatric Cardiology)">
+                  Cardiology (incl. Paediatric Cardiology)
+                </option>
+                <option value="Cardiothoracic Surgery">
+                  Cardiothoracic Surgery
+                </option>
+                <option value="Child and Adolescent Psychiatry and Psychotherapy">
+                  Child and Adolescent Psychiatry and Psychotherapy
+                </option>
+                <option value="Clinical Neurophysiology">
+                  Clinical Neurophysiology
+                </option>
+                <option value="Dermatology and Venereology">
+                  Dermatology and Venereology
+                </option>
+                <option value="Emergency Medicine">Emergency Medicine</option>
+                <option value="Endocrinology">Endocrinology</option>
+                <option value="Gastroenterology">Gastroenterology</option>
+                <option value=" General Practice"> General Practice</option>
+                <option value="Genetics">Genetics</option>
+                <option value="Geriatrics">Geriatrics</option>
+                <option value="Gynaecology and Obstetrics">
+                  Gynaecology and Obstetrics
+                </option>
+                <option value="Hand Surgery">Hand Surgery</option>
+                <option value="Infectious Diseases">Infectious Diseases</option>
+                <option value="Intensive Care Medicine">
+                  Intensive Care Medicine
+                </option>
+                <option value="Internal Medicine">Internal Medicine</option>
+                <option value="Medical Biopathology">
+                  Medical Biopathology
+                </option>
+                <option value="Medical Microbiology">
+                  Medical Microbiology
+                </option>
+                <option value="Nephrology">Nephrology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Neurosurgery">Neurosurgery</option>
+                <option value="Nuclear Medicine">Nuclear Medicine</option>
+                <option value="Occupational Medicine">
+                  Occupational Medicine
+                </option>
+                <option value="Oncology">Oncology</option>
+                <option value="Ophthalmology">Ophthalmology</option>
+                <option value="Oro-Maxillo-Facial Surgery and Stomatology">
+                  Oro-Maxillo-Facial Surgery and Stomatology
+                </option>
+                <option value="Orthopaedics">Orthopaedics</option>
+                <option value="Otorhinolaryngology">Otorhinolaryngology</option>
+                <option value="Paediatric Surgery">Paediatric Surgery</option>
+                <option value="Paediatrics">Paediatrics</option>
+                <option value="Pathology (surgical)">
+                  Pathology (surgical)
+                </option>
+                <option value="Physical Medicine and Rehabilitation">
+                  Physical Medicine and Rehabilitation
+                </option>
+                <option value="Plastic, Reconstructive and Aesthetic Surgery">
+                  Plastic, Reconstructive and Aesthetic Surgery
+                </option>
+                <option value="Pneumology">Pneumology</option>
+                <option value="Psychiatry">Psychiatry</option>
+                <option value="Public Health Medicine">
+                  Public Health Medicine
+                </option>
+                <option value="Radiology">Radiology</option>
+                <option value="Radiotherapy">Radiotherapy</option>
+                <option value="Rheumatology">Rheumatology</option>
+                <option value="Sports Medicine">Sports Medicine</option>
+                <option value="Surgery">Surgery</option>
+                <option value="Urology">Urology</option>
+                <option value="Vascular Surgery">Vascular Surgery</option>
+                <option value="Other">Other</option>
               </Select>
             </label>
           </InputWrapper>
@@ -128,6 +211,8 @@ const Register = () => {
                   id="office"
                   name="address_type"
                   value="Office"
+                  checked={addressType === false}
+                  onChange={() => setAddressType(false)}
                 />
                 Office
               </label>
@@ -138,12 +223,14 @@ const Register = () => {
                   id="private"
                   name="address_type"
                   value="Private"
+                  checked={addressType === true}
+                  onChange={() => setAddressType(true)}
                 />
                 Private
               </label>
             </RadioRow>
           </RadioWrapper>
-          <InputWrapper>
+          <InputWrapper className={addressType ? "d-none" : " "}>
             <label>
               <span>
                 Instituion <span className="required">*</span>
@@ -179,7 +266,7 @@ const Register = () => {
               <Input type="text" placeholder="Enter your City" />
             </label>
           </InputWrapper>
-          <InputWrapper>
+          {/* <InputWrapper>
             <InputWrapper>
               <label>
                 <span>
@@ -192,7 +279,7 @@ const Register = () => {
               <span>Street</span>
               <Input type="text" placeholder="Enter your Street Name" />
             </label>
-          </InputWrapper>
+          </InputWrapper> */}
           <InputWrapper className="mt-5">
             <label>
               <span>
@@ -215,7 +302,7 @@ const Register = () => {
               <Input type="Password" placeholder="Confirm Password" />
             </label>
           </InputWrapper>
-          <PhoneWrapper className="mt-5">
+          <PhoneWrapper className="mt-5 mb-5">
             <label htmlFor="phone-code">
               <span>
                 Phone <span className="required">*</span>
@@ -241,7 +328,7 @@ const Register = () => {
               <Input type="text" placeholder="Enter your Phone Number" />
             </label>
           </PhoneWrapper>
-          <PhoneWrapper>
+          {/* <PhoneWrapper>
             <label htmlFor="phone-code">
               <span>
                 Fax <span className="required">*</span>
@@ -274,7 +361,7 @@ const Register = () => {
             <label>
               <Input type="text" placeholder="Enter your Phone Number" />
             </label>
-          </PhoneWrapper>
+          </PhoneWrapper> */}
           <TermsCheckbox htmlFor="terms">
             <input
               required
@@ -291,9 +378,13 @@ const Register = () => {
           <Button type="submit" value="Sign Up" />
         </InputForm>
       </Container>
-    </>
+    </SigupWrapper>
   );
 };
+
+const SigupWrapper = styled.div`
+  margin-top: 200px;
+`
 
 const Title = styled.h1`
   margin: 30px auto 50px;
@@ -320,7 +411,7 @@ const InputForm = styled.form`
     font-weight: 600;
     transition: all 0.3s ease-out;
     &:hover {
-      color: #486FF8;
+      color: #486ff8;
       transition: all 0.3s ease-out;
     }
   }
@@ -347,7 +438,7 @@ const InputWrapper = styled.div`
     gap: 10px;
     width: 100%;
     .required {
-      color: #486FF8;
+      color: #486ff8;
     }
   }
 `;
@@ -372,7 +463,7 @@ const PhoneWrapper = styled.div`
     gap: 10px;
     width: 100%;
     .required {
-      color: #486FF8;
+      color: #486ff8;
     }
   }
 `;
@@ -393,7 +484,7 @@ const RadioWrapper = styled.div`
     align-items: flex-start;
     gap: 10px;
     .required {
-      color: #486FF8;
+      color: #486ff8;
     }
   }
 `;
@@ -431,7 +522,7 @@ const TermsCheckbox = styled.label`
       transition: all 0.3s ease-out;
       text-decoration: underline;
       &:hover {
-        color: #486FF8;
+        color: #486ff8;
         transition: all 0.3s ease-out;
         cursor: pointer;
       }
@@ -462,7 +553,7 @@ const Input = styled.input`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #486FF8;
+    border: 2px solid #486ff8;
     transition: all 0.3s ease-out;
   }
 `;
@@ -483,7 +574,7 @@ const Button = styled.input`
   border: 2px solid transparent;
   transition: all 0.3s ease-out;
   &:hover {
-    border: 2px solid #486FF8;
+    border: 2px solid #486ff8;
     background-color: #fff;
     color: #486ff8;
     transition: all 0.3s ease-out;
@@ -518,7 +609,7 @@ const Select = styled.select`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #486FF8;
+    border: 2px solid #486ff8;
     transition: all 0.3s ease-out;
   }
 `;

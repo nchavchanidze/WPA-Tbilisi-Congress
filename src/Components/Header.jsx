@@ -129,13 +129,13 @@ const Header = () => {
               >
                 <ul>
                   <li>
-                    <Link to="/">Topics</Link>
+                    <Link to="/abstract-topics">Topics</Link>
                   </li>
                   <li>
-                    <Link to="/">Symposium proposal submission</Link>
+                    <Link to="/symposium">Symposium proposal submission</Link>
                   </li>
                   <li>
-                    <Link to="/">Abstract submission</Link>
+                    <Link to="/abstract-submission">Abstract submission</Link>
                   </li>
                   <li>
                     <Link to="/">Abstracts book</Link>
@@ -159,7 +159,7 @@ const Header = () => {
               >
                 <ul>
                   <li>
-                    <Link to="/">Registration</Link>
+                    <Link to="/registration">Registration</Link>
                   </li>
                   <li>
                     <Link to="/">Onsite & Online</Link>

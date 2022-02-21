@@ -4,7 +4,10 @@ import AOS from "aos";
 import Loader from "./Components/Loader";
 import Contact from "./Pages/Contact";
 import AbstractEdit from "./Components/Abstract/AbstractEdit";
-import Symposium from "./Pages/Symposium/Symposium";
+import Symposium from './Pages/Symposium/Symposium'
+import SymposiumUpload from "./Pages/Symposium/SymposiumUpload";
+import AbstractTopics from "./Pages/AbstractTopics";
+import Registration from "./Pages/Registration/Registration";
 
 const Home = React.lazy(() => import("./Pages/Home"));
 const About = React.lazy(() => import("./Pages/About/About"));
@@ -15,7 +18,7 @@ const AbstractSubmission = React.lazy(() =>
 );
 const AbstractUpload = React.lazy(() => import("./Pages/AbstractUpload"));
 const EposterUpload = React.lazy(() => import("./Pages/EposterUpload"));
-const AbstractTopics = React.lazy(() => import("./Pages/AbstractTopics"));
+// const AbstractTopics = React.lazy(() => import("./Pages/AbstractTopics"));
 const NotFound = React.lazy(() => import("./Pages/NotFound"));
 const Dashboard = React.lazy(() => import("./Pages/Dashboard/Dashboard"));
 const Profile = React.lazy(() => import("./Pages/Profile/Profile"));
@@ -79,6 +82,14 @@ const App = () => {
     {
       path: "/symposium",
       element: <Symposium />,
+    },
+    {
+      path: "/symposium-upload",
+      element: <SymposiumUpload />,
+    },
+    {
+      path: "/registration",
+      element: <Registration />
     },
     {
       path: "*",

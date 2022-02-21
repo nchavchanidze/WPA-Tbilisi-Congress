@@ -5,12 +5,25 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import AboutImg from "../../Assets/Images/Abstact Submission/about.jpg";
 
-const AboutSubmission = () => {
+const AboutRegistration = () => {
   return (
     <AboutWrapper>
       <Container>
-        <AboutTitle>Abstract Submission is Now Open!</AboutTitle>
-        <About>Please read the requirements before submitting the abstract.</About>
+        <AboutTitle>Registration Now Open!</AboutTitle>
+        <About>
+          If you are still unsure about traveling to Tbilisi due to the
+          pandemic, then first register for virtual attendance and benefit from
+          Early rates until wpa-tbilisicongress, 2022 and you can later upgrade
+          to in-person event.
+          <br />
+          <br />
+          Congress is currently being planned as a hybrid event with physical
+          presence as well as with a virtual component. As we understand the
+          uncertainty during these unprecedented times, we offer our
+          participants the flexibility of changing their registration until
+          September 4, 2022 and, upon availability, from ONLINE to ONSITE or
+          vice versa.
+        </About>
       </Container>
     </AboutWrapper>
   );
@@ -33,9 +46,9 @@ const AboutImage = styled.img`
 const AboutTextWrapper = styled.div`
   padding-left: 120px;
   @media only screen and (max-width: 991.98px) {
-      padding-left: 0;
-      margin-top: 60px;
-      text-align: center;
+    padding-left: 0;
+    margin-top: 60px;
+    text-align: center;
   }
   a {
     background-color: #486ff8;
@@ -54,10 +67,10 @@ const AboutTextWrapper = styled.div`
     margin-top: 25px;
     transition: all 0.3s ease-out;
     @media only screen and (max-width: 991.98px) {
-        width: 100%;
-  }
+      width: 100%;
+    }
     &:hover {
-      border: 2px solid #486FF8;
+      border: 2px solid #486ff8;
       background-color: #fff;
       color: #486ff8;
       transition: all 0.3s ease-out;
@@ -80,4 +93,4 @@ const About = styled.p`
   margin-top: 25px;
 `;
 
-export default AboutSubmission;
+export default AboutRegistration;

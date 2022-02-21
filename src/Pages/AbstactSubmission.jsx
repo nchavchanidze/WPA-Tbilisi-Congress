@@ -15,7 +15,6 @@ const AbstactSubmission = () => {
       <Heading />
       <AboutSubmission />
       <Deadline />
-      <SubmissionButtons />
       <Guidelines />
     </Layout>
   );
