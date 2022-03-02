@@ -4,13 +4,17 @@ import AOS from "aos";
 import Loader from "./Components/Loader";
 import Contact from "./Pages/Contact";
 import AbstractEdit from "./Components/Abstract/AbstractEdit";
-import Symposium from './Pages/Symposium/Symposium'
+import Symposium from "./Pages/Symposium/Symposium";
 import SymposiumUpload from "./Pages/Symposium/SymposiumUpload";
 import AbstractTopics from "./Pages/AbstractTopics";
 import Registration from "./Pages/Registration/Registration";
 
 const Home = React.lazy(() => import("./Pages/Home"));
 const About = React.lazy(() => import("./Pages/About/About"));
+const Welcome = React.lazy(() => import("./Pages/About/Welcome/Welcome"));
+const GeneralInformation = React.lazy(() =>
+  import("./Pages/About/General Information/GeneralInformation")
+);
 const Login = React.lazy(() => import("./Pages/Login"));
 const Register = React.lazy(() => import("./Pages/Register"));
 const AbstractSubmission = React.lazy(() =>
@@ -34,6 +38,14 @@ const App = () => {
     {
       path: "/about",
       element: <About />,
+    },
+    {
+      path: "/welcome",
+      element: <Welcome />,
+    },
+    {
+      path: "/general-information",
+      element: <GeneralInformation />,
     },
     {
       path: "/login",
@@ -89,7 +101,7 @@ const App = () => {
     },
     {
       path: "/registration",
-      element: <Registration />
+      element: <Registration />,
     },
     {
       path: "*",
