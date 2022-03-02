@@ -319,113 +319,104 @@ const Guidelines = () => {
             </GuideWrapper>
           </Dropdown.Menu>
         </Dropdown>
-        <Dropdown>
-          <Dropdown.Toggle id="dropdown-basic">
-            Abstract Submitters' Declaration
-            <FontAwesomeIcon icon={faAngleDown} />
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Paragraph>
-              During abstract submission you will be asked to confirm that you
-              agree to the following:
-            </Paragraph>
-            <GuideWrapper>
-              <UlTitle>
-                <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-                <h4>
-                  I confirm that I previewed this abstract and that all
-                  information is correct. I accept that the content of this
-                  abstract{" "}
-                  <span>
-                    cannot be modified or corrected after final submission
-                  </span>{" "}
-                  and I am aware that it will be published as submitted.
-                </h4>
-              </UlTitle>
-            </GuideWrapper>
-            <GuideWrapper>
-              <UlTitle>
-                <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-                <h4>
-                  Submission of the abstract constitutes{" "}
-                  <span>the consent of all authors</span> to publication (e.g.
-                  Congress website, programs, other promotions, etc.)
-                </h4>
-              </UlTitle>
-            </GuideWrapper>
-            <GuideWrapper>
-              <UlTitle>
-                <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-                <h4>
-                  The Abstract Submitter warrants and represents that no part of
-                  the information and content provided by him/her (hereafter:
-                  the <span>Content</span>) to the Congress Organizers
-                  (hereafter: the
-                  <span>Organizers</span>), nor the publication of any such
-                  Content by the Organizers, on the internet or otherwise
-                  infringes any third party rights, including but not limited to
-                  privacy rights and/or intellectual property rights.
-                </h4>
-              </UlTitle>
-            </GuideWrapper>
-            <GuideWrapper>
-              <UlTitle>
-                <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-                <h4>
-                  The Abstract Submitter grants the Organizers a copyright
-                  license to reproduce, publish, translate, distribute, and
-                  display the text of the Content on a royalty-free, perpetual,
-                  irrevocable nonexclusive basis.
-                </h4>
-              </UlTitle>
-            </GuideWrapper>
-            <GuideWrapper>
-              <UlTitle>
-                <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-                <h4>
-                  I herewith confirm that the contact details saved in this
-                  system are those of the presenting author, who will be
-                  notified about the status of the abstract. The presenting
-                  author is responsible for informing the other authors about
-                  the status of the abstract. The submitting author may request
-                  to be copied on abstract correspondence.
-                </h4>
-              </UlTitle>
-            </GuideWrapper>
-            <GuideWrapper>
-              <UlTitle>
-                <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-                <h4>
-                  I understand that the presenting author must be a registered
-                  participant.
-                </h4>
-              </UlTitle>
-            </GuideWrapper>
-            <GuideWrapper>
-              <UlTitle>
-                <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-                <h4>
-                  The Organizers reserve the right to remove from publication
-                  and/or presentation an abstract which does not comply with the
-                  above.
-                </h4>
-              </UlTitle>
-            </GuideWrapper>
-            <GuideWrapper>
-              <UlTitle>
-                <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-                <h4>
-                  I understand that I must select a specific
-                  Theme/Topic/Subtopic for my abstract allocation. Although the
-                  Committee will work hard to honor this selection, this cannot
-                  be guaranteed. The Committee reserves the right to change the
-                  Theme, Topic or Subtopic under which the abstract was
-                  originally submitted.
-                </h4>
-              </UlTitle>
-            </GuideWrapper>
-          </Dropdown.Menu>
-        </Dropdown>
+        <DeclarationWrapper>
+        <DeclarationTitle>Abstract Submitters' Declaration</DeclarationTitle>
+        <Paragraph>
+          During abstract submission you will be asked to confirm that you agree
+          to the following:
+        </Paragraph>
+        <GuideWrapper>
+          <UlTitle>
+            <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
+            <h4>
+              I confirm that I previewed this abstract and that all information
+              is correct. I accept that the content of this abstract{" "}
+              <span>
+                cannot be modified or corrected after final submission
+              </span>{" "}
+              and I am aware that it will be published as submitted.
+            </h4>
+          </UlTitle>
+        </GuideWrapper>
+        <GuideWrapper>
+          <UlTitle>
+            <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
+            <h4>
+              Submission of the abstract constitutes{" "}
+              <span>the consent of all authors</span> to publication (e.g.
+              Congress website, programs, other promotions, etc.)
+            </h4>
+          </UlTitle>
+        </GuideWrapper>
+        <GuideWrapper>
+          <UlTitle>
+            <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
+            <h4>
+              The Abstract Submitter warrants and represents that no part of the
+              information and content provided by him/her (hereafter: the{" "}
+              <span>Content</span>) to the Congress Organizers (hereafter: the
+              <span>Organizers</span>), nor the publication of any such Content
+              by the Organizers, on the internet or otherwise infringes any
+              third party rights, including but not limited to privacy rights
+              and/or intellectual property rights.
+            </h4>
+          </UlTitle>
+        </GuideWrapper>
+        <GuideWrapper>
+          <UlTitle>
+            <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
+            <h4>
+              The Abstract Submitter grants the Organizers a copyright license
+              to reproduce, publish, translate, distribute, and display the text
+              of the Content on a royalty-free, perpetual, irrevocable
+              nonexclusive basis.
+            </h4>
+          </UlTitle>
+        </GuideWrapper>
+        <GuideWrapper>
+          <UlTitle>
+            <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
+            <h4>
+              I herewith confirm that the contact details saved in this system
+              are those of the presenting author, who will be notified about the
+              status of the abstract. The presenting author is responsible for
+              informing the other authors about the status of the abstract. The
+              submitting author may request to be copied on abstract
+              correspondence.
+            </h4>
+          </UlTitle>
+        </GuideWrapper>
+        <GuideWrapper>
+          <UlTitle>
+            <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
+            <h4>
+              I understand that the presenting author must be a registered
+              participant.
+            </h4>
+          </UlTitle>
+        </GuideWrapper>
+        <GuideWrapper>
+          <UlTitle>
+            <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
+            <h4>
+              The Organizers reserve the right to remove from publication and/or
+              presentation an abstract which does not comply with the above.
+            </h4>
+          </UlTitle>
+        </GuideWrapper>
+        <GuideWrapper>
+          <UlTitle>
+            <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
+            <h4>
+              I understand that I must select a specific Theme/Topic/Subtopic
+              for my abstract allocation. Although the Committee will work hard
+              to honor this selection, this cannot be guaranteed. The Committee
+              reserves the right to change the Theme, Topic or Subtopic under
+              which the abstract was originally submitted.
+            </h4>
+          </UlTitle>
+        </GuideWrapper>
+        </DeclarationWrapper>
         <GuidelineForm>
           <label htmlFor="agree">
             <GuideCheckbox
@@ -458,7 +449,7 @@ const GuidelinesSection = styled.section`
       margin-top: 0;
     }
     &.show {
-      /* border: 2px solid #486ff8; */
+      /* border: 2px solid #bd1b21; */
       border-radius: 5px;
 
       .dropdown-toggle {
@@ -467,7 +458,7 @@ const GuidelinesSection = styled.section`
         background-color: #fff;
         border: none;
         color: #39364f;
-        border: 2px solid #486ff8;
+        border: 2px solid #bd1b21;
         /* border-bottom: none; */
         border-radius: 0;
         border-top-left-radius: 5px;
@@ -481,7 +472,7 @@ const GuidelinesSection = styled.section`
       align-items: center;
       width: 100%;
       height: 76px;
-      background-color: #486ff8;
+      background-color: #bd1b21;
       border: none;
       color: #fff;
       font-family: "Urbanist", sans-serif;
@@ -545,6 +536,20 @@ const Title = styled.h1`
   }
 `;
 
+
+const DeclarationWrapper = styled.div`
+  padding-top: 100px;
+`
+
+const DeclarationTitle = styled.h4`
+  color: #39364f;
+  font-family: "Urbanist", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+`;
+
 const Paragraph = styled.p`
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
@@ -594,7 +599,7 @@ const UlTitle = styled.div`
     }
   }
   svg {
-    color: #486ff8;
+    color: #bd1b21;
     font-size: 15px;
   }
 `;
@@ -625,7 +630,7 @@ const GuideList = styled.li`
     min-height: 12px;
     border-radius: 50%;
     background-color: transparent;
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
   }
   span {
     font-weight: 700;
@@ -652,12 +657,12 @@ const GuidelineForm = styled.form`
     span {
       width: 30px;
       height: 30px;
-      border: 2px solid #486ff8;
+      border: 2px solid #bd1b21;
       transition: all 0.3s ease-out;
       border-radius: 6px;
     }
     input:checked ~ span {
-      background-color: #486ff8;
+      background-color: #bd1b21;
       border: 2px solid transparent;
       transition: all 0.3s ease-out;
     }
@@ -667,7 +672,7 @@ const GuideCheckbox = styled.input`
   visibility: hidden;
 `;
 const AbstractButton = styled(Link)`
-  background-color: #486ff8;
+  background-color: #bd1b21;
   font-family: "Urbanist", sans-serif;
   text-transform: capitalize;
   font-size: 16px;
@@ -682,18 +687,18 @@ const AbstractButton = styled(Link)`
   outline: none;
   border: 2px solid transparent;
   transition: all 0.3s ease-out;
-  margin:50px auto 0;
+  margin: 50px auto 0;
   &.disabled {
     pointer-events: none;
-    background-color: #a6b0d3 !important;
+    background-color: #ffd2d3 !important;
   }
   @media only screen and (max-width: 575.98px) {
     width: 100%;
   }
   &:hover {
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     background-color: #fff;
-    color: #486ff8;
+    color: #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;

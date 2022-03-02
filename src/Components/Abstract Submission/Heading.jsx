@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Background from "../../Assets/Images/Abstact Submission/background.jpg";
+import Background from "../../Assets/Images/page-cover.png"
+
 
 const Heading = () => {
   return (
@@ -12,13 +13,16 @@ const Heading = () => {
 };
 
 const HeadingWrapper = styled.section`
-  background-color: #fff;
+   background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 200px 0 100px;
+  padding: 269px 0 200px;
   box-shadow: 0 3px 25px 0 rgb(72 111 248 / 9%);
-  
+  background-image: url(${Background});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 const Title = styled.h1`
