@@ -15,6 +15,9 @@ const Welcome = React.lazy(() => import("./Pages/About/Welcome/Welcome"));
 const GeneralInformation = React.lazy(() =>
   import("./Pages/About/General Information/GeneralInformation")
 );
+const Committees = React.lazy(() =>
+  import("./Pages/About/Congress Committees/Committees")
+);
 const Login = React.lazy(() => import("./Pages/Login"));
 const Register = React.lazy(() => import("./Pages/Register"));
 const AbstractSubmission = React.lazy(() =>
@@ -46,6 +49,10 @@ const App = () => {
     {
       path: "/general-information",
       element: <GeneralInformation />,
+    },
+    {
+      path: "/congress-committees",
+      element: <Committees />,
     },
     {
       path: "/login",
