@@ -19,27 +19,27 @@ const ContactInfo = () => {
             </IconWrapper>
             <IconTitle>Our Address</IconTitle>
             <IconDescription>
-              2715 Ash Dr. San Jose, South Dakota 83475
+            43, Ipolitov-Ivanov St., 0153, Tbilisi
             </IconDescription>
           </InfoContainer>
           <InfoContainer md={4} sm={12}>
             <IconWrapper>
               <Icon icon={faPhoneAlt} />
             </IconWrapper>
-            <IconTitle>Chat Info</IconTitle>
+            <IconTitle>Phone</IconTitle>
             <IconDescription>
               Feel free and give us call at{" "}
-              <a href="tel:+995555555555">+995 555 555 555</a>
+              <a href="tel:+995751731955">+995 751 73 19 55</a>
             </IconDescription>
           </InfoContainer>
           <InfoContainer md={4} sm={12}>
             <IconWrapper>
               <Icon icon={faEnvelope} />
             </IconWrapper>
-            <IconTitle>Live support</IconTitle>
+            <IconTitle>E-Mail</IconTitle>
             <IconDescription>
-              Feel free and send us an Email{" "}
-              <a href="mailto:info@devscave.com">info@devscave.com</a>
+              Feel free and send us an E-Mail{" "}
+              <a href="mailto:wpatbilisicongress@gmail.com">wpatbilisicongress@gmail.com</a>
             </IconDescription>
           </InfoContainer>
         </InfoRow>
@@ -54,7 +54,7 @@ const ContactInfoWrapper = styled.section`
 
 const InfoRow = styled(Row)`
   padding-bottom: 100px;
-  border-bottom: 1px solid rgba(113, 116, 136, 0.2);
+  /* border-bottom: 1px solid rgba(113, 116, 136, 0.2); */
 `;
 
 const InfoContainer = styled(Col)`

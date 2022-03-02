@@ -15,7 +15,7 @@ const Contact = () => {
       <Heading />
       <ContactForm />
       <ContactInfo />
-      <ContactMap />
+      {/* <ContactMap /> */}
     </Layout>
   );
 };

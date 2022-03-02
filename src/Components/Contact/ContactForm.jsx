@@ -4,24 +4,24 @@ import styled from "styled-components";
 const ContactForm = () => {
   return (
     <ContactWrapper>
-      <Title>Drop us a line</Title>
       <Description>
-        Have a question, feedback or idea for the Devscave team? Use the form
-        below and a member of our team will contact you shortly.
+        Have a question, feedback or idea regarding the WPA Thematic Congres in
+        Tbilisi? Use the form below and a member of our team will contact you
+        shortly.
       </Description>
       <InputForm>
         <InputWrapper>
           <label>
             <span>
-              Firstname <span className="required">*</span>
+              First Name <span className="required">*</span>
             </span>
-            <Input type="text" required placeholder="Enter your Firstname" />
+            <Input type="text" required placeholder="Enter your First Name" />
           </label>
           <label>
             <span>
-              Lastname <span className="required">*</span>
+              Last Name <span className="required">*</span>
             </span>
-            <Input type="text" placeholder="Enter your Lastname" />
+            <Input type="text" placeholder="Enter your Last Name" />
           </label>
         </InputWrapper>
         <InputWrapper>
@@ -33,7 +33,7 @@ const ContactForm = () => {
           </label>
           <label>
             <span>
-              Company Name <span className="required">*</span>
+              Subject <span className="required">*</span>
             </span>
             <Input type="text" placeholder="Enter your Company Name" />
           </label>
@@ -56,14 +56,6 @@ const ContactWrapper = styled.section`
   padding: 100px 0;
 `;
 
-const Title = styled.h1`
-  font-family: "Urbanist", sans-serif;
-  font-size: 44px;
-  font-weight: 700;
-  color: #39364f;
-  text-align: center;
-`;
-
 const Description = styled.p`
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
@@ -71,7 +63,7 @@ const Description = styled.p`
   font-weight: 400;
   line-height: 1.6;
   text-align: center;
-  max-width: 530px;
+  /* max-width: 530px; */
   margin: 15px auto 0;
 `;
 
@@ -109,7 +101,7 @@ const InputWrapper = styled.div`
     gap: 10px;
     width: 100%;
     .required {
-      color: #486ff8;
+      color: #BD1B21;
     }
   }
 `;
@@ -135,7 +127,7 @@ const Input = styled.input`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #486ff8;
+    border: 2px solid #BD1B21;
     transition: all 0.3s ease-out;
   }
 `;
@@ -161,13 +153,13 @@ const Textarea = styled.textarea`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #486ff8;
+    border: 2px solid #BD1B21;
     transition: all 0.3s ease-out;
   }
 `;
 
 const Button = styled.input`
-  background-color: #486ff8;
+  background-color: #BD1B21;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -182,9 +174,9 @@ const Button = styled.input`
   border: 2px solid transparent;
   transition: all 0.3s ease-out;
   &:hover {
-    border: 2px solid #486FF8;
+    border: 2px solid #BD1B21;
     background-color: #fff;
-    color: #486ff8;
+    color: #BD1B21;
     transition: all 0.3s ease-out;
   }
 `;
