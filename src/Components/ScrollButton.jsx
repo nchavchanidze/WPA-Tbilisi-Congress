@@ -32,7 +32,7 @@ const ScrollButton = () => {
 const ScrollBtn = styled.button`
   min-height: 70px;
   min-width: 70px;
-  background-color: #486ff8;
+  background-color: #bd1b21;
   border-radius: 50%;
   border: none;
   position: fixed;
@@ -40,11 +40,11 @@ const ScrollBtn = styled.button`
   bottom: 4%;
   transition: all 0.3s ease-out;
   &:hover {
-    background-color: #f0f4ff;
+    background-color: #ffd2d3;
     transition: all 0.3s ease-out;
     svg {
       transition: all 0.3s ease-out;
-      color: #486ff8;
+      color: #bd1b21;
     }
   }
   svg {
