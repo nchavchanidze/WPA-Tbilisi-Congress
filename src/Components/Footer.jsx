@@ -10,75 +10,81 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
-import Logo from "../Assets/Images/LogoBlack.svg";
+// import Logo from "../Assets/Images/LogoBlack.svg";
+// import Logo from "../Assets/Images/NewLogo.png";
+import Logo from "../Assets/Images/wpa-logo.svg"
+
 
 const Footer = () => {
   return (
     <FooterContainer>
       <Container>
         <Row>
-          <Col md={5} sm={12}>
+          <Col md={4} sm={12}>
             <LogoWrapper>
               <Link to="/">
                 <img src={Logo} alt="Seat Event" />
               </Link>
             </LogoWrapper>
+
             <AboutText>
-              Network with fellow senior data leaders from global banks and
-              asset managers during our highly interactive sessions and over
-              coffee, lunch and drinks in our extended networking breaks.
+              The WPA is psychiatry’s global association representing national
+              societies aimed to increase the knowledge and skills necessary for
+              work in the field of mental health.
             </AboutText>
           </Col>
-          <Col md={2} sm={12}>
-            <Navigation>
+          <Col md={{span:4, offset:1}} sm={12}>
+            <FooterTitle>DATES TO NOTE</FooterTitle>
+            <DeadlinesWrapper>
               <li>
-                <Link to="/">Home</Link>
+                Proposal Submission Deadline: <span>22 February, 2022</span>
               </li>
               <li>
-                <Link to="/">About</Link>
+                Abstract Submission Deadline: <span>22 February, 2022</span>
               </li>
               <li>
-                <Link to="/">Events</Link>
+                Early Registration Deadline: <span>22 February, 2022</span>
+              </li>
+            </DeadlinesWrapper>
+          </Col>
+          {/* <Col md={2} sm={12}>
+            <FooterTitle>Quick Links</FooterTitle>
+            <Navigation style={{ marginTop: 30 }}>
+              <li>
+                <Link to="/">Sign in</Link>
               </li>
               <li>
-                <Link to="/">Schedules</Link>
+                <Link to="/">Register</Link>
               </li>
               <li>
-                <Link to="/">Registration</Link>
+                <Link to="/">Submit Abstract</Link>
+              </li>
+              <li>
+                <Link to="/">Submit Proposal</Link>
+              </li>
+              <li>
+                <Link to="/">FAQs</Link>
+              </li>
+              <li>
+                <Link to="/">Contact Us</Link>
               </li>
             </Navigation>
-          </Col>
+          </Col> */}
           <Col md={3} sm={12}>
-            <Navigation>
-              <li>
-                <Link to="/">Attend</Link>
-              </li>
-              <li>
-                <Link to="/">Abstract Submission</Link>
-              </li>
-              <li>
-                <Link to="/">Sumbit Abstract</Link>
-              </li>
-              <li>
-                <Link to="/">Abstract Topics</Link>
-              </li>
-              <li>
-                <Link to="/">What to Expect</Link>
-              </li>
-            </Navigation>
-          </Col>
-          <Col md={2} sm={12}>
-            <ContactWrapper>
+            <FooterTitle>Congress Secretariat</FooterTitle>
+            <ContactWrapper style={{ marginTop: 30 }}>
               <ContactText>
                 <span>Email: </span>
-                <a href="mailto:info@devscave.com">info@devscave.com</a>
+                <a href="mailto:wpatbilisicongress@gmail.com">
+                  wpatbilisicongress@gmail.com
+                </a>
               </ContactText>
               <ContactText>
                 <span>Phone: </span>
-                <a href="tel:+995555555555">+995 555 555 555</a>
+                <a href="tel:+995751731955">+995 751 73 19 55</a>
               </ContactText>
             </ContactWrapper>
-            <SocialsWrapper>
+            {/* <SocialsWrapper>
               <li>
                 <FontAwesomeIcon icon={faFacebookF} />
               </li>
@@ -91,17 +97,37 @@ const Footer = () => {
               <li>
                 <FontAwesomeIcon icon={faYoutube} />
               </li>
-            </SocialsWrapper>
+            </SocialsWrapper> */}
           </Col>
         </Row>
+        <Warning>
+          <p>
+            There is an increasing number of fraudulent websites that are
+            attempting to impersonate WPA Tbilisi Congress. We recommend you
+            only register through this website or use only trusted online
+            registration services.
+          </p>
+        </Warning>
         <Copyright>
-          <p>Copyright © 2021 Devscave. All Rights Reserved</p>
+          <p>Copyright © 2022 WPA Tbilisi Congress. All Rights Reserved.</p>
           <TermsPrivacy>
             <li>
-              <Link to="/">Privacy</Link>
+              <Link to="/">Sign in</Link>
             </li>
             <li>
-              <Link to="/">Terms</Link>
+              <Link to="/">Register</Link>
+            </li>
+            <li>
+              <Link to="/">Submit Abstract</Link>
+            </li>
+            <li>
+              <Link to="/">Submit Proposal</Link>
+            </li>
+            <li>
+              <Link to="/">FAQs</Link>
+            </li>
+            <li>
+              <Link to="/">Contact Us</Link>
             </li>
           </TermsPrivacy>
         </Copyright>
@@ -113,10 +139,24 @@ const Footer = () => {
 const FooterContainer = styled.footer`
   background-color: #fff;
   padding: 100px 0 30px;
+  box-shadow: 0 3px 25px 0 rgb(0 0 0 / 9%);
+`;
+
+const FooterTitle = styled.h5`
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  color: #39364f;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: uppercase;
+  @media only screen and (max-width: 755.98px) {
+    padding-top: 30px;
+    border-top: 1px solid rgba(57, 54, 79, 0.2);
+  }
 `;
 
 const LogoWrapper = styled.div`
-  height: 47px;
+  height: 80px;
   img {
     height: 100%;
   }
@@ -134,15 +174,35 @@ const AboutText = styled.p`
   }
 `;
 
+const DeadlinesWrapper = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  @media only screen and (max-width: 755.98px) {
+    padding-bottom: 30px;
+  }
+  li {
+    font-family: "Urbanist", sans-serif;
+    font-size: 16px;
+    color: #39364f;
+    font-weight: 500;
+    span {
+      font-weight: 600;
+    }
+  }
+`;
+
 const Navigation = styled.ul`
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
   @media only screen and (max-width: 755.98px) {
-    padding: 30px 0;
-    border-top: 1px solid rgba(57, 54, 79, 0.2);
+    padding-bottom: 30px;
   }
   li {
     a {
@@ -152,7 +212,7 @@ const Navigation = styled.ul`
       font-weight: 500;
       transition: all 0.3s ease-out;
       &:hover {
-        color: #486FF8;
+        color: #bd1b21;
         transition: all 0.3s ease-out;
       }
     }
@@ -164,10 +224,9 @@ const ContactWrapper = styled.ul`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
   @media only screen and (max-width: 755.98px) {
-    padding: 30px 0;
-    border-top: 1px solid rgba(57, 54, 79, 0.2);
+    padding-bottom: 30px;
   }
 `;
 
@@ -184,7 +243,7 @@ const ContactText = styled.li`
     color: #39364f;
     transition: all 0.3s ease-out;
     &:hover {
-      color: #486FF8;
+      color: #486ff8;
       transition: all 0.3s ease-out;
     }
   }
@@ -210,7 +269,7 @@ const SocialsWrapper = styled.ul`
     &:hover {
       background-color: transparent;
       transition: all 0.3s ease-out;
-    border: 1px solid #486ff8;
+      border: 1px solid #486ff8;
       svg {
         color: #486ff8;
         transition: all 0.3s ease-out;
@@ -222,12 +281,27 @@ const SocialsWrapper = styled.ul`
   }
 `;
 
+const Warning = styled.div`
+  margin-top: 65px;
+  padding-bottom: 30px;
+  p {
+    font-family: "Urbanist", sans-serif;
+    font-size: 14px;
+    color: #39364f;
+    font-weight: 400;
+  }
+`;
+
 const Copyright = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 65px;
+  @media only screen and (max-width: 991.98px) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 30px;
+  }
   p {
     font-family: "Urbanist", sans-serif;
     font-size: 14px;
@@ -240,6 +314,11 @@ const TermsPrivacy = styled.ul`
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  @media only screen and (max-width: 767.98px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
   li {
     a {
       font-family: "Urbanist", sans-serif;

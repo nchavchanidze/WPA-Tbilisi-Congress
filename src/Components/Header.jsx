@@ -6,7 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 // import Logo from "../Assets/Images/Logo.svg";
-import Logo from "../Assets/Images/NewLogo.png"
+// import Logo from "../Assets/Images/NewLogo.png"
+import Logo from "../Assets/Images/wpa-logo.svg"
+
 
 const Header = () => {
   const [burger, setBurger] = useState(false);
@@ -66,19 +68,16 @@ const Header = () => {
               >
                 <ul>
                   <li>
-                    <Link to="/">Welcome</Link>
+                    <Link to="/welcome">Welcome</Link>
                   </li>
                   <li>
-                    <Link to="/">General Information</Link>
+                    <Link to="/general-information">General Information</Link>
                   </li>
                   <li>
                     <Link to="/">Congress Committees</Link>
                   </li>
                   <li>
-                    <Link to="/">About WPA</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Covid-19 regulations</Link>
+                    <Link to="/">Sponsorship</Link>
                   </li>
                   <li>
                     <Link to="/">FAQs</Link>
@@ -108,7 +107,10 @@ const Header = () => {
                     <Link to="/">Pre-congress workshop</Link>
                   </li>
                   <li>
-                    <Link to="/">Instructions</Link>
+                    <Link to="/">Industry symposia</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Courses</Link>
                   </li>
                   <li>
                     <Link to="/">CME Accreditation</Link>
@@ -129,13 +131,16 @@ const Header = () => {
               >
                 <ul>
                   <li>
-                    <Link to="/abstract-topics">Topics</Link>
+                    <Link to="/abstract-topics">Abstract Topics</Link>
                   </li>
                   <li>
                     <Link to="/symposium">Symposium proposal submission</Link>
                   </li>
                   <li>
                     <Link to="/abstract-submission">Abstract submission</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Instructions</Link>
                   </li>
                   <li>
                     <Link to="/">Abstracts book</Link>
@@ -166,6 +171,9 @@ const Header = () => {
                   </li>
                   <li>
                     <Link to="/">Venue</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Covid-19 updates</Link>
                   </li>
                 </ul>
               </NavDropdown>
@@ -217,7 +225,7 @@ const StyledHeader = styled.header`
               color: #39364f !important;
               transition: all 0.3s ease-out;
               &:hover {
-                color: #6989ff !important;
+                color: #bd1b21 !important;
                 transition: all 0.3s ease-out;
               }
             }
@@ -255,7 +263,7 @@ const StyledHeader = styled.header`
 
 const StyledContainer = styled(Container)`
   background-color: #fff;
-  border-top: 4px solid #486ff8;
+  border-top: 4px solid #bd1b21;
   box-shadow: 0 3px 25px 0 rgb(0 0 0 / 9%);
   padding: 10px 40px;
   transition: all 0.3s ease-out;
@@ -265,7 +273,7 @@ const StyledContainer = styled(Container)`
 `;
 
 const LogoWrapper = styled.div`
-  height: 47px;
+  height: 80px;
   img {
     height: 100%;
   }
@@ -289,7 +297,7 @@ const Nav = styled.ul`
     }
     &.show {
       .dropdown-toggle {
-        color: #6989ff;
+        color: #bd1b21;
         display: flex;
         text-align: center;
         justify-content: center;
@@ -332,7 +340,7 @@ const Nav = styled.ul`
               color: #39364f;
               transition: all 0.3s ease-out;
               &:hover {
-                color: #6989ff;
+                color: #bd1b21;
                 transition: all 0.3s ease-out;
               }
             }
@@ -361,11 +369,11 @@ const Nav = styled.ul`
         display: none;
       }
       &:hover {
-        color: #6989ff;
+        color: #bd1b21;
         transition: all 0.3s ease-out;
       }
       &:focus {
-        color: #6989ff;
+        color: #bd1b21;
         transition: all 0.3s ease-out;
         box-shadow: none;
       }
@@ -407,13 +415,13 @@ const Nav = styled.ul`
       font-weight: 700;
       transition: all 0.3s ease-out;
       &:hover {
-        color: #6989ff;
+        color: #bd1b21;
         transition: all 0.3s ease-out;
       }
     }
   }
   .sign-btn {
-    background-color: #486ff8;
+    background-color: #bd1b21;
     font-family: "Urbanist", sans-serif;
     font-size: 16px;
     font-weight: 700;
@@ -429,9 +437,9 @@ const Nav = styled.ul`
     /* border: none; */
     transition: all 0.3s ease-out;
     &:hover {
-      border: 2px solid #486ff8;
+      border: 2px solid #bd1b21;
       background-color: #fff;
-      color: #486ff8;
+      color: #bd1b21;
       transition: all 0.3s ease-out;
     }
     @media only screen and (max-width: 991.98px) {
