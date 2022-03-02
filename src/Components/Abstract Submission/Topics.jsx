@@ -5,11 +5,15 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 import TopicList from "./Topics.json";
+import Background from "../../Assets/Images/page-cover.png"
+
 
 const Topics = () => {
   return (
     <>
-      <Title>Abstract Topics</Title>
+      <HeadingWrapper>
+        <Title>Abstract Topics</Title>
+      </HeadingWrapper>
       <TopicsContainer>
         <Row>
           <Col md={4} sm={12}>
@@ -49,14 +53,31 @@ const Topics = () => {
   );
 };
 
+const HeadingWrapper = styled.section`
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 269px 0 200px;
+  box-shadow: 0 3px 25px 0 rgb(72 111 248 / 9%);
+  background-image: url(${Background});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+`;
 const Title = styled.h1`
-  margin: 150px auto 50px;
-  text-align: center;
   font-family: "Urbanist", sans-serif;
-  font-size: 44px;
+  font-size: 56px;
   font-weight: 700;
-  color: #39364f;
   text-transform: capitalize;
+  color: #39364f;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  @media only screen and (max-width: 1019.98px) {
+    text-align: center;
+  }
 `;
 
 const TopicsContainer = styled(Container)`
@@ -89,7 +110,7 @@ const TopicItem = styled.li`
 `;
 
 const Button = styled(Link)`
-  background-color: #486ff8;
+  background-color: #bd1b21;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -108,9 +129,9 @@ const Button = styled(Link)`
     width: 100%;
   }
   &:hover {
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     background-color: #fff;
-    color: #486ff8;
+    color: #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;

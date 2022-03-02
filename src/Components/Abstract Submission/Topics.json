@@ -1,27 +1,27 @@
 [
   {
     "id": 0,
-    "title": "ADHD"
-  },
-  {
-    "id": 1,
     "title": "Adversity and Mental Health"
   },
   {
-    "id": 2,
+    "id": 1,
     "title": "Anxiety/Fear-related Disorders"
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "Autism Spectrum Disorder"
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "Bipolar Disorders"
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Child and Adolescent Psychiatry"
+  },
+  {
+    "id": 5,
+    "title": "Classification, Diagnostic Assessment and Nomenclature"
   },
   {
     "id": 6,
@@ -29,23 +29,23 @@
   },
   {
     "id": 7,
-    "title": "COVID-19"
-  },
-  {
-    "id": 8,
-    "title": "Dementia"
-  },
-  {
-    "id": 9,
     "title": "Depressive Disorders"
   },
   {
-    "id": 10,
+    "id": 8,
     "title": "Digital Mental Health"
   },
   {
-    "id": 11,
+    "id": 9,
+    "title": "Early Interventions in Psychiatry"
+  },
+  {
+    "id": 10,
     "title": "Eating/Feeding Disorders"
+  },
+  {
+    "id": 11,
+    "title": "Education in Psychiatry"
   },
   {
     "id": 12,
@@ -73,62 +73,83 @@
   },
   {
     "id": 18,
-    "title": "LGBTQI+"
+    "title": "Human Rights and Mental Health"
   },
   {
     "id": 19,
-    "title": "Neurodevelopmental disorders"
+    "title": "LGBTQI+"
   },
   {
     "id": 20,
-    "title": "Obsessive-Compulsive and Related Disorders"
+    "title": "Mental Health Users and Care Givers"
   },
   {
     "id": 21,
-    "title": "Old Age Psychiatry"
+    "title": "Mental health in a low and middle resource countries"
   },
   {
     "id": 22,
-    "title": "Oncology and Psychiatry"
+    "title": "Neurodevelopmental disorders"
   },
   {
     "id": 23,
-    "title": "Personality Disorders"
+    "title": "Obsessive-Compulsive and Related Disorders"
   },
   {
     "id": 24,
-    "title": "Psychopharmacology"
+    "title": "Old Age Psychiatry"
   },
   {
     "id": 25,
-    "title": "Psychotherapy"
+    "title": "Oncology and Psychiatry"
   },
   {
     "id": 26,
-    "title": "Psychotic Disorders"
+    "title": "Personality Disorders"
   },
   {
     "id": 27,
-    "title": "PTSD/Stress-related Disorders"
+    "title": "Psychiatric Institutions"
   },
   {
     "id": 28,
-    "title": "Rehabilitation of People with Mental Disorders"
+    "title": "Psychopharmacology"
   },
   {
     "id": 29,
-    "title": "Sleep-Wake Disorders"
+    "title": "Psychotherapy"
   },
   {
     "id": 30,
-    "title": "Substance-related Addictions"
+    "title": "Psychotic Disorders"
   },
   {
     "id": 31,
-    "title": "Suicide Prevention"
+    "title": "PTSD/Stress-related Disorders"
   },
   {
     "id": 32,
+    "title": "Rehabilitation of People with Mental Disorders"
+  },
+  {
+    "id": 33,
+    "title": "Sleep-Wake Disorders"
+  },
+  {
+    "id": 34,
+    "title": "Stigma and Mental Illness"
+  },
+  {
+    "id": 35,
+    "title": "Substance-related Addictions"
+  },
+  {
+    "id": 36,
+    "title": "Suicide Prevention"
+  },
+  {
+    "id": 37,
     "title": "Other"
   }
+
 ]
