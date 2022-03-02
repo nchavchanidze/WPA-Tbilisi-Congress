@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <>
+    <SignWrapper>
       <Title>Sign In</Title>
       <Container className="d-flex justify-content-center align-items-center">
         <InputForm>
@@ -22,9 +22,14 @@ const Login = () => {
           <Button type="submit" value="Sign In" />
         </InputForm>
       </Container>
-    </>
+    </SignWrapper>
   );
 };
+
+const SignWrapper = styled.div`
+  padding: 200px 0 100px;
+
+`
 
 const Title = styled.h1`
   margin: 30px auto 50px;
@@ -46,11 +51,11 @@ const InputForm = styled.form`
   a {
     font-family: "Urbanist", sans-serif;
     font-size: 14px;
-    color: #486ff8;
+    color: #bd1b21;
     font-weight: 600;
     transition: all 0.3s ease-out;
     &:hover {
-      color: #486FF8;
+      color: #bd1b21;
       transition: all 0.3s ease-out;
     }
   }
@@ -93,14 +98,14 @@ const Input = styled.input`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #486FF8;
+    border: 2px solid #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;
 
 
 const Button = styled.input`
-  background-color: #486ff8;
+  background-color: #bd1b21;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -116,9 +121,9 @@ const Button = styled.input`
   /* border: none; */
   transition: all 0.3s ease-out;
   &:hover {
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     background-color: #fff;
-    color: #486ff8;
+    color: #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;

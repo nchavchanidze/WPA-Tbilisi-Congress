@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Layout from "../Layouts/ComponentLayout";
+import Layout from "../Layouts/Layout";
 import SignIn from "../Components/Auth/Login";
 
 const Login = () => {
