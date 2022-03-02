@@ -74,7 +74,7 @@ const Header = () => {
                     <Link to="/general-information">General Information</Link>
                   </li>
                   <li>
-                    <Link to="/">Congress Committees</Link>
+                    <Link to="/congress-committees">Congress Committees</Link>
                   </li>
                   <li>
                     <Link to="/">Sponsorship</Link>
