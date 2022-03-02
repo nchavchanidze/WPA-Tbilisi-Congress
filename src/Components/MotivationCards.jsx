@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import Image01 from "../Assets/Images/Home/SummitReasons/image-01.jpg";
-import Image02 from "../Assets/Images/Home/SummitReasons/image-02.jpg";
-import Image03 from "../Assets/Images/Home/SummitReasons/image-03.jpg";
+import Image01 from "../Assets/Images/Home/SummitReasons/image-1.JPG";
+import Image02 from "../Assets/Images/Home/SummitReasons/image-2.JPG";
+import Image03 from "../Assets/Images/Home/SummitReasons/image-3.jpg";
+import Image04 from "../Assets/Images/Home/SummitReasons/image-4.JPG";
 
 const MotivationCards = () => {
   return (
@@ -63,7 +64,7 @@ const MotivationCards = () => {
         data-aos-duration="800"
         data-aos-delay="300"
       >
-        <CardImage src={Image02} alt="" />
+        <CardImage src={Image04} alt="" />
         <CardText>
           <h1>ADVANCE YOUR CAREER</h1>
           <p>

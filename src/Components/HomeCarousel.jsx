@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Slide01 from "../Assets/Images/Home/Slider/slide-01.jpg";
 import Slide02 from "../Assets/Images/Home/Slider/slide-02.jpg";
 import Slide03 from "../Assets/Images/Home/Slider/slide-03.png";
+import Cover from "../Assets/Images/Home/Slider/cover.png";
 import Sponsors from "./Sponsors";
 
 const HomeCarousel = () => {
@@ -25,9 +26,9 @@ const HomeCarousel = () => {
         <SliderComponent className="slide02" />
       </Slider> */}
         <SliderComponent />
-      <SlideContentWrapper>
+      {/* <SlideContentWrapper>
         <SliderContent>
-          {/* <Sponsors /> */}
+          <Sponsors />
           <p className="date">14 - 16 October 2022 / Tbilisi, Georgia</p>
           <h1>
             Treatment and Management of Mental Disorders in <br/> a Post-pandemic Era
@@ -36,7 +37,7 @@ const HomeCarousel = () => {
             <SliderButton to="/abstract-submission">Abstract Submission</SliderButton>
           </SliderButtonsWrapper>
         </SliderContent>
-      </SlideContentWrapper>
+      </SlideContentWrapper> */}
     </HomeCarouselWrapper>
   );
 };
@@ -44,6 +45,7 @@ const HomeCarousel = () => {
 const HomeCarouselWrapper = styled.div`
   position: relative;
   height: 100%;
+  background-image: url(${Cover});
 `;
 
 const SliderComponent = styled.div`
@@ -53,7 +55,7 @@ const SliderComponent = styled.div`
   background-color: #fff;
   &.slide02 {
     &:before {
-      /* background-image: url(${Slide03}); */
+      /* background-image: url(${Cover}); */
     }
   }
   &:before {
@@ -64,8 +66,7 @@ const SliderComponent = styled.div`
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.6;
-    /* background-image: url(${Slide03}); */
+    background-image: url(${Cover});
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -140,7 +141,7 @@ const SliderButtonsWrapper = styled.div`
   }
 `;
 const SliderButton = styled(Link)`
-  background-color: #486ff8;
+  background-color: #bd1b21;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -152,13 +153,13 @@ const SliderButton = styled(Link)`
   justify-content: center;
   align-items: center;
   outline: none;
-  /* border: 2px solid transparent; */
+  border: 2px solid transparent;
   border: none;
   transition: all 0.3s ease-out;
   &:hover {
-    /* border: 2px solid #486FF8; */
+    border: 2px solid #bd1b21;
     background-color: #fff;
-    color: #486ff8;
+    color: #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;

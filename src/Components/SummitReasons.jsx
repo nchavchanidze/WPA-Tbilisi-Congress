@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
 
-import Background from "../Assets/Images/Home/SummitReasons/background.png";
+import Background from "../Assets/Images/Home/SummitReasons/background-3.png";
 import SummitInfo from "./SummitInfo";
 
 const SummitReasons = () => {
@@ -32,7 +32,7 @@ const Title = styled.h1`
   font-weight: 700;
   color: #39364f;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `;
 
 export default SummitReasons;

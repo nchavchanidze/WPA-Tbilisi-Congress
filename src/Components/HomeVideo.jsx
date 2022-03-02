@@ -1,12 +1,17 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
+import Background from "../Assets/Images/Home/SummitReasons/background-3.png";
 
 const HomeVideo = () => {
   return (
-    <VideoWrapper>
+    <VideoWrapper
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="300"
+    >
+      <VideoTitle>Discover Tbilisi</VideoTitle>
       <VideoContainer>
-        <VideoTitle>Discover Tbilisi</VideoTitle>
         <iframe
           src="//players.brightcove.net/5104226627001/default_default/index.html?videoId=5791520391001"
           allowfullscreen
@@ -27,7 +32,10 @@ const HomeVideo = () => {
 
 const VideoWrapper = styled.section`
   padding: 100px 0;
-  height: 100vh;
+  background-image: url(${Background});
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 const VideoContainer = styled(Container)`
@@ -49,7 +57,7 @@ const Copyright = styled.p`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
-  color: #ff3333;
+  color: #39364F;
   margin-top: 10px;
 `;
 

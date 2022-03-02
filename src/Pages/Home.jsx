@@ -9,6 +9,7 @@ import Speakers from "../Components/Speakers";
 import Sponsors from "../Components/Sponsors";
 import HomeVideo from "../Components/HomeVideo";
 import Deadlines from "../Components/Deadlines";
+import WelcomeMessage from "../Components/Home/WelcomeMessage";
 
 const Home = () => {
   useEffect(() => {
@@ -18,9 +19,10 @@ const Home = () => {
     <Layout>
       <HomeCarousel />
       {/* <Sponsors /> */}
+      <WelcomeMessage />
       <SummitReasons />
       <MotivationCards />
-      <Deadlines />
+      {/* <Deadlines /> */}
       {/* <Speakers /> */}
       {/* <Pricing /> */}
       {/* <FAQ /> */}
