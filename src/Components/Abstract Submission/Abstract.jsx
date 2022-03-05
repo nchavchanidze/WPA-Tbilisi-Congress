@@ -376,7 +376,7 @@ const Abstract = () => {
 };
 
 const Title = styled.h1`
-  margin: 30px auto 50px;
+  margin: 200px auto 50px;
   text-align: center;
   font-family: "Urbanist", sans-serif;
   font-size: 44px;
@@ -389,6 +389,7 @@ const AbstractWrapper = styled(Container)`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 100px;
 `;
 
 const InputForm = styled.form`
@@ -403,11 +404,11 @@ const InputForm = styled.form`
   a {
     font-family: "Urbanist", sans-serif;
     font-size: 14px;
-    color: #486ff8;
+    color: #bd1b21;
     font-weight: 600;
     transition: all 0.3s ease-out;
     &:hover {
-      color: #486ff8;
+      color: #bd1b21;
       transition: all 0.3s ease-out;
     }
   }
@@ -435,7 +436,7 @@ const InputWrapper = styled.div`
     gap: 10px;
     width: 100%;
     .required {
-      color: #486ff8;
+      color: #bd1b21;
     }
   }
 `;
@@ -463,14 +464,14 @@ const Input = styled.input`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     transition: all 0.3s ease-out;
   }
   &[type="file"] {
     background-color: transparent;
     padding: 0;
     &::-webkit-file-upload-button {
-      background-color: #486ff8;
+      background-color: #bd1b21;
       font-family: "Urbanist", sans-serif;
       font-size: 16px;
       font-weight: 700;
@@ -485,9 +486,9 @@ const Input = styled.input`
       border: 2px solid transparent;
       transition: all 0.3s ease-out;
       &:hover {
-        border: 2px solid #486ff8;
+        border: 2px solid #bd1b21;
         background-color: #fff;
-        color: #486ff8;
+        color: #bd1b21;
         transition: all 0.3s ease-out;
       }
     }
@@ -510,7 +511,7 @@ const RadioWrapper = styled.div`
     align-items: flex-start;
     gap: 10px;
     .required {
-      color: #486ff8;
+      color: #bd1b21;
     }
   }
 `;
@@ -553,7 +554,7 @@ const KeywordsWrapper = styled.div`
 `;
 
 const AddButton = styled.button`
-  background-color: #486ff8;
+  background-color: #bd1b21;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -569,9 +570,9 @@ const AddButton = styled.button`
   border: 2px solid transparent;
   transition: all 0.3s ease-out;
   &:hover {
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     background-color: #fff;
-    color: #486ff8;
+    color: #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;
@@ -604,7 +605,7 @@ const Select = styled.select`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;
@@ -645,13 +646,13 @@ const RichText = styled(ReactQuill)`
   li {
   }
   .ql-editor {
-    height: 400px;
-    max-height: 400px;
+    height: 300px;
+    max-height: 300px;
   }
 `;
 
 const Button = styled.input`
-  background-color: #486ff8;
+  background-color: #bd1b21;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -666,9 +667,9 @@ const Button = styled.input`
   border: 2px solid transparent;
   transition: all 0.3s ease-out;
   &:hover {
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     background-color: #fff;
-    color: #486ff8;
+    color: #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;

@@ -154,7 +154,7 @@ const StepIndicator = styled.span`
   font-family: "Urbanist", sans-serif;
   font-size: 22px;
   font-weight: 900;
-  color: #486ff8;
+  color: #bd1b21;
   text-transform: uppercase;
 `;
 
@@ -217,7 +217,7 @@ const StepListItem = styled.li`
     min-width: 10px;
     min-height: 10px;
     border-radius: 50%;
-    background-color: #486ff8;
+    background-color: #bd1b21;
   }
   span {
     font-weight: 700;
@@ -247,7 +247,7 @@ const InputWrapper = styled.div`
     gap: 20px;
     width: 100%;
     .required {
-      color: #486ff8;
+      color: #bd1b21;
     }
   }
 `;
@@ -263,14 +263,14 @@ const Input = styled.input`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     transition: all 0.3s ease-out;
   }
   &[type="file"] {
     background-color: transparent;
     padding: 0;
     &::-webkit-file-upload-button {
-      background-color: #486ff8;
+      background-color: #bd1b21;
       font-family: "Urbanist", sans-serif;
       font-size: 16px;
       font-weight: 700;
@@ -282,9 +282,9 @@ const Input = styled.input`
       border: 2px solid transparent;
       transition: all 0.3s ease-out;
       &:hover {
-        border: 2px solid #486ff8;
+        border: 2px solid #bd1b21;
         background-color: #fff;
-        color: #486ff8;
+        color: #bd1b21;
         transition: all 0.3s ease-out;
       }
     }
@@ -292,7 +292,7 @@ const Input = styled.input`
 `;
 
 const Button = styled.input`
-  background-color: #486ff8;
+  background-color: #bd1b21;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -309,9 +309,9 @@ const Button = styled.input`
   transition: all 0.3s ease-out;
   margin: 50px auto 0;
   &:hover {
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     background-color: #fff;
-    color: #486ff8;
+    color: #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;

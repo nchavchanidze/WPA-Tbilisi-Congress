@@ -384,6 +384,7 @@ const Register = () => {
 
 const SigupWrapper = styled.div`
   margin-top: 200px;
+  padding-bottom: 100px;
 `
 
 const Title = styled.h1`
@@ -407,11 +408,11 @@ const InputForm = styled.form`
   a {
     font-family: "Urbanist", sans-serif;
     font-size: 14px;
-    color: #486ff8;
+    color: #bd1b21;
     font-weight: 600;
     transition: all 0.3s ease-out;
     &:hover {
-      color: #486ff8;
+      color: #bd1b21;
       transition: all 0.3s ease-out;
     }
   }
@@ -438,7 +439,7 @@ const InputWrapper = styled.div`
     gap: 10px;
     width: 100%;
     .required {
-      color: #486ff8;
+      color: #bd1b21;
     }
   }
 `;
@@ -463,7 +464,7 @@ const PhoneWrapper = styled.div`
     gap: 10px;
     width: 100%;
     .required {
-      color: #486ff8;
+      color: #bd1b21;
     }
   }
 `;
@@ -484,7 +485,7 @@ const RadioWrapper = styled.div`
     align-items: flex-start;
     gap: 10px;
     .required {
-      color: #486ff8;
+      color: #bd1b21;
     }
   }
 `;
@@ -509,7 +510,7 @@ const RadioRow = styled.div`
 const TermsCheckbox = styled.label`
   font-family: "Urbanist", sans-serif;
   font-size: 14px;
-  color: #486ff8;
+  color: #bd1b21;
   font-weight: 600;
   transition: all 0.3s ease-out;
   display: flex;
@@ -518,11 +519,11 @@ const TermsCheckbox = styled.label`
   gap: 10px;
   p {
     span {
-      color: #486ff8;
+      color: #bd1b21;
       transition: all 0.3s ease-out;
       text-decoration: underline;
       &:hover {
-        color: #486ff8;
+        color: #bd1b21;
         transition: all 0.3s ease-out;
         cursor: pointer;
       }
@@ -553,13 +554,13 @@ const Input = styled.input`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;
 
 const Button = styled.input`
-  background-color: #486ff8;
+  background-color: #bd1b21;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -574,9 +575,9 @@ const Button = styled.input`
   border: 2px solid transparent;
   transition: all 0.3s ease-out;
   &:hover {
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     background-color: #fff;
-    color: #486ff8;
+    color: #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;
@@ -609,7 +610,7 @@ const Select = styled.select`
   &:focus {
     box-shadow: none;
     outline: none;
-    border: 2px solid #486ff8;
+    border: 2px solid #bd1b21;
     transition: all 0.3s ease-out;
   }
 `;
