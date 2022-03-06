@@ -2,12 +2,12 @@ import React from 'react'
 import Construction from '../../../Components/Construction/Construction'
 import Layout from '../../../Layouts/Layout'
 
-const Committees = () => {
+const IndustrySymposia = () => {
   return (
     <Layout>
-      <Construction  title="Congress Committees"/>
+      <Construction  title="Industry Symposia"/>
     </Layout>
   )
 }
 
-export default Committees
+export default IndustrySymposia

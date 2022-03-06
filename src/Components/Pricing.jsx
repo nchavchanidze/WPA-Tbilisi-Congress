@@ -8,133 +8,151 @@ const Pricing = () => {
   return (
     <PricingWrapper>
       <Container data-aos="fade-up" data-aos-duration="800">
-        <Title data-aos="fade-up" data-aos-duration="800">
-          <span>Pricing Plan</span>
-          <h1>Get Your Ticket</h1>
-        </Title>
         <Row>
-          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <Col
+            lg={6}
+            md={6}
+            sm={12}
+            className="pricing-card"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          >
             <PricingCard>
-              <h1>Basic Pass</h1>
+              <h1>Platinum <span>(Up to two available)</span></h1>
               <PricingUl>
                 <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Regular Seating
+                  90-minute satellite symposium at prime time.
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Comfortable Seat
+                  Priority choice for the exhibition space location and a
+                  premium place in the exhibition area for all congress
+                  duration.
                 </li>
-                <li className="disabled">
+                <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Set your rates
+                  One full-page (A4 size) advertisement on cover pages in
+                  congress publications.
                 </li>
-                <li className="disabled">
+                <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Exclusive Deals
+                  Logo display on the congress website and all congress
+                  materials.
                 </li>
-                <li className="disabled">
+                <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Advanced Statistics
+                  Registration of 20 local (certified psychiatrists in Georgia)
+                  or five international delegates.
                 </li>
               </PricingUl>
-              <Price>
-                $39 <span>/ ticket</span>
-              </Price>
-              <ChooseBtn>Choose</ChooseBtn>
+              <Price>€ 9000</Price>
+              {/* <ChooseBtn>Choose</ChooseBtn> */}
             </PricingCard>
           </Col>
-          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <Col
+            lg={6}
+            md={6}
+            sm={12}
+            className="pricing-card"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
             <PricingCard>
-              <h1>Silver Pass</h1>
+              <h1>Gold</h1>
               <PricingUl>
                 <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Regular Seating
+                  90-minute satellite symposium at the appointed time by the
+                  congress organizing committee.{" "}
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faCheck} />A place in the exhibition
+                  area for all congress duration.{" "}
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Comfortable Seat
+                  One full-page (A4 size) advertisement in congress
+                  publications.{" "}
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Set your rates
+                  Logo display on the congress website and all congress
+                  materials.{" "}
                 </li>
-                <li className="disabled">
+                <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Exclusive Deals
-                </li>
-                <li className="disabled">
-                  <FontAwesomeIcon icon={faCheck} />
-                  Advanced Statistics
+                  Registration of 10 local (certified psychiatrists in Georgia)
+                  delegates.{" "}
                 </li>
               </PricingUl>
-              <Price>
-                $59 <span>/ ticket</span>
-              </Price>
-              <ChooseBtn>Choose</ChooseBtn>
+              <Price>€ 6000</Price>
+              {/* <ChooseBtn>Choose</ChooseBtn> */}
             </PricingCard>
           </Col>
-          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+        </Row>
+        <Row className="mt-5">
+          <Col
+            lg={6}
+            md={6}
+            sm={12}
+            className="pricing-card"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="300"
+          >
             <PricingCard>
-              <h1>Golden Pass</h1>
+              <h1>Silver</h1>
               <PricingUl>
                 <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Regular Seating
+                  60-minute symposium at the appointed time and place by the
+                  congress organizing committee.{" "}
+                </li>
+                <li>
+                  <FontAwesomeIcon icon={faCheck} />A place in the exhibition
+                  area for all congress duration.
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Comfortable Seat
+                  Logo display on the congress website and all congress
+                  materials.
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Set your rates
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faCheck} />
-                  Exclusive Deals
-                </li>
-                <li className="disabled">
-                  <FontAwesomeIcon icon={faCheck} />
-                  Advanced Statistics
+                  Registration of 5 local (certified psychiatrists in Georgia)
+                  delegates.
                 </li>
               </PricingUl>
-              <Price>
-                $99 <span>/ ticket</span>
-              </Price>
-              <ChooseBtn>Choose</ChooseBtn>
+              <Price>€ 3000</Price>
+              {/* <ChooseBtn>Choose</ChooseBtn> */}
             </PricingCard>
           </Col>
-          <Col xl={3} lg={6} md={6} sm={12} className="pricing-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+          <Col
+            lg={6}
+            md={6}
+            sm={12}
+            className="pricing-card"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
             <PricingCard>
-              <h1>Diamond Pass</h1>
+              <h1>Sponsor</h1>
               <PricingUl>
                 <li>
-                  <FontAwesomeIcon icon={faCheck} />
-                  Regular Seating
+                  <FontAwesomeIcon icon={faCheck} />A place in the exhibition
+                  area for all congress duration..
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faCheck} />
-                  Comfortable Seat
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faCheck} />
-                  Set your rates
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faCheck} />
-                  Exclusive Deals
-                </li>
-                <li>
-                  <FontAwesomeIcon icon={faCheck} />
-                  Advanced Statistics
+                  Logo display on the congress banner
                 </li>
               </PricingUl>
-              <Price>
-                $199 <span>/ ticket</span>
-              </Price>
-              <ChooseBtn>Choose</ChooseBtn>
+              <Price>€ 1000</Price>
+              {/* <ChooseBtn>Choose</ChooseBtn> */}
             </PricingCard>
           </Col>
         </Row>
@@ -146,6 +164,8 @@ const Pricing = () => {
 const PricingWrapper = styled.section`
   padding: 100px 0;
   .pricing-card {
+    display: flex;
+    justify-content: center;
     @media only screen and (max-width: 979.98px) {
       margin-top: 100px;
     }
@@ -179,8 +199,8 @@ const Title = styled.div`
     font-family: "Urbanist", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    text-transform: uppercase;
-    color: #486FF8;
+    text-transform: ;
+    color: #486ff8;
   }
   h1 {
     font-family: "Urbanist", sans-serif;
@@ -197,17 +217,18 @@ const PricingCard = styled.div`
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
   background-color: #fff;
   padding: 30px 45px;
-  width: 300px;
-  height: 430px;
+  width: 85%;
+  min-height: 470px;
   border-radius: 5px;
   transition: all 0.3s ease-out;
+  position: relative;
   @media only screen and (max-width: 1399.98px) {
     width: 270px;
   }
   @media only screen and (max-width: 1199.98px) {
     width: 300px;
   }
-  &:hover {
+  /* &:hover {
     transform: translateY(-40px);
     transition: all 0.3s ease-out;
     background-color: #39364f;
@@ -225,7 +246,7 @@ const PricingCard = styled.div`
       background-color: #486ff8;
       color: #fff;
     }
-  }
+  } */
   h1 {
     font-family: "Urbanist", sans-serif;
     font-size: 28px;
@@ -234,6 +255,13 @@ const PricingCard = styled.div`
     margin-bottom: 30px;
     text-transform: capitalize;
     transition: all 0.3s ease-out;
+    span {
+    font-family: "Urbanist", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: none;
+    color: #bd1b21;
+  }
   }
 `;
 
@@ -258,7 +286,7 @@ const PricingUl = styled.ul`
       opacity: 0.4;
     }
     svg {
-      color: #39364f;
+      color: #bd1b21;
       transition: all 0.3s ease-out;
     }
   }
@@ -272,6 +300,9 @@ const Price = styled.p`
   color: #39364f;
   transition: all 0.3s ease-out;
   margin-top: 30px;
+  position: absolute;
+  bottom: 30px;
+  left: 45px;
   span {
     font-size: 16px;
     font-weight: 400;

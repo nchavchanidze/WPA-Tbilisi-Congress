@@ -88,7 +88,13 @@ const Information = () => {
       </ParagraphWrapper>
       <ParagraphWrapper>
         <ParagraphTitle>Certificate of Attendance /CME</ParagraphTitle>
-        <Paragraph>...</Paragraph>
+        <Paragraph>
+          The Congress intends to apply for CME accreditation. Registered
+          participants will be able to obtain a certificate of attendance (COA)
+          as well as CME points when attending sessions during the Congress.
+          They may obtain their certificate by accessing the Congress system
+          activated soon after the end of the Congress.
+        </Paragraph>
       </ParagraphWrapper>
       <ParagraphWrapper>
         <ParagraphTitle>About WPA</ParagraphTitle>

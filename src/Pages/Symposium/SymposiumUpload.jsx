@@ -44,6 +44,7 @@ const SymposiumUpload = () => {
       return res.push(parsedStr);
     });
     setCounter(res.length);
+    window.scroll(0, 0)
   }, [intro]);
 
   const toolbarOptions = {

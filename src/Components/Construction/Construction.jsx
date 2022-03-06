@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
-const Construction = () => {
+import Heading from "./Heading";
+const Construction = (props) => {
   return (
     <NotFound>
+          <Heading title={props.title} />
       <Container>
         <NotFoundWrapper>
-          <Heading>Oops!</Heading>
           <SecondHeading>Page is under construction!</SecondHeading>
           <NotFoundText>
             The page you are looking is under construction. Try
@@ -21,10 +22,11 @@ const Construction = () => {
 };
 
 const NotFound = styled.section`
-  padding: 200px 0 100px;
+  /* padding: 200px 0 100px; */
 `;
 
 const NotFoundWrapper = styled.div`
+  padding: 100px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,15 +34,15 @@ const NotFoundWrapper = styled.div`
   gap: 20px;
 `;
 
-const Heading = styled.h1`
-  font-family: "Urbanist", sans-serif;
-  font-size: 192px;
-  font-weight: 700;
-  color: #bd1b21;
-  @media only screen and (max-width: 991.98px) {
-    font-size: 178px;
-  }
-`;
+// const Heading = styled.h1`
+//   font-family: "Urbanist", sans-serif;
+//   font-size: 192px;
+//   font-weight: 700;
+//   color: #bd1b21;
+//   @media only screen and (max-width: 991.98px) {
+//     font-size: 178px;
+//   }
+// `;
 
 const SecondHeading = styled.h2`
   font-family: "Urbanist", sans-serif;

@@ -18,7 +18,7 @@ const Topics = () => {
         <Row>
           <Col md={4} sm={12}>
             <TopicsUl>
-              {TopicList.slice(0, 11).map((topic) => (
+              {TopicList.slice(0, 13).map((topic) => (
                 <TopicItem key={topic.id}>
                   <FontAwesomeIcon icon={faChevronCircleRight} />
                   {topic.title}
@@ -28,7 +28,7 @@ const Topics = () => {
           </Col>
           <Col md={4} sm={12}>
             <TopicsUl className="topic-list">
-              {TopicList.slice(12, 23).map((topic) => (
+              {TopicList.slice(14, 27).map((topic) => (
                 <TopicItem key={topic.id}>
                   <FontAwesomeIcon icon={faChevronCircleRight} />
                   {topic.title}
@@ -38,7 +38,7 @@ const Topics = () => {
           </Col>
           <Col md={4} sm={12}>
             <TopicsUl className="topic-list">
-              {TopicList.slice(23).map((topic) => (
+              {TopicList.slice(27).map((topic) => (
                 <TopicItem key={topic.id}>
                   <FontAwesomeIcon icon={faChevronCircleRight} />
                   {topic.title}
@@ -107,6 +107,9 @@ const TopicItem = styled.li`
   justify-content: flex-start;
   align-items: center;
   gap: 25px;
+  svg {
+    color: #bd1b21;
+  }
 `;
 
 const Button = styled(Link)`

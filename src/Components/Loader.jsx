@@ -39,7 +39,7 @@ const moveit = keyframes`
 const Preloader = styled.div`
   height: 100vh;
   width: 100%;
-  background-color: #f0f4fe;
+  background-color: #fff;
   z-index: 99999;
   position: relative;
   display: flex;
@@ -55,7 +55,7 @@ const PreloaderDots = styled.div`
 `;
 
 const Dots = styled.div`
-  background: #486ff8;
+  background: #bd1b21;
   height: 20px;
   width: 20px;
   opacity: 0.3;

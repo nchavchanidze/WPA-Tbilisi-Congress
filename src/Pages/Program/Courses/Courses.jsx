@@ -1,13 +1,12 @@
 import React from 'react'
 import Construction from '../../../Components/Construction/Construction'
 import Layout from '../../../Layouts/Layout'
-
-const Committees = () => {
+const Courses = () => {
   return (
     <Layout>
-      <Construction  title="Congress Committees"/>
-    </Layout>
+    <Construction  title="Courses"/>
+  </Layout>
   )
 }
 
-export default Committees
+export default Courses

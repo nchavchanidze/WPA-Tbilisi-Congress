@@ -28,7 +28,14 @@ const Footer = () => {
             </LogoWrapper>
 
             <AboutText>
-              The WPA is psychiatry’s global association representing national
+              The {" "}
+          <a
+            href="http://www.wpanet.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WPA
+          </a>{" "} is psychiatry’s global association representing national
               societies aimed to increase the knowledge and skills necessary for
               work in the field of mental health.
             </AboutText>

@@ -6,6 +6,8 @@ import {
   faCalendarAlt,
   faCheckSquare,
   faClock,
+  faEnvelope,
+  faChalkboardTeacher
 } from "@fortawesome/free-solid-svg-icons";
 
 const Deadline = () => {
@@ -41,7 +43,7 @@ const Deadline = () => {
         <Row className="mt-5 align-center">
           <Col md={{span: 4, offset: 2}} sm={12}>
             <IconsWrapper>
-              <FontAwesomeIcon icon={faCalendarAlt} />
+              <FontAwesomeIcon icon={faEnvelope} />
               <IconTitle>2022</IconTitle>
               <IconDescription>
                 Deadline for Change of Title/Authorship
@@ -50,7 +52,7 @@ const Deadline = () => {
           </Col>
           <Col md={4} sm={12}>
             <IconsWrapper>
-              <FontAwesomeIcon icon={faClock} />
+              <FontAwesomeIcon icon={faChalkboardTeacher} />
               <IconTitle>2022</IconTitle>
               <IconDescription>
                 Presenting Author Registration Deadline

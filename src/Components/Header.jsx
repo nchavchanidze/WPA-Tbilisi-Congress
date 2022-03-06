@@ -77,10 +77,10 @@ const Header = () => {
                     <Link to="/congress-committees">Congress Committees</Link>
                   </li>
                   <li>
-                    <Link to="/">Sponsorship</Link>
+                    <Link to="/sponsorship">Sponsorship</Link>
                   </li>
                   <li>
-                    <Link to="/">FAQs</Link>
+                    <Link to="/faq">FAQs</Link>
                   </li>
                 </ul>
               </NavDropdown>
@@ -98,22 +98,22 @@ const Header = () => {
               >
                 <ul>
                   <li>
-                    <Link to="/">Scientific program</Link>
+                    <Link to="/scientific-program">Scientific program</Link>
                   </li>
                   <li>
-                    <Link to="/">Speakers</Link>
+                    <Link to="/speakers">Speakers</Link>
                   </li>
                   <li>
-                    <Link to="/">Pre-congress workshop</Link>
+                    <Link to="/pre-congress-workshop">Pre-congress workshop</Link>
                   </li>
                   <li>
-                    <Link to="/">Industry symposia</Link>
+                    <Link to="/industry-symposia">Industry symposia</Link>
                   </li>
                   <li>
-                    <Link to="/">Courses</Link>
+                    <Link to="/courses">Courses</Link>
                   </li>
                   <li>
-                    <Link to="/">CME Accreditation</Link>
+                    <Link to="/cme-accreditation">CME Accreditation</Link>
                   </li>
                 </ul>
               </NavDropdown>
@@ -140,10 +140,10 @@ const Header = () => {
                     <Link to="/abstract-submission">Abstract submission</Link>
                   </li>
                   <li>
-                    <Link to="/">Instructions</Link>
+                    <Link to="/instructions">Instructions</Link>
                   </li>
                   <li>
-                    <Link to="/">Abstracts book</Link>
+                    <Link to="/abstracts-book">Abstracts book</Link>
                   </li>
                 </ul>
               </NavDropdown>
