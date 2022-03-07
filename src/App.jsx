@@ -12,6 +12,8 @@ import Registration from "./Pages/Registration/Registration";
 const Home = React.lazy(() => import("./Pages/Home"));
 
 const About = React.lazy(() => import("./Pages/About/About"));
+
+// About
 const Welcome = React.lazy(() => import("./Pages/About/Welcome/Welcome"));
 const GeneralInformation = React.lazy(() =>
   import("./Pages/About/General Information/GeneralInformation")
@@ -22,28 +24,25 @@ const Committees = React.lazy(() =>
 const Sponsorship = React.lazy(() =>
   import("./Pages/About/Sponsorship/Sponsorship")
 );
-const FAQ = React.lazy(() =>
-  import("./Pages/About/FAQ/FAQ")
-);
+const FAQ = React.lazy(() => import("./Pages/About/FAQ/FAQ"));
 
+// Program
 const Scientific = React.lazy(() =>
   import("./Pages/Program/Scientific Program/Scientific")
 );
-const Speakers = React.lazy(() =>
-  import("./Pages/Program/Speakers/Speakers")
-);
+const Speakers = React.lazy(() => import("./Pages/Program/Speakers/Speakers"));
 const PreCongress = React.lazy(() =>
   import("./Pages/Program/Pre-Congress Workshop/PreCongress")
 );
 const IndustrySymposia = React.lazy(() =>
   import("./Pages/Program/Industry Symposia/IndustrySymposia")
 );
-const Courses = React.lazy(() =>
-  import("./Pages/Program/Courses/Courses")
-);
-const CME = React.lazy(() =>
-  import("./Pages/Program/CME/CME")
-);
+const Courses = React.lazy(() => import("./Pages/Program/Courses/Courses"));
+const CME = React.lazy(() => import("./Pages/Program/CME/CME"));
+
+// Submissions
+const AbstractUpload = React.lazy(() => import("./Pages/AbstractUpload"));
+const EposterUpload = React.lazy(() => import("./Pages/EposterUpload"));
 const Instructions = React.lazy(() =>
   import("./Pages/Submissions/Instructions/Instructions")
 );
@@ -51,13 +50,20 @@ const AbstractsBook = React.lazy(() =>
   import("./Pages/Submissions/Abstracts Book/AbstractsBook")
 );
 
+// Register
+const Onsite = React.lazy(() =>
+  import("./Pages/Registration/Onsite-Online/Onsite")
+);
+const Venue = React.lazy(() => import("./Pages/Registration/Venue/Venue"));
+const Covid = React.lazy(() => import("./Pages/Registration/Covid-19/Covid"));
+
+// Auth
 const Login = React.lazy(() => import("./Pages/Login"));
 const Register = React.lazy(() => import("./Pages/Register"));
 const AbstractSubmission = React.lazy(() =>
   import("./Pages/AbstactSubmission")
 );
-const AbstractUpload = React.lazy(() => import("./Pages/AbstractUpload"));
-const EposterUpload = React.lazy(() => import("./Pages/EposterUpload"));
+
 // const AbstractTopics = React.lazy(() => import("./Pages/AbstractTopics"));
 const NotFound = React.lazy(() => import("./Pages/NotFound"));
 const Dashboard = React.lazy(() => import("./Pages/Dashboard/Dashboard"));
@@ -96,28 +102,28 @@ const App = () => {
       element: <FAQ />,
     },
     {
-      path:"/scientific-program",
-      element: <Scientific />
+      path: "/scientific-program",
+      element: <Scientific />,
     },
     {
-      path:"/speakers",
-      element: <Speakers />
+      path: "/speakers",
+      element: <Speakers />,
     },
     {
-      path:"/pre-congress-workshop",
-      element: <PreCongress />
+      path: "/pre-congress-workshop",
+      element: <PreCongress />,
     },
     {
-      path:"/industry-symposia",
-      element: <IndustrySymposia />
+      path: "/industry-symposia",
+      element: <IndustrySymposia />,
     },
     {
-      path:"/courses",
-      element: <Courses />
+      path: "/courses",
+      element: <Courses />,
     },
     {
-      path:"/cme-accreditation",
-      element: <CME />
+      path: "/cme-accreditation",
+      element: <CME />,
     },
     {
       path: "/login",
@@ -144,11 +150,11 @@ const App = () => {
       element: <AbstractTopics />,
     },
     {
-      path:"/instructions",
-      element: <Instructions />
+      path: "/instructions",
+      element: <Instructions />,
     },
     {
-      path:"/abstracts-book",
+      path: "/abstracts-book",
       element: <AbstractsBook />,
     },
     {
@@ -182,6 +188,18 @@ const App = () => {
     {
       path: "/registration",
       element: <Registration />,
+    },
+    {
+      path: "/onsite-online",
+      element: <Onsite />,
+    },
+    {
+      path: "/venue",
+      element: <Venue />,
+    },
+    {
+      path: "/covid-19",
+      element: <Covid />,
     },
     {
       path: "*",

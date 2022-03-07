@@ -121,18 +121,18 @@ const CardText = styled.div`
     padding: 50px;
   } */
   h1 {
-    font-family: "Urbanist", sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 44px;
     font-weight: 700;
-    color: #39364f;
+    color: #000;
     margin-bottom: 45px;
     text-transform: capitalize;
   }
   p {
-    font-family: "Urbanist", sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #717488;
+    color: #000;
   }
 `;
 

@@ -58,10 +58,10 @@ const StyledContainer = styled(Container)`
 `;
 
 const Title = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
   text-align: center;
   margin-bottom: 100px;
 `;
@@ -87,17 +87,17 @@ const CEOWrapper = styled(Col)`
 `;
 
 const CEOName = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 26px;
   font-weight: 500;
-  color: #39364f;
+  color: #000;
   text-align: center;
 `;
 const Profession = styled.h2`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #717488;
+  color: #000;
   text-align: center;
 `;
 
@@ -110,10 +110,10 @@ const AboutWrapper = styled.div`
 `;
 
 const Paragraph = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #717488;
+  color: #000;
   span {
     font-weight: 700;
   }
@@ -121,7 +121,7 @@ const Paragraph = styled.p`
 
 const ReadMore = styled(Link)`
   background-color: #bd1b21;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;

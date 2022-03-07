@@ -43,21 +43,21 @@ const VideoContainer = styled(Container)`
   height: 620px;
 `;
 const VideoTitle = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 44px;
   font-weight: 700;
   text-transform: capitalize;
-  color: #39364f;
+  color: #000;
   margin: 0 auto 60px;
   text-align: center;
 `;
 
 const Copyright = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
-  color: #39364F;
+  color: #000;
   margin-top: 10px;
 `;
 

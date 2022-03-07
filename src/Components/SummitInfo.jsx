@@ -50,11 +50,10 @@ const SummitInfo = () => {
 };
 
 const SummitDescription = styled.p`
-  font-family: "Urbanist", sans-serif;
-  font-size: 16px;
+font-family: 'Titillium Web', sans-serif;  font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
-  color: #717488;
+  color: #000;
   text-align: center;
 `;
 
@@ -93,20 +92,18 @@ const SummitTicketElement = styled.div`
     }
   }
   p {
-    font-family: "Urbanist", sans-serif;
-    font-size: 50px;
+  font-family: 'Titillium Web', sans-serif;    font-size: 50px;
     font-weight: 700;
     color: #39364f;
   }
   span {
-    font-family: "Urbanist", sans-serif;
-    font-size: 20px;
+  font-family: 'Titillium Web', sans-serif;    font-size: 20px;
     font-weight: 600;
     color: #486ff8;
   }
   .description {
     font-size: 14px;
-    color: #717488;
+    color: #000;
     width: 70%;
   }
 `;

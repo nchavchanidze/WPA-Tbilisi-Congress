@@ -150,9 +150,9 @@ const FooterContainer = styled.footer`
 `;
 
 const FooterTitle = styled.h5`
-  font-family: "Urbanist", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 16px;
-  color: #39364f;
+  color: #000;
   font-weight: 700;
   line-height: 1.6;
   text-transform: uppercase;
@@ -170,9 +170,9 @@ const LogoWrapper = styled.div`
 `;
 
 const AboutText = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 16px;
-  color: #39364f;
+  color: #000;
   font-weight: 500;
   line-height: 1.6;
   margin-top: 30px;
@@ -192,9 +192,9 @@ const DeadlinesWrapper = styled.ul`
     padding-bottom: 30px;
   }
   li {
-    font-family: "Urbanist", sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 16px;
-    color: #39364f;
+    color: #000;
     font-weight: 500;
     span {
       font-weight: 600;
@@ -213,9 +213,9 @@ const Navigation = styled.ul`
   }
   li {
     a {
-      font-family: "Urbanist", sans-serif;
+      font-family: 'Titillium Web', sans-serif;
       font-size: 16px;
-      color: #39364f;
+      color: #000;
       font-weight: 500;
       transition: all 0.3s ease-out;
       &:hover {
@@ -238,16 +238,16 @@ const ContactWrapper = styled.ul`
 `;
 
 const ContactText = styled.li`
-  font-family: "Urbanist", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 16px;
-  color: #39364f;
+  color: #000;
   font-weight: 500;
   line-height: 1.6;
   span {
     font-weight: 600;
   }
   a {
-    color: #39364f;
+    color: #000;
     transition: all 0.3s ease-out;
     &:hover {
       color: #486ff8;
@@ -292,9 +292,9 @@ const Warning = styled.div`
   margin-top: 65px;
   padding-bottom: 30px;
   p {
-    font-family: "Urbanist", sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 14px;
-    color: #39364f;
+    color: #000;
     font-weight: 400;
   }
 `;
@@ -310,9 +310,9 @@ const Copyright = styled.div`
     gap: 30px;
   }
   p {
-    font-family: "Urbanist", sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 14px;
-    color: #39364f;
+    color: #000;
     font-weight: 400;
   }
 `;
@@ -328,9 +328,9 @@ const TermsPrivacy = styled.ul`
   }
   li {
     a {
-      font-family: "Urbanist", sans-serif;
+      font-family: 'Titillium Web', sans-serif;
       font-size: 14px;
-      color: #39364f;
+      color: #000;
       font-weight: 400;
     }
   }

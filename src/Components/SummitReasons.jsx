@@ -2,12 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 
-
 import Background from "../Assets/Images/Home/SummitReasons/background-3.png";
 import SummitInfo from "./SummitInfo";
 
 const SummitReasons = () => {
-
   return (
     <SummitReasonsWrapper>
       <Container data-aos="fade-up" data-aos-duration="800">
@@ -27,10 +25,10 @@ const SummitReasonsWrapper = styled.section`
 `;
 
 const Title = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
   text-align: center;
   margin-bottom: 100px;
 `;

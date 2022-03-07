@@ -167,13 +167,13 @@ const Header = () => {
                     <Link to="/registration">Registration</Link>
                   </li>
                   <li>
-                    <Link to="/">Onsite & Online</Link>
+                    <Link to="/onsite-online">Onsite & Online</Link>
                   </li>
                   <li>
-                    <Link to="/">Venue</Link>
+                    <Link to="/venue">Venue</Link>
                   </li>
                   <li>
-                    <Link to="/">Covid-19 updates</Link>
+                    <Link to="/covid-19">Covid-19 updates</Link>
                   </li>
                 </ul>
               </NavDropdown>
@@ -273,7 +273,7 @@ const StyledContainer = styled(Container)`
 `;
 
 const LogoWrapper = styled.div`
-  height: 80px;
+  height: 55px;
   img {
     height: 100%;
   }
@@ -337,7 +337,7 @@ const Nav = styled.ul`
           }
           li {
             a {
-              color: #39364f;
+              color: #000;
               transition: all 0.3s ease-out;
               &:hover {
                 color: #bd1b21;
@@ -349,9 +349,9 @@ const Nav = styled.ul`
       }
     }
     .dropdown-toggle {
-      font-family: "Urbanist", sans-serif;
-      font-size: 18px;
-      color: #39364f;
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 14px;
+      color: #000;
       font-weight: 700;
       transition: all 0.3s ease-out;
       background-color: unset;
@@ -409,9 +409,9 @@ const Nav = styled.ul`
   }
   li {
     a {
-      font-family: "Urbanist", sans-serif;
-      font-size: 18px;
-      color: #39364f;
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 14px;
+      color: #000;
       font-weight: 700;
       transition: all 0.3s ease-out;
       &:hover {
@@ -422,7 +422,7 @@ const Nav = styled.ul`
   }
   .sign-btn {
     background-color: #bd1b21;
-    font-family: "Urbanist", sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 16px;
     font-weight: 700;
     color: #fff;
@@ -487,7 +487,7 @@ const Hamburger = styled.div`
   .line {
     width: 30px;
     height: 2px;
-    background-color: #39364f;
+    background-color: #000;
     display: block;
     /* margin: 6px auto; */
     margin-top: 6px;
