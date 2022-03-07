@@ -44,13 +44,13 @@ const Footer = () => {
             <FooterTitle>DATES TO NOTE</FooterTitle>
             <DeadlinesWrapper>
               <li>
-                Proposal Submission Deadline: <span>22 February, 2022</span>
+                Proposal Submission Deadline: <span>15 May, 2022</span>
               </li>
               <li>
-                Abstract Submission Deadline: <span>22 February, 2022</span>
+                Abstract Submission Deadline: <span>01 July, 2022</span>
               </li>
               <li>
-                Early Registration Deadline: <span>22 February, 2022</span>
+                Early Registration Deadline: <span>01 August, 2022</span>
               </li>
             </DeadlinesWrapper>
           </Col>
