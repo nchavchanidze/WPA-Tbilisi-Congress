@@ -185,4 +185,13 @@ body {
   background-color: #fff;
   opacity: 1 !important;
 }
+.ReactModal__Overlay {
+  z-index: 9999;
+  
+}
+.ReactModal__Content {
+  &:focus {
+    outline: none;
+  }
+}
 `;
