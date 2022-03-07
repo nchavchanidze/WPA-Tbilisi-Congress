@@ -1,11 +1,13 @@
 import React from "react";
 // import Slider from "react-slick";
 import styled from "styled-components";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Slide01 from "../Assets/Images/Home/Slider/slide-01.jpg";
 import Slide02 from "../Assets/Images/Home/Slider/slide-02.jpg";
 import Slide03 from "../Assets/Images/Home/Slider/slide-03.png";
 import Cover from "../Assets/Images/Home/Slider/cover.png";
+import Banner from "../Assets/Images/Home/Banner/banner.png";
 import Sponsors from "./Sponsors";
 
 const HomeCarousel = () => {
@@ -21,24 +23,51 @@ const HomeCarousel = () => {
   // };
 
   return (
-    <HomeCarouselWrapper>
-      {/* <Slider {...settings}>
-        <SliderComponent className="slide02" />
-      </Slider> */}
-        <SliderComponent />
-      {/* <SlideContentWrapper>
-        <SliderContent>
-          <Sponsors />
-          <p className="date">14 - 16 October 2022 / Tbilisi, Georgia</p>
-          <h1>
-            Treatment and Management of Mental Disorders in <br/> a Post-pandemic Era
-          </h1>
-          <SliderButtonsWrapper>
-            <SliderButton to="/abstract-submission">Abstract Submission</SliderButton>
-          </SliderButtonsWrapper>
-        </SliderContent>
-      </SlideContentWrapper> */}
-    </HomeCarouselWrapper>
+    // <HomeCarouselWrapper>
+    //   {/* <Slider {...settings}>
+    //     <SliderComponent className="slide02" />
+    //   </Slider> */}
+    //   {/* <SliderComponent /> */}
+    //   {/* <SlideContentWrapper>
+    //     <SliderContent>
+    //       <Sponsors />
+    //       <p className="date">14 - 16 October 2022 / Tbilisi, Georgia</p>
+    //       <h1>
+    //         Treatment and Management of Mental Disorders in <br/> a Post-pandemic Era
+    //       </h1>
+    //       <SliderButtonsWrapper>
+    //         <SliderButton to="/abstract-submission">Abstract Submission</SliderButton>
+    //       </SliderButtonsWrapper>
+    //     </SliderContent>
+    //   </SlideContentWrapper> */}
+
+    // </HomeCarouselWrapper>
+    <BannerWrapper fluid={true}>
+      <Row>
+        <Col md={6} sm={12}>
+          <CongressLogoWrapper>
+            <CongressLogo>
+              WPA Thematic
+              <br />
+              <span>Congress</span>
+            </CongressLogo>
+            <HybridLogo>Hybrid</HybridLogo>
+          </CongressLogoWrapper>
+          <CongressTitle>
+            Treatment and Management <br /> of Mental Disorders in
+            <br /> a Post-pandemic Era
+          </CongressTitle>
+          <CongressDeadlines>
+            <span>Online &amp; Tbilisi, Georgia</span><br /> 14 - 16 October
+          </CongressDeadlines>
+        </Col>
+        <Col md={6} sm={12}>
+          <BannerImageWrapper>
+            <img src={Banner} alt="WPA Tbilisi Congress" />
+          </BannerImageWrapper>
+        </Col>
+      </Row>
+    </BannerWrapper>
   );
 };
 
@@ -46,6 +75,73 @@ const HomeCarouselWrapper = styled.div`
   position: relative;
   height: 100%;
   background-image: url(${Cover});
+`;
+
+const BannerWrapper = styled(Container)`
+  height: 100%;
+  /* width: 100%; */
+  /* position: relative; */
+  background-color: #fff;
+`;
+
+const CongressLogoWrapper = styled.div`
+  margin-top: 200px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 25px;
+`;
+const CongressLogo = styled.h1`
+  font-family: "Titillium Web", sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bd1b21;
+  line-height: 0.8;
+  span {
+    font-size: 95px;
+    color: #000;
+  }
+`;
+const HybridLogo = styled.h3`
+  font-family: "Titillium Web", sans-serif;
+  font-size: 22px;
+  color: #fff;
+  background-color: #bd1b21;
+  padding: 5px 20px;
+  border-radius: 6px;
+`;
+
+const CongressTitle = styled.h2`
+  font-family: "Titillium Web", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000;
+  margin-top: 50px;
+  margin-left: 100px;
+`;
+
+const CongressDeadlines = styled.h4`
+  font-family: "Titillium Web", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000;
+  margin-top: 50px;
+  margin-left: 100px;
+  span {
+  font-weight: 700;
+  }
+`;
+
+
+const BannerImageWrapper = styled.div`
+  width: 100%;
+  img {
+    width: 100%;
+  }
 `;
 
 const SliderComponent = styled.div`
