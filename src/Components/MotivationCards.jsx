@@ -12,7 +12,7 @@ const MotivationCards = () => {
       <CardWrapper data-aos="fade-left" data-aos-duration="800">
         <CardImage src={Image01} alt="" />
         <CardText>
-          <h1>LEVEL UP YOUR KNOWLEDGE</h1>
+          <h1>Level up your knowledge</h1>
           <p>
             The congress will bring together best mental health professionals.
             The latest discoveries and most up-to-date research will be revealed
@@ -31,7 +31,7 @@ const MotivationCards = () => {
       >
         <CardImage src={Image02} alt="" />
         <CardText>
-          <h1>HEAR FROM THE EXPERTS</h1>
+          <h1>Hear from the experts</h1>
           <p>
             Take the opportunity to meet global leaders in the field. Hear their
             findings, ask them questions, make new contacts. This is the great
@@ -47,7 +47,7 @@ const MotivationCards = () => {
       >
         <CardImage src={Image03} alt="" />
         <CardText>
-          <h1>NETWORK WITH THE COMMUNITY</h1>
+          <h1>Network with the community</h1>
           <p>
             Network with international practitioners, researchers, colleagues,
             and industry representatives. Share social and professional
@@ -66,7 +66,7 @@ const MotivationCards = () => {
       >
         <CardImage src={Image04} alt="" />
         <CardText>
-          <h1>ADVANCE YOUR CAREER</h1>
+          <h1>Advance your career</h1>
           <p>
             Take part in exciting keynote sessions, panel discussions, e-poster
             presentations, symposia, industry sessions, and many more.
@@ -126,6 +126,7 @@ const CardText = styled.div`
     font-weight: 700;
     color: #39364f;
     margin-bottom: 45px;
+    text-transform: capitalize;
   }
   p {
     font-family: "Urbanist", sans-serif;

@@ -22,9 +22,9 @@ const RegistrationCards = () => {
               <h1>ONSITE Participation</h1>
               <Paragraph>
                 If you are sure about traveling to Tbilisi, then register for
-                in-person event and secure your place for face-to-face meeting.
-                This will also include the benefits of the digital platform. The
-                process is the following:
+                ONSITE participation and secure your place for face-to-face
+                meeting. This will also include the benefits of the digital
+                platform. The process is the following:
               </Paragraph>
               <PricingUl>
                 <li>
@@ -50,11 +50,6 @@ const RegistrationCards = () => {
                   </Sublist>
                 </SublistTitle>
               </PricingUl>
-              <Paragraph style={{ marginTop: 25, paddingBottom: 0 }}>
-                Please note that ONSITE registration cannot be totally canceled;
-                you will only be able to change your ONSITE event registration
-                to ONLINE in case you want to.
-              </Paragraph>
               {/* <Price>€ 9000</Price> */}
               <ChooseBtn>Register Here</ChooseBtn>
             </PricingCard>
@@ -69,7 +64,7 @@ const RegistrationCards = () => {
             data-aos-delay="200"
           >
             <PricingCard>
-              <h1>ONSITE Participation</h1>
+              <h1>ONLINE Participation</h1>
               <Paragraph>
                 If you are still unsure about traveling to Tbilisi due to the
                 pandemic, then first register for ONLINE attendance and you can
@@ -338,19 +333,19 @@ const ChooseBtn = styled.button`
   align-items: center;
   border: 2px solid transparent;
   border-radius: 5px;
-  background-color: #bd1b21;
+  background-color: #ffd2d3;
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-transform: capitalize;
   color: #fff;
   transition: all 0.3s ease-out;
+  pointer-events: none;
   &:hover {
     border: 2px solid #bd1b21;
     background-color: #fff !important;
     color: #bd1b21 !important;
-  transition: all 0.3s ease-out;
-
+    transition: all 0.3s ease-out;
   }
 `;
 

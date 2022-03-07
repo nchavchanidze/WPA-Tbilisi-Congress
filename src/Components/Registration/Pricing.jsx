@@ -16,47 +16,38 @@ const Pricing = () => {
           </th>
         </tr>
         <tr>
-          <td className="category">High income countries*</td>
+          <td className="category">Participants form High Income Country*</td>
           <td className="early">250 €</td>
           <td className="regular">300 €</td>
         </tr>
         <tr>
-          <td className="category">Upper-middle income countries*</td>
+          <td className="category">articipants from Upper Middle-Income Country*</td>
           <td className="early">200 €</td>
           <td className="regular">250 €</td>
         </tr>
         <tr>
-          <td className="category">Low &amp; Lower-middle income countries*</td>
+          <td className="category">Participants from Low & Lower-income Country*</td>
           <td className="early">150 €</td>
           <td className="regular">200 €</td>
         </tr>
         <tr>
-          <td className="category">Georgian citizens</td>
+          <td className="category">Georgian citizens**</td>
           <td className="early">150 €</td>
           <td className="regular">200 €</td>
         </tr>
         <tr>
           <td className="category">
-            Students/Residents, Allied health professionals**
+          Students/Residents, Service users & carers, Allied professionals, Others
           </td>
-          <td className="early">100 €</td>
-          <td className="regular">150 €</td>
-        </tr>
-        <tr>
-          <td className="category">Service users and carers</td>
-          <td className="early">100 €</td>
-          <td className="regular">150 €</td>
+          <td className="early">150 €</td>
+          <td className="regular">200 €</td>
         </tr>
         <tr>
           <td className="category">Online participant</td>
           <td className="early">100 €</td>
-          <td className="regular">100 €</td>
+          <td className="regular">150 €</td>
         </tr>
-        <tr>
-          <td className="category">Accompanying person</td>
-          <td className="early">50 €</td>
-          <td className="regular">50 €</td>
-        </tr>
+        
       </Table>
     </TableWrapper>
   );
