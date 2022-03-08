@@ -57,7 +57,7 @@ const ContactWrapper = styled.section`
 `;
 
 const Description = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   color: #717488;
   font-weight: 400;
@@ -90,10 +90,10 @@ const InputWrapper = styled.div`
     flex-wrap: wrap;
   }
   label {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #39364f;
+    color: #000;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -114,12 +114,12 @@ const Input = styled.input`
   width: 100%;
   transition: all 0.3s ease-out;
   border: 2px solid transparent;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #39364f;
+  color: #000;
   &::-webkit-input-placeholder {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #717488;
     font-weight: 400;
@@ -143,7 +143,7 @@ const Textarea = styled.textarea`
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #39364f;
+  color: #000;
   &::-webkit-input-placeholder {
     font-family: "Urbanist", sans-serif;
     font-size: 14px;

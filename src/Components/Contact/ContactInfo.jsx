@@ -28,7 +28,7 @@ const ContactInfo = () => {
             </IconWrapper>
             <IconTitle>Phone</IconTitle>
             <IconDescription>
-              Feel free and give us call at{" "}
+              Feel free and give us call at<br />
               <a href="tel:+995751731955">+995 751 73 19 55</a>
             </IconDescription>
           </InfoContainer>
@@ -85,15 +85,15 @@ const Icon = styled(FontAwesomeIcon)`
   color: #242328;
 `;
 const IconTitle = styled.h2`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 22.5px;
-  color: #39364f;
+  color: #000;
   font-weight: 700;
   text-align: center;
 `;
 
 const IconDescription = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   color: #717488;
   font-weight: 400;
