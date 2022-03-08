@@ -62,10 +62,10 @@ const TableWrapper = styled(Container)`
 
 const Table = styled.table`
   width: 100%;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #39364f;
+  color: #000;
   th {
     /* border: 1px solid rgba(57, 54, 79, .3); */
     border-bottom: none;
@@ -95,12 +95,12 @@ const Table = styled.table`
       }
       &.early {
         background-color: #ffd2d3;
-        color: #39364f;
+        color: #000;
         font-weight: 600;
       }
       &.regular {
         background-color: #eaeef5;
-        color: #39364f;
+        color: #000;
         font-weight: 600;
       }
     }

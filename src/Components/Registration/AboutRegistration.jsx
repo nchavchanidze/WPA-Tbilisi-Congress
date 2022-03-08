@@ -278,7 +278,7 @@ const AboutTextWrapper = styled.div`
   }
   a {
     background-color: #486ff8;
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 700;
     color: #fff;
@@ -304,17 +304,17 @@ const AboutTextWrapper = styled.div`
   }
 `;
 const AboutTitle = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
 `;
 
 const About = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #717488;
+  color: #000;
   line-height: 1.6;
   margin-top: 25px;
 `;
@@ -329,24 +329,24 @@ const ParagraphWrapper = styled.div`
   width: 100%;
 `;
 const ParagraphTitle = styled.h3`
-  color: #39364f;
-  font-family: "Urbanist", sans-serif;
+  color: #000;
+  font-family: "Titillium Web", sans-serif;
   font-size: 22.5px;
   font-weight: 700;
   text-transform: capitalize;
 `;
 
 const Paragraph = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #717488;
+  color: #000;
   line-height: 1.6;
   span {
     font-weight: 700;
     color: #bd1b21;
     &.strong {
-      color: #39364f;
+      color: #000;
     }
   }
 `;
@@ -366,10 +366,10 @@ const UlTitle = styled.div`
   align-items: baseline;
   gap: 10px;
   h4 {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 20px;
     line-height: 1.6;
-    color: #39364f;
+    color: #000;
     font-weight: 500;
     span {
       font-weight: 600;
@@ -391,11 +391,11 @@ const UlList = styled.ul`
 `;
 
 const GuideList = styled.li`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
-  color: #39364f;
+  color: #000;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
