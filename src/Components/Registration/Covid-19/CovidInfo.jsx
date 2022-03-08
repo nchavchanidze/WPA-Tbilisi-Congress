@@ -34,10 +34,10 @@ const ParagraphWrapper = styled.div`
 `;
 
 const Paragraph = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #717488;
+  color: #000;
   line-height: 1.6;
 `;
 export default CovidInfo;
