@@ -74,18 +74,18 @@ const HotelInfoContainer = styled.div`
   gap: 10px;
 `;
 const HotelTitle = styled.h3`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 20px;
   line-height: 1.6;
-  color: #39364f;
+  color: #000;
   font-weight: 700;
   margin-bottom: 25px;
 `;
 const HotelContact = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #717488;
+  color: #000;
   line-height: 1.6;
   span {
     font-weight: 700;

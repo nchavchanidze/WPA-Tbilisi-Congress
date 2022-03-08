@@ -24,10 +24,10 @@ const MapWrapper = styled.section`
 `;
 
 const MapTitle = styled.h4`
-  font-family: "Urbanist", sans-serif;
+ font-family: "Titillium Web", sans-serif;
   font-size: 20px;
   line-height: 1.6;
-  color: #39364f;
+  color: #000;
   font-weight: 700;
   margin-bottom: 25px;
   text-align: center;
