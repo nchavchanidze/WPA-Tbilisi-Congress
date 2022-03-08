@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -10,13 +10,14 @@ const Instructions = () => {
       <Heading title="Instructions" />
       <MessageWrapper>
         <Message>
-        Information about Instructions of this event will be located on the Congress website in due course.
+          Information about Instructions of this event will be located on the
+          Congress website in due course.
         </Message>
         <Button to="/">Go to Home</Button>
       </MessageWrapper>
     </Layout>
-  )
-}
+  );
+};
 const MessageWrapper = styled.div`
   padding: 100px 0;
   display: flex;
@@ -28,7 +29,7 @@ const MessageWrapper = styled.div`
 `;
 
 const Message = styled.h2`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #717488;
@@ -38,7 +39,7 @@ const Message = styled.h2`
 `;
 const Button = styled(Link)`
   background-color: #bd1b21;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
@@ -59,4 +60,4 @@ const Button = styled(Link)`
     transition: all 0.3s ease-out;
   }
 `;
-export default Instructions
+export default Instructions;
