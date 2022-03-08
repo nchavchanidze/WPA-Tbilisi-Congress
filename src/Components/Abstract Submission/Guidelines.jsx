@@ -459,7 +459,7 @@ const GuidelinesSection = styled.section`
         height: 65px;
         background-color: #fff;
         border: none;
-        color: #39364f;
+        color: #000;
         border: 2px solid #bd1b21;
         /* border-bottom: none; */
         border-radius: 5px;
@@ -474,13 +474,13 @@ const GuidelinesSection = styled.section`
       align-items: center;
       width: 100%;
       height: 65px;
-      font-family: "Urbanist", sans-serif;
+      font-family: "Titillium Web", sans-serif;
       font-size: 22.5px;
       font-weight: 700;
       text-transform: capitalize;
       background-color: #fff;
       border: none;
-      color: #39364f;
+      color: #000;
       border: 2px solid #bd1b21;
       border-radius: 5px;
       padding: 20px 18px;
@@ -515,7 +515,7 @@ const GuidelinesSection = styled.section`
         position: unset !important;
         transform: translate(0, 0) !important;
         p {
-          font-family: "Urbanist", sans-serif;
+          font-family: "Titillium Web", sans-serif;
           font-size: 16px;
           font-weight: 400;
           color: #717488;
@@ -527,12 +527,12 @@ const GuidelinesSection = styled.section`
   }
 `;
 const Title = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 56px;
   font-weight: 700;
   text-transform: capitalize;
   text-align: center;
-  color: #39364f;
+  color: #000;
   margin: 0 auto 50px;
   @media only screen and (max-width: 1019.98px) {
     text-align: center;
@@ -544,8 +544,8 @@ const DeclarationWrapper = styled.div`
 `;
 
 const DeclarationTitle = styled.h4`
-  color: #39364f;
-  font-family: "Urbanist", sans-serif;
+  color: #000;
+  font-family: "Titillium Web", sans-serif;
   font-size: 30px;
   font-weight: 700;
   text-transform: capitalize;
@@ -553,15 +553,15 @@ const DeclarationTitle = styled.h4`
 `;
 
 const Paragraph = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #39364f;
+  color: #000;
   font-weight: 400;
 `;
 
 const Strong = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px !important;
   line-height: 1.6 !important;
   color: #000 !important;
@@ -569,11 +569,11 @@ const Strong = styled.p`
 `;
 
 const GuideTitle = styled.h2`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 46px;
   font-weight: 700;
   text-transform: capitalize;
-  color: #39364f;
+  color: #000;
   margin: 50px 0;
 `;
 
@@ -591,10 +591,10 @@ const UlTitle = styled.div`
   align-items: baseline;
   gap: 10px;
   h4 {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 20px;
     line-height: 1.6;
-    color: #39364f;
+    color: #000;
     font-weight: 500;
     span {
       font-weight: 600;
@@ -616,11 +616,11 @@ const UlList = styled.ul`
 `;
 
 const GuideList = styled.li`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
-  color: #39364f;
+  color: #000;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -651,10 +651,10 @@ const GuidelineForm = styled.form`
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 20px;
     line-height: 1.6;
-    color: #39364f;
+    color: #000;
     font-weight: 500;
     span {
       width: 30px;
@@ -675,7 +675,7 @@ const GuideCheckbox = styled.input`
 `;
 const AbstractButton = styled(Link)`
   background-color: #bd1b21;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   text-transform: capitalize;
   font-size: 16px;
   font-weight: 700;

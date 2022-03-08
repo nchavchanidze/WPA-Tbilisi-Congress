@@ -66,10 +66,10 @@ const Deadline = () => {
 };
 
 const DeadlineTitle = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
   text-align: center;
   margin-bottom: 100px;
 `;
@@ -95,15 +95,15 @@ const IconsWrapper = styled.div`
 `;
 
 const IconTitle = styled.h2`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 22.5px;
-  color: #39364f;
+  color: #000;
   font-weight: 700;
   text-align: center;
 `;
 
 const IconDescription = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   color: #717488;
   font-weight: 400;

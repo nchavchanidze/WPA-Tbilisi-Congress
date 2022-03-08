@@ -10,7 +10,9 @@ const AboutSubmission = () => {
     <AboutWrapper>
       <Container>
         <AboutTitle>Abstract Submission is Now Open!</AboutTitle>
-        <About>Please read the requirements before submitting the abstract.</About>
+        <About>
+          Please read the requirements before submitting the abstract.
+        </About>
       </Container>
     </AboutWrapper>
   );
@@ -33,13 +35,13 @@ const AboutImage = styled.img`
 const AboutTextWrapper = styled.div`
   padding-left: 120px;
   @media only screen and (max-width: 991.98px) {
-      padding-left: 0;
-      margin-top: 60px;
-      text-align: center;
+    padding-left: 0;
+    margin-top: 60px;
+    text-align: center;
   }
   a {
     background-color: #486ff8;
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 700;
     color: #fff;
@@ -54,10 +56,10 @@ const AboutTextWrapper = styled.div`
     margin-top: 25px;
     transition: all 0.3s ease-out;
     @media only screen and (max-width: 991.98px) {
-        width: 100%;
-  }
+      width: 100%;
+    }
     &:hover {
-      border: 2px solid #486FF8;
+      border: 2px solid #486ff8;
       background-color: #fff;
       color: #486ff8;
       transition: all 0.3s ease-out;
@@ -65,14 +67,14 @@ const AboutTextWrapper = styled.div`
   }
 `;
 const AboutTitle = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
 `;
 
 const About = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #717488;

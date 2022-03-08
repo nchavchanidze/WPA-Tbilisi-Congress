@@ -125,10 +125,10 @@ const Eposter = (props) => {
 const Title = styled.h1`
   margin: 30px auto 50px;
   text-align: center;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
   text-transform: capitalize;
 `;
 
@@ -139,11 +139,11 @@ const EposterWrapper = styled(Container)`
 `;
 
 const Foreword = styled.h2`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.6;
-  color: #39364f;
+  color: #000;
 `;
 
 const StepWrapper = styled.div`
@@ -151,7 +151,7 @@ const StepWrapper = styled.div`
 `;
 
 const StepIndicator = styled.span`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 22px;
   font-weight: 900;
   color: #bd1b21;
@@ -159,21 +159,21 @@ const StepIndicator = styled.span`
 `;
 
 const StepTitle = styled.h3`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.6;
-  color: #39364f;
+  color: #000;
   text-transform: uppercase;
   margin-top: 10px;
 `;
 
 const StepParagraph = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
-  color: #39364f;
+  color: #000;
   margin-top: 10px;
   a {
     font-weight: 700;
@@ -184,7 +184,7 @@ const StepParagraph = styled.p`
 `;
 
 const StepRule = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 600;
   font-style: italic;
@@ -202,11 +202,11 @@ const StepList = styled.ul`
   flex-direction: column;
 `;
 const StepListItem = styled.li`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
-  color: #39364f;
+  color: #000;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -236,10 +236,10 @@ const InputWrapper = styled.div`
     flex-wrap: wrap;
   }
   label {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #39364f;
+    color: #000;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -271,7 +271,7 @@ const Input = styled.input`
     padding: 0;
     &::-webkit-file-upload-button {
       background-color: #bd1b21;
-      font-family: "Urbanist", sans-serif;
+      font-family: "Titillium Web", sans-serif;
       font-size: 16px;
       font-weight: 700;
       color: #fff;
@@ -293,7 +293,7 @@ const Input = styled.input`
 
 const Button = styled.input`
   background-color: #bd1b21;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
