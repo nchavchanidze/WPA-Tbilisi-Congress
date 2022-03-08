@@ -1,5 +1,6 @@
 {
-  "name": "seat-event",
+  "name": "wpa-tbilisi-congress",
+  "homepage": "https://wpatbilisicongress.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
