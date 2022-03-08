@@ -75,19 +75,19 @@ const SpeakerImage = styled.div`
 `;
 
 const SpeakerPosition = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #39364f;
+  color: #000;
   text-align: center;
   line-height: 1.6;
 `;
 
 const SpeakerName = styled.h3`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 22.5px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
   text-align: center;
 `;
 
@@ -135,7 +135,7 @@ const ModalCloseButton = styled.button`
   .line {
     width: 30px;
     height: 2px;
-    background-color: #39364f;
+    background-color: #000;
     display: block;
     /* margin: 6px auto; */
     margin-top: 6px;
@@ -177,10 +177,10 @@ const ModalSpeakerWrapper = styled.div`
   min-width: 180px;
 `;
 const ModalSpeakerDescription = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #39364f;
+  color: #000;
   line-height: 1.6;
   /* margin-top: 50px; */
   max-height: 246px;

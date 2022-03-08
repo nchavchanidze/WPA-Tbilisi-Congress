@@ -37,7 +37,7 @@ const Speakers = () => {
       name: "Danuta Wasserman",
       image: Speaker02,
       description:
-        "Professor Afzal Javed was appointed President-Elect at the 2017 World Congress of Psychiatry in Berlin.  In 2020, he assumed the role of President and launched the 2020-2023 Action Plan. As President, Professor Afzal leads the work of the Executive Committee, ensuring the group remains focused on fulfilling the vision of WPA and on reaching its goals as outlined in its charter and in the current Action Plan. In addition to his roles as a Consultant Psychiatrist at the UK NHS, Honorary Clinical Associate Teacher at Warwick Medical School, University of Warwick UK and honorary Chairman of the Pakistan Psychiatric Research Centre, Fountain House, Lahore, Pakistan, Professor Afzal Javed also fulfils his role as WPA President by liaising with member societies across the globe, supporting their local endeavors and sharing knowledge and information between them.",
+        "Prof.Dr.Danuta Wasserman M.D., Ph.D. is Professor of Psychiatry and Suicidology; Head and Founder of National Centre for Suicide Research and Prevention of Mental lll-Health (NASP); Director for WHO Collaborating Centre for Research, Methods Development and Training in Suicide Prevention; President for European Psychiatric Association (EPA) 2013-2014. Member of the EPA Board 2013-2021; President-elect for World Psychiatric Association (WPA) 2020-2023.",
       socials: {
         facebook: "/",
         twitter: "/",
@@ -107,10 +107,10 @@ const SpeakerWrapper = styled.section`
 const Title = styled.h1`
   margin: 0 auto 100px;
   text-align: center;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
 `;
 
 const SpeakersContainer = styled(Container)`
