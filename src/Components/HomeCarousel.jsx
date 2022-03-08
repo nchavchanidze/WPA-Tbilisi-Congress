@@ -3,11 +3,11 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Slide01 from "../Assets/Images/Home/Slider/slide-01.jpg";
-import Slide02 from "../Assets/Images/Home/Slider/slide-02.jpg";
-import Slide03 from "../Assets/Images/Home/Slider/slide-03.png";
 import Cover from "../Assets/Images/Home/Slider/cover.png";
 import Banner from "../Assets/Images/Home/Banner/banner.png";
+import Logo01 from "../Assets/Images/Home/Banner/logo-1.png";
+import Logo03 from "../Assets/Images/Home/Banner/logo-2.png";
+import Logo02 from "../Assets/Images/Home/Banner/logo-3.png";
 import Sponsors from "./Sponsors";
 
 const HomeCarousel = () => {
@@ -42,8 +42,8 @@ const HomeCarousel = () => {
     //   </SlideContentWrapper> */}
 
     // </HomeCarouselWrapper>
-    <BannerWrapper fluid={true}>
-      <Row>
+    <BannerContainer fluid={true}>
+      <BannerWrapper>
         <Col md={6} sm={12}>
           <CongressLogoWrapper>
             <CongressLogo>
@@ -58,16 +58,28 @@ const HomeCarousel = () => {
             <br /> a Post-pandemic Era
           </CongressTitle>
           <CongressDeadlines>
-            <span>Online &amp; Tbilisi, Georgia</span><br /> 14 - 16 October
+            <span>Online &amp; Tbilisi, Georgia</span>
+            <br /> 14 - 16 October
           </CongressDeadlines>
+          <BannerLogosWrapper>
+            <BannerLogo>
+              <img src={Logo01} alt="Society of Georgian Psychiatrists" />
+            </BannerLogo>
+            <BannerLogo>
+              <img src={Logo02} alt="Alliance for Better Mental Health" />
+            </BannerLogo>
+            <BannerLogo>
+              <img src={Logo03} alt="Global Initiative on Psychiatry" />
+            </BannerLogo>
+          </BannerLogosWrapper>
         </Col>
         <Col md={6} sm={12}>
           <BannerImageWrapper>
             <img src={Banner} alt="WPA Tbilisi Congress" />
           </BannerImageWrapper>
         </Col>
-      </Row>
-    </BannerWrapper>
+      </BannerWrapper>
+    </BannerContainer>
   );
 };
 
@@ -77,11 +89,17 @@ const HomeCarouselWrapper = styled.div`
   background-image: url(${Cover});
 `;
 
-const BannerWrapper = styled(Container)`
+const BannerContainer = styled(Container)`
   height: 100%;
   /* width: 100%; */
   /* position: relative; */
   background-color: #fff;
+`;
+
+const BannerWrapper = styled(Row)`
+  @media only screen and (max-width: 1439.98px) {
+    padding-top: 100px;
+  }
 `;
 
 const CongressLogoWrapper = styled.div`
@@ -91,6 +109,12 @@ const CongressLogoWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-end;
   gap: 25px;
+  @media only screen and (max-width: 991.98px) {
+    margin-top: 80px;
+  }
+  @media only screen and (max-width: 830.98px) {
+    margin-left: 40px;
+  }
 `;
 const CongressLogo = styled.h1`
   font-family: "Titillium Web", sans-serif;
@@ -103,6 +127,24 @@ const CongressLogo = styled.h1`
     font-size: 95px;
     color: #000;
   }
+  @media only screen and (max-width: 1439.98px) {
+    font-size: 45px;
+    span {
+      font-size: 65px;
+    }
+  }
+  @media only screen and (max-width: 1172.98px) {
+    font-size: 25px;
+    span {
+      font-size: 37px;
+    }
+  }
+  @media only screen and (max-width: 767.98px) {
+    font-size: 45px;
+    span {
+      font-size: 65px;
+    }
+  }
 `;
 const HybridLogo = styled.h3`
   font-family: "Titillium Web", sans-serif;
@@ -111,6 +153,12 @@ const HybridLogo = styled.h3`
   background-color: #bd1b21;
   padding: 5px 20px;
   border-radius: 6px;
+  @media only screen and (max-width: 1172.98px) {
+    font-size: 15px;
+  }
+  @media only screen and (max-width: 767.98px) {
+    font-size: 22px;
+  }
 `;
 
 const CongressTitle = styled.h2`
@@ -119,8 +167,18 @@ const CongressTitle = styled.h2`
   font-weight: 600;
   text-transform: uppercase;
   color: #000;
-  margin-top: 50px;
+  margin-top: 85px;
   margin-left: 100px;
+  @media only screen and (max-width: 1439.98px) {
+    margin-top: 50px;
+  }
+  @media only screen and (max-width: 1172.98px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 830.98px) {
+    margin-left: 40px;
+    margin-top: 25px;
+  }
 `;
 
 const CongressDeadlines = styled.h4`
@@ -129,13 +187,46 @@ const CongressDeadlines = styled.h4`
   font-weight: 600;
   text-transform: uppercase;
   color: #000;
-  margin-top: 50px;
+  margin-top: 85px;
   margin-left: 100px;
   span {
-  font-weight: 700;
+    color: #bd1b21;
+    font-weight: 700;
+  }
+  @media only screen and (max-width: 1439.98px) {
+    margin-top: 50px;
+  }
+  @media only screen and (max-width: 1172.98px) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 830.98px) {
+    margin-left: 40px;
+  }
+  @media only screen and (max-width: 767.98px) {
+    font-size: 32px;
+    margin-top: 25px;
   }
 `;
 
+const BannerLogosWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-left: 100px;
+  @media only screen and (max-width: 830.98px) {
+    margin-left: 40px;
+    margin-top: 25px;
+  }
+`;
+
+const BannerLogo = styled.div`
+  width: 200px;
+  img {
+    width: 100%;
+  }
+`;
 
 const BannerImageWrapper = styled.div`
   width: 100%;
