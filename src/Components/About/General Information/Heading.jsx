@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Background from "../../../Assets/Images/page-cover.png"
+import Background from "../../../Assets/Images/page-cover.png";
 
 const Heading = () => {
   return (
@@ -22,15 +22,15 @@ const HeadingWrapper = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
 `;
 
 const Title = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
+
   font-size: 56px;
   font-weight: 700;
   text-transform: capitalize;
-  color: #39364f;
+  color: #000;
   /* position: absolute; */
   /* top: 50%; */
   /* left: 50%; */

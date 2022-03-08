@@ -129,18 +129,18 @@ const ParagraphWrapper = styled.div`
   gap: 15px;
 `;
 const ParagraphTitle = styled.h3`
-  color: #39364f;
-  font-family: "Urbanist", sans-serif;
+  color: #000;
+  font-family: "Titillium Web", sans-serif;
   font-size: 22.5px;
   font-weight: 700;
   text-transform: capitalize;
 `;
 
 const Paragraph = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #717488;
+  color: #000;
   line-height: 1.6;
 `;
 
