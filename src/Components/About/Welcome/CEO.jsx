@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Image from "../../../Assets/Images/wpa-ceo.jpg";
 
-
 const CEO = () => {
   return (
     <CEOWrapper>
@@ -36,18 +35,18 @@ const ImageWrapper = styled.div`
 `;
 
 const CEOName = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 26px;
   font-weight: 500;
-  color: #39364f;
+  color: #000;
   text-align: center;
 `;
 
 const Profession = styled.h2`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #717488;
+  color: #000;
   text-align: center;
 `;
 

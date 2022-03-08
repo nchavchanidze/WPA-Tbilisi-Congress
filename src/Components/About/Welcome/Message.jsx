@@ -43,10 +43,10 @@ const Message = () => {
         happy stay in one of the most beautiful cities of the Europe.
       </Paragraph>
       <Paragraph>
-        <span>Welcome to Georgia!</span> <br /> Welcome to the world of professionals and thanks for
-        joining us and exchanging experiences and presenting the best practices
-        of national and international strategies in the scientific programme of
-        the congress!
+        <span>Welcome to Georgia!</span> <br /> Welcome to the world of
+        professionals and thanks for joining us and exchanging experiences and
+        presenting the best practices of national and international strategies
+        in the scientific programme of the congress!
       </Paragraph>
       <Paragraph>
         I wish the organisers and the participants of this conference a big
@@ -69,10 +69,10 @@ const StyledContainer = styled(Container)`
 `;
 
 const Paragraph = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #717488;
+  color: #000;
 `;
 
 export default Message;
