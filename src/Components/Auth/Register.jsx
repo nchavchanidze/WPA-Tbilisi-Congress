@@ -390,10 +390,10 @@ const SigupWrapper = styled.div`
 const Title = styled.h1`
   margin: 30px auto 50px;
   text-align: center;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
   text-transform: capitalize;
 `;
 
@@ -406,7 +406,7 @@ const InputForm = styled.form`
   gap: 25px;
   width: 600px;
   a {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #bd1b21;
     font-weight: 600;
@@ -428,10 +428,10 @@ const InputWrapper = styled.div`
     flex-wrap: wrap;
   }
   label {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #39364f;
+    color: #000;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -453,10 +453,10 @@ const PhoneWrapper = styled.div`
     flex-wrap: wrap;
   }
   label {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #39364f;
+    color: #000;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -476,10 +476,10 @@ const RadioWrapper = styled.div`
   flex-direction: column;
   gap: 10px;
   span {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #39364f;
+    color: #000;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -496,10 +496,10 @@ const RadioRow = styled.div`
   align-items: flex-start;
   gap: 30px;
   label {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #39364f;
+    color: #000;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -508,7 +508,7 @@ const RadioRow = styled.div`
 `;
 
 const TermsCheckbox = styled.label`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 14px;
   color: #bd1b21;
   font-weight: 600;
@@ -540,13 +540,13 @@ const Input = styled.input`
   transition: all 0.3s ease-out;
   border: 2px solid transparent;
   &[type="email"] {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #39364f;
+    color: #000;
   }
   &::-webkit-input-placeholder {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #717488;
     font-weight: 400;
@@ -561,7 +561,7 @@ const Input = styled.input`
 
 const Button = styled.input`
   background-color: #bd1b21;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
@@ -590,10 +590,10 @@ const Select = styled.select`
   width: 280px;
   transition: all 0.3s ease-out;
   border: 2px solid transparent;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #39364f;
+  color: #000;
   width: 100%;
   option {
     transition: all 0.3s ease-out;
@@ -602,7 +602,7 @@ const Select = styled.select`
     }
   }
   &::-webkit-input-placeholder {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #717488;
     font-weight: 400;
