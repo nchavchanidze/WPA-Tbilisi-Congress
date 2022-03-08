@@ -353,6 +353,7 @@ const Nav = styled.ul`
       font-size: 14px;
       color: #000;
       font-weight: 700;
+      text-transform: uppercase;
       transition: all 0.3s ease-out;
       background-color: unset;
       border: none;
@@ -414,6 +415,7 @@ const Nav = styled.ul`
       color: #000;
       font-weight: 700;
       transition: all 0.3s ease-out;
+      text-transform: uppercase;
       &:hover {
         color: #bd1b21;
         transition: all 0.3s ease-out;
@@ -423,8 +425,9 @@ const Nav = styled.ul`
   .sign-btn {
     background-color: #bd1b21;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
+    text-transform: uppercase;
     color: #fff;
     border-radius: 25px;
     height: 50px;
