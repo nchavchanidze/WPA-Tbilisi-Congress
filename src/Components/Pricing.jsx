@@ -196,17 +196,16 @@ const Title = styled.div`
   margin: 0 auto;
   text-align: center;
   span {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    text-transform: ;
     color: #486ff8;
   }
   h1 {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 44px;
     font-weight: 700;
-    color: #39364f;
+    color: #000;
     margin-top: 30px;
     margin-bottom: 50px;
     text-transform: capitalize;
@@ -218,7 +217,7 @@ const PricingCard = styled.div`
   background-color: #fff;
   padding: 30px 45px;
   width: 85%;
-  min-height: 470px;
+  min-height: 500px;
   border-radius: 5px;
   transition: all 0.3s ease-out;
   position: relative;
@@ -231,7 +230,7 @@ const PricingCard = styled.div`
   /* &:hover {
     transform: translateY(-40px);
     transition: all 0.3s ease-out;
-    background-color: #39364f;
+    background-color: #000;
     color: #fff;
     h1,
     li,
@@ -248,15 +247,15 @@ const PricingCard = styled.div`
     }
   } */
   h1 {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 28px;
     font-weight: 700;
-    color: #39364f;
+    color: #000;
     margin-bottom: 30px;
     text-transform: capitalize;
     transition: all 0.3s ease-out;
     span {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 18px;
     font-weight: 400;
     text-transform: none;
@@ -272,11 +271,11 @@ const PricingUl = styled.ul`
   flex-direction: column;
   gap: 20px;
   li {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 400;
     text-transform: capitalize;
-    color: #39364f;
+    color: #000;
     transition: all 0.3s ease-out;
     display: flex;
     justify-content: flex-start;
@@ -293,11 +292,11 @@ const PricingUl = styled.ul`
 `;
 
 const Price = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 25px;
   font-weight: 700;
   text-transform: capitalize;
-  color: #39364f;
+  color: #000;
   transition: all 0.3s ease-out;
   margin-top: 30px;
   position: absolute;
@@ -321,7 +320,7 @@ const ChooseBtn = styled.button`
   border: none;
   border-radius: 5px;
   background-color: #f0f4ff;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-transform: capitalize;
