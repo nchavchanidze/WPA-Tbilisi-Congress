@@ -390,10 +390,10 @@ const SymposiumUpload = () => {
 const Title = styled.h1`
   margin: 200px auto 50px;
   text-align: center;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
   text-transform: capitalize;
 `;
 
@@ -414,7 +414,7 @@ const InputForm = styled.form`
   max-width: 750px;
   width: 100%;
   a {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #bd1b21;
     font-weight: 600;
@@ -437,10 +437,10 @@ const InputWrapper = styled.div`
     flex-wrap: wrap;
   }
   label {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #39364f;
+    color: #000;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -470,13 +470,13 @@ const Input = styled.input`
   transition: all 0.3s ease-out;
   border: 2px solid transparent;
   &[type="email"] {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #39364f;
+    color: #000;
   }
   &::-webkit-input-placeholder {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #717488;
     font-weight: 400;
@@ -492,7 +492,7 @@ const Input = styled.input`
     padding: 0;
     &::-webkit-file-upload-button {
       background-color: #bd1b21;
-      font-family: "Urbanist", sans-serif;
+      font-family: "Titillium Web", sans-serif;
       font-size: 16px;
       font-weight: 700;
       color: #fff;
@@ -523,10 +523,10 @@ const Select = styled.select`
   /* width: 280px; */
   transition: all 0.3s ease-out;
   border: 2px solid transparent;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #39364f;
+  color: #000;
   width: 360px;
   option {
     transition: all 0.3s ease-out;
@@ -535,7 +535,7 @@ const Select = styled.select`
     }
   }
   &::-webkit-input-placeholder {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #717488;
     font-weight: 400;
@@ -557,10 +557,10 @@ const AuthorWrapper = styled.div`
 `;
 
 const Counter = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #39364f;
+  color: #000;
   &.over {
     color: #f00;
   }
@@ -569,7 +569,7 @@ const Counter = styled.p`
 const RichText = styled(ReactQuill)`
   max-width: 750px;
   width: 100% !important;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   p {
   }
   ul {
@@ -599,7 +599,7 @@ const RichText = styled(ReactQuill)`
 
 const Button = styled.input`
   background-color: #bd1b21;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
@@ -621,7 +621,7 @@ const Button = styled.input`
 `;
 const AddButton = styled.button`
   background-color: #bd1b21;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
