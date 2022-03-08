@@ -17,40 +17,41 @@ const AboutOnsiteOnline = () => {
         <GuideWrapper>
           <UlTitle>
             <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-            <h4>Benefits of attending <span>ONSITE</span> include:</h4>
+            <h4>
+              Benefits of attending <span>ONSITE</span> include:
+            </h4>
           </UlTitle>
           <UlList>
             <GuideList>
-            Admittance to Opening Ceremony & Welcome Reception
+              Admittance to Opening Ceremony & Welcome Reception
             </GuideList>
             <GuideList>Participation in all scientific sessions</GuideList>
-            <GuideList>Face-to-face interaction with speakers/experts </GuideList>
+            <GuideList>
+              Face-to-face interaction with speakers/experts{" "}
+            </GuideList>
             <GuideList>Networking with peers</GuideList>
             <GuideList>Access to industry sessions and materials</GuideList>
             <GuideList>Participation in the courses</GuideList>
             <GuideList>Open access to the virtual sessions</GuideList>
+            <GuideList>Congress materials</GuideList>
+            <GuideList>Certificate of Attendance/CME</GuideList>
+            <GuideList>Online abstract book</GuideList>
             <GuideList>
-            Congress materials
-            </GuideList>
-            <GuideList>
-            Certificate of Attendance/CME
-            </GuideList>
-            <GuideList>
-            Online abstract book
-            </GuideList>
-            <GuideList>
-            Refreshments/Meals as per breaks in the program
+              Refreshments/Meals as per breaks in the program
             </GuideList>
           </UlList>
         </GuideWrapper>
         <GuideWrapper>
           <UlTitle>
             <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-            <h4>Benefits of attending <span>ONLINE</span> include:</h4>
+            <h4>
+              Benefits of attending <span>ONLINE</span> include:
+            </h4>
           </UlTitle>
           <UlList>
             <GuideList>
-            Access to all scientific content: pre-recorded & selected live interactive sessions
+              Access to all scientific content: pre-recorded & selected live
+              interactive sessions
             </GuideList>
             <GuideList>Online networking opportunities</GuideList>
             <GuideList>Debating during live-streamed sessions</GuideList>
@@ -58,12 +59,8 @@ const AboutOnsiteOnline = () => {
             <GuideList>Certificate of Attendance/CME</GuideList>
             <GuideList>Access to E-Posters</GuideList>
             <GuideList>Online abstract book</GuideList>
-            <GuideList>
-            Flexibility and comfort
-            </GuideList>
-            <GuideList>
-            The meeting will be held online, using Zoom.
-            </GuideList>
+            <GuideList>Flexibility and comfort</GuideList>
+            <GuideList>The meeting will be held online, using Zoom.</GuideList>
           </UlList>
         </GuideWrapper>
       </Container>
@@ -82,7 +79,7 @@ const AboutWrapper = styled.section`
 `;
 
 const About = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #717488;
@@ -108,10 +105,10 @@ const UlTitle = styled.div`
   align-items: baseline;
   gap: 10px;
   h4 {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 20px;
     line-height: 1.6;
-    color: #39364f;
+    color: #000;
     font-weight: 500;
     span {
       font-weight: 600;
@@ -133,11 +130,11 @@ const UlList = styled.ul`
 `;
 
 const GuideList = styled.li`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
-  color: #39364f;
+  color: #000;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
