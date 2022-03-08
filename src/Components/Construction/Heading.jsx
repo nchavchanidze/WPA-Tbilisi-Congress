@@ -27,11 +27,11 @@ const HeadingWrapper = styled.section`
 `;
 
 const Title = styled.h1`
-  font-family: "Urbanist", sans-serif;
+font-family: "Titillium Web", sans-serif;
   font-size: 56px;
   font-weight: 700;
   text-transform: capitalize;
-  color: #39364f;
+  color: #000;
   /* position: absolute; */
   /* top: 50%; */
   /* left: 50%; */

@@ -35,7 +35,7 @@ const NotFoundWrapper = styled.div`
 `;
 
 // const Heading = styled.h1`
-//   font-family: "Urbanist", sans-serif;
+//   font-family: "Titillium Web", sans-serif;
 //   font-size: 192px;
 //   font-weight: 700;
 //   color: #bd1b21;
@@ -45,17 +45,17 @@ const NotFoundWrapper = styled.div`
 // `;
 
 const SecondHeading = styled.h2`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 35px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
   @media only screen and (max-width: 991.98px) {
     text-align: center;
   }
 `;
 
 const NotFoundText = styled.p`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #717488;
@@ -66,7 +66,7 @@ const NotFoundText = styled.p`
 
 const Button = styled(Link)`
   background-color: #bd1b21;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
