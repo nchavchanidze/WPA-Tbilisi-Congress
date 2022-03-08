@@ -34,10 +34,10 @@ const SignWrapper = styled.div`
 const Title = styled.h1`
   margin: 30px auto 50px;
   text-align: center;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 44px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
   text-transform: capitalize;
 `;
 
@@ -49,7 +49,7 @@ const InputForm = styled.form`
   flex-direction: column;
   gap: 25px;
   a {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #bd1b21;
     font-weight: 600;
@@ -68,10 +68,10 @@ const InputWrapper = styled.div`
   flex-direction: column;
   gap: 10px;
   label {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 600;
-    color: #39364f;
+    color: #000;
   }
 `;
 
@@ -84,13 +84,13 @@ const Input = styled.input`
   transition: all 0.3s ease-out;
   border: 2px solid transparent;
   &[type="email"] {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #39364f;
+    color: #000;
   }
   &::-webkit-input-placeholder {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #717488;
     font-weight: 400;
@@ -106,7 +106,7 @@ const Input = styled.input`
 
 const Button = styled.input`
   background-color: #bd1b21;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
