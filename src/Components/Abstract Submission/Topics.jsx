@@ -5,8 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 import TopicList from "./Topics.json";
-import Background from "../../Assets/Images/page-cover.png"
-
+import Background from "../../Assets/Images/page-cover.png";
 
 const Topics = () => {
   return (
@@ -66,11 +65,11 @@ const HeadingWrapper = styled.section`
   background-position: center;
 `;
 const Title = styled.h1`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 56px;
   font-weight: 700;
   text-transform: capitalize;
-  color: #39364f;
+  color: #000;
   /* position: absolute; */
   /* top: 50%; */
   /* left: 50%; */
@@ -99,10 +98,10 @@ const TopicsUl = styled.ul`
 `;
 
 const TopicItem = styled.li`
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: #39364f;
+  color: #000;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -114,7 +113,7 @@ const TopicItem = styled.li`
 
 const Button = styled(Link)`
   background-color: #bd1b21;
-  font-family: "Urbanist", sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
