@@ -26,7 +26,7 @@ const WelcomeMessage = () => {
                 &quot;Treatment and Management of Mental Disorders in a
                 Post-Pandemic Era&quot;
               </span>{" "}
-              being held in Tbilisi, Georgia during October 14-16,2022.
+              being held in Tbilisi, Georgia during October 14-16, 2022.
             </Paragraph>
             <Paragraph>
               I am pleased that Georgian Psychiatric Association, a highly
