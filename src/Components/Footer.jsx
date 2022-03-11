@@ -119,22 +119,22 @@ const Footer = () => {
           <p>Copyright © 2022 WPA Tbilisi Congress. All Rights Reserved.</p>
           <TermsPrivacy>
             <li>
-              <Link to="/">Sign in</Link>
+              <Link to="/login">Sign in</Link>
             </li>
             <li>
-              <Link to="/">Register</Link>
+              <Link to="/registration">Register</Link>
             </li>
             <li>
-              <Link to="/">Submit Abstract</Link>
+              <Link to="/abstract-submission">Submit Abstract</Link>
             </li>
             <li>
-              <Link to="/">Submit Proposal</Link>
+              <Link to="/symposium">Submit Proposal</Link>
             </li>
             <li>
-              <Link to="/">FAQs</Link>
+              <Link to="/faq">FAQs</Link>
             </li>
             <li>
-              <Link to="/">Contact Us</Link>
+              <Link to="/contact">Contact Us</Link>
             </li>
           </TermsPrivacy>
         </Copyright>
