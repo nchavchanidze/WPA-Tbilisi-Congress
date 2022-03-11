@@ -6,11 +6,34 @@ const Information = () => {
   return (
     <StyledContainer>
       <ParagraphWrapper>
-        <ParagraphTitle>What is TBILISI & ONLINE</ParagraphTitle>
+        <ParagraphTitle>About the Congress</ParagraphTitle>
         <Paragraph>
-          The WPA Thematic Congress in Tbilisi will be held in hybrid format. We
-          hope that most of you will be able to travel and attend the event
-          in-person. At the same time many of you might not be able to do so.
+          WPA Thematic Congress “Treatment and Management of Mental Disorders in
+          a Post-Pandemic Era” will be hed in a hybrid format on 14-16 October
+          2022 in Tbilisi, Georgia.
+          <br />
+          <br />
+          COVID Pandemic has significantly changed our lives and negatively
+          affected people's mental health. Psychiatry faced new demands in
+          treating and managing mental disorders, mental health complications of
+          covid infected patients, and stress-related conditions in the general
+          population.
+          <br />
+          <br />
+          The thematic congress is focused on sharing knowledge and experience
+          dealing with pandemic-related pharmacological and psychosocial issues.
+          The leading experts will discuss the current and anticipated
+          challenges and solutions.
+          <br />
+          <br />
+          The Congress is organized by the World Psychiatric Association (WPA)
+          and hosted by the Society of Georgian Psychiatrists (SGP) with support
+          of the Alliance for Better Mental Health (ABMH) and the Foundation
+          Global initiative on Psychiatry (GIP-Tbilisi).
+          <br />
+          <br />
+          We hope that most of you will be able to travel and attend the event
+          in-person. In the same time, many of you might not be able to do so.
           Therefore, we are planning a full in-person meeting in Tbilisi and an
           online experience.
         </Paragraph>
@@ -73,7 +96,7 @@ const Information = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://www.geoconsul.gov.ge/HtmlPage/Html/View?id=956&lang=Eng
+            https://www.geoconsul.gov.ge
           </a>{" "}
           <br />
           For e-visa apply{" "}
@@ -94,22 +117,6 @@ const Information = () => {
           as well as CME points when attending sessions during the Congress.
           They may obtain their certificate by accessing the Congress system
           activated soon after the end of the Congress.
-        </Paragraph>
-      </ParagraphWrapper>
-      <ParagraphWrapper>
-        <ParagraphTitle>About WPA</ParagraphTitle>
-        <Paragraph>
-          The{" "}
-          <a
-            href="http://www.wpanet.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WPA
-          </a>{" "}
-          is psychiatry’s global association representing national societies
-          aimed to increase the knowledge and skills necessary for work in the
-          field of mental health.
         </Paragraph>
       </ParagraphWrapper>
     </StyledContainer>
