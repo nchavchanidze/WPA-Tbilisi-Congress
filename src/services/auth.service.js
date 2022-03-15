@@ -64,6 +64,7 @@ const login = (email, pass) => {
             JSON.stringify({
               firstname: response.data.userData[0].firstname,
               salutation: response.data.userData[0].salutation,
+              email: response.data.userData[0].email,
             })
           );
         }
@@ -74,8 +75,16 @@ const login = (email, pass) => {
 };
 
 const logout = () => {
-  localStorage.removeItem("user");
-  localStorage.removeItem("userdata");
+  return axios.post(API_URL + "Logout", { 
+    email: JSON.parse(localStorage.getItem("userdata")).email,
+    token: localStorage.getItem("user")
+  }).then((response) => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("userdata");
+    return response.data
+  }).catch((err) => {
+    console.error(err.response.data)
+  })
 };
 
 const getCurrentUser = () => {

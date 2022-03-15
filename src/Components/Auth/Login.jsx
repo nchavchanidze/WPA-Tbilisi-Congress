@@ -81,14 +81,14 @@ const Login = (props) => {
       <Container className="d-flex justify-content-center align-items-center">
         <InputForm onSubmit={handleLogin} ref={form}>
           <InputWrapper>
-            <label htmlFor="username">Username</label>
+            <label htmlFor="Email">Email</label>
             <StyledInput
               type="email"
-              name="username"
+              name="Email"
               value={email}
               onChange={onChangeUsername}
               validations={[required, validEmail]}
-              placeholder="Enter your Username"
+              placeholder="Enter your Email"
             />
           </InputWrapper>
           <InputWrapper>

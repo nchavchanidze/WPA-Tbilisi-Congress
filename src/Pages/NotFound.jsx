@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Error404 from "../Components/Error404";
-import Layout from "../Layouts/ComponentLayout";
+import Layout from "../Layouts/Layout";
 
 const NotFound = () => {
   useEffect(() => {
