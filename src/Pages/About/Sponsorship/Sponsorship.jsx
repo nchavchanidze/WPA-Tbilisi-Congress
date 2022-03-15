@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
-import Heading from "../../../Components/About/Sponsorship/Heading";
+import Heading from "../../../Components/Heading";
 import Pricing from "../../../Components/Pricing";
 import Layout from "../../../Layouts/Layout";
 
 const Sponsorship = () => {
   return (
     <Layout>
-      <Heading />
+      <Heading title="Sponsorship" />
       <Container>
         <ParagraphWrapper>
           <ParagraphTitle>Sponsorship Levels & Benefits</ParagraphTitle>

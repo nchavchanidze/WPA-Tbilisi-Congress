@@ -59,7 +59,7 @@ const HomeCarousel = () => {
           </CongressTitle>
           <CongressDeadlines>
             <span>Online &amp; Tbilisi, Georgia</span>
-            <br /> 14 - 16 October
+            <br /> 14 - 16 October 2022
           </CongressDeadlines>
           <BannerLogosWrapper>
             <BannerLogo>

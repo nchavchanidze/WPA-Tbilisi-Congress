@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import Heading from "./Heading";
+import Heading from "../Heading";
 const Construction = (props) => {
   return (
     <NotFound>
@@ -14,7 +14,7 @@ const Construction = (props) => {
             The page you are looking is under construction. Try
             going to Home Page by using the button below.
           </NotFoundText>
-          <Button to="/">Go to Home</Button>
+          <Button to="/">Go to Home Page</Button>
         </NotFoundWrapper>
       </Container>
     </NotFound>

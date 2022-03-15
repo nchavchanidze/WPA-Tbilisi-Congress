@@ -1,23 +1,13 @@
-import React, { useState, useRef, useContext } from "react";
-import styled from "styled-components";
+import React, { useState, useRef } from "react";
 import { Container } from "react-bootstrap";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-
-// import { UserContext } from "../../App";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
-import AuthService from "../../services/auth.service";
-
-import { useAuth } from "./Auth";
-
-const required = (value) => {
-  if (!value) {
-    return <AlertBox role="alert">This field is required!</AlertBox>;
-  }
-};
+import axios from "axios";
 
 const validEmail = (value) => {
   if (!isEmail(value)) {
@@ -25,127 +15,107 @@ const validEmail = (value) => {
   }
 };
 
-const Login = (props) => {
-  // authenticate(localStorage.getItem("user"))
+const required = (value) => {
+  if (!value) {
+    return <AlertBox role="alert">This field is required!</AlertBox>;
+  }
+};
 
-  const navigate = useNavigate();
-  const { state } = useLocation();
-  const from = state?.from || "/";
+const PasswordReset = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [successful, setSuccessful] = useState(false);
+  const [message, setMessage] = useState("");
 
   const form = useRef();
   const checkBtn = useRef();
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
 
-  const onChangeUsername = (e) => {
+  const onChangeEmail = (e) => {
     const email = e.target.value;
     setEmail(email);
   };
 
-  const onChangePassword = (e) => {
-    const pass = e.target.value;
-    setPass(pass);
-  };
-
-  const handleLogin = (e) => {
+  const handleReset = (e) => {
     e.preventDefault();
     setMessage("");
     setLoading(true);
     form.current.validateAll();
     if (checkBtn.current.context._errors.length === 0) {
-      AuthService.login(email, pass).then(
-        () => {
-          navigate(from);
-        },
-        (error) => {
-          const resMessage =
-            (error.response &&
-              error.response.data &&
-              error.response.data.error) ||
-            error.message ||
-            error.toString();
-          setLoading(false);
-          setMessage(resMessage);
-        }
-      );
-    } else {
-      setLoading(false);
+      axios
+        .post("https://wpatbilisicongress.com/Server/API/Auth/Reset", {
+          email: email,
+        })
+        .then(
+          (response) => {
+            setMessage(response.data.msg);
+            setSuccessful(true);
+            console.log(response.data);
+          },
+          (error) => {
+            const resMessage =
+              (error.response &&
+                error.response.data &&
+                error.response.data.msg) ||
+              error.message ||
+              error.toString();
+            setMessage(resMessage);
+            setSuccessful(false);
+          }
+        );
     }
   };
 
   return (
-    <SignWrapper>
-      <Title>Sign In</Title>
-      <Container className="d-flex justify-content-center align-items-center">
-        <InputForm onSubmit={handleLogin} ref={form}>
+    <StyledContainer>
+      {message ? (
+        <AlertWrapper>
+          <SuccessMessageWrapper
+            className={successful ? "success" : "error"}
+            role="alert"
+          >
+            <SuccessMessage>{message}</SuccessMessage>
+          </SuccessMessageWrapper>
+          <LinkButton to="/">Go to Home Page</LinkButton>
+        </AlertWrapper>
+      ) : (
+        <InputForm onSubmit={handleReset} ref={form}>
           <InputWrapper>
-            <label htmlFor="username">Username</label>
+            <label htmlFor="Email">Email</label>
             <StyledInput
               type="email"
-              name="username"
+              name="Email"
               value={email}
-              onChange={onChangeUsername}
+              onChange={onChangeEmail}
               validations={[required, validEmail]}
-              placeholder="Enter your Username"
+              placeholder="Enter your Email"
             />
           </InputWrapper>
-          <InputWrapper>
-            <label htmlFor="password">Password</label>
-            <StyledInput
-              type="password"
-              className="form-control"
-              name="password"
-              value={pass}
-              onChange={onChangePassword}
-              validations={[required]}
-              placeholder="Enter your Password"
-            />
-          </InputWrapper>
-          <Link to="/forgot-password">Forgot Password?</Link>
-          <Link to="/register">Don’t have an account? Create one.</Link>
           <Button disabled={loading}>
             {loading && (
               <span className="spinner-border spinner-border-sm"></span>
             )}
-            <span>Login</span>
+            <span>Send</span>
           </Button>
-          {message && (
-            <div className="form-group">
-              <div className="alert alert-danger" role="alert">
-                {message}
-              </div>
-            </div>
-          )}
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </InputForm>
-      </Container>
-    </SignWrapper>
+      )}
+    </StyledContainer>
   );
 };
 
-const SignWrapper = styled.div`
-  padding: 200px 0 100px;
-`;
-
-const Title = styled.h1`
-  margin: 30px auto 50px;
-  text-align: center;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 44px;
-  font-weight: 700;
-  color: #000;
-  text-transform: capitalize;
+const StyledContainer = styled(Container)`
+  padding: 100px 0;
 `;
 
 const InputForm = styled(Form)`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: flex-end;
+  /* flex-direction: column; */
   gap: 25px;
+  width: 600px;
+
   a {
     font-family: "Titillium Web", sans-serif;
     font-size: 14px;
@@ -165,6 +135,10 @@ const InputWrapper = styled.div`
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
+  div {
+    width: 100%;
+  }
   label {
     font-family: "Titillium Web", sans-serif;
     font-size: 16px;
@@ -178,7 +152,8 @@ const StyledInput = styled(Input)`
   padding: 15px;
   border: none;
   border-radius: 5px;
-  width: 280px;
+  min-width: 280px;
+  width: 100%;
   transition: all 0.3s ease-out;
   border: 2px solid transparent;
   &[type="email"] {
@@ -208,8 +183,8 @@ const Button = styled.button`
   font-weight: 700;
   color: #fff;
   border-radius: 5px;
-  height: 50px;
-  width: 100%;
+  height: 58px;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,5 +211,56 @@ const AlertBox = styled.div`
   font-family: "Titillium Web", sans-serif;
   font-size: 14px;
 `;
+const AlertWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+`;
 
-export default Login;
+const SuccessMessageWrapper = styled.div`
+  margin: 0 auto;
+  padding: 20px 15px;
+  border-radius: 8px;
+  &.success {
+    background-color: #bbfff1;
+    border: 2px solid #2ea58d;
+  }
+  &.error {
+    background-color: #ffa5ac;
+    border: 2px solid #f15360;
+  }
+`;
+const SuccessMessage = styled.p`
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+`;
+
+const LinkButton = styled(Link)`
+  background-color: #bd1b21;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-out;
+  margin-top: 50px;
+  &:hover {
+    border: 2px solid #bd1b21;
+    background-color: #fff;
+    color: #bd1b21;
+    transition: all 0.3s ease-out;
+  }
+`;
+
+export default PasswordReset;

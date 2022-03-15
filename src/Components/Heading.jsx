@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Background from "../Assets/Images/page-cover.png"
-
+import Background from "../Assets/Images/page-cover.jpeg";
 
 const Heading = (props) => {
   return (
@@ -13,29 +12,42 @@ const Heading = (props) => {
 };
 
 const HeadingWrapper = styled.section`
-   background-color: #fff;
-   width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 269px 0 200px;
+  /* padding: 170px 0 200px; */
+  height: 375px;
   box-shadow: 0 3px 25px 0 rgb(72 111 248 / 9%);
-  background-image: url(${Background});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
+  background-color: #fff;
+  &:before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-image: url(${Background});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+  }
 `;
 
 const Title = styled.h1`
   font-family: "Titillium Web", sans-serif;
   font-size: 56px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: capitalize;
   color: #000;
-  /* position: absolute; */
-  /* top: 50%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
+  z-index: 999;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   @media only screen and (max-width: 1019.98px) {
     text-align: center;
   }

@@ -1,12 +1,14 @@
 import React from 'react'
-import ComponentLayout from "../../Layouts/ComponentLayout";
+import Layout from "../../Layouts/Layout";
+import Heading from '../../Components/Heading';
 import UpdateProfile from '../../Components/Profile/UpdateProfile';
 
 const Profile = () => {
     return (
-        <ComponentLayout>
+        <Layout>
+            <Heading title="Profile" />
             <UpdateProfile />
-        </ComponentLayout>
+        </Layout>
     )
 }
 

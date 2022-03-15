@@ -12,30 +12,28 @@ const Deadline = () => {
   return (
     <DeadlineWrapper>
       <Container>
-        <DeadlineTitle>Important Deadlines</DeadlineTitle>
+        <DeadlineTitle>Important Dates</DeadlineTitle>
         <Row>
           <Col md={4} sm={12}>
             <IconsWrapper>
               <FontAwesomeIcon icon={faCalendarAlt} />
-              <IconTitle>10 October 2021 (23:59 GMT+4)</IconTitle>
-              <IconDescription>Symposia Submission Deadline</IconDescription>
+              <IconTitle>OPEN</IconTitle>
+              <IconDescription>Symposium Proposal Submission</IconDescription>
             </IconsWrapper>
           </Col>
           <Col md={4} sm={12}>
             <IconsWrapper>
               <FontAwesomeIcon icon={faClock} />
-              <IconTitle>8 November 2021</IconTitle>
-              <IconDescription>
-                Notification of Submission Acceptance
-              </IconDescription>
+              <IconTitle>15 May 2022</IconTitle>
+              <IconDescription>Proposal Submission Deadline</IconDescription>
             </IconsWrapper>
           </Col>
           <Col md={4} sm={12}>
             <IconsWrapper>
               <FontAwesomeIcon icon={faCheckSquare} />
-              <IconTitle>10 October 2021</IconTitle>
+              <IconTitle>15 June 2022</IconTitle>
               <IconDescription>
-                Deadline for Change of Title/Authorship
+                Notification to Accepted Authors
               </IconDescription>
             </IconsWrapper>
           </Col>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import ContactForm from "../Components/Contact/ContactForm";
 import ContactInfo from "../Components/Contact/ContactInfo";
 import ContactMap from "../Components/Contact/ContactMap";
-import Heading from "../Components/Contact/Heading";
+import Heading from "../Components/Heading";
 import Layout from "../Layouts/Layout";
 
 const Contact = () => {
@@ -12,7 +12,7 @@ const Contact = () => {
 
   return (
     <Layout>
-      <Heading />
+      <Heading title="Contact Us" />
       <ContactForm />
       <ContactInfo />
       {/* <ContactMap /> */}

@@ -8,6 +8,7 @@ import Symposium from "./Pages/Symposium/Symposium";
 import SymposiumUpload from "./Pages/Symposium/SymposiumUpload";
 import AbstractTopics from "./Pages/AbstractTopics";
 import Registration from "./Pages/Registration/Registration";
+import PrivateRoute from "./Components/PrivateRoute";
 
 const Home = React.lazy(() => import("./Pages/Home"));
 
@@ -60,6 +61,9 @@ const Covid = React.lazy(() => import("./Pages/Registration/Covid-19/Covid"));
 // Auth
 const Login = React.lazy(() => import("./Pages/Login"));
 const Register = React.lazy(() => import("./Pages/Register"));
+const ForgotPassword = React.lazy(() => import("./Pages/Auth/ForgotPassword"));
+const NewPassword = React.lazy(() => import("./Pages/Auth/NewPassword"));
+
 const AbstractSubmission = React.lazy(() =>
   import("./Pages/AbstactSubmission")
 );
@@ -134,6 +138,14 @@ const App = () => {
       element: <Register />,
     },
     {
+      path: "/forgot-password",
+      element: <ForgotPassword />,
+    },
+    {
+      path: "/new-password/:token",
+      element: <NewPassword />,
+    },
+    {
       path: "/abstract-submission",
       element: <AbstractSubmission />,
     },
@@ -183,7 +195,11 @@ const App = () => {
     },
     {
       path: "/symposium-upload",
-      element: <SymposiumUpload />,
+      element: (
+        <PrivateRoute>
+          <SymposiumUpload />
+        </PrivateRoute>
+      ),
     },
     {
       path: "/registration",
@@ -211,14 +227,23 @@ const App = () => {
     AOS.init();
   }, []);
   return (
-    <Suspense fallback={<Loader />}>
-      <Routes>
-        {routes.map(({ path, element }, key) => (
-          <Route exact path={path} element={element} key={key} />
-        ))}
-      </Routes>
-      <ScrollButton />
-    </Suspense>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          {routes.map(({ path, element }, key) => (
+            <Route exact path={path} element={element} key={key} />
+          ))}
+          {/* <Route
+            exact
+            path="/symposium-upload"
+            element={
+              <PrivateRoute>
+                <SymposiumUpload />
+              </PrivateRoute>
+            }
+          /> */}
+        </Routes>
+        <ScrollButton />
+      </Suspense>
   );
 };
 

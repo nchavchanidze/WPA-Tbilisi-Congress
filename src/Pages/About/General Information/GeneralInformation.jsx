@@ -1,12 +1,12 @@
 import React from 'react'
-import Heading from '../../../Components/About/General Information/Heading'
+import Heading from '../../../Components/Heading'
 import Information from '../../../Components/About/General Information/Information'
 import Layout from '../../../Layouts/Layout'
 
 const GeneralInformation = () => {
   return (
      <Layout>
-         <Heading />
+         <Heading title="General Information"/>
     <Information />
      </Layout> 
   )

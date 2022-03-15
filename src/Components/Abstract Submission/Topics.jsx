@@ -10,9 +10,6 @@ import Background from "../../Assets/Images/page-cover.png";
 const Topics = () => {
   return (
     <>
-      <HeadingWrapper>
-        <Title>Abstract Topics</Title>
-      </HeadingWrapper>
       <TopicsContainer>
         <Row>
           <Col md={4} sm={12}>

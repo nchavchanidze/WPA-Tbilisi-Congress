@@ -12,8 +12,10 @@ import {
 
 // import Logo from "../Assets/Images/LogoBlack.svg";
 // import Logo from "../Assets/Images/NewLogo.png";
-import Logo from "../Assets/Images/wpa-logo.svg"
-
+import Logo from "../Assets/Images/wpa-logo.svg";
+import Logo01 from "../Assets/Images/Home/Banner/logo-1.png";
+import Logo03 from "../Assets/Images/Home/Banner/logo-2.png";
+import Logo02 from "../Assets/Images/Home/Banner/logo-3.png";
 
 const Footer = () => {
   return (
@@ -28,23 +30,44 @@ const Footer = () => {
             </LogoWrapper>
 
             <AboutText>
-              The {" "}
-          <a
-            href="http://www.wpanet.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WPA
-          </a>{" "} is psychiatry’s global association representing national
-              societies aimed to increase the knowledge and skills necessary for
-              work in the field of mental health.
+              The{" "}
+              <a
+                href="http://www.wpanet.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WPA
+              </a>{" "}
+              is psychiatry’s global association representing national societies
+              aimed to increase the knowledge and skills necessary for work in
+              the field of mental health.
             </AboutText>
+            <BannerLogosWrapper>
+              <BannerLogo>
+                <img src={Logo01} alt="Society of Georgian Psychiatrists" />
+              </BannerLogo>
+              <BannerLogo>
+                <img src={Logo02} alt="Alliance for Better Mental Health" />
+              </BannerLogo>
+              <BannerLogo>
+                <img src={Logo03} alt="Global Initiative on Psychiatry" />
+              </BannerLogo>
+            </BannerLogosWrapper>
           </Col>
-          <Col md={{span:4, offset:1}} sm={12}>
+          <Col md={{ span: 4, offset: 1 }} sm={12}>
             <FooterTitle>DATES TO NOTE</FooterTitle>
             <DeadlinesWrapper>
               <li>
+                Online Registration Open: <span>31 March, 2022</span>
+              </li>
+              <li>
+                Proposal Submission Open: <span>15 March, 2022</span>
+              </li>
+              <li>
                 Proposal Submission Deadline: <span>15 May, 2022</span>
+              </li>
+              <li>
+                Abstract Submission Open: <span>01 April, 2022</span>
               </li>
               <li>
                 Abstract Submission Deadline: <span>01 July, 2022</span>
@@ -150,7 +173,7 @@ const FooterContainer = styled.footer`
 `;
 
 const FooterTitle = styled.h5`
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   color: #000;
   font-weight: 700;
@@ -170,7 +193,7 @@ const LogoWrapper = styled.div`
 `;
 
 const AboutText = styled.p`
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   color: #000;
   font-weight: 500;
@@ -192,7 +215,7 @@ const DeadlinesWrapper = styled.ul`
     padding-bottom: 30px;
   }
   li {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     color: #000;
     font-weight: 500;
@@ -213,7 +236,7 @@ const Navigation = styled.ul`
   }
   li {
     a {
-      font-family: 'Titillium Web', sans-serif;
+      font-family: "Titillium Web", sans-serif;
       font-size: 16px;
       color: #000;
       font-weight: 500;
@@ -238,7 +261,7 @@ const ContactWrapper = styled.ul`
 `;
 
 const ContactText = styled.li`
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   color: #000;
   font-weight: 500;
@@ -292,7 +315,7 @@ const Warning = styled.div`
   margin-top: 65px;
   padding-bottom: 30px;
   p {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #000;
     font-weight: 400;
@@ -310,7 +333,7 @@ const Copyright = styled.div`
     gap: 30px;
   }
   p {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     color: #000;
     font-weight: 400;
@@ -328,11 +351,31 @@ const TermsPrivacy = styled.ul`
   }
   li {
     a {
-      font-family: 'Titillium Web', sans-serif;
+      font-family: "Titillium Web", sans-serif;
       font-size: 14px;
       color: #000;
       font-weight: 400;
     }
+  }
+`;
+
+const BannerLogosWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  /* margin-left: 100px; */
+  @media only screen and (max-width: 830.98px) {
+    margin-left: 40px;
+    margin-top: 25px;
+  }
+`;
+
+const BannerLogo = styled.div`
+  width: 200px;
+  img {
+    width: 100%;
   }
 `;
 

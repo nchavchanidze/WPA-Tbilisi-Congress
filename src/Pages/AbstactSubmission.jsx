@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import AboutSubmission from "../Components/Abstract Submission/AboutSubmission";
 import Deadline from "../Components/Abstract Submission/Deadline";
-import Heading from "../Components/Abstract Submission/Heading";
+import Heading from "../Components/Heading";
 import SubmissionButtons from "../Components/Abstract Submission/SubmissionButtons";
-import Guidelines from "../Components/Abstract Submission/Guidelines"
+import Guidelines from "../Components/Abstract Submission/Guidelines";
 import Layout from "../Layouts/Layout";
 
 const AbstactSubmission = () => {
@@ -12,7 +12,7 @@ const AbstactSubmission = () => {
   }, []);
   return (
     <Layout>
-      <Heading />
+      <Heading title="Abstact Submission" />
       <AboutSubmission />
       <Deadline />
       <Guidelines />

@@ -144,7 +144,7 @@ const Guidelines = () => {
             <span></span>I agree
           </label> */}
           <AbstractButton to="/symposium-upload">
-            Submit your symposium
+            Submt your Proposal
           </AbstractButton>
         </GuidelineForm>
       </Container>
@@ -234,7 +234,6 @@ const Title = styled.h1`
   font-family: "Titillium Web", sans-serif;
   font-size: 56px;
   font-weight: 700;
-  text-transform: capitalize;
   text-align: center;
   color: #000;
   margin: 0 auto 50px;

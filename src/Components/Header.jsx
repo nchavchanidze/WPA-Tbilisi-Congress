@@ -7,19 +7,31 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 // import Logo from "../Assets/Images/Logo.svg";
 // import Logo from "../Assets/Images/NewLogo.png"
-import Logo from "../Assets/Images/wpa-logo.svg"
+import Logo from "../Assets/Images/wpa-logo.svg";
 
+import AuthService from "../services/auth.service";
 
 const Header = () => {
   const [burger, setBurger] = useState(false);
   const [scroll, setScroll] = useState(0);
   const [show, setShow] = useState(false);
+  const [token, setToken] = useState();
+  const userFirstname =
+    localStorage.getItem("userdata") === null
+      ? ""
+      : JSON.parse(localStorage.getItem("userdata")).firstname;
 
   const handleBurger = () => {
     setBurger(!burger);
   };
 
+  const SignOut = () => {
+    AuthService.logout();
+    window.location.reload();
+  };
+
   useEffect(() => {
+    setToken(localStorage.getItem("user"));
     document.addEventListener("scroll", () => {
       setScroll(window.scrollY);
     });
@@ -104,7 +116,9 @@ const Header = () => {
                     <Link to="/speakers">Speakers</Link>
                   </li>
                   <li>
-                    <Link to="/pre-congress-workshop">Pre-congress workshop</Link>
+                    <Link to="/pre-congress-workshop">
+                      Pre-congress workshop
+                    </Link>
                   </li>
                   <li>
                     <Link to="/industry-symposia">Industry symposia</Link>
@@ -180,9 +194,38 @@ const Header = () => {
               <li>
                 <Link to="/contact">Contact</Link>
               </li>
-              <Link className="sign-btn" to="/login">
-                Sign In
-              </Link>
+              {!token ? (
+                <Link className="sign-btn" to="/login">
+                  Sign In
+                </Link>
+              ) : (
+                <>
+                  {/* <ProfileName>Hi, {userFirstname}</ProfileName> */}
+                  <NavDropdown
+                    title={
+                      <>
+                        Hi, {userFirstname}
+                        <FontAwesomeIcon
+                          className="nav-item-icon"
+                          icon={faChevronDown}
+                        ></FontAwesomeIcon>
+                      </>
+                    }
+                    id="basic-nav-dropdown"
+                  >
+                    <ul>
+                      <li>
+                        <Link to="/">Profile</Link>
+                      </li>
+                      <li>
+                        <SignOutButton onClick={SignOut}>
+                          Sign Out
+                        </SignOutButton>
+                      </li>
+                    </ul>
+                  </NavDropdown>
+                </>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -349,7 +392,7 @@ const Nav = styled.ul`
       }
     }
     .dropdown-toggle {
-      font-family: 'Titillium Web', sans-serif;
+      font-family: "Titillium Web", sans-serif;
       font-size: 14px;
       color: #000;
       font-weight: 700;
@@ -410,7 +453,7 @@ const Nav = styled.ul`
   }
   li {
     a {
-      font-family: 'Titillium Web', sans-serif;
+      font-family: "Titillium Web", sans-serif;
       font-size: 14px;
       color: #000;
       font-weight: 700;
@@ -424,7 +467,7 @@ const Nav = styled.ul`
   }
   .sign-btn {
     background-color: #bd1b21;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Titillium Web", sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -448,6 +491,41 @@ const Nav = styled.ul`
     @media only screen and (max-width: 991.98px) {
       width: 100%;
     }
+  }
+`;
+
+const ProfileName = styled.p`
+  font-family: "Titillium Web", sans-serif;
+  font-size: 14px;
+  color: #000;
+  font-weight: 700;
+`;
+
+const SignOutButton = styled.button`
+  background-color: #bd1b21;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 25px;
+  height: 50px;
+  min-width: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 2px solid transparent;
+  /* border: none; */
+  transition: all 0.3s ease-out;
+  &:hover {
+    border: 2px solid #bd1b21;
+    background-color: #fff;
+    color: #bd1b21;
+    transition: all 0.3s ease-out;
+  }
+  @media only screen and (max-width: 991.98px) {
+    width: 100%;
   }
 `;
 

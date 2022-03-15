@@ -306,7 +306,7 @@ const AboutTextWrapper = styled.div`
 const AboutTitle = styled.h1`
   font-family: "Titillium Web", sans-serif;
   font-size: 44px;
-  font-weight: 700;
+  font-weight: 600;
   color: #000;
 `;
 
