@@ -60,6 +60,7 @@ const Register = (props) => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [successful, setSuccessful] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
   const navigate = useNavigate();
@@ -67,6 +68,12 @@ const Register = (props) => {
   const cpassword = (value) => {
     if (value !== password) {
       return <AlertBox>The password is not same.</AlertBox>;
+    }
+  };
+
+  const vaddress = (value) => {
+    if (addressType === "Office") {
+      return <AlertBox>This field is required!</AlertBox>;
     }
   };
 
@@ -158,7 +165,9 @@ const Register = (props) => {
     e.preventDefault();
     setMessage("");
     setSuccessful(false);
+    setLoading(true);
     form.current.validateAll();
+    console.log(form);
     if (password === confirmPassword) {
       if (checkBtn.current.context._errors.length === 0) {
         axios
@@ -186,6 +195,8 @@ const Register = (props) => {
               setSuccessful(false);
             }
           );
+      } else {
+        setLoading(false);
       }
     }
   };
@@ -232,7 +243,7 @@ const Register = (props) => {
                     type="text"
                     value={middleName}
                     onChange={onChangeMiddlename}
-                    validations={[required]}
+                    // validations={[required]}
                     placeholder="Enter your Middle Name"
                   />
                 </label>
@@ -450,7 +461,7 @@ const Register = (props) => {
                 </RadioRow>
               </RadioWrapper>
               <InputWrapper
-                className={addressType !== "Office" ? "d-none" : " "}
+              // className={addressType !== "Office" ? "d-none" : " "}
               >
                 <label>
                   <span>
@@ -458,10 +469,10 @@ const Register = (props) => {
                   </span>
                   <StyledInput
                     type="text"
-                    required
                     placeholder="Enter your Instituion"
                     value={institution}
                     onChange={onChangeInstitution}
+                    required={addressType !== "Office" ? false : true}
                   />
                 </label>
                 <label>
@@ -473,6 +484,7 @@ const Register = (props) => {
                     placeholder="Enter your Department"
                     value={department}
                     onChange={onChangeDepartment}
+                    required={addressType !== "Office" ? false : true}
                   />
                 </label>
               </InputWrapper>
@@ -609,7 +621,12 @@ const Register = (props) => {
                 </p>
               </TermsCheckbox>
               <Link to="/login">Already have an account? Sign In.</Link>
-              <Button>Sign Up</Button>
+              <Button>
+                {loading && (
+                  <span className="spinner-border spinner-border-sm"></span>
+                )}
+                <span>Sign Up</span>
+              </Button>
             </>
           )}
           {message && (

@@ -111,14 +111,15 @@ const Login = (props) => {
             )}
             <span>Login</span>
           </Button>
+          <CheckButton style={{ display: "none" }} ref={checkBtn} />
           {message && (
             <div className="form-group">
               <div className="alert alert-danger" role="alert">
-                {message}
+                {/* {message} */}
+                The specified email or password is invalid or unregistered.
               </div>
             </div>
           )}
-          <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </InputForm>
       </Container>
     </SignWrapper>
