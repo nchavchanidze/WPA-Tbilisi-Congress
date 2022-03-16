@@ -461,7 +461,7 @@ const Register = (props) => {
                 </RadioRow>
               </RadioWrapper>
               <InputWrapper
-              // className={addressType !== "Office" ? "d-none" : " "}
+              className={addressType !== "Office" ? "d-none" : " "}
               >
                 <label>
                   <span>
