@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 
 import Background from "../Assets/Images/page-cover.jpeg";
 
 const Heading = (props) => {
   return (
     <HeadingWrapper>
+      <Helmet>
+        <title>{props.title} - WPA Tbilisi Congress 2022</title>
+        <meta name="title" content={`${props.title} - WPA Tbilisi Congress 2022`} />
+      </Helmet>
       <Title>{props.title}</Title>
     </HeadingWrapper>
   );

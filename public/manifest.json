@@ -1,10 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "WPA Tbilisi Congress",
+  "name": "WPA Tbilisi Congress",
+  "description": "WPA Thematic Congress “Treatment and Management of Mental Disorders in a Post-Pandemic Era” will be hed in a hybrid format on 14-16 October 2022 in Tbilisi, Georgia.",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "64x64 32x32 48x48 24x24 16x16",
       "type": "image/x-icon"
     },
     {
@@ -18,8 +19,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://wpatbilisicongress.com/",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#BD1B21",
   "background_color": "#ffffff"
 }

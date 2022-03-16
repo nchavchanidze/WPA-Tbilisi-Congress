@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import AOS from "aos";
 import Loader from "./Components/Loader";
 import Contact from "./Pages/Contact";
@@ -9,6 +10,8 @@ import SymposiumUpload from "./Pages/Symposium/SymposiumUpload";
 import AbstractTopics from "./Pages/AbstractTopics";
 import Registration from "./Pages/Registration/Registration";
 import PrivateRoute from "./Components/PrivateRoute";
+import ogImage from './Assets/Images/linkbanner.png'
+
 
 const Home = React.lazy(() => import("./Pages/Home"));
 
@@ -223,16 +226,55 @@ const App = () => {
     },
   ];
 
+  const location = useLocation();
+
+  console.log(location);
+
   useEffect(() => {
     AOS.init();
   }, []);
   return (
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          {routes.map(({ path, element }, key) => (
-            <Route exact path={path} element={element} key={key} />
-          ))}
-          {/* <Route
+    <Suspense fallback={<Loader />}>
+      <Helmet>
+        <meta
+          name="description"
+          content="WPA Thematic Congress “Treatment and Management of Mental Disorders in a Post-Pandemic Era” will be hed in a hybrid format on 14-16 October 2022 in Tbilisi, Georgia."
+        />
+        <meta
+          name="keywords"
+          content="Marketing, Social Media, Content Crafting, Business Consultation, Branding, Photo-video Shooting, Website"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content={`https://wpatbilisicongress.com${location.pathname}`}
+        />
+        <meta property="og:title" content="Home - WPA Tbilisi Congress 2022" />
+        <meta
+          property="og:description"
+          content="WPA Thematic Congress “Treatment and Management of Mental Disorders in a Post-Pandemic Era” will be hed in a hybrid format on 14-16 October 2022 in Tbilisi, Georgia."
+        />
+        <meta property="og:image" content={ogImage} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content={`https://wpatbilisicongress.com${location.pathname}`}
+        />
+        <meta
+          property="twitter:title"
+          content="Home - WPA Tbilisi Congress 2022"
+        />
+        <meta
+          property="twitter:description"
+          content="WPA Thematic Congress “Treatment and Management of Mental Disorders in a Post-Pandemic Era” will be hed in a hybrid format on 14-16 October 2022 in Tbilisi, Georgia."
+        />
+        <meta property="twitter:image" content={ogImage} />
+      </Helmet>
+      <Routes>
+        {routes.map(({ path, element }, key) => (
+          <Route exact path={path} element={element} key={key} />
+        ))}
+        {/* <Route
             exact
             path="/symposium-upload"
             element={
@@ -241,9 +283,9 @@ const App = () => {
               </PrivateRoute>
             }
           /> */}
-        </Routes>
-        <ScrollButton />
-      </Suspense>
+      </Routes>
+      <ScrollButton />
+    </Suspense>
   );
 };
 

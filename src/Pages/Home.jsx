@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
+
 import HomeCarousel from "../Components/HomeCarousel";
 import MotivationCards from "../Components/MotivationCards";
 import FAQ from "../Components/FAQ";
@@ -15,6 +17,10 @@ const Home = () => {
   }, []);
   return (
     <Layout>
+      <Helmet>
+        <title>Home - WPA Tbilisi Congress 2022</title>
+        <meta name="title" content="Home - WPA Tbilisi Congress 2022" />
+      </Helmet>
       <HomeCarousel />
       {/* <Sponsors /> */}
       <WelcomeMessage />
