@@ -75,16 +75,21 @@ const login = (email, pass) => {
 };
 
 const logout = () => {
-  return axios.post(API_URL + "Logout", { 
-    email: JSON.parse(localStorage.getItem("userdata")).email,
-    token: localStorage.getItem("user")
-  }).then((response) => {
-    localStorage.removeItem("user");
-    localStorage.removeItem("userdata");
-    return response.data
-  }).catch((err) => {
-    console.error(err.response.data)
-  })
+  localStorage.removeItem("user");
+  localStorage.removeItem("userdata");
+  // return axios
+  //   .post(API_URL + "Logout", {
+  //     email: JSON.parse(localStorage.getItem("userdata")).email,
+  //     token: localStorage.getItem("user"),
+  //   })
+  //   .then((response) => {
+  //     localStorage.removeItem("user");
+  //     localStorage.removeItem("userdata");
+  //     return response.data;
+  //   })
+  //   .catch((err) => {
+  //     console.error(err.response.data);
+  //   });
 };
 
 const getCurrentUser = () => {
