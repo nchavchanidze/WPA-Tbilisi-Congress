@@ -14,7 +14,7 @@ const Error404 = () => {
             The page you are looking is not available or has been removed. Try
             going to Home Page by using the button below.
           </NotFoundText>
-          <Button to="/">Go to Home</Button>
+          <Button to="/">Go to Home Page</Button>
         </NotFoundWrapper>
       </Container>
     </NotFound>
@@ -34,38 +34,38 @@ const NotFoundWrapper = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-family: "Urbanist", sans-serif;
+ font-family: "Titillium Web", sans-serif;
   font-size: 192px;
   font-weight: 700;
-  color: #486ff8;
+  color: #BC1A21;
   @media only screen and (max-width: 991.98px) {
     font-size: 178px;
   }
 `;
 
 const SecondHeading = styled.h2`
-  font-family: "Urbanist", sans-serif;
+ font-family: "Titillium Web", sans-serif;
   font-size: 35px;
   font-weight: 700;
-  color: #39364f;
+  color: #000;
   @media only screen and (max-width: 991.98px) {
     text-align: center;
   }
 `;
 
 const NotFoundText = styled.p`
-  font-family: "Urbanist", sans-serif;
+ font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #717488;
+  color: #000;
   @media only screen and (max-width: 991.98px) {
     text-align: center;
   }
 `;
 
 const Button = styled(Link)`
-  background-color: #486ff8;
-  font-family: "Urbanist", sans-serif;
+  background-color: #BC1A21;
+ font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
@@ -80,9 +80,9 @@ const Button = styled(Link)`
   transition: all 0.3s ease-out;
   margin-top: 50px;
   &:hover {
-    border: 2px solid #486FF8;
+    border: 2px solid #BC1A21;
     background-color: #fff;
-    color: #486ff8;
+    color: #BC1A21;
     transition: all 0.3s ease-out;
   }
 `;
