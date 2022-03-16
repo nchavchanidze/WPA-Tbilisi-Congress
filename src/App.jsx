@@ -66,6 +66,7 @@ const Login = React.lazy(() => import("./Pages/Login"));
 const Register = React.lazy(() => import("./Pages/Register"));
 const ForgotPassword = React.lazy(() => import("./Pages/Auth/ForgotPassword"));
 const NewPassword = React.lazy(() => import("./Pages/Auth/NewPassword"));
+const TermsConditions = React.lazy(() => import("./Pages/Auth/TermsConditions"));
 
 const AbstractSubmission = React.lazy(() =>
   import("./Pages/AbstactSubmission")
@@ -139,6 +140,10 @@ const App = () => {
     {
       path: "/register",
       element: <Register />,
+    },
+    {
+      path: "/terms-conditions",
+      element: <TermsConditions />,
     },
     {
       path: "/forgot-password",

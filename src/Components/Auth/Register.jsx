@@ -617,7 +617,7 @@ const Register = (props) => {
                   value="terms"
                 />
                 <p>
-                  I agree to the <span>Terms and Conditions</span>.
+                  I agree to the <a href="/terms-conditions" rel="noopener noreferrer" target="_blank">Terms and Conditions</a>.
                 </p>
               </TermsCheckbox>
               <Link to="/login">Already have an account? Sign In.</Link>
@@ -787,10 +787,10 @@ const TermsCheckbox = styled.label`
   align-items: center;
   gap: 10px;
   p {
-    span {
+    a {
       color: #bd1b21;
       transition: all 0.3s ease-out;
-      text-decoration: underline;
+      text-decoration: underline !important;
       &:hover {
         color: #bd1b21;
         transition: all 0.3s ease-out;
