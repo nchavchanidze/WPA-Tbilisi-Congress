@@ -84,6 +84,9 @@ const NewPasswordReset = () => {
 
   return (
     <StyledContainer>
+      <About>
+          Please enter your New Password.
+        </About>
       {message ? (
         <AlertWrapper>
           <SuccessMessageWrapper
@@ -303,5 +306,15 @@ const LinkButton = styled(Link)`
     color: #bd1b21;
     transition: all 0.3s ease-out;
   }
+`;
+
+const About = styled.p`
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.6;
+  margin: 0 auto 25px;
+  text-align: center;
 `;
 export default NewPasswordReset;
