@@ -13,7 +13,7 @@ const Deadlines = () => {
         </tr> */}
         <tr>
           <td className="category">Online Registration Open</td>
-          <td className="regular">31 March 2022</td>
+          <td className="regular">31 May 2022</td>
         </tr>
         <tr>
           <td className="category">Symposium Proposal Submission Open</td>
@@ -21,11 +21,11 @@ const Deadlines = () => {
         </tr>
         <tr>
           <td className="category">Proposal Submission Deadline</td>
-          <td className="regular">15 May 2022</td>
+          <td className="regular">15 June 2022</td>
         </tr>
         <tr>
           <td className="category">Notification of Proposal Acceptance</td>
-          <td className="regular">15 June 2022</td>
+          <td className="regular">15 July 2022</td>
         </tr>
         <tr>
           <td className="category">Abstract Submission Open</td>
@@ -70,6 +70,7 @@ const Title = styled.h1`
 `;
 
 const Table = styled.table`
+  max-width: 920px;
   width: 100%;
   font-family: "Titillium Web", sans-serif;
   font-size: 16px;
@@ -112,6 +113,7 @@ const Table = styled.table`
         background-color: #eaeef5;
         color: #000;
         font-weight: 600;
+        text-align: left !important;
       }
     }
   }

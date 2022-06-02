@@ -7,55 +7,35 @@ import {
   faCheckSquare,
   faClock,
   faEnvelope,
-  faChalkboardTeacher
+  faChalkboardTeacher,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Deadline = () => {
   return (
     <DeadlineWrapper>
       <Container>
-        <DeadlineTitle>Important Deadlines</DeadlineTitle>
+        <DeadlineTitle>Important Dates</DeadlineTitle>
         <Row>
           <Col md={4} sm={12}>
             <IconsWrapper>
               <FontAwesomeIcon icon={faCalendarAlt} />
-              <IconTitle>2022</IconTitle>
+              <IconTitle>01 April 2022</IconTitle>
               <IconDescription>Abstract Submissions Open</IconDescription>
             </IconsWrapper>
           </Col>
           <Col md={4} sm={12}>
             <IconsWrapper>
               <FontAwesomeIcon icon={faClock} />
-              <IconTitle>2022</IconTitle>
-              <IconDescription>Abstract Submission Deadline</IconDescription>
+              <IconTitle>01 July 2022</IconTitle>
+              <IconDescription>Submission Deadline</IconDescription>
             </IconsWrapper>
           </Col>
           <Col md={4} sm={12}>
-            <IconsWrapper>
-              <FontAwesomeIcon icon={faCheckSquare} />
-              <IconTitle>2022</IconTitle>
-              <IconDescription>
-                Notification of Acceptance/Rejection
-              </IconDescription>
-            </IconsWrapper>
-          </Col>
-        </Row>
-        <Row className="mt-5 align-center">
-          <Col md={{span: 4, offset: 2}} sm={12}>
-            <IconsWrapper>
+          <IconsWrapper>
               <FontAwesomeIcon icon={faEnvelope} />
-              <IconTitle>2022</IconTitle>
+              <IconTitle>01 August 2022</IconTitle>
               <IconDescription>
-                Deadline for Change of Title/Authorship
-              </IconDescription>
-            </IconsWrapper>
-          </Col>
-          <Col md={4} sm={12}>
-            <IconsWrapper>
-              <FontAwesomeIcon icon={faChalkboardTeacher} />
-              <IconTitle>2022</IconTitle>
-              <IconDescription>
-                Presenting Author Registration Deadline
+                Notification to Accepted Authors
               </IconDescription>
             </IconsWrapper>
           </Col>

@@ -1,22 +1,52 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+  useContext,
+} from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { toast } from "react-toastify";
+
+import { LoginContext } from "../../Helper/Context";
+
 import Layout from "../../Layouts/Layout";
 import AuthorCard from "../../Components/Abstract Submission/AuthorCard";
 import Countries from "../../Components/Auth/Country.json";
 
 import axios from "axios";
+import Form from "react-validation/build/form";
+import ValidInput from "react-validation/build/input";
+import CheckButton from "react-validation/build/button";
+import { isEmail } from "validator";
+
+const required = (value) => {
+  if (!value) {
+    return <AlertBox>This field is required!</AlertBox>;
+  }
+};
+const validEmail = (value) => {
+  if (!isEmail(value)) {
+    return <AlertBox>This is not a valid email.</AlertBox>;
+  }
+};
 
 const SymposiumUpload = () => {
-  const [title, setTitle] = useState("");
-  const [intro, setIntro] = useState("");
+  const { usertoken, user } = useContext(LoginContext);
+
   const [counter, setCounter] = useState([]);
 
+  const form = useRef();
+  const checkBtn = useRef();
   const [successful, setSuccessful] = useState(false);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const [token, setToken] = useState(localStorage.getItem("user"));
 
   const [proposer, setProposer] = useState("");
   const [proposerEmail, setProposerEmail] = useState("");
@@ -60,27 +90,6 @@ const SymposiumUpload = () => {
     title: "",
   });
 
-  const handleAuthor = (
-    e,
-    authors,
-    setAuthors,
-    authorsValue,
-    setAuthorsValue
-  ) => {
-    e.preventDefault();
-    if (authorsValue === "") {
-      alert("Add Authors");
-    } else {
-      const id = authors.length ? authors[authors.length - 1].id + 1 : 0;
-      setAuthors([...authors, { id: id, message: authorsValue }]);
-      setAuthorsValue("");
-    }
-  };
-
-  const deleteAuthor = (id, authors, setAuthors) => {
-    setAuthors(authors.filter((author) => author.id !== id));
-  };
-
   const dataParser = useCallback(() => {
     let res = [];
     let data = symposiumDescription;
@@ -95,9 +104,8 @@ const SymposiumUpload = () => {
   const toolbarOptions = {
     toolbar: [
       ["bold", "italic", "underline", "strike"], // toggled buttons
-      ["blockquote", "code-block"],
       ["link"],
-      [{ header: 1 }, { header: 2 }], // custom button values
+      // [{ header: 1 }, { header: 2 }], // custom button values
       [{ list: "ordered" }, { list: "bullet" }],
       [{ script: "sub" }, { script: "super" }], // superscript/subscript
       [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
@@ -105,26 +113,36 @@ const SymposiumUpload = () => {
       [{ size: ["small", false, "large", "huge"] }], // custom dropdown
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
       [{ color: [] }, { background: [] }], // dropdown with defaults from theme
-      [{ font: [] }],
+      // [{ font: [] }],
       [{ align: [] }],
       ["clean"],
     ],
   };
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     dataParser();
-    window.scrollTo(0, 0);
+    setToken(localStorage.getItem("token"));
   }, [dataParser]);
 
   const Symposium = {
+    // token: usertoken,
+    // salutation: user.salutation,
+    // user: user.firstname,
     token: localStorage.getItem("user"),
     salutation:
       localStorage.getItem("userdata") === null
         ? ""
         : JSON.parse(localStorage.getItem("userdata")).salutation,
-
+    user:
+      localStorage.getItem("userdata") === null
+        ? ""
+        : JSON.parse(localStorage.getItem("userdata")).firstname +
+          " " +
+          JSON.parse(localStorage.getItem("userdata")).lastname,
     fullname: proposer,
-    text: symposiumDescription,
+    description: symposiumDescription,
     email: proposerEmail,
     title: symposiumTitle,
     chair_name: chair.name,
@@ -165,40 +183,98 @@ const SymposiumUpload = () => {
     e.preventDefault();
     setMessage("");
     setSuccessful(false);
-    return axios
-      .post(
-        "https://wpatbilisicongress.com/Server/API/Simposyums/Create",
-        Symposium
-      )
-      .then((response) => {
-        setMessage(response.data.msg);
-        setSuccessful(true);
-        console.log(response.data);
-        return response.data;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    setLoading(true);
+    form.current.validateAll();
+    if (checkBtn.current.context._errors.length === 0) {
+      axios
+        .post(
+          "https://wpatbilisicongress.com/Server/API/Simposyums/Create",
+          Symposium
+        )
+        .then(
+          (response) => {
+            setMessage(response.data.msg);
+            setSuccessful(true);
+            setLoading(false);
+            toast.success("Your submission has been successfully uploaded.", {
+              position: "bottom-right",
+              autoClose: 7000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
+            // setTimeout(() => {
+            //   navigate("/");
+            // }, 7000);
+            return response.data;
+          },
+          (error) => {
+            const resMessage =
+              (error.response &&
+                error.response.data &&
+                error.response.data.message) ||
+              error.message ||
+              error.toString();
+            setMessage(resMessage);
+            setLoading(false);
+            setSuccessful(false);
+            toast.error(
+              "A problem has occurred during the submission process. Please, try again!",
+              {
+                position: "bottom-right",
+                autoClose: 7000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+              }
+            );
+          }
+        )
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // setToken(localStorage.getItem("token"));
+  }, []);
+
   // console.log(Symposium);
+  // console.log(token);
 
   return (
     <Layout>
       <Title>Symposium</Title>
       <AbstractWrapper>
-        {message ? (
+        {successful ? (
           <AlertWrapper>
             <SuccessMessageWrapper
               className={successful ? "success" : "error"}
               role="alert"
             >
-              <SuccessMessage>{message}</SuccessMessage>
+              <SuccessMessage>
+                {successful ? (
+                  <>Your submission has been successfully uploaded.</>
+                ) : (
+                  <>
+                    A problem has occurred during the submission process.
+                    Please, try again!
+                  </>
+                )}
+              </SuccessMessage>
             </SuccessMessageWrapper>
             <LinkButton to="/">Go to Home Page</LinkButton>
           </AlertWrapper>
         ) : (
-          <InputForm>
+          <InputForm onSubmit={uploadSymposium} ref={form}>
             {/* <InputWrapper>
             <label>
               <span>Title</span>
@@ -247,18 +323,22 @@ const SymposiumUpload = () => {
             <InputWrapper>
               <label>
                 <span>Symposium Proposer</span>
-                <InputBox>
+                <InputBox style={{ alignItems: "flex-start" }}>
                   <Input
                     value={proposer}
                     onChange={(e) => setProposer(e.target.value)}
                     type="text"
                     placeholder="Enter Name"
+                    validations={[required]}
+                    required
                   />
                   <Input
                     value={proposerEmail}
                     onChange={(e) => setProposerEmail(e.target.value)}
                     type="email"
                     placeholder="Enter Email"
+                    validations={[required, validEmail]}
+                    required
                   />
                 </InputBox>
               </label>
@@ -271,6 +351,8 @@ const SymposiumUpload = () => {
                   onChange={(e) => setSymposiumTitle(e.target.value)}
                   type="text"
                   placeholder="Enter Title"
+                  validations={[required]}
+                  required
                 />
               </label>
             </InputWrapper>
@@ -283,6 +365,7 @@ const SymposiumUpload = () => {
                 value={symposiumDescription}
                 onChange={setSymposiumDescription}
                 modules={toolbarOptions}
+                required
               />
               <Counter className={counter > 250 ? "over" : ""}>
                 {counter} / 250
@@ -302,6 +385,8 @@ const SymposiumUpload = () => {
                     }
                     type="text"
                     placeholder="Enter Name"
+                    validations={[required]}
+                    required
                   />
                   <label htmlFor="Country">
                     <Select
@@ -315,7 +400,7 @@ const SymposiumUpload = () => {
                         })
                       }
                     >
-                      <option defaultValue={"DEFAULT"}>Select Country</option>
+                      <option value="">Select Country</option>
                       <option value="notSpecified">Not specified</option>
                       {Countries.map((country) => (
                         <option value={country.name} key={country.code}>
@@ -335,6 +420,8 @@ const SymposiumUpload = () => {
                   }
                   type="email"
                   placeholder="Enter Email"
+                  required
+                  validations={[required, validEmail]}
                 />
               </label>
             </InputWrapper>
@@ -352,6 +439,8 @@ const SymposiumUpload = () => {
                     }
                     type="text"
                     placeholder="Enter Name"
+                    required
+                    validations={[required]}
                   />
                   <label htmlFor="Country">
                     <Select
@@ -365,7 +454,7 @@ const SymposiumUpload = () => {
                         })
                       }
                     >
-                      <option defaultValue={"DEFAULT"}>Select Country</option>
+                      <option value="">Select Country</option>
                       <option value="notSpecified">Not specified</option>
                       {Countries.map((country) => (
                         <option value={country.name} key={country.code}>
@@ -385,6 +474,8 @@ const SymposiumUpload = () => {
                   }
                   type="email"
                   placeholder="Enter Email"
+                  required
+                  validations={[required, validEmail]}
                 />
               </label>
             </InputWrapper>
@@ -408,6 +499,8 @@ const SymposiumUpload = () => {
                     }
                     type="text"
                     placeholder="Enter Name"
+                    required
+                    validations={[required]}
                   />
                   <label htmlFor="Country">
                     <Select
@@ -421,7 +514,7 @@ const SymposiumUpload = () => {
                         })
                       }
                     >
-                      <option defaultValue={"DEFAULT"}>Select Country</option>
+                      <option value="">Select Country</option>
                       <option value="notSpecified">Not specified</option>
                       {Countries.map((country) => (
                         <option value={country.name} key={country.code}>
@@ -434,7 +527,6 @@ const SymposiumUpload = () => {
                 <InputBox>
                   <Input
                     name="email"
-                    presenterName="firstPresenter"
                     value={firstPresenter.email}
                     onChange={(e) =>
                       setFirstPresenter({
@@ -443,6 +535,8 @@ const SymposiumUpload = () => {
                       })
                     }
                     placeholder="Enter Email"
+                    required
+                    validations={[required, validEmail]}
                   />
                   <Input
                     value={firstPresenter.title}
@@ -454,6 +548,8 @@ const SymposiumUpload = () => {
                     }
                     type="text"
                     placeholder="Enter Title of presentation"
+                    required
+                    validations={[required]}
                   />
                 </InputBox>
               </label>
@@ -473,6 +569,8 @@ const SymposiumUpload = () => {
                     }
                     type="text"
                     placeholder="Enter Name"
+                    required
+                    validations={[required]}
                   />
                   <label htmlFor="Country">
                     <Select
@@ -486,7 +584,7 @@ const SymposiumUpload = () => {
                         })
                       }
                     >
-                      <option defaultValue={"DEFAULT"}>Select Country</option>
+                      <option value="">Select Country</option>
                       <option value="notSpecified">Not specified</option>
                       {Countries.map((country) => (
                         <option value={country.name} key={country.code}>
@@ -499,7 +597,6 @@ const SymposiumUpload = () => {
                 <InputBox>
                   <Input
                     name="email"
-                    presenterName="firstPresenter"
                     value={secondPresenter.email}
                     onChange={(e) =>
                       setSecondPresenter({
@@ -508,6 +605,8 @@ const SymposiumUpload = () => {
                       })
                     }
                     placeholder="Enter Email"
+                    required
+                    validations={[required, validEmail]}
                   />
                   <Input
                     value={secondPresenter.title}
@@ -519,6 +618,8 @@ const SymposiumUpload = () => {
                     }
                     type="text"
                     placeholder="Enter Title of presentation"
+                    required
+                    validations={[required]}
                   />
                 </InputBox>
               </label>
@@ -538,6 +639,8 @@ const SymposiumUpload = () => {
                     }
                     type="text"
                     placeholder="Enter Name"
+                    required
+                    validations={[required]}
                   />
                   <label htmlFor="Country">
                     <Select
@@ -551,7 +654,7 @@ const SymposiumUpload = () => {
                         })
                       }
                     >
-                      <option defaultValue={"DEFAULT"}>Select Country</option>
+                      <option value="">Select Country</option>
                       <option value="notSpecified">Not specified</option>
                       {Countries.map((country) => (
                         <option value={country.name} key={country.code}>
@@ -564,7 +667,6 @@ const SymposiumUpload = () => {
                 <InputBox>
                   <Input
                     name="email"
-                    presenterName="firstPresenter"
                     value={thirdPresenter.email}
                     onChange={(e) =>
                       setThirdPresenter({
@@ -573,6 +675,8 @@ const SymposiumUpload = () => {
                       })
                     }
                     placeholder="Enter Email"
+                    required
+                    validations={[required, validEmail]}
                   />
                   <Input
                     value={thirdPresenter.title}
@@ -584,6 +688,8 @@ const SymposiumUpload = () => {
                     }
                     type="text"
                     placeholder="Enter Title of presentation"
+                    required
+                    validations={[required]}
                   />
                 </InputBox>
               </label>
@@ -603,6 +709,8 @@ const SymposiumUpload = () => {
                     }
                     type="text"
                     placeholder="Enter Name"
+                    required
+                    validations={[required]}
                   />
                   <label htmlFor="Country">
                     <Select
@@ -616,7 +724,7 @@ const SymposiumUpload = () => {
                         })
                       }
                     >
-                      <option defaultValue={"DEFAULT"}>Select Country</option>
+                      <option value="">Select Country</option>
                       <option value="notSpecified">Not specified</option>
                       {Countries.map((country) => (
                         <option value={country.name} key={country.code}>
@@ -629,7 +737,6 @@ const SymposiumUpload = () => {
                 <InputBox>
                   <Input
                     name="email"
-                    presenterName="firstPresenter"
                     value={fourthPresenter.email}
                     onChange={(e) =>
                       setFourthPresenter({
@@ -638,6 +745,8 @@ const SymposiumUpload = () => {
                       })
                     }
                     placeholder="Enter Email"
+                    required
+                    validations={[required, validEmail]}
                   />
                   <Input
                     value={fourthPresenter.title}
@@ -649,11 +758,19 @@ const SymposiumUpload = () => {
                     }
                     type="text"
                     placeholder="Enter Title of presentation"
+                    required
+                    validations={[required]}
                   />
                 </InputBox>
               </label>
             </InputWrapper>
-            <Button onClick={uploadSymposium}>Submit</Button>
+            <Button disabled={loading}>
+              {loading && (
+                <span className="spinner-border spinner-border-sm"></span>
+              )}
+              <span>Submit</span>
+            </Button>
+            <CheckButton style={{ display: "none" }} ref={checkBtn} />
           </InputForm>
         )}
       </AbstractWrapper>
@@ -678,7 +795,7 @@ const AbstractWrapper = styled(Container)`
   padding-bottom: 100px;
 `;
 
-const InputForm = styled.form`
+const InputForm = styled(Form)`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -724,6 +841,9 @@ const InputWrapper = styled.div`
     .required {
       color: #bd1b21;
     }
+    div {
+      width: 100%;
+    }
   }
 `;
 
@@ -735,7 +855,7 @@ const InputBox = styled.div`
   width: 100%;
 `;
 
-const Input = styled.input`
+const Input = styled(ValidInput)`
   background-color: #f4f4f4;
   padding: 15px;
   border: none;
@@ -930,18 +1050,22 @@ const SuccessMessageWrapper = styled.div`
   padding: 20px 15px;
   border-radius: 8px;
   &.success {
-    background-color: #bbfff1;
-    border: 2px solid #2ea58d;
+    p {
+      color: #000;
+    }
   }
   &.error {
-    background-color: #ffa5ac;
-    border: 2px solid #f15360;
+    /* background-color: #ffa5ac; */
+    /* border: 2px solid #f15360; */
+    p {
+      color: #bc1a21;
+    }
   }
 `;
 const SuccessMessage = styled.p`
   font-family: "Titillium Web", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   color: #000;
 `;
 
@@ -967,6 +1091,18 @@ const LinkButton = styled(Link)`
     color: #bd1b21;
     transition: all 0.3s ease-out;
   }
+`;
+
+const AlertBox = styled.div`
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #bd1b21;
+  border-radius: 0.25rem;
+  background-color: #ffd2d3;
+  color: #bd1b21;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 14px;
 `;
 
 export default SymposiumUpload;

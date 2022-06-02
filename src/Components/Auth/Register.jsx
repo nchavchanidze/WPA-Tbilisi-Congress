@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -182,7 +183,16 @@ const Register = (props) => {
             (response) => {
               setMessage(response.data.msg);
               setSuccessful(true);
-              console.log(response.data);
+              toast.success(message, {
+                position: "bottom-right",
+                autoClose: 7000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+              });
             },
             (error) => {
               const resMessage =
@@ -193,6 +203,16 @@ const Register = (props) => {
                 error.toString();
               setMessage(resMessage);
               setSuccessful(false);
+              toast.error(message, {
+                position: "bottom-right",
+                autoClose: 7000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+              });
             }
           );
       } else {
@@ -200,8 +220,6 @@ const Register = (props) => {
       }
     }
   };
-
-  console.log(userData);
 
   return (
     <SigupWrapper>
@@ -461,7 +479,7 @@ const Register = (props) => {
                 </RadioRow>
               </RadioWrapper>
               <InputWrapper
-              className={addressType !== "Office" ? "d-none" : " "}
+                className={addressType !== "Office" ? "d-none" : " "}
               >
                 <label>
                   <span>
@@ -617,7 +635,15 @@ const Register = (props) => {
                   value="terms"
                 />
                 <p>
-                  I agree to the <a href="/terms-conditions" rel="noopener noreferrer" target="_blank">Terms and Conditions</a>.
+                  I agree to the{" "}
+                  <a
+                    href="/terms-conditions"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Terms and Conditions
+                  </a>
+                  .
                 </p>
               </TermsCheckbox>
               <Link to="/login">Already have an account? Sign In.</Link>

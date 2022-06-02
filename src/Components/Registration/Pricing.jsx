@@ -21,7 +21,7 @@ const Pricing = () => {
           <td className="regular">300 €</td>
         </tr>
         <tr>
-          <td className="category">articipants from Upper Middle-Income Country*</td>
+          <td className="category">Participants from Upper Middle-Income Country*</td>
           <td className="early">200 €</td>
           <td className="regular">250 €</td>
         </tr>
@@ -43,7 +43,7 @@ const Pricing = () => {
           <td className="regular">200 €</td>
         </tr>
         <tr>
-          <td className="category">Online participant</td>
+          <td className="category">Online participants</td>
           <td className="early">100 €</td>
           <td className="regular">150 €</td>
         </tr>

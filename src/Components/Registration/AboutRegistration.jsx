@@ -13,30 +13,38 @@ const AboutRegistration = () => {
   return (
     <AboutWrapper>
       <Container>
-        <AboutTitle>Registration Is Now Closed!</AboutTitle>
+        <AboutTitle>will be OPEN on 31st May</AboutTitle>
+        <About style={{ width: "100%" }}>
+          Dear colleagues, if you are still unsure about travelling to Tbilisi,
+          then first register for ONLINE participation and benefit from Early
+          rates until 1st August 2022.
+        </About>
         <About>
-          Congress is currently being planned as a hybrid event with physical
-          presence as well as with a virtual component. As we understand the
+          The Congress is currently being planned as a hybrid event with
+          physical presence and a virtual component. As we understand the
           uncertainty during these unprecedented times, we offer our
-          participants the flexibility of changing their registration until
-          September 4, 2022 and, upon availability, from ONLINE to ONSITE or
-          vice versa.
+          participants the flexibility of changing their registration until 4
+          September 2022 and, upon availability, from ONLINE to ONSITE or vice
+          versa.
         </About>
       </Container>
       <RegistrationCards />
       <Container>
         <About>
-          Please note that ONSITE registration cannot be totally canceled; you
-          will only be able to change your ONSITE event registration to ONLINE
-          in case you want to. To make changes in your registration type, please
-          send an email to the Congress Secretariat indicating the change you
-          want to make:{" "}
+          Please note that ON-SITE registration cannot be totally cancelled; you
+          will only be able to change your ON-SITE event registration to ONLINE
+          in case you want to.
+          <br /> <br /> To make changes in your registration type, please send
+          an email to the Congress Secretariat indicating the change you want to
+          make:{" "}
           <a href="mailto:wpatbilisicongress@gmail.com">
             wpatbilisicongress@gmail.com
           </a>
           . Please note that only one change is allowed per participant. For
           further details see the section Conversion of Registration Category
           below.
+          <br /> <br /> For further details, see the section Conversion of
+          Registration Category below.
         </About>
         <ParagraphWrapper>
           <ParagraphTitle>Registration Fees</ParagraphTitle>
@@ -46,7 +54,7 @@ const AboutRegistration = () => {
             with the official meeting organizer.
           </Paragraph>
           <Paragraph>
-            Onsite and Online full Participation Fees (in EUR) apply to payments
+            ONSITE and ONLINE Participation Fees (in EUR) apply to payments
             received prior to the indicated deadlines.
           </Paragraph>
         </ParagraphWrapper>
@@ -56,7 +64,7 @@ const AboutRegistration = () => {
             Fees are exempted from VAT.
           </Paragraph>
           <Paragraph>
-            <span>*</span> Defined as per{" "}
+            <span>*</span> Countries are defined as per{" "}
             <a
               href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups"
               target="_blank"
@@ -66,8 +74,9 @@ const AboutRegistration = () => {
             </a>
           </Paragraph>
           <Paragraph>
-            <span>**</span> May pay equivalent in Georgian LARI as per daily
-            course of National Bank of Georgia on the day of payment.
+            <span>**</span> Georgian citizens may transfer equivalent in
+            Georgian LARI as per daily course of National Bank of Georgia on the
+            day of payment.
           </Paragraph>
         </ParagraphWrapper>
         <ParagraphWrapper>
@@ -81,7 +90,7 @@ const AboutRegistration = () => {
         <GuideWrapper>
           <UlTitle>
             <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-            <h4>Onsite participation registration fee includes:</h4>
+            <h4>ONSITE participation registration fee includes:</h4>
           </UlTitle>
           <UlList>
             <GuideList>
@@ -101,14 +110,14 @@ const AboutRegistration = () => {
         <GuideWrapper>
           <UlTitle>
             <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-            <h4>Online participation registration fee includes:</h4>
+            <h4>ONLINE participation registration fee includes:</h4>
           </UlTitle>
           <UlList>
             <GuideList>
               Access to all Plenary Lectures and Scientific Sessions
             </GuideList>
             <GuideList>Access to all Industry-Sponsored Symposia</GuideList>
-            <GuideList>Access to virtual posters</GuideList>
+            <GuideList>Access to posters</GuideList>
             <GuideList>Networking with colleagues </GuideList>
             <GuideList>Certificate of Attendance</GuideList>
             <GuideList>To join debates during live-streamed sessions</GuideList>
@@ -117,8 +126,8 @@ const AboutRegistration = () => {
         <ParagraphWrapper>
           <ParagraphTitle>Registration Terms</ParagraphTitle>
           <Paragraph>
-            Full payment of your registration is required in order to confirm
-            your participation to the Congress.
+            Full payment of your registration is required to confirm your
+            participation in the Congress.
           </Paragraph>
         </ParagraphWrapper>
         <ParagraphWrapper>
@@ -128,61 +137,83 @@ const AboutRegistration = () => {
               All payments are to be made in Euro (EUR)
             </span>
           </Paragraph>
+
           <Paragraph>
-            Payment of registration fees can be made as follows:
+            <span className="strong">By Credit Card</span> (Visa, MasterCard)
+            <br />
+            Follow the process through the Congress’s online services system.
+            Upon completion of payment, the online system will redirect you to a
+            confirmation of service and the respective payments page.
             <br />
             <br />
-            <span className="strong">By Credit Card</span> (Visa, MasterCard or
-            American Express) online following the process through the
-            Congress’s online services system. Upon completion of payment, the
-            online system will redirect you to a confirmation of service and the
-            respective payments page. Once you have completed this process, you
-            will receive a confirmation email with information about the service
-            booked and your payment status.
+            <br />
+            <span className="strong">By Bank Transfer</span> (Additional 30 EUR
+            handling fee is required)
             <br />
             <br />
-            <span className="strong">By Bank Transfer</span> (From outside of
-            Georgia additional 30 Euro handling fee is required.)
+            Bank account for the{" "}
+            <span className="strong">Society of Georgian Psychiatrists:</span>
+            <br />
+            <span className="strong">Beneficiary:</span> AVLIP ZURABASHVILI
+            SOCIETY OF GEORGIAN PSYCHIATRISTS
+            <br />
+            <span className="strong">Account:</span> GE58BG0000000117633800 EUR
+            <br />
+            <span className="strong">Bank details:</span> Bank of Georgia. 29a
+            Gagarin street, Tbilisi, Georgia
+            <br />
+            <span className="strong">SWIFT:</span> BAGAGE22
             <br />
             <br />
-            <span className="strong">Account Name:</span> WPA THEMATIC Congress
-            in Tbilisi
+            Bank account for the{" "}
+            <span className="strong">Alliance for Better Mental Health:</span>
             <br />
-            <span className="strong">Bank details:</span>
+            <span className="strong">Beneficiary:</span> Aliansi uketesi
+            psikikuri janmrtelobistvis
             <br />
-            <span className="strong">Bank Code:</span>
+            <span className="strong">Account:</span> GE86TB7667136120100001 EUR
             <br />
-            <span className="strong">Account Number: </span>
+            <span className="strong">Bank details:</span> JSC TBC Bank. Tbilisi,
+            Georgia
             <br />
-            <span className="strong">IBAN No:</span>
+            <span className="strong">SWIFT:</span> TBCBGE22
             <br />
             <br />
-            Please ensure that the name of the congress and of the participant
-            is stated on the bank transfer. <br />
+            Please ensure that the name of the event and of the participant is
+            stated on the bank transfer. <br />
             Bank charges are the responsibility of the participant and should be
             paid at source in addition to the registration fees.
           </Paragraph>
           <Paragraph>
             Registration will only be valid upon receipt of the full payment by
             the registration department according to the deadline indicated. An
-            email confirming registration will only be sent after receipt of the
-            required fees.
+            email confirming registration will only be sent after receiving the
+            required fee. Onsite participants will receive the badges with their
+            names upon presentation of the Confirmation letter at the
+            registration counter at the congress venue.
+            <br />
             <br />
             Outstanding payments will be collected on-site and charged by
             on-site rate. A copy of the bank transfer (or other proof of
-            payment) will be required in the event that registration fees were
-            not credited to the congress account on time.
+            payment) will be required if registration fees were not credited to
+            the congress account on time.
             <br />
-            For further information, please{" "}
-            <Link to="/contact">contact us</Link>.
+            <br />
+            For further information, please contact at{" "}
+            <Link to="mailto:wpatbilisicongress@gmail.com">
+              wpatbilisicongress@gmail.com
+            </Link>
+            .
           </Paragraph>
         </ParagraphWrapper>
         <ParagraphWrapper>
           <ParagraphTitle>Group Registration</ParagraphTitle>
           <Paragraph>
-            For groups of 10 or more registrations, please{" "}
-            <Link to="/contact">contact us</Link>
-            {""} for assistance
+            For groups of 10 or more registrations, please contact at{" "}
+            <Link to="mailto:wpatbilisicongress@gmail.com">
+              wpatbilisicongress@gmail.com
+            </Link>
+            {""} for assistance.
           </Paragraph>
         </ParagraphWrapper>
         <ParagraphWrapper>
@@ -193,7 +224,7 @@ const AboutRegistration = () => {
             <a href="mailto:wpatbilisicongress@gmail.com">
               wpatbilisicongress@gmail.com
             </a>{" "}
-            to receive refund of registration fee.
+            to receive refund of the registration fee.
           </Paragraph>
           <GuideWrapper>
             <UlTitle>
@@ -205,12 +236,12 @@ const AboutRegistration = () => {
             <UlList>
               <GuideList>
                 Cancellations received until and including{" "}
-                <span>September 4, 2022</span> – full refund
+                <span> 4 September 2022</span> – full refund
               </GuideList>
               <GuideList>
-                As of <span>September 5, 2022</span> – no refund will be made In
-                case of cancellation bank transfer handling fee (XX EUR) will
-                not be refunded – applicable to bank transfer payments only.
+                As of <span>5 September 2022</span> – no refund will be made In
+                case of cancellation bank transfer handling fee (30 EUR) will
+                not be refunded (applicable to bank transfer payments only).
               </GuideList>
             </UlList>
           </GuideWrapper>
@@ -226,27 +257,27 @@ const AboutRegistration = () => {
             starting date.
             <br />
             For ONSITE to ONLINE change we will refund the difference in fees
-            (withholding XX € as international bank transfer fee. Please note
+            (withholding 30 EUR as international bank transfer fee). Please note
             that all refunds will be made after the Congress.
             <br />
-            Up to <span className="strong">September 4, 2022</span> you will be
+            Up to <span className="strong">4 September 2022</span> you will be
             able to change your registration category at no charge.
             <br />
-            As of <span className="strong">September 5, 2022</span>, there will
+            As of <span className="strong">5 September 2022</span>, there will
             be no refunds for changing your registration category.
           </Paragraph>
         </ParagraphWrapper>
         <ParagraphWrapper>
           <ParagraphTitle>Confirmation of Registration</ParagraphTitle>
           <Paragraph>
-            As soon as the appropriate fees have been received, participants
-            will receive a registration confirmation letter. For online payments
-            through the Congress system, the confirmation letter will be
-            automatically provided during online registration, as soon as the
-            credit card charges have been completed and confirmed. For bank
-            transfers the confirmation letter will be sent by email. Please
-            check your email inbox for the Registration Confirmation. If not
-            received, please check your Spam folder before{" "}
+            Participants will receive a registration confirmation letter as soon
+            as the appropriate fees have been received. The confirmation letter
+            will be automatically provided during online registration for online
+            payments through the Congress system as soon as the credit card
+            charges have been completed and confirmed. For bank transfers the
+            confirmation letter will be sent by email. Please check your email
+            inbox for the Registration Confirmation. If not received, please
+            check your Spam folder before{" "}
             <Link to="/contact">contacting us</Link> for assistance.
           </Paragraph>
         </ParagraphWrapper>
@@ -333,7 +364,6 @@ const ParagraphTitle = styled.h3`
   font-family: "Titillium Web", sans-serif;
   font-size: 22.5px;
   font-weight: 700;
-  text-transform: capitalize;
 `;
 
 const Paragraph = styled.p`

@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -38,6 +40,7 @@ const PasswordReset = () => {
   const handleReset = (e) => {
     e.preventDefault();
     setMessage("");
+    setSuccessful(false);
     setLoading(true);
     form.current.validateAll();
     if (checkBtn.current.context._errors.length === 0) {
@@ -49,6 +52,16 @@ const PasswordReset = () => {
           (response) => {
             setMessage(response.data.msg);
             setSuccessful(true);
+            toast.success("The message with password recovery instruction has been sent to your email.", {
+              position: "bottom-right",
+              autoClose: 7000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
             console.log(response.data);
           },
           (error) => {
@@ -67,40 +80,53 @@ const PasswordReset = () => {
 
   return (
     <StyledContainer>
-      <About>
-          If you forgot password, please enter your Email address.
-        </About>
-      {message ? (
+      {successful ? (
         <AlertWrapper>
           <SuccessMessageWrapper
             className={successful ? "success" : "error"}
             role="alert"
           >
-            <SuccessMessage>{message}</SuccessMessage>
+            <SuccessMessage>
+              {successful ? (
+                <>
+                  The message with password recovery instruction has been sent
+                  to your email.
+                </>
+              ) : (
+                <>
+                  A problem has occurred during the process. Please, try again!
+                </>
+              )}
+            </SuccessMessage>
           </SuccessMessageWrapper>
           <LinkButton to="/">Go to Home Page</LinkButton>
         </AlertWrapper>
       ) : (
-        <InputForm onSubmit={handleReset} ref={form}>
-          <InputWrapper>
-            <label htmlFor="Email">Email</label>
-            <StyledInput
-              type="email"
-              name="Email"
-              value={email}
-              onChange={onChangeEmail}
-              validations={[required, validEmail]}
-              placeholder="Enter your Email"
-            />
-          </InputWrapper>
-          <Button disabled={loading}>
-            {loading && (
-              <span className="spinner-border spinner-border-sm"></span>
-            )}
-            <span>Send</span>
-          </Button>
-          <CheckButton style={{ display: "none" }} ref={checkBtn} />
-        </InputForm>
+        <>
+          <About>
+            If you forgot password, please enter your Email address.
+          </About>
+          <InputForm onSubmit={handleReset} ref={form}>
+            <InputWrapper>
+              <label htmlFor="Email">Email</label>
+              <StyledInput
+                type="email"
+                name="Email"
+                value={email}
+                onChange={onChangeEmail}
+                validations={[required, validEmail]}
+                placeholder="Enter your Email"
+              />
+            </InputWrapper>
+            <Button disabled={loading}>
+              {loading && (
+                <span className="spinner-border spinner-border-sm"></span>
+              )}
+              <span>Send</span>
+            </Button>
+            <CheckButton style={{ display: "none" }} ref={checkBtn} />
+          </InputForm>
+        </>
       )}
     </StyledContainer>
   );
@@ -227,12 +253,18 @@ const SuccessMessageWrapper = styled.div`
   padding: 20px 15px;
   border-radius: 8px;
   &.success {
-    background-color: #bbfff1;
-    border: 2px solid #2ea58d;
+    /* background-color: #bbfff1; */
+    /* border: 2px solid #2ea58d; */
+    p {
+      color: #000;
+    }
   }
   &.error {
-    background-color: #ffa5ac;
-    border: 2px solid #f15360;
+    /* background-color: #ffa5ac; */
+    /* border: 2px solid #f15360; */
+    p {
+      color: #bc1a21;
+    }
   }
 `;
 const SuccessMessage = styled.p`

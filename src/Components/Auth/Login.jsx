@@ -2,6 +2,9 @@ import React, { useState, useRef, useContext } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
+import { LoginContext } from "../../Helper/Context";
+import axios from "axios";
 
 // import { UserContext } from "../../App";
 
@@ -27,6 +30,8 @@ const validEmail = (value) => {
 
 const Login = (props) => {
   // authenticate(localStorage.getItem("user"))
+
+  const { setUsertoken, setUser } = useContext(LoginContext);
 
   const navigate = useNavigate();
   const { state } = useLocation();
@@ -55,21 +60,91 @@ const Login = (props) => {
     setLoading(true);
     form.current.validateAll();
     if (checkBtn.current.context._errors.length === 0) {
-      AuthService.login(email, pass).then(
-        () => {
-          navigate(from);
-        },
-        (error) => {
-          const resMessage =
-            (error.response &&
-              error.response.data &&
-              error.response.data.error) ||
-            error.message ||
-            error.toString();
-          setLoading(false);
-          setMessage(resMessage);
-        }
-      );
+      return axios
+        .post("https://wpatbilisicongress.com/Server/API/Auth/Login", {
+          email,
+          pass,
+        })
+        .then(
+          (response) => {
+            if (response.data.msg) {
+              if (response.data.error === false) {
+                // console.log(response.data.userData);
+                localStorage.setItem("user", response.data.msg);
+                localStorage.setItem(
+                  "userdata",
+                  JSON.stringify({
+                    firstname: response.data.userData[0].firstname,
+                    lastname: response.data.userData[0].lastname,
+                    salutation: response.data.userData[0].salutation,
+                    email: response.data.userData[0].email,
+                  })
+                );
+                setUsertoken(response.data.msg);
+                setUser({
+                  firstname: response.data.userData[0].firstname,
+                  lastname: response.data.userData[0].lastname,
+                  salutation: response.data.userData[0].salutation,
+                  email: response.data.userData[0].email,
+                });
+              }
+            }
+            navigate(from);
+            return response.data;
+          },
+
+          // AuthService.Login(email, pass).then(
+          // (response) => {
+          // if (response.data.msg) {
+          //   if (response.data.error === false) {
+          //     // console.log(response.data.userData);
+          //     // localStorage.setItem("user", response.data.msg);
+          //     // localStorage.setItem(
+          //     //   "userdata",
+          //     //   JSON.stringify({
+          //     //     firstname: response.data.userData[0].firstname,
+          //     //     lastname: response.data.userData[0].lastname,
+          //     //     salutation: response.data.userData[0].salutation,
+          //     //     email: response.data.userData[0].email,
+          //     //   })
+          //     // );
+          //     setUserToken(response.data.msg);
+          //   }
+          // }
+          // console.log(response.data.userData[0].firstname);
+          // setLoading(false);
+          // console.log(response.data);
+          // },
+          // () => {
+          //   navigate(from);
+          // },
+          (error) => {
+            const resMessage =
+              (error.response &&
+                error.response.data &&
+                error.response.data.error) ||
+              error.message ||
+              error.toString();
+            setLoading(false);
+            setMessage(resMessage);
+            toast.error(
+              "The specified email or password is invalid or unregistered.",
+              {
+                position: "bottom-right",
+                autoClose: 7000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+              }
+            );
+          }
+        )
+        .catch((error) => {
+          console.log(error);
+        });
     } else {
       setLoading(false);
     }
@@ -112,14 +187,14 @@ const Login = (props) => {
             <span>Login</span>
           </Button>
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
-          {message && (
+          {/* {message && (
             <div className="form-group">
               <div className="alert alert-danger" role="alert">
-                {/* {message} */}
+                {message}
                 The specified email or password is invalid or unregistered.
               </div>
             </div>
-          )}
+          )} */}
         </InputForm>
       </Container>
     </SignWrapper>

@@ -122,11 +122,11 @@ const CardText = styled.div`
   } */
   h1 {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 44px;
+    font-size: 38px;
     font-weight: 700;
     color: #000;
     margin-bottom: 45px;
-    text-transform: capitalize;
+    text-transform: uppercase;
   }
   p {
     font-family: 'Titillium Web', sans-serif;

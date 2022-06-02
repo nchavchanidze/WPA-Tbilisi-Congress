@@ -14,9 +14,9 @@ const HomeVideo = () => {
       <VideoContainer>
         <iframe
           src="//players.brightcove.net/5104226627001/default_default/index.html?videoId=5791520391001"
-          allowfullscreen
-          webkitallowfullscreen
-          mozallowfullscreen
+          allowFullScreen
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true"
           title="Tbilisi"
           width="100%"
           height="100%"

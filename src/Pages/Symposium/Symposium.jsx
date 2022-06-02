@@ -8,7 +8,7 @@ import Layout from "../../Layouts/Layout";
 const Symposium = () => {
   return (
     <Layout>
-      <Heading title="Symposia Proposal Submission"/>
+      <Heading title="Symposium Proposal Submission"/>
       <AboutSymposium />
       <Deadline />
       <Guidelines />

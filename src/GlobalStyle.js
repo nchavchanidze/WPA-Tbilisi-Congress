@@ -194,4 +194,7 @@ body {
     outline: none;
   }
 }
+/* .Toastify__toast-theme--light.Toastify__toast--error {
+  background-color: #bd1b21;
+} */
 `;

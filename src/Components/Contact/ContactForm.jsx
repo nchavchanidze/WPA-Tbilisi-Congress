@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+import { toast } from "react-toastify";
+
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import Textarea from "react-validation/build/textarea";
@@ -56,7 +58,16 @@ const ContactForm = () => {
           (response) => {
             setMessage(response.data.msg);
             setSuccessful(true);
-            console.log(response.data);
+            toast.success("Your Message has been successfully sent.", {
+              position: "bottom-right",
+              autoClose: 7000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            });
           },
           (error) => {
             const resMessage =
@@ -67,6 +78,19 @@ const ContactForm = () => {
               error.toString();
             setMessage(resMessage);
             setSuccessful(false);
+            toast.error(
+              "A problem has occurred during the process. Please, try again!",
+              {
+                position: "bottom-right",
+                autoClose: 7000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+              }
+            );
           }
         );
     }
@@ -79,16 +103,25 @@ const ContactForm = () => {
         Tbilisi? Use the form below and a member of our team will contact you
         shortly.
       </Description>
-      {message ? (
-        <AlertWrapper>
-          <SuccessMessageWrapper
-            className={successful ? "success" : "error"}
-            role="alert"
-          >
-            <SuccessMessage>{message}</SuccessMessage>
-          </SuccessMessageWrapper>
-          <LinkButton to="/">Go to Home Page</LinkButton>
-        </AlertWrapper>
+      {successful ? (
+          <AlertWrapper>
+            <SuccessMessageWrapper
+              className={successful ? "success" : "error"}
+              role="alert"
+            >
+              <SuccessMessage>
+                {successful ? (
+                  <>Your Message has been successfully sent.</>
+                ) : (
+                  <>
+                    A problem has occurred during the process. Please, try
+                    again!
+                  </>
+                )}
+              </SuccessMessage>
+            </SuccessMessageWrapper>
+            <LinkButton to="/">Go to Home Page</LinkButton>
+          </AlertWrapper>
       ) : (
         <InputForm onSubmit={handleSendMessage} ref={form}>
           <InputWrapper>
@@ -138,7 +171,7 @@ const ContactForm = () => {
               </span>
               <StyledInput
                 type="text"
-                placeholder="Enter your Company Name"
+                placeholder="Enter Subject"
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 validations={[required]}
@@ -329,18 +362,22 @@ const SuccessMessageWrapper = styled.div`
   padding: 20px 15px;
   border-radius: 8px;
   &.success {
-    background-color: #bbfff1;
-    border: 2px solid #2ea58d;
+    p {
+      color: #000;
+    }
   }
   &.error {
-    background-color: #ffa5ac;
-    border: 2px solid #f15360;
+    /* background-color: #ffa5ac; */
+    /* border: 2px solid #f15360; */
+    p {
+      color: #bc1a21;
+    }
   }
 `;
 const SuccessMessage = styled.p`
   font-family: "Titillium Web", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   color: #000;
 `;
 

@@ -36,7 +36,8 @@ const SpeakerCard = (props) => {
           <SpeakerName>{props.name}</SpeakerName>
           <SpeakerPosition>{props.position}</SpeakerPosition>
         </ModalSpeakerWrapper>
-        <ModalSpeakerDescription>{props.description}</ModalSpeakerDescription>
+        {/* <ModalSpeakerDescription>{props.description}</ModalSpeakerDescription> */}
+        <ModalSpeakerDescription dangerouslySetInnerHTML={{ __html: props.description }} />
         <ModalCloseButton onClick={closeModal}>
           <span className="line"></span>
           <span className="line"></span>

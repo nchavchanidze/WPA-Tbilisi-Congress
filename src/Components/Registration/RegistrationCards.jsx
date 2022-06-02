@@ -2,7 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faCircle,
+  faChevronCircleRight,
+} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const RegistrationCards = () => {
   return (
@@ -23,8 +28,7 @@ const RegistrationCards = () => {
               <Paragraph>
                 If you are sure about traveling to Tbilisi, then register for
                 ONSITE participation and secure your place for face-to-face
-                meeting. This will also include the benefits of the digital
-                platform. The process is the following:
+                meeting. The process is the following:
               </Paragraph>
               <PricingUl>
                 <li>
@@ -38,20 +42,16 @@ const RegistrationCards = () => {
                     Then, until September 4th you will be able to:
                   </div>
                   <Sublist>
+                    <li>Move your ONSITE registration to ONLINE.</li>
                     <li>
-                      <FontAwesomeIcon icon={faCircle} />
-                      Move your ONSITE registration to ONLINE. The difference
-                      between both rates will be refunded after the conference.
-                    </li>
-                    <li>
-                      <FontAwesomeIcon icon={faCircle} />
-                      Keep your ONSITE registration.
+                      The difference between both rates will be refunded after
+                      the conference.
                     </li>
                   </Sublist>
                 </SublistTitle>
               </PricingUl>
               {/* <Price>€ 9000</Price> */}
-              <ChooseBtn>Register Here</ChooseBtn>
+              {/* <ChooseBtn>Register Here</ChooseBtn> */}
             </PricingCard>
           </Col>
           <Col
@@ -66,10 +66,9 @@ const RegistrationCards = () => {
             <PricingCard>
               <h1>ONLINE Participation</h1>
               <Paragraph>
-                If you are still unsure about traveling to Tbilisi due to the
-                pandemic, then first register for ONLINE attendance and you can
-                later upgrade to ONSITE event if necessary (and upon
-                availability). The process is the following:
+                Register for ONLINE attendance if you are still uncertain about
+                travelling to Tbilisi. You can later upgrade to ONSITE event if
+                necessary (and upon availability). The process is the following:
               </Paragraph>
               <PricingUl>
                 <li>
@@ -84,24 +83,21 @@ const RegistrationCards = () => {
                   </div>
                   <Sublist>
                     <li>
-                      <FontAwesomeIcon icon={faCircle} />
                       Upgrade your ONLINE to ONSITE registration and benefit
                       from both the face-to-face meeting and the digital
                       platform. The difference between the rates must be paid
-                      when the change is confirmed by the Congress Secretariat.
+                      when the Congress Secretariat confirms the change.
                     </li>
-                    <li>
-                      <FontAwesomeIcon icon={faCircle} />
-                      Keep your ONLINE registration.
-                    </li>
+                    <li>Keep your ONLINE registration.</li>
                   </Sublist>
                 </SublistTitle>
               </PricingUl>
               {/* <Price>€ 9000</Price> */}
-              <ChooseBtn>Register Here</ChooseBtn>
+              {/* <ChooseBtn>Register Here</ChooseBtn> */}
             </PricingCard>
           </Col>
         </Row>
+        <ChooseBtn className="disabled" to="/registration/register">Register Here</ChooseBtn>
       </Container>
     </PricingWrapper>
   );
@@ -229,12 +225,11 @@ const PricingUl = styled.ul`
     font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    text-transform: capitalize;
     color: #000;
     transition: all 0.3s ease-out;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
     gap: 15px;
     line-height: 1.6;
     &.disabled {
@@ -252,7 +247,6 @@ const SublistTitle = styled.li`
   font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  text-transform: capitalize;
   color: #000;
   transition: all 0.3s ease-out;
   display: flex;
@@ -285,7 +279,6 @@ const Sublist = styled.ul`
     font-family: "Titillium Web", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    text-transform: capitalize;
     color: #000;
     transition: all 0.3s ease-out;
     display: flex;
@@ -293,6 +286,16 @@ const Sublist = styled.ul`
     align-items: baseline;
     gap: 15px;
     margin-left: 20px;
+    &:before {
+      content: "";
+    display: block;
+    min-width: 12px;
+    min-height: 12px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #bd1b21;
+}
+    }
     &.disabled {
       opacity: 0.4;
     }
@@ -323,8 +326,9 @@ const Price = styled.p`
   }
 `;
 
-const ChooseBtn = styled.button`
-  margin-top: 30px;
+const ChooseBtn = styled(Link)`
+  margin-top: 100px;
+  max-width: 500px;
   width: 100%;
   padding: 13px 0;
   display: flex;
@@ -332,19 +336,23 @@ const ChooseBtn = styled.button`
   align-items: center;
   border: 2px solid transparent;
   border-radius: 5px;
-  background-color: #ffd2d3;
+  background-color: #bd1b21;
   font-family: "Titillium Web", sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-transform: capitalize;
   color: #fff;
   transition: all 0.3s ease-out;
-  pointer-events: none;
+  /* pointer-events: none; */
   &:hover {
     border: 2px solid #bd1b21;
     background-color: #fff !important;
     color: #bd1b21 !important;
     transition: all 0.3s ease-out;
+  }
+  &.disabled {
+    pointer-events: none;
+    background-color: #ffd2d3 !important;
   }
 `;
 

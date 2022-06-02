@@ -7,7 +7,7 @@ import Background from "../../Assets/Images/page-cover.png"
 const Heading = () => {
   return (
     <HeadingWrapper>
-      <Title>Abstact Submission</Title>
+      <Title>Abstract Submission</Title>
     </HeadingWrapper>
   );
 };

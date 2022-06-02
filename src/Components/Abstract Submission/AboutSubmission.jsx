@@ -9,7 +9,7 @@ const AboutSubmission = () => {
   return (
     <AboutWrapper>
       <Container>
-        <AboutTitle>Abstract Submission is Now Open!</AboutTitle>
+        <AboutTitle>Now OPEN!</AboutTitle>
         <About>
           Please read the requirements before submitting the abstract.
         </About>

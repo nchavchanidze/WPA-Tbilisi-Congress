@@ -12,7 +12,7 @@ const AbstactSubmission = () => {
   }, []);
   return (
     <Layout>
-      <Heading title="Abstact Submission" />
+      <Heading title="Abstract Submission" />
       <AboutSubmission />
       <Deadline />
       <Guidelines />

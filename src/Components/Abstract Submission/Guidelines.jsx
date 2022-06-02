@@ -15,10 +15,9 @@ const Guidelines = () => {
     setRuleCheck(!ruleCheck);
   };
 
-  console.log(ruleCheck);
   return (
     <GuidelinesSection>
-      <Title>Guidelines for Submission</Title>
+      <Title>Instructions for Submission</Title>
       <Container>
         <Dropdown>
           <Dropdown.Toggle id="dropdown-basic">
@@ -27,13 +26,8 @@ const Guidelines = () => {
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Paragraph>
-              It will be possible to participate with online presentation.
-              Online presenters who are not present in Tbilisi will be asked to
-              pre-record their presentations. Presentations will be available to
-              view on demand with no live element. Presenters who are sure they
-              will only be able to participate online and will not be coming to
-              Tbilisi should inform the Congress Secretariat
-              (wpatbilisicongress@gmail.com) by … 2022.
+              All presentations/lectures/speeches should be given in live format
+              whether online or onsite.
               <br />
               <br />
               <Strong>
@@ -142,15 +136,6 @@ const Guidelines = () => {
               <UlTitle>
                 <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
                 <h4>
-                  Instructions for preparation of presentations are available on
-                  the Congress website.
-                </h4>
-              </UlTitle>
-            </GuideWrapper>
-            <GuideWrapper>
-              <UlTitle>
-                <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-                <h4>
                   The Scientific Committee will review all submitted abstracts.
                   Following the notification about acceptance the scheduling
                   information will be sent to the abstract submitter.
@@ -165,16 +150,6 @@ const Guidelines = () => {
                   not meet the scientific standards of the Association at any
                   point before or after acceptance and subsequent publication in
                   the digital congress abstract book.
-                </h4>
-              </UlTitle>
-            </GuideWrapper>
-            <GuideWrapper>
-              <UlTitle>
-                <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-                <h4>
-                  If an author needs to withdraw a submitted abstract, a written
-                  request should be sent to the Congress Secretariat no later
-                  than … 2022.
                 </h4>
               </UlTitle>
             </GuideWrapper>
@@ -214,7 +189,7 @@ const Guidelines = () => {
               <UlTitle>
                 <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
                 <h4>
-                  Abstract title – must be in <span>UPPER CASE</span> and{" "}
+                  Abstract title – must be in <span>UPPERCASE</span> and{" "}
                   <span>limited to 25 words</span>.
                 </h4>
               </UlTitle>
@@ -295,7 +270,7 @@ const Guidelines = () => {
                   Click on the <span>Submit</span> button at the end of the
                   process in order to save your abstract. You may log in to the
                   system later to make changes to your abstract, up to the
-                  submission deadline.
+                  submission deadline.{" "}
                   <span>
                     After the deadline, changes will not be possible.
                   </span>{" "}
@@ -355,7 +330,7 @@ const Guidelines = () => {
               <h4>
                 The Abstract Submitter warrants and represents that no part of
                 the information and content provided by him/her (hereafter: the{" "}
-                <span>Content</span>) to the Congress Organizers (hereafter: the
+                <span>Content</span>) to the Congress Organizers (hereafter: the {" "}
                 <span>Organizers</span>), nor the publication of any such
                 Content by the Organizers, on the internet or otherwise
                 infringes any third party rights, including but not limited to
@@ -530,7 +505,6 @@ const Title = styled.h1`
   font-family: "Titillium Web", sans-serif;
   font-size: 56px;
   font-weight: 700;
-  text-transform: capitalize;
   text-align: center;
   color: #000;
   margin: 0 auto 50px;

@@ -12,7 +12,7 @@ import {
 
 // import Logo from "../Assets/Images/LogoBlack.svg";
 // import Logo from "../Assets/Images/NewLogo.png";
-import Logo from "../Assets/Images/wpa-logo.svg";
+import Logo from "../Assets/Images/footer-wpa-logo.svg";
 import Logo01 from "../Assets/Images/Home/Banner/logo-1.png";
 import Logo03 from "../Assets/Images/Home/Banner/logo-2.png";
 import Logo02 from "../Assets/Images/Home/Banner/logo-3.png";
@@ -44,13 +44,31 @@ const Footer = () => {
             </AboutText>
             <BannerLogosWrapper>
               <BannerLogo>
-                <img src={Logo01} alt="Society of Georgian Psychiatrists" />
+                <a
+                  href="https://www.facebook.com/Society-of-Georgian-Psychiatrists-%E1%83%A1%E1%83%90%E1%83%A5%E1%83%90%E1%83%A0%E1%83%97%E1%83%95%E1%83%94%E1%83%9A%E1%83%9D%E1%83%A1-%E1%83%A4%E1%83%A1%E1%83%98%E1%83%A5%E1%83%98%E1%83%90%E1%83%A2%E1%83%A0%E1%83%97%E1%83%90-%E1%83%A1%E1%83%90%E1%83%96%E1%83%9D%E1%83%92%E1%83%90%E1%83%93%E1%83%9D%E1%83%94%E1%83%91%E1%83%90-230622757138327"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={Logo01} alt="Society of Georgian Psychiatrists" />
+                </a>
               </BannerLogo>
               <BannerLogo>
-                <img src={Logo02} alt="Alliance for Better Mental Health" />
+                <a
+                  href="https://www.gip-global.org/organization/fgip-member-organizations/global-initiative-on-psychiatry-tbilisi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={Logo02} alt="Global Initiative on Psychiatry" />
+                </a>
               </BannerLogo>
               <BannerLogo>
-                <img src={Logo03} alt="Global Initiative on Psychiatry" />
+                <a
+                  href="https://www.facebook.com/%E1%83%90%E1%83%9A%E1%83%98%E1%83%90%E1%83%9C%E1%83%A1%E1%83%98-%E1%83%A3%E1%83%99%E1%83%94%E1%83%97%E1%83%94%E1%83%A1%E1%83%98-%E1%83%A4%E1%83%A1%E1%83%98%E1%83%A5%E1%83%98%E1%83%99%E1%83%A3%E1%83%A0%E1%83%98-%E1%83%AF%E1%83%90%E1%83%9C%E1%83%9B%E1%83%A0%E1%83%97%E1%83%94%E1%83%9A%E1%83%9D%E1%83%91%E1%83%98%E1%83%A1%E1%83%97%E1%83%95%E1%83%98%E1%83%A1Alliance-for-Better-Mental-Health-1286629694799058"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={Logo03} alt="Alliance for Better Mental Health" />
+                </a>
               </BannerLogo>
             </BannerLogosWrapper>
           </Col>
@@ -58,13 +76,13 @@ const Footer = () => {
             <FooterTitle>DATES TO NOTE</FooterTitle>
             <DeadlinesWrapper>
               <li>
-                Online Registration Open: <span>31 March, 2022</span>
+                Online Registration Open: <span>31 May, 2022</span>
               </li>
               <li>
                 Proposal Submission Open: <span>15 March, 2022</span>
               </li>
               <li>
-                Proposal Submission Deadline: <span>15 May, 2022</span>
+                Proposal Submission Deadline: <span>15 June, 2022</span>
               </li>
               <li>
                 Abstract Submission Open: <span>01 April, 2022</span>
@@ -142,22 +160,10 @@ const Footer = () => {
           <p>Copyright © 2022 WPA Tbilisi Congress. All Rights Reserved.</p>
           <TermsPrivacy>
             <li>
-              <Link to="/login">Sign in</Link>
+              <Link to="/terms-conditions">Terms and Conditions</Link>
             </li>
             <li>
-              <Link to="/registration">Register</Link>
-            </li>
-            <li>
-              <Link to="/abstract-submission">Submit Abstract</Link>
-            </li>
-            <li>
-              <Link to="/symposium">Submit Proposal</Link>
-            </li>
-            <li>
-              <Link to="/faq">FAQs</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/privacy">Privacy Policy</Link>
             </li>
           </TermsPrivacy>
         </Copyright>
@@ -186,7 +192,7 @@ const FooterTitle = styled.h5`
 `;
 
 const LogoWrapper = styled.div`
-  height: 80px;
+  height: 65px;
   img {
     height: 100%;
   }

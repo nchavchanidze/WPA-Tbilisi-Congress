@@ -9,13 +9,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Guidelines = () => {
-  const [ruleCheck, setRuleCheck] = useState(false);
-
-  const handleRule = () => {
-    setRuleCheck(!ruleCheck);
-  };
-
-  console.log(ruleCheck);
   return (
     <GuidelinesSection>
       <Title>Guidelines for Submission</Title>
@@ -45,12 +38,6 @@ const Guidelines = () => {
               participate in the symposium (speakers and the chairs) should be
               from the same country.
             </h4>
-          </UlTitle>
-        </GuideWrapper>
-        <GuideWrapper>
-          <UlTitle>
-            <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-            <h4>Submitters can apply for no more than 1 symposium.</h4>
           </UlTitle>
         </GuideWrapper>
         <GuideWrapper>
@@ -105,7 +92,7 @@ const Guidelines = () => {
           <UlTitle>
             <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
             <h4>
-              or all accepted symposia presenting speakers should login to the
+              For all accepted symposia presenting speakers should login to the
               individual Abstract Submission portal to complete their submission
               of Symposium. Each presenting speaker must submit abstract before
               the abstract submission deadline, via the web-site only.
@@ -133,18 +120,8 @@ const Guidelines = () => {
         </Paragraph>
 
         <GuidelineForm>
-          {/* <label htmlFor="agree">
-            <GuideCheckbox
-              type="checkbox"
-              name="I agree"
-              id="agree"
-              checked={ruleCheck}
-              onChange={handleRule}
-            />
-            <span></span>I agree
-          </label> */}
           <AbstractButton to="/symposium-upload">
-            Submt your Proposal
+            Submit your Proposal
           </AbstractButton>
         </GuidelineForm>
       </Container>

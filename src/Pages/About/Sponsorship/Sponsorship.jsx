@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import Heading from "../../../Components/Heading";
 import Pricing from "../../../Components/Pricing";
 import Layout from "../../../Layouts/Layout";
+import SponsorshipInfo from "../../../Components/About/Sponsorship/SponsorshipInfo";
 
 const Sponsorship = () => {
   return (
@@ -27,6 +28,7 @@ const Sponsorship = () => {
         </ParagraphWrapper>
       </Container>
       <Pricing />
+      <SponsorshipInfo />
     </Layout>
   );
 };

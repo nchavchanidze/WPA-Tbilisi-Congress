@@ -3,7 +3,7 @@ import { Container, Navbar, NavDropdown } from "react-bootstrap";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
 // import Logo from "../Assets/Images/Logo.svg";
 // import Logo from "../Assets/Images/NewLogo.png"
@@ -16,18 +16,22 @@ const Header = () => {
   const [scroll, setScroll] = useState(0);
   const [show, setShow] = useState(false);
   const [token, setToken] = useState();
-  const userFirstname =
-    localStorage.getItem("userdata") === null
-      ? ""
-      : JSON.parse(localStorage.getItem("userdata")).firstname;
-
+  const userData = {
+    firstName:
+      localStorage.getItem("userdata") === null
+        ? ""
+        : JSON.parse(localStorage.getItem("userdata")).firstname,
+    lastName:
+      localStorage.getItem("userdata") === null
+        ? ""
+        : JSON.parse(localStorage.getItem("userdata")).lastname,
+  };
   const handleBurger = () => {
     setBurger(!burger);
   };
 
   const SignOut = () => {
     AuthService.logout();
-    window.location.reload();
   };
 
   useEffect(() => {
@@ -92,7 +96,7 @@ const Header = () => {
                     <Link to="/sponsorship">Sponsorship</Link>
                   </li>
                   <li>
-                    <Link to="/faq">FAQs</Link>
+                    <Link to="/faq">FAQ</Link>
                   </li>
                 </ul>
               </NavDropdown>
@@ -200,8 +204,16 @@ const Header = () => {
                 </Link>
               ) : (
                 <>
-                  {/* <ProfileName>Hi, {userFirstname}</ProfileName> */}
-                  <NavDropdown
+                  <ProfileName>
+                    {userData.firstName} {userData.lastName.substring(0, 1)}
+                    <SignOutButton title="Sign Out"onClick={SignOut}>
+                      <FontAwesomeIcon
+                        className="nav-item-icon"
+                        icon={faSignOutAlt}
+                      />
+                    </SignOutButton>
+                  </ProfileName>
+                  {/* <NavDropdown
                     title={
                       <>
                         Hi, {userFirstname}
@@ -223,7 +235,7 @@ const Header = () => {
                         </SignOutButton>
                       </li>
                     </ul>
-                  </NavDropdown>
+                  </NavDropdown> */}
                 </>
               )}
             </Nav>
@@ -242,15 +254,14 @@ const StyledHeader = styled.header`
   z-index: 9999;
   transition: all 0.3s ease-out;
   padding: 0px 40px;
-
   &.scrolled {
-    background-color: #fff;
+    background-color: #ffffff;
     transition: all 0.3s ease-out;
     padding: 0px 0px;
     top: 0;
     .container-fluid {
       border: none;
-      background-color: #fff;
+      background-color: #ffffff;
       transition: all 0.3s ease-out;
     }
     /* .hamburger {
@@ -305,7 +316,7 @@ const StyledHeader = styled.header`
 `;
 
 const StyledContainer = styled(Container)`
-  background-color: #fff;
+  background-color: #ffffff;
   border-top: 4px solid #bd1b21;
   box-shadow: 0 3px 25px 0 rgb(0 0 0 / 9%);
   padding: 10px 40px;
@@ -316,7 +327,7 @@ const StyledContainer = styled(Container)`
 `;
 
 const LogoWrapper = styled.div`
-  height: 55px;
+  height: 80px;
   img {
     height: 100%;
   }
@@ -472,9 +483,9 @@ const Nav = styled.ul`
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
-    border-radius: 25px;
+    border-radius: 5px;
     height: 50px;
-    min-width: 136px;
+    min-width: 115px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -502,26 +513,14 @@ const ProfileName = styled.p`
 `;
 
 const SignOutButton = styled.button`
-  background-color: #bd1b21;
-  font-family: "Titillium Web", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  border-radius: 25px;
-  height: 50px;
-  min-width: 136px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #bd1b21;
   outline: none;
-  border: 2px solid transparent;
-  /* border: none; */
+  border: none;
   transition: all 0.3s ease-out;
+  background-color: transparent;
+  margin-left: 1rem;
   &:hover {
-    border: 2px solid #bd1b21;
-    background-color: #fff;
-    color: #bd1b21;
+    color: #ffd2d3;
     transition: all 0.3s ease-out;
   }
   @media only screen and (max-width: 991.98px) {

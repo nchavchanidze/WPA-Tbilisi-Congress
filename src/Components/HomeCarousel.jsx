@@ -212,7 +212,7 @@ const BannerLogosWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
   margin-top: 50px;
   margin-left: 100px;
   @media only screen and (max-width: 830.98px) {
@@ -222,7 +222,7 @@ const BannerLogosWrapper = styled.div`
 `;
 
 const BannerLogo = styled.div`
-  width: 200px;
+  width: 170px;
   img {
     width: 100%;
   }

@@ -49,10 +49,7 @@ const AboutOnsiteOnline = () => {
             </h4>
           </UlTitle>
           <UlList>
-            <GuideList>
-              Access to all scientific content: pre-recorded & selected live
-              interactive sessions
-            </GuideList>
+            <GuideList>Access to live interactive sessions</GuideList>
             <GuideList>Online networking opportunities</GuideList>
             <GuideList>Debating during live-streamed sessions</GuideList>
             <GuideList>Participation in the courses</GuideList>
