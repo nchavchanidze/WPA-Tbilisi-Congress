@@ -166,7 +166,7 @@ const Header = () => {
                 </ul>
               </NavDropdown>
               <li>
-                <Link to="/">Schedules</Link>
+                <Link to="/schedules">Schedules</Link>
               </li>
               <NavDropdown
                 title={

@@ -23,6 +23,8 @@ import Speaker16 from "../../../Assets/Images/Speakers/speaker-16.jpg";
 import Speaker17 from "../../../Assets/Images/Speakers/speaker-17.jpg";
 import Speaker18 from "../../../Assets/Images/Speakers/speaker-18.jpg";
 import Speaker19 from "../../../Assets/Images/Speakers/speaker-19.jpg";
+import Speaker20 from "../../../Assets/Images/Speakers/speaker-20.png";
+import Speaker21 from "../../../Assets/Images/Speakers/speaker-21.png";
 
 import Background from "../../../Assets/Images/Home/SummitReasons/background.png";
 
@@ -434,6 +436,80 @@ const Speakers = () => {
       He is active in public engagement activities, speaking regularly on radio, TV and at literary and science
       festivals. He was a trustee of Combat Stress for over ten years and his contributions to veterans’
       charities include cycling (slowly) eight times to Paris to raise funds for the Royal British Legion.`,
+      socials: {
+        facebook: "/",
+        twitter: "/",
+        linkedIn: "/",
+      },
+    },
+    {
+      id: 20,
+      position: "University of Georgia (Georgia)",
+      name: "Nana Zavradashvili",
+      image: Speaker20,
+      description: `Nana Zavradashvili, PhD is Associate Professor at the University of Georgia, consultant
+      psychiatrist at the Rustavi Mental Health Center, invited professor in social psychiatry at Ilia
+      State University. As a local expert and invited trainer, she is involved in Council of Europe
+      projects aimed at strengthening mental health in the penitentiary and police systems and
+      developing mental health policy and regulatory framework in line with European best practice.
+      Nana Zavradashvili has many years of practical work experience and is actively involved in
+      pedagogical and research activities. Over the years, she has been a consultant psychiatrist at the
+      National Center for Mental Health, coordinator of the psychiatric residency program, and
+      executive director of the Coalition &quot;Human Rights and in Healthcare&quot;. Her research interests
+      include human rights and mental health, quality assurance in mental healthcare, risk assessment
+      and management of violence in psychiatry. The International Master’s Degree on Mental Health
+      Policy and Services allows Nana Zavradashvili to carry out numerous activities at the mental
+      health policy level; in particular she participated in the development of the Mental Health
+      Strategic Plan, National Mental Healthcare Standards, reviewed legal provisions of involuntary
+      treatment; recently she coordinated assessment of the quality of psychiatric care and the
+      human rights condition in all psychiatric institutions in Georgia, using WHO quality&amp;rights toolkit
+      and produced countrywide report. Nana Zavradashvili is an active participant and speaker of
+      local and international scientific conferences, has undergone various trainings in local and
+      international organizations, as well as leads advanced training courses in Georgia and abroad.`,
+      socials: {
+        facebook: "/",
+        twitter: "/",
+        linkedIn: "/",
+      },
+    },
+    {
+      id: 21,
+      position:
+        "Institute of Psychiatry of Taras Shevchenko National University of Kyiv (Ukraine)",
+      name: "Iryna Pinchuk",
+      image: Speaker21,
+      description: `Professor Iryna Pinchuk is a Director of the Institute of Psychiatry of Taras Shevchenko National
+      University of Kyiv (since 2019), the Head of the International Technology Transfer Center (since 2020),
+      the Vice-President Ukrainian Psychiatric Association (since 2019), Member board International
+      Consortium of Universities for  Drug Demand Reduction (ICUDDR) (since 2017), Mental Health Expert at
+      the Ministry of Health of Ukraine (since 2021). She was a Director of International PEPFAR Addiction
+      Technology Transfer Center - Ukraine and Central Asia (2017-2020), Director of the Ukrainian Research
+      Institute for Social and Forensic Psychiatry and Drug Abuse (2012-2018). Iryna Pinchuk is a Founder
+      Chapter Ukraine the International Society of Substance Use Prevention and Treatment Professionals
+      (ISSUP Ukraine). She was a Consultant to the World Health Organization (WHO) (2020, 2021).<br /><br />
+      Iryna Pinchuk is a member of the Board of Ukrainian Psychiatry Association (since 1998), and the Head
+      of Donetsk regional branch of the Ukrainian Psychiatry Association (2011-2012).<br /><br />
+      Key qualifications:<br />
+      - More than 30 years’ experience in psychiatric service, working with psychiatric dispensaries,
+      psycho-neurological doctors’ offices, psychotherapeutic centres and psychotherapeutic offices
+      gained through management of the institutions and later their accreditation as a head of national
+      accreditation commission<br />
+      - In-depth knowledge of the epidemiology and prevalence of mental disorders among general
+      population<br />
+      - Clear understanding of healthcare sector complex reforms Ukraine, specifically in mental health
+      and psychosocial support, service delivery, policy and regulatory framework development,
+      workforce development and organizational strengthen<br />
+      - More than 15 years’ experience in designing and implementing innovative and alternative
+      approaches to mental health and organizational strengthening of psychiatric service in Ukraine<br />
+      - Experience in engaging with national stakeholders in mental health at different levels and
+      education institutions, health authorities at national and local level<br />
+      - 10 years of experience in promotion of social inclusion of people with mental disorders<br />
+      - 5 years of experience working with people affected by a conflict including those after war; working
+      with the national and international NGOs for the MHPSS service provision to the conflict affected
+      population in the eastern Ukraine<br />
+      - Provides training for undergraduate medical students and postgraduate mental health specialists
+      on SUD and mental health. The National Trainer of ATTC Ukraine.
+      `,
       socials: {
         facebook: "/",
         twitter: "/",

@@ -97,7 +97,7 @@ const RegistrationCards = () => {
             </PricingCard>
           </Col>
         </Row>
-        <ChooseBtn className="disabled" to="/registration/register">Register Here</ChooseBtn>
+        <ChooseBtn to="/registration/register">Register Here</ChooseBtn>
       </Container>
     </PricingWrapper>
   );

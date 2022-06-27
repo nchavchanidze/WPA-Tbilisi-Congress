@@ -88,7 +88,7 @@ const Footer = () => {
                 Abstract Submission Open: <span>01 April, 2022</span>
               </li>
               <li>
-                Abstract Submission Deadline: <span>01 July, 2022</span>
+                Abstract Submission Deadline: <span>01 August, 2022</span>
               </li>
               <li>
                 Early Registration Deadline: <span>01 August, 2022</span>

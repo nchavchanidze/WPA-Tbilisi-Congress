@@ -1,17 +1,17 @@
-import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import Layout from "../../../Layouts/Layout";
-import Heading from "../../../Components/Heading";
+import Layout from "../../Layouts/Layout";
+import Heading from "../../Components/Heading";
 
-const PreCongress = () => {
+const Schedules = () => {
   return (
     <Layout>
-      <Heading title="Pre-Congress Workshop" />
+      <Heading title="Schedules" />
       <MessageWrapper>
         <Message>
-          Information about Pre-congress Workshop will appear soon.
+          The SCHEDULES will be activated and ZOOM links will appear across the
+          sessions 1 day prior the Congress only for registered participants.
         </Message>
         <Button to="/">Go to Home Page</Button>
       </MessageWrapper>
@@ -61,4 +61,5 @@ const Button = styled(Link)`
     transition: all 0.3s ease-out;
   }
 `;
-export default PreCongress;
+
+export default Schedules;

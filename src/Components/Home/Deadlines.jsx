@@ -32,12 +32,12 @@ const Deadlines = () => {
           <td className="regular">01 April 2022</td>
         </tr>
         <tr>
-          <td className="category">Abstract Submission Deadline</td>
-          <td className="regular">01 July 2022</td>
+          <td className="category">Abstract Submission Deadline [Extended]</td>
+          <td className="regular">01 August 2022</td>
         </tr>
         <tr>
           <td className="category">Notification of Abstract Acceptance</td>
-          <td className="regular">01 August 2022</td>
+          <td className="regular">01 September 2022</td>
         </tr>
         <tr>
           <td className="category">Early Registration Deadline</td>

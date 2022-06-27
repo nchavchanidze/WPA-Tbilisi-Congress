@@ -67,6 +67,9 @@ const CongressRegister = React.lazy(() =>
   import("./Pages/Registration/Register/Register")
 );
 
+// Schedules
+const Schedules = React.lazy(() => import("./Pages/Schedules/Schedules"));
+
 // Auth
 const Login = React.lazy(() => import("./Pages/Login"));
 const Register = React.lazy(() => import("./Pages/Register"));
@@ -88,6 +91,9 @@ const Abstracts = React.lazy(() => import("./Pages/Abstracts/Abstracts"));
 const ScrollButton = React.lazy(() => import("./Components/ScrollButton"));
 
 const Privacy = React.lazy(() => import("./Pages/Privacy/Privacy"));
+
+const Success = React.lazy(() => import("./Pages/Payment/Success"));
+
 
 const App = () => {
   const routes = [
@@ -224,6 +230,10 @@ const App = () => {
       ),
     },
     {
+      path: "/schedules",
+      element: <Schedules />,
+    },
+    {
       path: "/registration",
       element: <Registration />,
     },
@@ -232,6 +242,14 @@ const App = () => {
       element: (
         <PrivateRoute>
           <CongressRegister />,
+        </PrivateRoute>
+      ),
+    },
+    {
+      path: "/registration/success",
+      element: (
+        <PrivateRoute>
+          <Success />
         </PrivateRoute>
       ),
     },

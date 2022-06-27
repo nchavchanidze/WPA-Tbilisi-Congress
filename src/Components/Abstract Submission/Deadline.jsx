@@ -26,14 +26,14 @@ const Deadline = () => {
           <Col md={4} sm={12}>
             <IconsWrapper>
               <FontAwesomeIcon icon={faClock} />
-              <IconTitle>01 July 2022</IconTitle>
+              <IconTitle>01 August 2022 [Extended]</IconTitle>
               <IconDescription>Submission Deadline</IconDescription>
             </IconsWrapper>
           </Col>
           <Col md={4} sm={12}>
           <IconsWrapper>
               <FontAwesomeIcon icon={faEnvelope} />
-              <IconTitle>01 August 2022</IconTitle>
+              <IconTitle>01 September 2022</IconTitle>
               <IconDescription>
                 Notification to Accepted Authors
               </IconDescription>

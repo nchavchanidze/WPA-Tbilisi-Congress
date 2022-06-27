@@ -1,34 +1,119 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
+import axios from "axios";
 
 const RegisterInfo = () => {
+  const [category, setCategory] = useState("");
+  const [price, setPrice] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  const data = JSON.stringify({
+    token: localStorage.getItem("user"),
+    product_id: category,
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(data);
+    setLoading(true);
+    axios
+      .post("https://wpatbilisicongress.com/Server/API/Banking/Create", data, {
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((res) => {
+        setLoading(false);
+        clearInputs();
+        console.log(res);
+        window.location.replace(res.data.msg[1].uri);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+  };
+
+  const clearInputs = () => {
+    setCategory("");
+    setPrice(0);
+  };
+
+  console.log(JSON.stringify(localStorage.getItem("user")));
+  console.log(data);
   return (
     <InfoWrapper>
-      <RadioForm>
+      <RadioForm onSubmit={handleSubmit}>
         <RadioLabel htmlFor="">
-          <input type="radio" name="categories" value="" />
+          <input
+            type="radio"
+            name="categories"
+            value="1"
+            onChange={(e) => {
+              setCategory(e.target.value);
+              setPrice(250);
+            }}
+          />
           Participants form High Income Country*
         </RadioLabel>
         <RadioLabel htmlFor="">
-          <input type="radio" name="categories" value="" />
+          <input
+            type="radio"
+            name="categories"
+            value="2"
+            onChange={(e) => {
+              setCategory(e.target.value);
+              setPrice(200);
+            }}
+          />
           Participants from Upper Middle-Income Country*
         </RadioLabel>
         <RadioLabel htmlFor="">
-          <input type="radio" name="categories" value="" />
+          <input
+            type="radio"
+            name="categories"
+            value="3"
+            onChange={(e) => {
+              setCategory(e.target.value);
+              setPrice(150);
+            }}
+          />
           Participants from Low & Lower-income Country*
         </RadioLabel>
         <RadioLabel htmlFor="">
-          <input type="radio" name="categories" value="" />
+          <input
+            type="radio"
+            name="categories"
+            value="4"
+            onChange={(e) => {
+              setCategory(e.target.value);
+              setPrice(150);
+            }}
+          />
           Georgian citizens**
         </RadioLabel>
         <RadioLabel htmlFor="">
-          <input type="radio" name="categories" value="" />
+          <input
+            type="radio"
+            name="categories"
+            value="5"
+            onChange={(e) => {
+              setCategory(e.target.value);
+              setPrice(150);
+            }}
+          />
           Students/Residents, Service users & carers, Allied professionals,
           Others
         </RadioLabel>
         <RadioLabel htmlFor="">
-          <input type="radio" name="categories" value="" />
+          <input
+            type="radio"
+            name="categories"
+            value="6"
+            onChange={(e) => {
+              setCategory(e.target.value);
+              setPrice(100);
+            }}
+          />
           Online participants
         </RadioLabel>
       </RadioForm>
@@ -59,8 +144,14 @@ const RegisterInfo = () => {
         </Paragraph>
       </ParagraphWrapper>
       <TotalWrapper>
-        <p>Total: <span className="strong">€ 250</span></p>
+        <p>
+          Total: <span className="strong">{price} €</span>
+        </p>
       </TotalWrapper>
+      <SubmitBtn disabled={loading} onClick={handleSubmit}>
+        {loading && <span className="spinner-border spinner-border-sm"></span>}{" "}
+        Register Here
+      </SubmitBtn>
     </InfoWrapper>
   );
 };
@@ -130,6 +221,35 @@ const TotalWrapper = styled.div`
         color: #000;
       }
     }
+  }
+`;
+const SubmitBtn = styled.button`
+  margin: 50px auto 0;
+  max-width: 500px;
+  width: 100%;
+  padding: 13px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: #bd1b21;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #fff;
+  transition: all 0.3s ease-out;
+  /* pointer-events: none; */
+  &:hover {
+    border: 2px solid #bd1b21;
+    background-color: #fff !important;
+    color: #bd1b21 !important;
+    transition: all 0.3s ease-out;
+  }
+  &.disabled {
+    pointer-events: none;
+    background-color: #ffd2d3 !important;
   }
 `;
 export default RegisterInfo;

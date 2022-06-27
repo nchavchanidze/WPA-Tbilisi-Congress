@@ -296,6 +296,7 @@ const Abstract = () => {
     setSuccessful(false);
     setLoading(true);
     form.current.validateAll();
+    if (title !== "" && topic !== "") {
     if (checkBtn.current.context._errors.length === 0) {
       axios
         .post(
@@ -352,6 +353,24 @@ const Abstract = () => {
           return err;
         });
     }
+  } else if (title === "" && topic === "") {
+    setMessage("Please, fill in the required fields.");
+    setLoading(false);
+    setSuccessful(false);
+    toast.error(
+      "Please, fill in the required fields.",
+      {
+        position: "bottom-right",
+        autoClose: 7000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      }
+    );
+  }
   };
 
   const AuthorsArr = authors.map((author) => {
