@@ -246,7 +246,7 @@ const App = () => {
       ),
     },
     {
-      path: "/registration/success",
+      path: "/registration/getPaymentResult",
       element: (
         <PrivateRoute>
           <Success />

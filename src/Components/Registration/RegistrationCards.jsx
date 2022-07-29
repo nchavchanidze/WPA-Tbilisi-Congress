@@ -13,7 +13,7 @@ const RegistrationCards = () => {
   return (
     <PricingWrapper>
       <Container data-aos="fade-up" data-aos-duration="800">
-        <Row>
+        {/* <Row>
           <Col
             lg={6}
             md={6}
@@ -50,8 +50,8 @@ const RegistrationCards = () => {
                   </Sublist>
                 </SublistTitle>
               </PricingUl>
-              {/* <Price>€ 9000</Price> */}
-              {/* <ChooseBtn>Register Here</ChooseBtn> */}
+              <Price>€ 9000</Price>
+              <ChooseBtn>Register Here</ChooseBtn>
             </PricingCard>
           </Col>
           <Col
@@ -92,11 +92,11 @@ const RegistrationCards = () => {
                   </Sublist>
                 </SublistTitle>
               </PricingUl>
-              {/* <Price>€ 9000</Price> */}
-              {/* <ChooseBtn>Register Here</ChooseBtn> */}
+              <Price>€ 9000</Price>
+              <ChooseBtn>Register Here</ChooseBtn>
             </PricingCard>
           </Col>
-        </Row>
+        </Row> */}
         <ChooseBtn to="/registration/register">Register Here</ChooseBtn>
       </Container>
     </PricingWrapper>
@@ -104,7 +104,8 @@ const RegistrationCards = () => {
 };
 
 const PricingWrapper = styled.section`
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 50px 0;
   .pricing-card {
     display: flex;
     justify-content: center;
@@ -327,7 +328,7 @@ const Price = styled.p`
 `;
 
 const ChooseBtn = styled(Link)`
-  margin-top: 100px;
+  /* margin-top: 100px; */
   max-width: 500px;
   width: 100%;
   padding: 13px 0;

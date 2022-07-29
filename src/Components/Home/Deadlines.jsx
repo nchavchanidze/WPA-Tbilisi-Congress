@@ -33,7 +33,7 @@ const Deadlines = () => {
         </tr>
         <tr>
           <td className="category">Abstract Submission Deadline [Extended]</td>
-          <td className="regular">01 August 2022</td>
+          <td className="regular">10 August 2022</td>
         </tr>
         <tr>
           <td className="category">Notification of Abstract Acceptance</td>

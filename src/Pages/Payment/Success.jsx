@@ -1,19 +1,69 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import Heading from "../../Components/Heading";
 import Layout from "../../Layouts/Layout";
 
 const Success = () => {
+  const [error, setError] = useState(true);
+  const [loading, setLoading] = useState(false);
+
+  const data = JSON.stringify({
+    token: localStorage.getItem("user"),
+  });
+
+  const handleCheckPayment = () => {
+    setLoading(true);
+    axios
+      .post(
+        "https://wpatbilisicongress.com/Server/API/Banking/CheckPayment",
+        data,
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      )
+      .then((res) => {
+        setError(res.data.error);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setError(true);
+      });
+  };
+
+  useEffect(() => {
+    handleCheckPayment();
+  }, []);
+
+  console.log(loading);
   return (
     <Layout>
       <Heading title="Registration" />
       <NotFoundWrapper>
-        <SecondHeading>Your payment was successful.</SecondHeading>
-        <SuccessMessage>
-          For additional information, please check your mailbox.
-        </SuccessMessage>
-        <Button to="/">Go to Home Page</Button>
+        {loading ? (
+          <span className="spinner-border spinner-border-sm"></span>
+        ) : (
+          <>
+            {!error ? (
+              <>
+                <SecondHeading>Your payment was successful.</SecondHeading>
+                <SuccessMessage>
+                  For additional information, please check your mailbox.
+                </SuccessMessage>
+              </>
+            ) : (
+              <>
+                <SecondHeading>Your payment was not successful.</SecondHeading>
+                <SuccessMessage>
+                  There was a problem during payment. Please try again.
+                </SuccessMessage>
+              </>
+            )}
+            <Button to="/">Go to Home Page</Button>
+          </>
+        )}
       </NotFoundWrapper>
     </Layout>
   );
@@ -25,6 +75,7 @@ const NotFoundWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  padding: 50px 0;
 `;
 
 const SecondHeading = styled.h2`
@@ -32,7 +83,7 @@ const SecondHeading = styled.h2`
   font-size: 35px;
   font-weight: 700;
   color: #000;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   @media only screen and (max-width: 991.98px) {
     text-align: center;
   }
@@ -53,7 +104,7 @@ const Button = styled(Link)`
   outline: none;
   border: 2px solid transparent;
   transition: all 0.3s ease-out;
-  margin: 50px 0;
+  margin: 50px 0 0;
   &:hover {
     border: 2px solid #bc1a21;
     background-color: #fff;

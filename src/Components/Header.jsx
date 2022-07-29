@@ -184,9 +184,9 @@ const Header = () => {
                   <li>
                     <Link to="/registration">Registration</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="/onsite-online">Onsite & Online</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to="/venue">Venue</Link>
                   </li>

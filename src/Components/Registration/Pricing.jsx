@@ -42,11 +42,11 @@ const Pricing = () => {
           <td className="early">150 €</td>
           <td className="regular">200 €</td>
         </tr>
-        <tr>
+        {/* <tr>
           <td className="category">Online participants</td>
           <td className="early">100 €</td>
           <td className="regular">150 €</td>
-        </tr>
+        </tr> */}
         
       </Table>
     </TableWrapper>

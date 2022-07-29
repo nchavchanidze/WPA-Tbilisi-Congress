@@ -13,8 +13,11 @@ const AboutRegistration = () => {
   return (
     <AboutWrapper>
       <Container>
-        <AboutTitle>will be OPEN on 31st May</AboutTitle>
-        <About style={{ width: "100%" }}>
+        <AboutTitle>now OPEN</AboutTitle>
+        <TitleDescription>
+          <span>News:</span> Participation is available only ONSITE!
+        </TitleDescription>
+        {/* <About style={{ width: "100%" }}>
           Dear colleagues, if you are still unsure about travelling to Tbilisi,
           then first register for ONLINE participation and benefit from Early
           rates until 1st August 2022.
@@ -26,11 +29,11 @@ const AboutRegistration = () => {
           participants the flexibility of changing their registration until 4
           September 2022 and, upon availability, from ONLINE to ONSITE or vice
           versa.
-        </About>
+        </About> */}
       </Container>
       <RegistrationCards />
       <Container>
-        <About>
+        {/* <About>
           Please note that ON-SITE registration cannot be totally cancelled; you
           will only be able to change your ON-SITE event registration to ONLINE
           in case you want to.
@@ -45,7 +48,7 @@ const AboutRegistration = () => {
           below.
           <br /> <br /> For further details, see the section Conversion of
           Registration Category below.
-        </About>
+        </About> */}
         <ParagraphWrapper>
           <ParagraphTitle>Registration Fees</ParagraphTitle>
           <Paragraph>
@@ -54,8 +57,8 @@ const AboutRegistration = () => {
             with the official meeting organizer.
           </Paragraph>
           <Paragraph>
-            ONSITE and ONLINE Participation Fees (in EUR) apply to payments
-            received prior to the indicated deadlines.
+            Participation Fees (in EUR) apply to payments received prior to the
+            indicated deadlines.
           </Paragraph>
         </ParagraphWrapper>
         <Pricing />
@@ -66,7 +69,7 @@ const AboutRegistration = () => {
           <Paragraph>
             <span>*</span> Countries are defined as per{" "}
             <a
-              href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups"
+              href="https://wpatbilisicongress.com/world-bank-country-classification-by-income-economies.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -90,7 +93,7 @@ const AboutRegistration = () => {
         <GuideWrapper>
           <UlTitle>
             <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
-            <h4>ONSITE participation registration fee includes:</h4>
+            <h4>Participation registration fee includes:</h4>
           </UlTitle>
           <UlList>
             <GuideList>
@@ -107,7 +110,7 @@ const AboutRegistration = () => {
             </GuideList>
           </UlList>
         </GuideWrapper>
-        <GuideWrapper>
+        {/* <GuideWrapper>
           <UlTitle>
             <FontAwesomeIcon icon={faChevronCircleRight} />{" "}
             <h4>ONLINE participation registration fee includes:</h4>
@@ -122,7 +125,7 @@ const AboutRegistration = () => {
             <GuideList>Certificate of Attendance</GuideList>
             <GuideList>To join debates during live-streamed sessions</GuideList>
           </UlList>
-        </GuideWrapper>
+        </GuideWrapper> */}
         <ParagraphWrapper>
           <ParagraphTitle>Registration Terms</ParagraphTitle>
           <Paragraph>
@@ -147,7 +150,7 @@ const AboutRegistration = () => {
             <br />
             <br />
             <br />
-            <span className="strong">By Bank Transfer</span> (Additional 30 EUR
+            <span className="strong">By Bank Transfer</span> (Additional
             handling fee is required)
             <br />
             <br />
@@ -240,13 +243,12 @@ const AboutRegistration = () => {
               </GuideList>
               <GuideList>
                 As of <span>5 September 2022</span> – no refund will be made In
-                case of cancellation bank transfer handling fee (30 EUR) will
-                not be refunded (applicable to bank transfer payments only).
+                case of cancellation bank transfer. 
               </GuideList>
             </UlList>
           </GuideWrapper>
         </ParagraphWrapper>
-        <ParagraphWrapper>
+        {/* <ParagraphWrapper>
           <ParagraphTitle>Conversion of Registration Category</ParagraphTitle>
           <Paragraph>
             Upon request, the Congress Secretariat will change your initial
@@ -266,7 +268,7 @@ const AboutRegistration = () => {
             As of <span className="strong">5 September 2022</span>, there will
             be no refunds for changing your registration category.
           </Paragraph>
-        </ParagraphWrapper>
+        </ParagraphWrapper> */}
         <ParagraphWrapper>
           <ParagraphTitle>Confirmation of Registration</ParagraphTitle>
           <Paragraph>
@@ -339,6 +341,17 @@ const AboutTitle = styled.h1`
   font-size: 44px;
   font-weight: 600;
   color: #000;
+`;
+
+const TitleDescription = styled.h2`
+  font-family: "Titillium Web", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: #000;
+  span {
+    font-weight: 700;
+    color: #bd1b21;
+  }
 `;
 
 const About = styled.p`

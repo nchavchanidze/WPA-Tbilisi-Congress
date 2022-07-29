@@ -15,7 +15,6 @@ const RegisterInfo = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(data);
     setLoading(true);
     axios
       .post("https://wpatbilisicongress.com/Server/API/Banking/Create", data, {
@@ -24,12 +23,11 @@ const RegisterInfo = () => {
       .then((res) => {
         setLoading(false);
         clearInputs();
-        console.log(res);
         window.location.replace(res.data.msg[1].uri);
       })
       .catch((err) => {
-        console.log(err);
         setLoading(false);
+        console.log(err);
       });
   };
 
@@ -38,8 +36,6 @@ const RegisterInfo = () => {
     setPrice(0);
   };
 
-  console.log(JSON.stringify(localStorage.getItem("user")));
-  console.log(data);
   return (
     <InfoWrapper>
       <RadioForm onSubmit={handleSubmit}>
@@ -104,7 +100,7 @@ const RegisterInfo = () => {
           Students/Residents, Service users & carers, Allied professionals,
           Others
         </RadioLabel>
-        <RadioLabel htmlFor="">
+        {/* <RadioLabel htmlFor="">
           <input
             type="radio"
             name="categories"
@@ -115,7 +111,7 @@ const RegisterInfo = () => {
             }}
           />
           Online participants
-        </RadioLabel>
+        </RadioLabel> */}
       </RadioForm>
       <ParagraphWrapper>
         <Paragraph style={{ fontStyle: "italic" }}>
@@ -124,7 +120,7 @@ const RegisterInfo = () => {
         <Paragraph>
           <span>*</span> Countries are defined as per{" "}
           <a
-            href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups"
+            href="https://wpatbilisicongress.com/world-bank-country-classification-by-income-economies.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
