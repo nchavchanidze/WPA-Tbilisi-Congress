@@ -13,7 +13,7 @@ const Questions = () => {
           <Link to="/">Registration</Link> page.
         </Paragraph>
       </ParagraphWrapper>
-      <ParagraphWrapper>
+      {/* <ParagraphWrapper>
         <ParagraphTitle>
           What do I need in order to attend the virtual Congress? How to join
           live sessions?
@@ -26,7 +26,7 @@ const Questions = () => {
           activated and ZOOM links will appear across the sessions 1 day prior
           the Congress. Please, use your full name for ZOOM!
         </Paragraph>
-      </ParagraphWrapper>
+      </ParagraphWrapper> */}
       <ParagraphWrapper>
         <ParagraphTitle>Can I register onsite?</ParagraphTitle>
         <Paragraph>
@@ -40,7 +40,7 @@ const Questions = () => {
           received and registration is completed.
         </Paragraph>
       </ParagraphWrapper>
-      <ParagraphWrapper>
+      {/* <ParagraphWrapper>
         <ParagraphTitle>
           Is it possible to change the Registration Category (ONSITE/ONLINE)?
         </ParagraphTitle>
@@ -60,10 +60,10 @@ const Questions = () => {
           category at no charge. As of 5 September 2022, there will be no
           refunds for changing your registration category.
         </Paragraph>
-      </ParagraphWrapper>
+      </ParagraphWrapper> */}
       <ParagraphWrapper>
         <ParagraphTitle>
-          What is included in my registration fee for in-person attendance?
+          What is included in my registration fee?
         </ParagraphTitle>
         <Paragraph>
           The full registration fee for onsite attendance allows access to all
@@ -87,7 +87,7 @@ const Questions = () => {
       <ParagraphWrapper>
         <ParagraphTitle>Who can attend the Welcome Reception?</ParagraphTitle>
         <Paragraph>
-          All registered ONSITE participants are invited to attend the Congress
+          All registered participants are invited to attend the Congress
           Opening &amp;Welcome Reception on 14 October evening. Attendance is
           included with your registration.
         </Paragraph>

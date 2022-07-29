@@ -141,10 +141,10 @@ const App = () => {
       path: "/industry-symposia",
       element: <IndustrySymposia />,
     },
-    {
-      path: "/courses",
-      element: <Courses />,
-    },
+    // {
+    //   path: "/courses",
+    //   element: <Courses />,
+    // },
     {
       path: "/cme-accreditation",
       element: <CME />,

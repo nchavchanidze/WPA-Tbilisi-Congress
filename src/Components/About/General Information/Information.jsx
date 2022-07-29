@@ -9,7 +9,7 @@ const Information = () => {
         <ParagraphTitle>About the Congress</ParagraphTitle>
         <Paragraph>
           WPA Thematic Congress “Treatment and Management of Mental Disorders in
-          a Post-Pandemic Era” will be hed in a hybrid format on 14-16 October
+          a Post-Pandemic Era” will be held on 14-16 October
           2022 in Tbilisi, Georgia.
           <br />
           <br />
@@ -32,10 +32,6 @@ const Information = () => {
           Global initiative on Psychiatry (GIP-Tbilisi).
           <br />
           <br />
-          We hope that most of you will be able to travel and attend the event
-          in-person. In the same time, many of you might not be able to do so.
-          Therefore, we are planning a full in-person meeting in Tbilisi and an
-          online experience.
         </Paragraph>
       </ParagraphWrapper>
       <ParagraphWrapper>

@@ -6,7 +6,7 @@ const AboutSymposium = () => {
   return (
     <AboutWrapper>
       <Container>
-        <AboutTitle>Now OPEN!</AboutTitle>
+        <AboutTitle>Now CLOSED!</AboutTitle>
         <About>Please read the requirements before submitting proposals.</About>
       </Container>
     </AboutWrapper>

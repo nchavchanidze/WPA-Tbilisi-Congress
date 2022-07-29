@@ -120,7 +120,7 @@ const Guidelines = () => {
         </Paragraph>
 
         <GuidelineForm>
-          <AbstractButton to="/symposium-upload">
+          <AbstractButton className="disabled" to="/symposium-upload">
             Submit your Proposal
           </AbstractButton>
         </GuidelineForm>
