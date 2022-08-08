@@ -46,7 +46,8 @@ const RegisterInfo = () => {
             value="1"
             onChange={(e) => {
               setCategory(e.target.value);
-              setPrice(250);
+              // setPrice(250);
+              setPrice(300)
             }}
           />
           Participants form High Income Country*
@@ -58,7 +59,8 @@ const RegisterInfo = () => {
             value="2"
             onChange={(e) => {
               setCategory(e.target.value);
-              setPrice(200);
+              // setPrice(200);
+              setPrice(250);
             }}
           />
           Participants from Upper Middle-Income Country*
@@ -70,7 +72,8 @@ const RegisterInfo = () => {
             value="3"
             onChange={(e) => {
               setCategory(e.target.value);
-              setPrice(150);
+              // setPrice(150);
+              setPrice(200);
             }}
           />
           Participants from Low & Lower-income Country*
@@ -82,7 +85,8 @@ const RegisterInfo = () => {
             value="4"
             onChange={(e) => {
               setCategory(e.target.value);
-              setPrice(150);
+              // setPrice(150);
+              setPrice(200);
             }}
           />
           Georgian citizens**
@@ -94,7 +98,8 @@ const RegisterInfo = () => {
             value="5"
             onChange={(e) => {
               setCategory(e.target.value);
-              setPrice(150);
+              // setPrice(150);
+              setPrice(200);
             }}
           />
           Students/Residents, Service users & carers, Allied professionals,
